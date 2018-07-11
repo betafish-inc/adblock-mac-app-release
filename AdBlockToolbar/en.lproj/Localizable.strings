@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/2/18.
+  Copyright © 2018 BetaFish. All rights reserved.
+*/
+/* Allow ads menu item */
+"allow.ads.site.menu" = "Allow ads on this site";
+/* Block ads menu item */
+"block.ads.site.menu" = "Block ads on this site";
+/* Pause menu item */
+"pause.menu" = "Pause";
+/* Resume menu item */
+"resume.menu" = "Resume";
+/* Error title */
+"error.title" = "Error";
+/* Invalid url alert */
+"invalid.url.alert" = "Invalid url";
+/* Settings menu item */
+"settings.menu" = "Settings";
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Help & Feedback";
+/* Extension disabled alert */
+"extension.disabled.alert" = "AdBlock extension is disabled";
+/* Alert title */
+"alert.title" = "Alert";
+/* Feature under development alert */
+"feature.under.development" = "This feature is under development.";
+/* OK button */
+"ok.button" = "OK";

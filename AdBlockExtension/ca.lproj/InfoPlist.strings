@@ -1,0 +1,12 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "L'AdBlock";
+
+/* Bundle name */
+"CFBundleName" = "L'AdBlock";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Drets d'autor © 2018 BetaFish, Inc. Tots els drets reservats.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Bloqueja anuncis molestos, intrusius i maliciosos i finestres emergents. Torneu a gaudir de navegar per la web.";
+

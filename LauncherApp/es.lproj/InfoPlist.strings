@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish LLC. Todos los derechos reservados.";
+

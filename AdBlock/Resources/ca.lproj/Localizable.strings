@@ -1,0 +1,150 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "Quant a l'AdBlock";
+
+/* About menu item */
+"about.menu" = "Quant a";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Permet la publicitat no intrusiva";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "L'AdBlock torna a bloquejar els anuncis.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Activeu les extensions d'AdBlock al Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Activeu l'AdBlock al Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Extensió d'AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "Ajuda d'AdBlock";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "L'AdBlock ja no bloqueja anuncis";
+
+/* Alert title */
+"alert.title" = "Alerta";
+
+/* EasyList title */
+"easylist.title" = "Bloqueja anuncis molestos, finestres emergents";
+
+/* Feature under development alert */
+"feature.under.development" = "Aquesta característica està en desenvolupament.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Error en actualitzar les llistes de filtres. Proveu-ho més tard.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Determineu el que AdBlock mostra o amaga als llocs web que visiteu.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Última actualització";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Regles";
+
+/* Filter Lists success */
+"filter.lists.success" = "Les vostres llistes de filtres s'han actualitzat correctament";
+
+/* Filter Lists title */
+"filter.lists.title" = "Llistes de filtres";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Hi ha massa filtres habilitats: Safari no pot utilitzar més de 50.000 regles.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Actualitza les llistes de filtres";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "S'estan actualitzant les llistes de filtres...";
+
+/* Help menu item */
+"help.menu" = "Ajuda";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Feu clic a la icona ￼%1$@ de Safari per pausar l'AdBlock o permetre anuncis als llocs que vulgueu";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Seleccioneu «Permet anuncis en aquest lloc» per desactivar l'AdBlock als llocs on voleu veure els anuncis o voleu donar suport al propietari del lloc web";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Utilitzeu l'enllaç Ajuda i comentaris per veure les preguntes freqüents o %1$@envieu-nos un correu%2$@";
+
+/* Info Text button */
+"info.text.button" = "Comenceu a navegar per la web!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Visiteu el %1$@nostre lloc%2$@ per obtenir respostes a les preguntes més freqüents o per enviar-nos comentaris.";
+
+/* Info Text header */
+"info.text.header" = "L'AdBlock ja està llest!";
+
+/* Info Text intro text */
+"info.text.intro" = "L'AdBlock està activat i bloqueja anuncis per vós. Aquí teniu algunes coses que podeu fer:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Configureu l'AdBlock al Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Activeu l'<b>AdBlock</b> i la icona d'<b>AdBlock Safari</b> a les preferències d'extensió del Safari";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Sí, si us plau, continueu amb l'AdBlock actualitzat!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Omet aquest pas";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Actualitzem contínuament les llistes que utilitzem per bloquejar els anuncis amb eficàcia.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "Per assegurar-nos que estem bloquejant tants anuncis com sigui possible, feu clic a sota per mantenir actualitzat l'AdBlock.";
+
+/* OK button */
+"ok.button" = "D'acord";
+
+/* Preferences menu item */
+"preferences.menu" = "Preferències...";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Surt de l'AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Surt";
+
+/* Services menu item */
+"services.menu" = "Serveis";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Inicia l'AdBlock a l'inici de sessió";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Llista blanca";
+
+/* Whitelisting button */
+"whitelisting.button" = "Afegeix un lloc web";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "No teniu llocs a la llista blanca";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Escriu una URL vàlida.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "example.com O subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "p. ex. www.example.com";
+
+/* Whitelisting header */
+"whitelisting.header" = "Per desactivar el bloqueig d'anuncis en llocs específics, podeu afegir-los a la vostra «llista blanca» aquí:";
+
+/* Whitelisting title */
+"whitelisting.title" = "Afegeix a la llista blanca";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Aquesta URL ja existeix.";
+

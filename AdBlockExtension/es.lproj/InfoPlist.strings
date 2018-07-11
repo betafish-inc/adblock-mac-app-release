@@ -1,0 +1,12 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "AdBlock";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Todos los derechos reservados.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Bloquear ventanas emergentes y anuncios molestos, entrometidos y maliciosos. Disfrutar de navegar por la red de nuevo.";
+

@@ -1,0 +1,36 @@
+/* Alert title */
+"alert.title" = "Upozornění";
+
+/* Allow ads menu item */
+"allow.ads.site.menu" = "Povolit reklamy na této stránce";
+
+/* Block ads menu item */
+"block.ads.site.menu" = "Blokovat reklamy na této stránce";
+
+/* Error title */
+"error.title" = "Chyba";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "Rozšíření AdBlock je zakázané";
+
+/* Feature under development alert */
+"feature.under.development" = "Tato funkce je ve vývoji.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Pomoc a zpětná vazba";
+
+/* Invalid url alert */
+"invalid.url.alert" = "Neplatná adresa URL";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Pause menu item */
+"pause.menu" = "Pauza";
+
+/* Resume menu item */
+"resume.menu" = "Obnovit";
+
+/* Settings menu item */
+"settings.menu" = "Nastavení";
+
