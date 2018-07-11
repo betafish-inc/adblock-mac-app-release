@@ -1,0 +1,109 @@
+/* 
+  Localizable.strings
+  AdBlock
+
+  Created by Brent Montrose on 6/18/18.
+  Copyright © 2018 BetaFish. All rights reserved.
+*/
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Please activate <b>AdBlock</b> and the <b>AdBlock Safari icon</b> in your Safari extension preferences";
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Set up AdBlock in Safari";
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "We are constantly updating the lists we use to block ads effectively.";
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "To ensure we are blocking as many ads as possible, please click below to keep AdBlock current.";
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Yes, please keep AdBlock up to date!";
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Skip this step";
+/* Info Text header */
+"info.text.header" = "AdBlock is ready to go!";
+/* Info Text intro text */
+"info.text.intro" = "AdBlock is on and blocking ads for you. Here are a few things you can do:";
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Click on the ￼%1$@ icon in Safari to pause AdBlock or allow ads on sites you like";
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Select 'Allow ads on this site' to turn off AdBlock on sites where you like the ads or want to support the website owner";
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Use the Help & Feedback link to see frequently asked questions or %1$@send us an email%2$@";
+/* Info Text contact text */
+"info.text.contact.text" = "Please visit %1$@our site%2$@ to get answers to frequently asked questions or to send us feedback.";
+/* Info Text button */
+"info.text.button" = "Start surfing the web!";
+/* Filter Lists title */
+"filter.lists.title" = "Filter Lists";
+/* Filter Lists header */
+"filter.lists.header" = "Determine what AdBlock shows or hides on the websites you visit.";
+/* Filter Lists update button */
+"filter.lists.update.button" = "Update Filter Lists";
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Last updated";
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Updating the filter lists...";
+/* Filter Lists error */
+"filter.lists.error" = "Error updating filter lists. Please try again later.";
+/* Filter Lists success */
+"filter.lists.success" = "Your filter lists have been updated successfully";
+/* EasyList title */
+"easylist.title" = "Block annoying ads, pop-ups";
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Allow some non-intrusive ads";
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Rules";
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Too many filters enabled: Safari cannot use more than 50000 rules.";
+/* AdBlock Disabled alert */
+"adblock.disabled.alert" = "The AdBlock extension is disabled in Safari.";
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Enable AdBlock in Safari";
+/* AdBlock Disabled alert */
+"adblock.disabled.alert" = "Please enable the AdBlock extensions in Safari.";
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock Extension";
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock is no longer blocking any ads";
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock is blocking ads again.";
+/* Whitelisting title */
+"whitelisting.title" = "Whitelisting";
+/* Whitelisting header */
+"whitelisting.header" = "To turn off ad blocking on specific sites, you can add them to your 'whitelist' here:";
+/* Whitelisting example text */
+"whitelisting.example.text" = "eg. www.example.com";
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "example.com OR subdomain.example.com";
+/* Whitelisting button */
+"whitelisting.button" = "Add Website";
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "You have no whitelisted sites";
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Please enter a valid url.";
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "This url already exists.";
+/* Start AdBlock at login menu item */
+"start.at.login" = "Start AdBlock at Login";
+/* Whitelist menu item */
+"whitelist.menu" = "Whitelist";
+/* Quit menu item */
+"quit.menu" = "Quit";
+/* About menu item */
+"about.menu" = "About";
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock Help";
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Quit AdBlock";
+/* About AdBlock menu item */
+"about.adblock.menu" = "About AdBlock";
+/* Preferences menu item */
+"preferences.menu" = "Preferences...";
+/* Services menu item */
+"services.menu" = "Services";
+/* Help menu item */
+"help.menu" = "Help";
+/* Alert title */
+"alert.title" = "Alert";
+/* Feature under development alert */
+"feature.under.development" = "This feature is under development.";
+/* OK button */
+"ok.button" = "OK";

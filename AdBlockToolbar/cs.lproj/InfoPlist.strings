@@ -1,0 +1,15 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "AdBlock Safari ikona";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* (No Comment) */
+"NSExtension.SFSafariToolbarItem.Label" = "AdBlock Safari ikona";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Všechna práva vyhrazena.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Tato ikona vám umožňuje ovládat aplikaci AdBlock v rámci Safari včetně možnosti pozastavit a povolit reklamy na stránkách, které se vám líbí.";
+

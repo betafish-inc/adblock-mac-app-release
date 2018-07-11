@@ -1,0 +1,36 @@
+/* Alert title */
+"alert.title" = "Alerta";
+
+/* Allow ads menu item */
+"allow.ads.site.menu" = "Permitir anuncios en este sitio";
+
+/* Block ads menu item */
+"block.ads.site.menu" = "Bloquear anuncios en este sitio";
+
+/* Error title */
+"error.title" = "Error";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "Se deshabilita la extensión de AdBlock";
+
+/* Feature under development alert */
+"feature.under.development" = "Esta opción se encuentra bajo construcción.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Ayuda y comentarios";
+
+/* Invalid url alert */
+"invalid.url.alert" = "URL inválida";
+
+/* OK button */
+"ok.button" = "Aceptar";
+
+/* Pause menu item */
+"pause.menu" = "Pausar";
+
+/* Resume menu item */
+"resume.menu" = "Reanudar";
+
+/* Settings menu item */
+"settings.menu" = "Configuraciones";
+

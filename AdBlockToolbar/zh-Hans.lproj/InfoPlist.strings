@@ -1,0 +1,15 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "AdBlock Safari 图标";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* (No Comment) */
+"NSExtension.SFSafariToolbarItem.Label" = "AdBlock Safari 图标";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "版权所有© 2018 BetaFish有限公司。保留所有权利。";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "此图标允许您在Safari中控制AdBlock程序, 包括暂停Adblock以及允许您喜爱的网站上显示广告的功能。";
+

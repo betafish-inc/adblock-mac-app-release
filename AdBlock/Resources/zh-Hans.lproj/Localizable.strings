@@ -1,0 +1,150 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "关于AdBlock";
+
+/* About menu item */
+"about.menu" = "关于";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "允许一些非侵入性的广告";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock恢复阻止广告了。";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "请启用Safari中的AdBlock扩展。";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "在Safari中启用AdBlock";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock扩展";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock帮助";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock将停止阻止广告";
+
+/* Alert title */
+"alert.title" = "警告";
+
+/* EasyList title */
+"easylist.title" = "阻止烦人的广告和弹窗";
+
+/* Feature under development alert */
+"feature.under.development" = "此项功能正在开发中。";
+
+/* Filter Lists error */
+"filter.lists.error" = "更新过滤列表时出错。请稍后再试。";
+
+/* Filter Lists header */
+"filter.lists.header" = "确定AdBlock在您访问的网站上显示或隐藏的内容。";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "最近更新";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "规则";
+
+/* Filter Lists success */
+"filter.lists.success" = "您的过滤列表已成功更新";
+
+/* Filter Lists title */
+"filter.lists.title" = "过滤列表";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "启用的过滤列表太多: Safari 不能使用50000条以上的规则。";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "更新过滤列表";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "正在更新过滤列表……";
+
+/* Help menu item */
+"help.menu" = "帮助";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "单击 Safari 中的%1$@ 图标以暂停AdBlock或允许您喜欢的网站显示广告";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "如果您喜欢某些广告或想支持网站所有者，可选择 '允许此网站显示广告' 以关闭 AdBlock";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "使用帮助& 反馈链接来查询常见问题或%1$@发邮件给我们%2$@";
+
+/* Info Text button */
+"info.text.button" = "开始网上冲浪吧！";
+
+/* Info Text contact text */
+"info.text.contact.text" = "访问%1$@我们的网站%2$@来查询常见问题或向我们反馈意见。";
+
+/* Info Text header */
+"info.text.header" = "AdBlock已经准备好了！";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock已经开始为您屏蔽广告了。下面是您可以进行的一些设定：";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "在Safari中打开AdBlock";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "请在您的Safari扩展偏好设置中打开<b>AdBlock</b>和<b>AdBlock Safari图标</b>";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "请保持AdBlock处于最新状态！";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "跳过此步骤";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "我们持续更新列表以使我们能有效地屏蔽广告。";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "为了确保我们尽可能多地拦截广告, 请点击下面以使 AdBlock 保持最新状态。";
+
+/* OK button */
+"ok.button" = "确定";
+
+/* Preferences menu item */
+"preferences.menu" = "偏好设置...";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "退出Adblock";
+
+/* Quit menu item */
+"quit.menu" = "退出";
+
+/* Services menu item */
+"services.menu" = "服务";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "登录时启动AdBlock";
+
+/* Whitelist menu item */
+"whitelist.menu" = "白名单";
+
+/* Whitelisting button */
+"whitelisting.button" = "添加网站";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "您没有列入白名单的网站";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "请输入一个有效的URL";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "example.com 或 subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "例如 www.example.com";
+
+/* Whitelisting header */
+"whitelisting.header" = "要关闭特定网站上的广告屏蔽, 可以在此处将其添加到 '白名单' 中:";
+
+/* Whitelisting title */
+"whitelisting.title" = "加入白名单";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "此 url 已存在。";
+

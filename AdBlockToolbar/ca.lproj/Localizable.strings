@@ -1,0 +1,36 @@
+/* Alert title */
+"alert.title" = "Alerta";
+
+/* Allow ads menu item */
+"allow.ads.site.menu" = "Permet anuncis en aquest lloc";
+
+/* Block ads menu item */
+"block.ads.site.menu" = "Bloqueja anuncis en aquest lloc";
+
+/* Error title */
+"error.title" = "Error";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "L'extensió AdBlock està desactivada";
+
+/* Feature under development alert */
+"feature.under.development" = "Aquesta característica està en desenvolupament.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Ajuda i comentaris";
+
+/* Invalid url alert */
+"invalid.url.alert" = "URL no vàlida";
+
+/* OK button */
+"ok.button" = "D'acord";
+
+/* Pause menu item */
+"pause.menu" = "Pausa";
+
+/* Resume menu item */
+"resume.menu" = "Reprèn";
+
+/* Settings menu item */
+"settings.menu" = "Configuració";
+

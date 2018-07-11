@@ -1,0 +1,150 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "O AdBlocku";
+
+/* About menu item */
+"about.menu" = "O programu";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Povolit některé nerušivé reklamy";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock opět blokuje reklamy.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Povolte prosím rozšíření AdBlock v Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Povolit AdBlock v Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Rozšíření AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock nápověda";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock již neblokuje žádné reklamy";
+
+/* Alert title */
+"alert.title" = "Upozornění";
+
+/* EasyList title */
+"easylist.title" = "Blokovat obtěžující reklamy, vyskakovací okna";
+
+/* Feature under development alert */
+"feature.under.development" = "Tato funkce je ve vývoji.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Chyba při aktualizování seznamů filtrů. Zkuste to prosím později.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Zjistěte, co AdBlock zobrazuje nebo skrývá na stránkách, které navštívíte.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Naposledy aktualizováno";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Pravidla";
+
+/* Filter Lists success */
+"filter.lists.success" = "Vaše seznamy filtrů byly úspěšně aktualizovány";
+
+/* Filter Lists title */
+"filter.lists.title" = "Seznamy filtrů";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Příliš mnoho filtrů povoleno: Safari nemůže využívat více než 50000 pravidel.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Aktualizovat seznamy filtrů";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Aktualizování seznamů filtrů...";
+
+/* Help menu item */
+"help.menu" = "Pomoc";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Klikněte na ikonu %1$@ pro pozastavení AdBlocku nebo k povolení reklam na stránkách, které se vám líbí";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Vyberte 'Povolit reklamy na této stránce' pro vypnutí AdBlocku na stránkách, které se vám líbí nebo k podpoře vlastníků webových stránek";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Využijte odkaz Pomoc a zpětná vazba pro zobrazení často kladených otázek nebo %1$@nám zašlete e-mail%2$@";
+
+/* Info Text button */
+"info.text.button" = "Začněte s prohlížením webu!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Navštivte prosím %1$@naši stránku%2$@ pro získání odpovědí na často kladené otázky nebo pro zaslání zpětné vazby.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock je připraven!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock je zapnutý a blokuje reklamy pro vás. Tady je pár věcí, které můžete udělat:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Nastavit AdBlock v Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Aktivujte prosím <b>AdBlock</b> a <b>AdBlock Safari ikonu</b> v předvolbách rozšíření prohlížeče Safari";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Ano, udržujte prosím AdBlock aktualizovaný!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Přeskočit tento krok";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Neustále aktualizujeme seznamy, které využíváme k účinnému blokování reklam.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "Abychom se ujistili, že blokujeme co největší počet reklam, klikněte prosím níže k udržování aktuálnosti AdBlocku.";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "Předvolby...";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Ukončit AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Ukončit";
+
+/* Services menu item */
+"services.menu" = "Služby";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Spustit AdBlock při přihlášení";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Povolené stránky";
+
+/* Whitelisting button */
+"whitelisting.button" = "Přidat stránku";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Nemáte žádné povolené stránky";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Zadejte prosím platnou adresu URL.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "example.com NEBO subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "např. www.example.com";
+
+/* Whitelisting header */
+"whitelisting.header" = "Chcete-li vypnout blokování reklam na konkrétních webových stránkách, můžete je přidat na 'bílou listinu' zde:";
+
+/* Whitelisting title */
+"whitelisting.title" = "Přidávání na bílou listinu";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Tato adresa URL již existuje.";
+

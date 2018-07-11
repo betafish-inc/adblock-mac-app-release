@@ -1,0 +1,15 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Icono de Safari de AdBlock";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* (No Comment) */
+"NSExtension.SFSafariToolbarItem.Label" = "Icono de Safari de AdBlock";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Todos los derechos reservados.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Este icono te permite controlar la app de AdBlock desde dentro de Safari, incluyendo la capacidad de pausar y permitir anuncios en sitios que te gustan.";
+

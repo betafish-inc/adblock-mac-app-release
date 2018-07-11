@@ -1,0 +1,36 @@
+/* Alert title */
+"alert.title" = "警告";
+
+/* Allow ads menu item */
+"allow.ads.site.menu" = "允许此网站显示广告";
+
+/* Block ads menu item */
+"block.ads.site.menu" = "屏蔽此网站上的广告";
+
+/* Error title */
+"error.title" = "错误";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "AdBlock扩展被禁用";
+
+/* Feature under development alert */
+"feature.under.development" = "此项功能正在开发中。";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "帮助 & 反馈";
+
+/* Invalid url alert */
+"invalid.url.alert" = "无效的url";
+
+/* OK button */
+"ok.button" = "确定";
+
+/* Pause menu item */
+"pause.menu" = "暂停";
+
+/* Resume menu item */
+"resume.menu" = "恢复";
+
+/* Settings menu item */
+"settings.menu" = "设置";
+
