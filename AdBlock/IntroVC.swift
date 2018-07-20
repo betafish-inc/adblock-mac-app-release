@@ -54,28 +54,29 @@ class IntroVC: NSViewController {
         
         introOneTextField.isEditable = false
         introOneTextField.attributedStringValue = String(NSLocalizedString("intro.screen.1.text", comment: "")).convertHTML()
-        introOneButton.attributedTitle = NSAttributedString(string: NSLocalizedString("intro.screen.1.button", comment: ""), attributes: introOneButton.attributedTitle.attributes(at: 0, effectiveRange: nil))
+        introOneButton.attributedTitle = NSAttributedString(string: NSLocalizedString("intro.screen.1.button", comment: ""), attributes: introOneButton.getAttributes())
         
         introTwoTextFieldOne.stringValue = NSLocalizedString("intro.screen.2.text.1", comment: "")
         introTwoTextFieldTwo.stringValue = NSLocalizedString("intro.screen.2.text.2", comment: "")
-        introTwoButton.attributedTitle = NSAttributedString(string: NSLocalizedString("intro.screen.2.button", comment: ""), attributes: introTwoButton.attributedTitle.attributes(at: 0, effectiveRange: nil))
+        introTwoButton.attributedTitle = NSAttributedString(string: NSLocalizedString("intro.screen.2.button", comment: ""), attributes: introTwoButton.getAttributes())
         introTwoSkip.title = NSLocalizedString("intro.screen.2.skip", comment: "")
         
         infoTextView.delegate = self
         buildIntroInfoPage()
         infoHeaderTextField.stringValue = NSLocalizedString("info.text.header", comment: "")
-        infoTextButton.attributedTitle = NSAttributedString(string: NSLocalizedString("info.text.button", comment: ""), attributes: infoTextButton.attributedTitle.attributes(at: 0, effectiveRange: nil))
+        infoTextButton.attributedTitle = NSAttributedString(string: NSLocalizedString("info.text.button", comment: ""), attributes: infoTextButton.getAttributes())
     }
     
     private func buildIntroInfoPage() {
+        let bulletSymbol = "\u{2022} "
         let brHTML = "<br>".convertHTML()
-        var ourParagraphStyle: NSMutableParagraphStyle
+        let ourParagraphStyle: NSMutableParagraphStyle
         ourParagraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         ourParagraphStyle.tabStops = [NSTextTab(textAlignment: .left, location: 20, options: NSDictionary() as! [NSTextTab.OptionKey : Any])]
         ourParagraphStyle.defaultTabInterval = 20
         ourParagraphStyle.firstLineHeadIndent = 0
         ourParagraphStyle.headIndent = 20
-        var endParagraphStyle: NSMutableParagraphStyle
+        let endParagraphStyle: NSMutableParagraphStyle
         endParagraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         endParagraphStyle.paragraphSpacingBefore = 10
         
@@ -85,19 +86,19 @@ class IntroVC: NSViewController {
         let logoUrl = Bundle.main.url(forResource: "AdBlockIcon3", withExtension: "png")
         let logoString = logoUrl?.absoluteString
         let logoHTML = "<img src='" + logoString! + "'>"
-        let bulletOne = "\u{2022} ".convertHTML(size: 24)
+        let bulletOne = bulletSymbol.convertHTML(size: 24)
         bulletOne.append(String(format: NSLocalizedString("info.text.bullet.1", comment: ""), logoHTML).convertHTML(size: 14))
         bulletOne.addAttributes([.paragraphStyle: ourParagraphStyle], range: NSMakeRange(0, bulletOne.length))
         infoTextView.textStorage?.append(bulletOne)
         infoTextView.textStorage?.append(brHTML)
         
-        let bulletTwo = "\u{2022} ".convertHTML(size: 24)
+        let bulletTwo = bulletSymbol.convertHTML(size: 24)
         bulletTwo.append(NSLocalizedString("info.text.bullet.2", comment: "").convertHTML(size: 14))
         bulletTwo.addAttributes([.paragraphStyle: ourParagraphStyle], range: NSMakeRange(0, bulletTwo.length))
         infoTextView.textStorage?.append(bulletTwo)
         infoTextView.textStorage?.append(brHTML)
         
-        let bulletThree = "\u{2022} ".convertHTML(size: 24)
+        let bulletThree = bulletSymbol.convertHTML(size: 24)
         bulletThree.append(String(format: NSLocalizedString("info.text.bullet.3", comment: ""), "<a href='mailto:help@getadblock.com'>", "</a>").convertHTML(size: 14))
         bulletThree.addAttributes([.paragraphStyle: ourParagraphStyle], range: NSMakeRange(0, bulletThree.length))
         infoTextView.textStorage?.append(bulletThree)
@@ -197,6 +198,7 @@ class IntroVC: NSViewController {
     }
     
     @IBAction func startAppOnLoginClicked(_ sender: NSButton) {
+        LogServerManager.shared.recordMessageWithUserID(msg: "startAppOnLoginClicked")
         SwiftyBeaver.debug("start app on login click")
         let launcherAppId = "com.betafish.adblock-mac.LauncherApp"
         if !SMLoginItemSetEnabled(launcherAppId as CFString, sender.state == .on ? true : false) {
@@ -217,6 +219,7 @@ class IntroVC: NSViewController {
     }
 
     @IBAction func skipThisStepClicked(_ sender: NSButton) {
+        LogServerManager.shared.recordMessageWithUserID(msg: "skipThisStepClicked")
         SwiftyBeaver.debug("skipThisStepClicked")
         self.skipLaunchAppOnUserLoginStep = true
          UserPref.setLaunchAppOnUserLogin(false)

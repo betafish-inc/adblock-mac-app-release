@@ -56,6 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         AssetsManager.shared.initialize()
         FilterListManager.shared.initialize()
+        PingDataManager.shared.start()
         killLauncherIfRunning()
     }
 

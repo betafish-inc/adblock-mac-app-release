@@ -57,7 +57,6 @@ class MainVC: NSViewController {
         if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
             appDelegate.appMenuBar.initializeAppMenuBar()
         }
-        PingDataManager.shared.start()
         
         lastUpdatedDate = UserPref.filterListsUpdatedDate()
         updateLastUpdatedDateLabel()
@@ -68,9 +67,9 @@ class MainVC: NSViewController {
         
         lblFilterlistDesc.stringValue = NSLocalizedString("filter.lists.header", comment: "")
         lblWhitelistDesc.stringValue = NSLocalizedString("whitelisting.header", comment: "")
-        btnUpdateFilterLists.attributedTitle = NSAttributedString(string: NSLocalizedString("filter.lists.update.button", comment: ""), attributes: btnUpdateFilterLists.attributedTitle.attributes(at: 0, effectiveRange: nil))
+        btnUpdateFilterLists.attributedTitle = NSAttributedString(string: NSLocalizedString("filter.lists.update.button", comment: ""), attributes: btnUpdateFilterLists.getAttributes())
         txtWhitelist.placeholderString = NSLocalizedString("whitelisting.example.text", comment: "")
-        btnAddWebsite.attributedTitle = NSAttributedString(string: NSLocalizedString("whitelisting.button", comment: ""), attributes: btnAddWebsite.attributedTitle.attributes(at: 0, effectiveRange: nil))
+        btnAddWebsite.attributedTitle = NSAttributedString(string: NSLocalizedString("whitelisting.button", comment: ""), attributes: btnAddWebsite.getAttributes())
         whitelistExampleText.stringValue = NSLocalizedString("whitelisting.example.explanation", comment: "")
         disabledAlertText.stringValue = NSLocalizedString("adblock.disabled.alert", comment: "")
         disabledButton.title = NSLocalizedString("adblock.disabled.button", comment: "")

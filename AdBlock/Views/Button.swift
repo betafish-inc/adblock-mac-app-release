@@ -43,4 +43,16 @@ class Button: NSButton
             self.attributedTitle = attributedTitle
         }
     }
+    
+    func getAttributes() -> [NSAttributedStringKey : Any]?
+    {
+        let buttonAttributes: [NSAttributedStringKey : Any]?
+        if self.attributedTitle.string.isEmpty {
+            buttonAttributes = nil
+        } else {
+            buttonAttributes = self.attributedTitle.attributes(at: 0, effectiveRange: nil)
+        }
+        
+        return buttonAttributes
+    }
 }

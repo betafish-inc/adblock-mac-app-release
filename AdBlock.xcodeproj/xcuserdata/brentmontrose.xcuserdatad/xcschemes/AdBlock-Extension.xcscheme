@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "37AB11C521012681008DAA64"
+               BuildableName = "AdBlock-Tests.xctest"
+               BlueprintName = "AdBlock-Tests"
+               ReferencedContainer = "container:AdBlock.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2D4331320907DD30073624C"
-            BuildableName = "AdBlock-Extension.appex"
-            BlueprintName = "AdBlock-Extension"
+            BlueprintIdentifier = "E278F4052089D93A00573C9B"
+            BuildableName = "AdBlock.app"
+            BlueprintName = "AdBlock"
             ReferencedContainer = "container:AdBlock.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

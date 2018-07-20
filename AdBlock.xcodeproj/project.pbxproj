@@ -11,6 +11,8 @@
 		3707751120E171E300CCD620 /* Pods_AdBlock_Safari_Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D9F255A79038F94E7D5C36 /* Pods_AdBlock_Safari_Menu.framework */; };
 		372D7D0E20D94766009B4DA5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372D7D0D20D94766009B4DA5 /* Image.xcassets */; };
 		375A5E3D20D03D4B00A8A572 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375A5E3C20D03D4B00A8A572 /* IntroVC.swift */; };
+		3787EE8020F530C700FF5633 /* LogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EE7F20F530C700FF5633 /* LogServerManager.swift */; };
+		37B33A2920F3E79C00921596 /* PingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8B23820BD25B5000C64D1 /* PingDataManager.swift */; };
 		5167F6E8C9E69C88C7E747ED /* Pods_AdBlock_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A4AA2A6AE574059D091D0F /* Pods_AdBlock_Extension.framework */; };
 		599CD0E020EAD0DB0005A60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599CD0DF20EAD0DB0005A60A /* Main.storyboard */; };
 		599CD0E220EAD11C0005A60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599CD0E120EAD11B0005A60A /* Main.storyboard */; };
@@ -21,8 +23,6 @@
 		599CD10B20EC1BC20005A60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 599CD10D20EC1BC20005A60A /* InfoPlist.strings */; };
 		599CD10E20EC1BC70005A60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 599CD11020EC1BC70005A60A /* InfoPlist.strings */; };
 		599CD11120EC1BCB0005A60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 599CD11320EC1BCB0005A60A /* InfoPlist.strings */; };
-		599CD12320EC54900005A60A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 599CD12220EC548F0005A60A /* Info.plist */; };
-		599CD12620EC54EC0005A60A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 599CD12520EC54EC0005A60A /* Info.plist */; };
 		59AD37BB20EAC81700F738D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59AD37BD20EAC81700F738D8 /* Localizable.strings */; };
 		59EF602620E6B2AA00A822B1 /* AdBlockIcon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 59EF602520E6B2AA00A822B1 /* AdBlockIcon3.png */; };
 		59EF602820EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF602720EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift */; };
@@ -160,7 +160,8 @@
 		29558AEBFF5E5BD1CFD53716 /* Pods-AdBlock-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Mac/Pods-AdBlock-Mac.release.xcconfig"; sourceTree = "<group>"; };
 		3703CBE020D9801100FCEAF0 /* AdBlockIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AdBlockIcon.pdf; sourceTree = "<group>"; };
 		372D7D0D20D94766009B4DA5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
-		375A5E3C20D03D4B00A8A572 /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroVC.swift; path = AdBlock/IntroVC.swift; sourceTree = SOURCE_ROOT; };
+		375A5E3C20D03D4B00A8A572 /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		3787EE7F20F530C700FF5633 /* LogServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogServerManager.swift; sourceTree = "<group>"; };
 		399EFEF224E0B1C088B2730B /* Pods-AdBlock-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Extension/Pods-AdBlock-Extension.release.xcconfig"; sourceTree = "<group>"; };
 		39EEAD48C6B9D5AB845AF3A3 /* Pods_AdBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D23F4E0FB36263FA613141E /* Pods-AdBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock/Pods-AdBlock.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,7 +239,7 @@
 		E27BB6FD20AC68A100544CD0 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E27F249D2092E6F6006B4EDE /* AssetDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDownloader.swift; sourceTree = "<group>"; };
 		E283EDA820A171C7008B471B /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		E2B7106B208DA1FA00E3752C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/rachelweissman-hohler/Documents/AdBlock/adblock-mac-app/AdBlock/Resources/Assets.xcassets"; sourceTree = "<absolute>"; };
+		E2B7106B208DA1FA00E3752C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B7106D208DB16700E3752C /* SectionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListVC.swift; sourceTree = "<group>"; };
 		E2B7106F208DB1C800E3752C /* SectionItemCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionItemCollectionViewItem.swift; sourceTree = "<group>"; };
 		E2B71071208DB25D00E3752C /* SectionItemCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionItemCollectionViewItem.xib; sourceTree = "<group>"; };
@@ -310,6 +311,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3787EE7E20F5302900FF5633 /* LogServerManagement */ = {
+			isa = PBXGroup;
+			children = (
+				3787EE7F20F530C700FF5633 /* LogServerManager.swift */,
+			);
+			path = LogServerManagement;
+			sourceTree = "<group>";
+		};
 		5D8AC3369989B05B0C955716 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +431,7 @@
 			children = (
 				E2C3165520919FD900202151 /* Event.swift */,
 				E2C3165620919FDA00202151 /* Observable.swift */,
+				3787EE7E20F5302900FF5633 /* LogServerManagement */,
 				E278F437208A01E700573C9B /* AssetsManagement */,
 				E278F439208A020500573C9B /* FilterlistManagement */,
 				E278F438208A01F500573C9B /* WhitelistManagement */,
@@ -735,7 +745,6 @@
 				59AD37BB20EAC81700F738D8 /* Localizable.strings in Resources */,
 				E2B7106C208DA1FA00E3752C /* Assets.xcassets in Resources */,
 				59EF602620E6B2AA00A822B1 /* AdBlockIcon3.png in Resources */,
-				599CD12320EC54900005A60A /* Info.plist in Resources */,
 				E2B71072208DB25D00E3752C /* SectionItemCollectionViewItem.xib in Resources */,
 				599CD10820EC1BB70005A60A /* InfoPlist.strings in Resources */,
 			);
@@ -747,7 +756,6 @@
 			files = (
 				E2D4331820907DD40073624C /* blockerList.json in Resources */,
 				599CD10B20EC1BC20005A60A /* InfoPlist.strings in Resources */,
-				599CD12620EC54EC0005A60A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +880,7 @@
 				E278F40C2089D93A00573C9B /* MainVC.swift in Sources */,
 				E2C3165720919FDA00202151 /* Event.swift in Sources */,
 				E2C3165C2091CF4700202151 /* Storyboard+AdBlock.swift in Sources */,
+				3787EE8020F530C700FF5633 /* LogServerManager.swift in Sources */,
 				E2B71079208DBE2000E3752C /* SectionHeaderView.swift in Sources */,
 				E278F40A2089D93A00573C9B /* AppDelegate.swift in Sources */,
 				E2D433462090C1930073624C /* MainWindowController.swift in Sources */,
@@ -930,6 +939,7 @@
 				E270FEC420B2A3E80053EDD6 /* String+Shortcuts.swift in Sources */,
 				E217A8D820A2CC5B00DF0CF1 /* WhitelistManager.swift in Sources */,
 				E217A8D920A2EE9700DF0CF1 /* FileManager+AdBlock.swift in Sources */,
+				37B33A2920F3E79C00921596 /* PingDataManager.swift in Sources */,
 				E217A8E320A3214D00DF0CF1 /* FilterListManager.swift in Sources */,
 				E2C3165E20920CE000202151 /* AlertUtil.swift in Sources */,
 				E2359FB020A465870055C403 /* PauseResumeBlockinManager.swift in Sources */,

@@ -61,7 +61,7 @@
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWX-ju-0H2" userLabel="Pause - Stack View">
                                         <rect key="frame" x="0.0" y="97" width="4" height="31"/>
                                         <subviews>
-                                            <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-QH-t7y" customClass="Button" customModule="AdBlock_Mac">
+                                            <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-QH-t7y" customClass="Button" customModule="AdBlock">
                                                 <rect key="frame" x="0.0" y="0.0" width="4" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="T6c-Ri-kaE"/>
@@ -104,7 +104,7 @@
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ce-Lg-63u" userLabel="Allow Ads - Stack View">
                                         <rect key="frame" x="0.0" y="65" width="4" height="31"/>
                                         <subviews>
-                                            <button focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-5R-TpW" userLabel="Allow ads" customClass="Button" customModule="AdBlock_Mac">
+                                            <button focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-5R-TpW" userLabel="Allow ads" customClass="Button" customModule="AdBlock">
                                                 <rect key="frame" x="0.0" y="0.0" width="4" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="GM4-mC-eq6"/>
@@ -144,7 +144,7 @@
                                             <constraint firstAttribute="height" constant="1" id="BXT-LS-blI"/>
                                         </constraints>
                                     </box>
-                                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-fz-nvQ" userLabel="Setting" customClass="Button" customModule="AdBlock_Mac">
+                                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-fz-nvQ" userLabel="Setting" customClass="Button" customModule="AdBlock">
                                         <rect key="frame" x="0.0" y="33" width="172" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="LuT-ev-fXA"/>
@@ -168,7 +168,7 @@
                                             <constraint firstAttribute="height" constant="1" id="ejK-J1-7Ku"/>
                                         </constraints>
                                     </box>
-                                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-2W-2VD" customClass="Button" customModule="AdBlock_Mac">
+                                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-2W-2VD" customClass="Button" customModule="AdBlock">
                                         <rect key="frame" x="0.0" y="1" width="172" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="mGt-aW-MH7"/>
