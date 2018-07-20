@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04AA1AF416E44CAB53EBA0A28EA8E0EB"
-               BuildableName = "Pods_AdBlock_Extension.framework"
-               BlueprintName = "Pods-AdBlock-Extension"
+               BlueprintIdentifier = "810D782B261435253F1405AA6B8383B0"
+               BuildableName = "SwiftyBeaver.framework"
+               BlueprintName = "SwiftyBeaver-macOS10.12"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04AA1AF416E44CAB53EBA0A28EA8E0EB"
-            BuildableName = "Pods_AdBlock_Extension.framework"
-            BlueprintName = "Pods-AdBlock-Extension"
+            BlueprintIdentifier = "810D782B261435253F1405AA6B8383B0"
+            BuildableName = "SwiftyBeaver.framework"
+            BlueprintName = "SwiftyBeaver-macOS10.12"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

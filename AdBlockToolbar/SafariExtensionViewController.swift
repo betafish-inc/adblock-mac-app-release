@@ -45,7 +45,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         if (Constants.DEBUG_LOG_ENABLED) {
             SwiftyBeaver.addDestination(ConsoleDestination())
         }
-        
         btnAllowAds.title = NSLocalizedString("allow.ads.site.menu", comment: "")
         btnPause.title = NSLocalizedString("pause.menu", comment: "")
         btnSettings.title = NSLocalizedString("settings.menu", comment: "")

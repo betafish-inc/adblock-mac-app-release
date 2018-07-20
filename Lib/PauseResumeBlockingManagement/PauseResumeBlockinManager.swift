@@ -23,29 +23,22 @@ class PauseResumeBlockinManager: NSObject {
     static let shared: PauseResumeBlockinManager = PauseResumeBlockinManager()
     
     func pauseBlocking() {
-        NSLog("PauseResumeBlockinManager pauseBlocking")
         UserPref.setPauseBlocking(true)
-        NSLog("PauseResumeBlockinManager \(UserPref.isBlockingPaused())")
     }
     
     func resumeBlocking() {
-        NSLog("PauseResumeBlockinManager resumeBlocking")
         UserPref.setPauseBlocking(false)
-        NSLog("PauseResumeBlockinManager \(UserPref.isBlockingPaused())")
     }
     
     func isBlockingPaused() -> Bool {
-        NSLog("PauseResumeBlockinManager isBlockingPaused() \(UserPref.isBlockingPaused())")
         return UserPref.isBlockingPaused()
     }
     
     func callReloadContentBlocker(_ completion: @escaping () -> Void) {
         SFContentBlockerManager.reloadContentBlocker(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXTENSION_IDENTIFIER, completionHandler: { (error) in
             if let error = error {
-                NSLog("[ASSETS_MANAGER]: Error in reloading content blocker \(error)")
                 SwiftyBeaver.error("[ASSETS_MANAGER]: Error in reloading content blocker \(error)")
             } else {
-                NSLog("[ASSETS_MANAGER]: Content blocker reloaded successfully")
                 SwiftyBeaver.debug("[ASSETS_MANAGER]: Content blocker reloaded successfully")
             }
             DispatchQueue.main.async {

@@ -68,6 +68,8 @@ public struct Constants {
     static var shouldSelectWhitelist = Observable<Bool>(false)
 
     static let PING_URL: String = "https://ping.getadblock.com/stats/"
+
+    static let LOG_SERVER_URL: String = "https://log.getadblock.com/v2/record_log.php"
     
     public enum AdBlockError: Error {
         case invalidApiUrl

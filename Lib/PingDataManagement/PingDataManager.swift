@@ -30,21 +30,31 @@ class PingDataManager: NSObject {
     func start() {
         schedulePingData()
     }
-    
-    private func schedulePingData() {
-        
+
+    func pingDataIfNecessary() {
         let pingDate = nextScheduleDate()
         let currentDate = Date()
         if currentDate >= pingDate {
             sendPingData()
         }
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + (60 * 60)) {
+    }
+
+    private func schedulePingData() {
+        let pingDate = nextScheduleDate()
+        SwiftyBeaver.debug("[next ping date]: \(pingDate)")
+        let currentDate = Date()
+        if currentDate >= pingDate {
+            sendPingData()
+        }
+        SwiftyBeaver.debug("[self.getNextPing]: \(self.getNextPing())")
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: self.getNextPing()) {
             self.schedulePingData()
         }
     }
     
     func sendPingData() {
         UserPref.incrementTotalPings()
+        UserPref.setLastPingDate(Date())
         guard let url = URL(string: "\(Constants.PING_URL)" ) else {
             return
         }
@@ -58,28 +68,29 @@ class PingDataManager: NSObject {
                     return
                 }
                 SwiftyBeaver.debug("[PING_DATA_RESPONSE]: \(String(data: data, encoding: .utf8) ?? "")")
-                UserPref.setLastPingDate(Date())
         }
     }
     
     private func preparePingData() -> [String: Any] {
+        self.setSafariVersion()
         var pingData: [String: Any] = [:]
         pingData["cmd"] = "ping"
         let locale = NSLocale.autoupdatingCurrent
         pingData["n"] = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
         pingData["v"] = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         pingData["u"] = generateOrGetUserId()   // user id
-        pingData["o"] = UserPref.operatingSystem()  // operating system
         pingData["ov"] = ProcessInfo().operatingSystemVersionString // operating system version
-        pingData["f"] = "S" // browser flavor
-        pingData["bv"] = UserPref.safariVersion()   // TODO browser version
+        pingData["f"] = "MA" // flavor
+        pingData["o"] = "Mac OS X" // OS
+        pingData["bv"] = UserPref.safariVersion()
         pingData["l"] = locale.languageCode!   // user language
         pingData["aa"] = FilterListManager.shared.isEnabled(filterListId: Constants.ALLOW_ADS_FILTER_LIST_ID) ? 1 : 0
+        pingData["lol"] = UserPref.isLaunchAppOnUserLogin() ? 1 : 0
         
         return pingData
     }
     
-    private func generateOrGetUserId() -> String {
+    func generateOrGetUserId() -> String {
         if let userId = UserPref.userId() {
             return userId
         }
@@ -96,16 +107,59 @@ class PingDataManager: NSObject {
     
     private func nextScheduleDate() -> Date {
         let totalPings = UserPref.totalPings()
-        var delayHours = 1
+        var delayHours = 1.0
         if totalPings == 0 {
-            delayHours = 1
+            return Date() - TimeInterval(1000) // ping now
+        } else if totalPings == 1 {
+             delayHours = 0.1 // 6 minutes
+        } else if totalPings == 2 {
+            delayHours = 1 // 1 hour
         } else if totalPings < 8 {
-            delayHours = 24
+            delayHours = 24 // 24 hours
         } else {
-            delayHours = 24 * 7
+            delayHours = 24 * 7 // 1 week
         }
-        
+
         let lastPingDate = UserPref.lastPingDate() ?? Date()
-        return lastPingDate + TimeInterval(60 * 60 * delayHours)
+        let nextScheduleDate = lastPingDate + TimeInterval(60 * 60 * delayHours)
+        SwiftyBeaver.debug("[nextScheduleDate totalPings]: \(totalPings) delayHours: \(delayHours) lastpingDate: \(lastPingDate) nextScheduleDate: \(nextScheduleDate)")
+        return nextScheduleDate
+    }
+
+    private func getNextPing() -> DispatchTime {
+        let totalPings = UserPref.totalPings()
+        var delayHours = DispatchTime.now()
+        var secondsSinceLastPing = 0.0
+        if UserPref.lastPingDate() != nil {
+            secondsSinceLastPing = (UserPref.lastPingDate()?.timeIntervalSinceNow)!
+        }
+        if totalPings == 1 {
+            delayHours =  delayHours + DispatchTimeInterval.seconds(6 * 60) // 6 minutes
+        } else if totalPings == 2 {
+            delayHours =  delayHours + DispatchTimeInterval.seconds(60 * 60) // 1 hour
+        } else if ((totalPings > 2) && (totalPings <= 8)) {
+            delayHours = delayHours + DispatchTimeInterval.seconds(60 * 60 * 24) // 1 day
+        } else {
+            delayHours = delayHours + DispatchTimeInterval.seconds(60 * 60 * 24 * 7) // 1 week
+        }
+        // if set, 'secondsSinceLastPing' will be negative, so we add a negative value to correctly
+        // calculate the delay hours
+        delayHours = delayHours + DispatchTimeInterval.seconds(Int(secondsSinceLastPing))
+        SwiftyBeaver.debug("getNextPing()  totalPings]: \(totalPings) [delayHours]: \(delayHours)) [secondsSinceLastPing]: \(secondsSinceLastPing)")
+        return delayHours
+    }
+
+    private func setSafariVersion() {
+        var safarVersion = "unk"
+        var safariPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: "com.apple.Safari")
+        if (safariPath != nil) {
+            safariPath = safariPath! + "/Contents/Info.plist"
+            if FileManager.default.isReadableFile(atPath: safariPath!) {
+                let myDict = NSDictionary(contentsOfFile: safariPath!)
+                safarVersion = myDict!["CFBundleShortVersionString"] as! String
+                SwiftyBeaver.debug("safari version \(safarVersion)")
+            }
+        }
+        UserPref.setSafariVersion(safarVersion)
     }
 }
