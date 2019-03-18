@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "Om AdBlock";
+
+/* About menu item */
+"about.menu" = "Om";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Tillåt några icke påträngande annonser";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock blockerar annonser igen.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Aktivera AdBlock-tilläggen i Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Aktivera AdBlock i Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock-tillägg";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock-hjälp";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock blockerar inte längre några annonser";
+
+/* Alert title */
+"alert.title" = "Varning";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Avancerad annonsblockering";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Flytta alla längst fram";
+
+/* Custom title */
+"custom.title" = "Anpassad";
+
+/* Title for debug info window */
+"debug.info.title" = "Debugginfo";
+
+/* Debug info menu item */
+"debug.menu" = "Visa debugginfo";
+
+/* EasyList title */
+"easylist.title" = "Blockera irriterande annonser, popups";
+
+/* Feature under development alert */
+"feature.under.development" = "Denna funktion är under utveckling.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Det uppstod ett fel vid uppdateringen av filterlistorna. Försök igen senare.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Bestäm vad AdBlock ska visa eller gömma på webbplatserna du besöker.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Senast uppdaterad";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Regler";
+
+/* Filter Lists success */
+"filter.lists.success" = "Dina filterlistor har uppdaterats";
+
+/* Filter Lists title */
+"filter.lists.title" = "Filterlistor";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "För många filter aktiverade: Safari kan inte använda fler än 50 000 regler.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Uppdatera filterlistor";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Uppdaterar filterlistorna...";
+
+/* Help menu item */
+"help.menu" = "Hjälp";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Klicka på ￼%1$@-ikonen i Safari för att pausa AdBlock eller tillåta annonser på sidor som du gillar";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Välj \"Tillåt annonser på den här sidan\" för att stänga av AdBlock på sidor där du gillar annonserna eller vill stödja webbplatsens ägare";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Använd Hjälp & synpunkter-länken för att se vanliga frågor eller %1$@skicka ett mejl till oss%2$@";
+
+/* Info Text button */
+"info.text.button" = "Börja surfa på nätet!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Besök %1$@vår sida%2$@ för att få svar på vanliga frågor eller skicka synpunkter till oss.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock är redo!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock är igång och blockerar annonser åt dig. Här är ett par saker du kan göra:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Ställ in AdBlock i Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Aktivera <b>AdBlock-motor</b> och <b>AdBlock-ikon</b> i dina tilläggsinställningar för Safari";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Ja, håll AdBlock uppdaterat!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Hoppa över det här steget";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Vi uppdaterar konstant listorna som vi använder för att blockera annonser effektivt.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "För att se till att vi blockerar så många annonser som möjligt, klicka nedan för att hålla AdBlock aktuellt.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Obs: Om du väljer det här alternativet, kommer AdBlock att fortsätta köras i bakgrunden även när du har avslutat appen. Du kan när som helst ändra denna inställning via alternativet \"Starta AdBlock vid inloggning\" i AdBlock-menyn som du hittar i menyfältet på din Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "Uppgraderingen kunde inte laddas. Försök igen senare.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Uppgraderingen kunde inte laddas";
+
+/* Minimize menu item */
+"minimize.menu" = "Minimera";
+
+/* New Window menu item */
+"new.window.menu" = "Nytt fönster";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "Inställningar...";
+
+/* Upgrade title */
+"product.account.title" = "Mitt konto";
+
+/* Upgrade title */
+"product.upgrade.title" = "Uppgradera";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "Köpet avbröts.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Avbrutet köp";
+
+/* Date of purchase */
+"purchase.date" = "Inköpsdatum: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Fel vid köpet: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Köpfel";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Köpet misslyckades på grund av: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Köpet misslyckades";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "Identifieraren för uppgraderingsköpet är ogiltig. Vänligen kontakta supporten på https://help.getadblock.com.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Ogiltig identifierare för uppgraderingsköpet";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Din uppgradering har återställts. Tack så mycket!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Uppgradering återställd";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Tack för att du köpt uppgraderingen!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Uppgradering komplett";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Avsluta AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Avsluta";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Fel vid läsning av inköpskvitto. Försök igen senare.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Fel på inköpskvitto";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Det gick inte att återställa uppgraderingen. Försök igen senare.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Återställning av uppgradering misslyckades";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Inget matchande köp av uppgradering hittades.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Uppgraderingsfel";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Det gick inte att läsa uppgraderingskvittot. Försök igen senare.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Fel på uppgraderingskvitto";
+
+/* Services menu item */
+"services.menu" = "Tjänster";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Starta AdBlock vid inloggning";
+
+/* Upgrade already text */
+"upgrade.already" = "Redan uppgraderat?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Klicka här";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Få ut mer av AdBlock med dessa extrafunktioner.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Stöd dina favoritwebbplatser genom att lägga till dem till din personliga vitlista";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Tillåt annonser på webbplatser du gillar";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Få tillgång till ännu smartare och kraftfullare annonsblockering";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Avancerad annonsblockering";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Få svar samma dag om du har en fråga eller ett problem";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Få utmärkt VIP-support";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Fler funktioner kommer snart!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Uppgradera nu";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Endast %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Köp i appen är inte aktiverat på detta konto.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Uppgradering inte tillgänglig";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "Uppgraderingen endast bara tillgänglig på Safari 11 och nyare. Vänligen uppdatera Safari och försök igen.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Uppgradering inte tillgänglig";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Vitlista";
+
+/* Whitelisting button */
+"whitelisting.button" = "Lägg till webbplats";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Du har inga vitlistade webbplatser";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Ange en giltig URL.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.exempel.com/index.html ELLER underdomän.exempel.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "t.ex. http://www.exampel.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "För att stänga av annonsblockering på specifika webbplatser så kan du lägga till dem på din \"vitlista\" här:";
+
+/* Whitelisting title */
+"whitelisting.title" = "Vitlistning";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Denna URL finns redan.";
+
+/* Window menu item */
+"window.menu" = "Fönster";
+

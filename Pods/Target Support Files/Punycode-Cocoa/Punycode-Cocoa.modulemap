@@ -1,6 +1,0 @@
-framework module Punycode_Cocoa {
-  umbrella header "Punycode-Cocoa-umbrella.h"
-
-  export *
-  module * { export * }
-}

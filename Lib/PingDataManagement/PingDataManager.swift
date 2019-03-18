@@ -41,12 +41,10 @@ class PingDataManager: NSObject {
 
     private func schedulePingData() {
         let pingDate = nextScheduleDate()
-        SwiftyBeaver.debug("[next ping date]: \(pingDate)")
         let currentDate = Date()
         if currentDate >= pingDate {
             sendPingData()
         }
-        SwiftyBeaver.debug("[self.getNextPing]: \(self.getNextPing())")
         DispatchQueue.global(qos: .background).asyncAfter(deadline: self.getNextPing()) {
             self.schedulePingData()
         }
@@ -73,17 +71,18 @@ class PingDataManager: NSObject {
     
     private func preparePingData() -> [String: Any] {
         self.setSafariVersion()
+        self.setOperatingSystemVersion()
         var pingData: [String: Any] = [:]
         pingData["cmd"] = "ping"
         let locale = NSLocale.autoupdatingCurrent
-        pingData["n"] = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
-        pingData["v"] = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        pingData["n"] = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
+        pingData["v"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         pingData["u"] = generateOrGetUserId()   // user id
-        pingData["ov"] = ProcessInfo().operatingSystemVersionString // operating system version
+        pingData["ov"] =  UserPref.operatingSystemVersion() // operating system version
         pingData["f"] = "MA" // flavor
         pingData["o"] = "Mac OS X" // OS
         pingData["bv"] = UserPref.safariVersion()
-        pingData["l"] = locale.languageCode!   // user language
+        pingData["l"] = locale.languageCode ?? locale.identifier   // user language
         pingData["aa"] = FilterListManager.shared.isEnabled(filterListId: Constants.ALLOW_ADS_FILTER_LIST_ID) ? 1 : 0
         pingData["lol"] = UserPref.isLaunchAppOnUserLogin() ? 1 : 0
         
@@ -114,7 +113,7 @@ class PingDataManager: NSObject {
              delayHours = 0.1 // 6 minutes
         } else if totalPings == 2 {
             delayHours = 1 // 1 hour
-        } else if totalPings < 8 {
+        } else if totalPings <= 8 {
             delayHours = 24 // 24 hours
         } else {
             delayHours = 24 * 7 // 1 week
@@ -129,10 +128,8 @@ class PingDataManager: NSObject {
     private func getNextPing() -> DispatchTime {
         let totalPings = UserPref.totalPings()
         var delayHours = DispatchTime.now()
-        var secondsSinceLastPing = 0.0
-        if UserPref.lastPingDate() != nil {
-            secondsSinceLastPing = (UserPref.lastPingDate()?.timeIntervalSinceNow)!
-        }
+        let secondsSinceLastPing = UserPref.lastPingDate()?.timeIntervalSinceNow ?? 0.0
+        
         if totalPings == 1 {
             delayHours =  delayHours + DispatchTimeInterval.seconds(6 * 60) // 6 minutes
         } else if totalPings == 2 {
@@ -151,15 +148,16 @@ class PingDataManager: NSObject {
 
     private func setSafariVersion() {
         var safarVersion = "unk"
-        var safariPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: "com.apple.Safari")
-        if (safariPath != nil) {
-            safariPath = safariPath! + "/Contents/Info.plist"
-            if FileManager.default.isReadableFile(atPath: safariPath!) {
-                let myDict = NSDictionary(contentsOfFile: safariPath!)
-                safarVersion = myDict!["CFBundleShortVersionString"] as! String
-                SwiftyBeaver.debug("safari version \(safarVersion)")
+        if let safariPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: "com.apple.Safari") {
+            let safariPathInfoPath = safariPath + "/Contents/Info.plist"
+            if FileManager.default.isReadableFile(atPath: safariPathInfoPath), let myDict = NSDictionary(contentsOfFile: safariPathInfoPath) {
+                safarVersion = myDict["CFBundleShortVersionString"] as? String ?? "unk"
             }
         }
         UserPref.setSafariVersion(safarVersion)
+    }
+
+    private func setOperatingSystemVersion() {
+        UserPref.setOperatingSystemVersion("\(ProcessInfo().operatingSystemVersion.majorVersion).\(ProcessInfo().operatingSystemVersion.minorVersion).\(ProcessInfo().operatingSystemVersion.patchVersion)")
     }
 }

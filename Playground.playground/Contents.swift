@@ -28,6 +28,19 @@ private func removeProtocol(from url: String) -> String {
     return path
 }
 
+func domainAndParents(_ domain: String) -> [String]? {
+    var result: [String]? = []
+    var parts = domain.components(separatedBy: ".")
+    var nextDomain = parts[parts.count - 1]
+    for (index, _) in parts.enumerated().reversed()  {
+        result?.append(nextDomain)
+        if (index > 0) {
+            nextDomain = parts[index - 1] + "." + nextDomain
+        }
+    }
+    return result
+}
+
 func normalizeUrl(_ url: String) -> String {
     var normalizedUrl = removeProtocol(from: url)
     guard let firstSlashIndex = normalizedUrl.index(of: "/") else {
@@ -87,6 +100,11 @@ isValid(url: "https://www.washingtonpost.com/news/politics/wp/2018/05/18/2018-ha
 ProcessInfo().operatingSystemVersionString
 let locale = NSLocale.autoupdatingCurrent
 locale.languageCode!
+domainAndParents("code.getadblock.com")
+let theURL = URL(string: "http://code.getadblock.com/tst/")
+theURL?.host
+
+
 
 
 

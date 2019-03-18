@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "За AdBlock";
+
+/* About menu item */
+"about.menu" = "За приложението";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Позволи определени ненатрапчиви реклами";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock отново блокира реклами.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Моля, разрешете разширенията на AdBlock в Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Разреши AdBlock в Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Разширение AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "Помощ на AdBlock";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock вече не блокира реклами.";
+
+/* Alert title */
+"alert.title" = "Известие";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Разширено блокиране на реклами";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Изведи на преден план";
+
+/* Custom title */
+"custom.title" = "Собствен";
+
+/* Title for debug info window */
+"debug.info.title" = "Предпроверочни данни";
+
+/* Debug info menu item */
+"debug.menu" = "Покажи предпроверочните данни";
+
+/* EasyList title */
+"easylist.title" = "Блокирай досадните и изскачащите реклами";
+
+/* Feature under development alert */
+"feature.under.development" = "Възможността e в разработка.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Грешка при обновяване на филтрите. Моля, опитайте по-късно.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Какво AdBlock показва или скрива в посетените от вас сайтове.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Обновени";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Правила";
+
+/* Filter Lists success */
+"filter.lists.success" = "Филтрите са обновени успешно";
+
+/* Filter Lists title */
+"filter.lists.title" = "Филтри";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Разрешени са твърде много филтри: Safari не е в състояние да ползва повече от 50 000 правила.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Обнови филтрите";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Обновяване на филтрите…";
+
+/* Help menu item */
+"help.menu" = "Помощ";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Щракнете по иконата на ￼%1$@ в Safari за задържане на AdBlock или позволете реклама в харесвани от вас сайтове.";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Изберете „Позволи реклами в сайта“ за изключване на AdBlock за сайтове с харесвани от вас реклами или такива, чиито собственици подкрепяте.";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Ползвайте препратка „Помощ и отзив“ за преглед на често задаваните въпроси, или за да %1$@пишете%2$@.";
+
+/* Info Text button */
+"info.text.button" = "Сърфирай мрежата!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Моля, посетете %1$@нашия сайт%2$@ за отговор на често задавани въпроси, или за да ни изпратите своя отзив.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock е готов за ползване!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock е включен и блокира реклами. Ето някои неща, които да пробвате:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Настрой AdBlock в Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Моля, включете <b>AdBlock</b> и <b>Икона на AdBlock в Safari</b> от настройките на разширението в Safari.";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Да, моля, обновявай AdBlock!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Пропусни стъпката";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Непрекъснато обновяваме ползваните списъци за ефективно блокиране на реклами.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "За да се гарантира, че се блокират колкото е възможно повече реклами, моля, щракнете по-долу за актуализиране на AdBlock.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Забележка: ако я изберете, AdBlock ще продължи да работи фоново дори и да затворите апа. Можете да я промените, когато решите, като изключите „Пускай AdBlock с вписване“ в менюто на AdBlock от лентата с меню на Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "Провалено зареждане на обновяването на продукта. Моля, опитайте по-късно.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Провалено зареждане на обновяването";
+
+/* Minimize menu item */
+"minimize.menu" = "Намали";
+
+/* New Window menu item */
+"new.window.menu" = "Създай прозорец";
+
+/* OK button */
+"ok.button" = "ДА";
+
+/* Preferences menu item */
+"preferences.menu" = "Настройки…";
+
+/* Upgrade title */
+"product.account.title" = "Mоят профил";
+
+/* Upgrade title */
+"product.upgrade.title" = "Обновяване";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "Покупката е отменена.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Отменена покупка";
+
+/* Date of purchase */
+"purchase.date" = "Дата на покупка: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Грешка в покупката: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Грешка в покупката";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Покупката се провали поради грешка: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Провалена покупка";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "Идентификаторът на покупката на обновяване е недействителен. Моля, обърнете се към поддръжката в https://help.getadblock.com за помощ.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Недействителен идентификатор на покупката на обновяване";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Обновяването е възстановено. Благодарим!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Възстановено обновяване";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Благодарим за покупката на обновяването!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Завършено обновяване";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Изход от AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Изход";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Грешка при четене на разписката за покупка. Моля, опитайте по-късно.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Грешка в разписката за покупка";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Грешка при възстановяване на обновяването. Моля, опитайте по-късно.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Провалено възстановяване на обновяването";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Не беше намерена съвпадаща покупка с обновяване.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Грешка в обновяването";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Грешка при четене на разписката за обновяване. Моля, опитайте по-късно.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Грешка в разписката за обновяване";
+
+/* Services menu item */
+"services.menu" = "Услуги";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Пускай AdBlock с вписване";
+
+/* Upgrade already text */
+"upgrade.already" = "Вече сте обновили?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Щракнете тук";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Повече от AdBlock с бонусни възможности";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Подкрепяте предпочитаните си сайтове с добавяне към ваш изключващ списък.";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Подкрепа на любимите сайтове";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Получавате достъп до още по-умно и по-мощно блокиране на реклами.";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Разширено блокиране на реклами";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Получавате отговор още същия ден при въпрос или недостатък.";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Получаване на поддръжка ВИП";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Още възможности очаквайте скоро!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Обнови сега";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Срещу %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Покупки през апа не са разрешени за профила.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Неналично обновяване";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "Обновяването е налично само за Safari 11 и по-нова. Моля, обновете Safari и опитайте по-късно.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Неналично обновяване";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Изключи";
+
+/* Whitelisting button */
+"whitelisting.button" = "Добави сайта";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Няма изключени сайтове.";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Моля, въведете действителен адрес,";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.example.com/index.html ИЛИ subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "т.е. http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "Блокирането на реклами в определени сайтове може да се спре, като се добавят като „изключени“ тук:";
+
+/* Whitelisting title */
+"whitelisting.title" = "Изключения";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Адресът вече съществува.";
+
+/* Window menu item */
+"window.menu" = "Прозорец";
+

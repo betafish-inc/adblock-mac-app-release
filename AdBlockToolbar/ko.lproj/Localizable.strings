@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "알림";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "이 사이트에서 광고 허용";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "이 페이지에서 광고 허용";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "이 사이트에서 광고 차단";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "이 페이지에서 광고 차단";
+
+/* Error title */
+"error.title" = "오류";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "AdBlock 확장 프로그램이 꺼져 있습니다";
+
+/* Feature under development alert */
+"feature.under.development" = "이 기능은 현재 개발 중입니다.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "도움말 및 의견";
+
+/* Invalid url alert */
+"invalid.url.alert" = "잘못된 URL";
+
+/* OK button */
+"ok.button" = "확인";
+
+/* Pause menu item */
+"pause.menu" = "일시 중지";
+
+/* Resume menu item */
+"resume.menu" = "다시 시작";
+
+/* Settings menu item */
+"settings.menu" = "설정";
+
+/* Upgrade button */
+"upgrade.button" = "업그레이드";
+

@@ -17,6 +17,7 @@
 
 import Cocoa
 import SwiftyBeaver
+import SafariServices
 
 enum FilterListManagerStatus {
     case idle
@@ -46,6 +47,11 @@ class FilterListManager: NSObject {
     func enable(filterListId: String) {
         status.set(newValue: .filterListUpdateStarted)
         UserPref.setFilterList(identifier: filterListId, enabled: true)
+        // All "secret" upgrade filter lists should be enabled when the Anti-Circumvention list is enabled
+        if filterListId == Constants.ANTI_CIRCUMVENTION_LIST_ID {
+            UserPref.setFilterList(identifier: Constants.CUSTOM_FILTER_LIST_ID, enabled: true)
+            UserPref.setFilterList(identifier: Constants.ADVANCE_FILTER_LIST_ID, enabled: true)
+        }
         status.set(newValue: .filterListUpdateCompleted)
         status.set(newValue: .idle)
     }
@@ -53,6 +59,11 @@ class FilterListManager: NSObject {
     func disable(filterListId: String) {
         status.set(newValue: .filterListUpdateStarted)
         UserPref.setFilterList(identifier: filterListId, enabled: false)
+        // All "secret" upgrade filter lists should be disabled when the Anti-Circumvention list is disabled
+        if filterListId == Constants.ANTI_CIRCUMVENTION_LIST_ID {
+            UserPref.setFilterList(identifier: Constants.CUSTOM_FILTER_LIST_ID, enabled: false)
+            UserPref.setFilterList(identifier: Constants.ADVANCE_FILTER_LIST_ID, enabled: false)
+        }
         status.set(newValue: .filterListUpdateCompleted)
         status.set(newValue: .idle)
     }
@@ -80,9 +91,14 @@ class FilterListManager: NSObject {
         for (key, _) in checksums {
             group.enter()
             DispatchQueue.global(qos: .background).async(group: group) {
-                let filterListUrl = Constants.AssetsUrls.thirdPartyFolder?.appendingPathComponent("\(key).json")
+                var updatedKey = key
+                if (SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
+                    updatedKey = key + "_v2";
+                }
+                let filterListUrl = Constants.AssetsUrls.thirdPartyFolder?.appendingPathComponent("\(updatedKey).json")
                 let filterList: [[String: Any]]? = FileManager.default.readJsonFile(at: filterListUrl)
-                SwiftyBeaver.debug("[FILTER_LIST_MANAGER]: \(key) (\(filterList?.count ?? 0) Rules)")
+                SwiftyBeaver.debug("[FILTER_LIST_MANAGER]: \(updatedKey) (\(filterList?.count ?? 0) Rules)")
+                // save the original key, not the "updatedKey", we don't need to expose that version of the content blocking rules to UserPrefs
                 UserPref.setFilterList(identifier: key, rulesCount: filterList?.count ?? 0)
                 group.leave()
             }
@@ -114,6 +130,8 @@ class FilterListManager: NSObject {
             if isEnabled(filterListId: key) {
                 if (key == Constants.ADS_FILTER_LIST_ID || key == Constants.ALLOW_ADS_FILTER_LIST_ID) && (exceptionRulesId == Constants.ALLOW_ADS_FILTER_LIST_ID || exceptionRulesId == Constants.ADS_FILTER_LIST_ID) {
                     continue
+                } else if (key == Constants.ADS_FILTER_LIST_ID && isEnabled(filterListId: Constants.ALLOW_ADS_FILTER_LIST_ID)) {
+                    continue
                 }
                 count = count + UserPref.filterListRulesCount(identifier: key)
             }
@@ -128,24 +146,33 @@ class FilterListManager: NSObject {
         }
         
         let mainMenuSourcePath = Bundle.main.path(forResource: "sections", ofType: "plist")
-        let sectionArray = NSArray(contentsOfFile: mainMenuSourcePath!) as? [[String:AnyObject]]
-        for section in sectionArray! {
-            if let itemsArray = section["section"] as? [[String: AnyObject]] {
-                // Process and prepare section items
-                for item in itemsArray {
-                    if let filterList = item["filterlist"] as? [[String: AnyObject]] {
-                        for filterListItem in filterList {
-                            let id = filterListItem["id"] as? String
-                            let active = (filterListItem["active"] as? Bool ?? true)
-                            let rulesCount = filterListItem["rules_count"] as? Int
-                            
-                            saveState(item: Item(id: id, name: "", active: active, rulesCount: rulesCount))
+        if let unwrappedMainMenuPath = mainMenuSourcePath, let sectionArray = NSArray(contentsOfFile: unwrappedMainMenuPath) as? [[String:AnyObject]] {
+            for section in sectionArray {
+                if let itemsArray = section["section"] as? [[String: AnyObject]] {
+                    // Process and prepare section items
+                    for item in itemsArray {
+                        if let filterList = item["filterlist"] as? [[String: AnyObject]] {
+                            for filterListItem in filterList {
+                                let id = filterListItem["id"] as? String
+                                var active = (filterListItem["active"] as? Bool ?? true)
+                                let rulesCount = filterListItem["rules_count"] as? Int
+                                let upgrade = filterListItem["upgrade"] as? Bool ?? false
+                                if upgrade && !UserPref.isUpgradeUnlocked() {
+                                    active = false
+                                }
+                                
+                                // Only save state if the filter list isn't
+                                if !UserPref.isFilterListSaved(identifier: id ?? "") {
+                                    saveState(item: Item(id: id, name: "", active: active, rulesCount: rulesCount))
+                                }
+                            }
                         }
                     }
                 }
             }
+            AssetsManager.shared.requestMerge()
+            UserPref.setBundledAssetsDefaultStateUpdated(true)
         }
-        AssetsManager.shared.requestMerge()
-        UserPref.setBundledAssetsDefaultStateUpdated(true)
     }
+    
 }

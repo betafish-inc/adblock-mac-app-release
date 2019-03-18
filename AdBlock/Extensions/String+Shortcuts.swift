@@ -33,7 +33,7 @@ extension String {
         }
     }
     
-    func toAttributed(highlight: String, with attributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
+    func toAttributed(highlight: String, with attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         let ranges = rangesOfString(s: highlight)
         let attributedString = NSMutableAttributedString(string:self)
         for range in ranges {
@@ -43,7 +43,7 @@ extension String {
         return attributedString
     }
     
-    func toAttributed(highlight: [String], with attributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
+    func toAttributed(highlight: [String], with attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         let mutableAttributedString = NSMutableAttributedString(string:self)
         
         for s in highlight {
@@ -87,14 +87,14 @@ extension NSMutableAttributedString {
     }
 
     @discardableResult func bold(_ text: String, _ size:CGFloat) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: NSFont(name: "LucidaGrande-Bold", size: size) as Any]
+        let attrs: [NSAttributedString.Key: Any] = [.font: NSFont(name: "LucidaGrande-Bold", size: size) as Any]
         let boldString = NSMutableAttributedString(string:text, attributes: attrs)
         append(boldString)
         return self
     }
 
     @discardableResult func normal(_ text: String, _ size:CGFloat) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: NSFont(name: "LucidaGrande", size: size) as Any]
+        let attrs: [NSAttributedString.Key: Any] = [.font: NSFont(name: "LucidaGrande", size: size) as Any]
         let normal = NSAttributedString(string: text, attributes: attrs)
         append(normal)
 

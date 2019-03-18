@@ -16,6 +16,7 @@
  */
 
 import Cocoa
+import SwiftyBeaver
 
 extension Notification.Name {
     static let killLauncher = Notification.Name("com.betafish.adblock-mac.killLauncher")
@@ -23,18 +24,30 @@ extension Notification.Name {
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        if (Constants.DEBUG_LOG_ENABLED) {
+            let console = ConsoleDestination()
+            console.format = "$DHH:mm:ss$d $L: $M"
+            console.minLevel = .verbose
+            SwiftyBeaver.addDestination(console)
+            if let assetPath = Constants.AssetsUrls.assetsFolder?.path, FileManager.default.fileExists(atPath: assetPath) {
+                FileManager.default.createDirectoryIfNotExists(Constants.AssetsUrls.logFolder, withIntermediateDirectories: true)
+                let file = FileDestination()
+                file.logFileURL = Constants.AssetsUrls.logFileURL
+                SwiftyBeaver.addDestination(file)
+            }
+        }
         let mainAppIdentifier = "com.betafish.adblock-mac"
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == mainAppIdentifier }.isEmpty
-        
+
         if !isRunning {
             DistributedNotificationCenter.default().addObserver(self,
                                                                 selector: #selector(self.terminate),
                                                                 name: .killLauncher,
                                                                 object: mainAppIdentifier)
-            
+
             let path = Bundle.main.bundlePath as NSString
             var components = path.pathComponents
             components.removeLast()
@@ -42,16 +55,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             components.removeLast()
             components.append("MacOS")
             components.append("AdBlock") //main app name
-            
             let newPath = NSString.path(withComponents: components)
-            
-            NSWorkspace.shared.launchApplication(newPath)
+            let returnVal = NSWorkspace.shared.launchApplication(newPath)
+            SwiftyBeaver.debug("started main app hidden return value: \(returnVal.description)")
         } else {
             self.terminate()
         }
     }
     
     @objc func terminate() {
+        SwiftyBeaver.debug("launcher app terminate")
         NSApp.terminate(nil)
     }
 }

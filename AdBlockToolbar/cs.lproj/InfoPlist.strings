@@ -5,7 +5,7 @@
 "CFBundleName" = "AdBlock";
 
 /* (No Comment) */
-"NSExtension.SFSafariToolbarItem.Label" = "AdBlock Safari ikona";
+"Toolbar Button Label for Identifier: AdBlockSafariIcon" = "AdBlock Safari ikona";
 
 /* Copyright (human-readable) */
 "NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Všechna práva vyhrazena.";

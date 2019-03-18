@@ -5,5 +5,6 @@
   Created by Rachel Weissman-Hohler on 7/3/18.
   Copyright © 2018 BetaFish. All rights reserved.
 */
-NSHumanReadableCopyright = "Copyright © 2018 BetaFish LLC. All rights reserved.";
+NSHumanReadableCopyright = "Copyright © 2018 BetaFish, Inc. All rights reserved.";
 NSHumanReadableDescription = "Block annoying, intrusive, and malicious ads and pop-ups. Enjoy surfing the web again.";
+CFBundleDisplayName = "AdBlock Engine";

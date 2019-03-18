@@ -34,7 +34,7 @@ class LogServerManager: NSObject {
         payload["event"] =  msg
         payload["payload"] = userInfoPayload
         SwiftyBeaver.debug("[LOG_REQUEST]: \(url.absoluteString) => Para: \(payload)")
-        Alamofire.request(url, method: .post, parameters: payload)
+        Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncoding.default)
             .validate()
             .response { (response) in
                 guard let data = response.data else {
@@ -52,7 +52,7 @@ class LogServerManager: NSObject {
         payload["u"] = PingDataManager.shared.generateOrGetUserId()
         payload["ov"] = ProcessInfo().operatingSystemVersionString // operating system version
         payload["f"] = "MA" // flavor
-        payload["l"] = locale.languageCode!   // user language
+        payload["l"] = locale.languageCode ?? locale.identifier   // user language
         
         return payload
     }

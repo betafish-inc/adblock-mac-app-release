@@ -5,10 +5,14 @@
   Created by Rachel Weissman-Hohler on 7/2/18.
   Copyright © 2018 BetaFish. All rights reserved.
 */
-/* Allow ads menu item */
-"allow.ads.site.menu" = "Allow ads on this site";
-/* Block ads menu item */
-"block.ads.site.menu" = "Block ads on this site";
+/* Allow ads menu item for Safari 10 users*/
+"allow.ads.site.menu.safari.10" = "Allow ads on this site";
+/* Allow ads menu item for Safari 11+ users*/
+"allow.ads.site.menu.safari.11" = "Allow ads on this page";
+/* Block ads menu item Safari 10 users*/
+"block.ads.site.menu.safari.10" = "Block ads on this site";
+/* Block ads menu item Safari 11+ users*/
+"block.ads.site.menu.safari.11" = "Block ads on this page";
 /* Pause menu item */
 "pause.menu" = "Pause";
 /* Resume menu item */
@@ -29,3 +33,5 @@
 "feature.under.development" = "This feature is under development.";
 /* OK button */
 "ok.button" = "OK";
+/* Upgrade button */
+"upgrade.button" = "UPGRADE";

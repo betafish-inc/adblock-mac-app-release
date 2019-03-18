@@ -1,29 +1,35 @@
 /* Alert title */
-"alert.title" = "警告";
+"alert.title" = "警报";
 
-/* Allow ads menu item */
-"allow.ads.site.menu" = "允许此网站显示广告";
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "允许此网站上的广告";
 
-/* Block ads menu item */
-"block.ads.site.menu" = "屏蔽此网站上的广告";
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "允许此页面上的广告";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "拦截此网站上的广告";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "拦截此页面上的广告";
 
 /* Error title */
 "error.title" = "错误";
 
 /* Extension disabled alert */
-"extension.disabled.alert" = "AdBlock扩展被禁用";
+"extension.disabled.alert" = "AdBlock 扩展已禁用";
 
 /* Feature under development alert */
-"feature.under.development" = "此项功能正在开发中。";
+"feature.under.development" = "此功能正在开发中。";
 
 /* Help and Feedback menu item */
-"help.feedback.menu" = "帮助 & 反馈";
+"help.feedback.menu" = "帮助和反馈";
 
 /* Invalid url alert */
-"invalid.url.alert" = "无效的url";
+"invalid.url.alert" = "无效的 URL";
 
 /* OK button */
-"ok.button" = "确定";
+"ok.button" = "好";
 
 /* Pause menu item */
 "pause.menu" = "暂停";
@@ -33,4 +39,7 @@
 
 /* Settings menu item */
 "settings.menu" = "设置";
+
+/* Upgrade button */
+"upgrade.button" = "升级";
 

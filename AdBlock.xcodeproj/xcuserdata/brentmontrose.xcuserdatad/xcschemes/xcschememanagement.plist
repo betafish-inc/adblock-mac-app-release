@@ -4,29 +4,44 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AdBlock-Extension.xcscheme</key>
+		<key>AdBlock-Extension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>AdBlock-Safari-Menu.xcscheme</key>
+		<key>AdBlock-Safari-Menu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>AdBlock.xcscheme</key>
+		<key>AdBlock-Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>AdBlock.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>LauncherApp.xcscheme</key>
+		<key>LauncherApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>12</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>37AB11C521012681008DAA64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2201A8B20AD8E2D00F7CFB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E278F4052089D93A00573C9B</key>
 		<dict>
 			<key>primary</key>

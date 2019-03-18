@@ -103,10 +103,14 @@ class FilterListTableCellView: NSTableCellView {
     private func assetsManagerStatusChageObserver(data: (AssetsManagerStatus, AssetsManagerStatus)) {
         switch data.1 {
         case .mergeRulesStarted:
-            checkbox.isEnabled = false
+            DispatchQueue.main.async {
+                self.checkbox.isEnabled = false
+            }
         case .mergeRulesCompleted, .mergeRulesError:
-            checkbox.isEnabled = true
-            currentFilterListId = nil
+            DispatchQueue.main.async {
+                self.checkbox.isEnabled = true
+                self.currentFilterListId = nil
+            }
         default:
             SwiftyBeaver.debug("idle")
         }

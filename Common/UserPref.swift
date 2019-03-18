@@ -66,6 +66,17 @@ struct UserPref {
         let seconds:Int = readPreferenceValue(of: "LAST_UPDATED_DATE") ?? Int(Date().timeIntervalSince1970.rounded())
         return Date(timeIntervalSince1970: TimeInterval(seconds))
     }
+
+    static func setFilterListModifiedDate(identifier: String, date: Date) {
+        writePreferenceValue { (pref) in
+            pref?["\(identifier)_updated"] = Int(date.timeIntervalSince1970.rounded())
+        }
+    }
+
+    static func filterListModifiedDate(identifier: String) -> Date {
+        let seconds:Int = readPreferenceValue(of: "\(identifier)_updated") ?? 0
+        return Date(timeIntervalSince1970: TimeInterval(seconds))
+    }
     
     static func setBundledAssetsDefaultStateUpdated(_ stateUpdated: Bool) {
         writePreferenceValue { (pref) in
@@ -114,6 +125,11 @@ struct UserPref {
         writePreferenceValue { (pref) in
             pref?[identifier] = rulesCount
         }
+    }
+    
+    static func isFilterListSaved(identifier: String) -> Bool {
+        let isSaved: Bool? = readPreferenceValue(of: "\(identifier)_active")
+        return isSaved != nil
     }
     
     static func filterListRulesCount(identifier: String) -> Int {
@@ -201,5 +217,41 @@ struct UserPref {
         writePreferenceValue { (pref) in
             pref?["LAST_PING_DATE"] = Int(date.timeIntervalSince1970.rounded())
         }
+    }
+
+    static func setConvertedRulesToIfTop(_ value: Bool) {
+        writePreferenceValue { (pref) in
+            pref?["CONVERTED_RULES_TO_IF_TOP"] = value
+        }
+    }
+
+    static func isConvertedRulesToIfTop() -> Bool {
+        return readPreferenceValue(of: "CONVERTED_RULES_TO_IF_TOP") ?? false
+    }
+
+    static func setPurchasedProductId(_ productId: String) {
+        writePreferenceValue { (pref) in
+            pref?["PURCHASED_PRODUCT_ID"] = productId
+        }
+    }
+
+    static func removePurchasedProductId() {
+        writePreferenceValue { (pref) in
+            pref?["PURCHASED_PRODUCT_ID"] = nil
+        }
+    }
+
+    static func purchasedProductId() -> String? {
+        return readPreferenceValue(of: "PURCHASED_PRODUCT_ID")
+    }
+    
+    static func setUpgradeUnlocked(_ value: Bool) {
+        writePreferenceValue { (pref) in
+            pref?["WHITELIST_WIZARD_UNLOCKED"] = value
+        }
+    }
+    
+    static func isUpgradeUnlocked() -> Bool {
+        return readPreferenceValue(of: "WHITELIST_WIZARD_UNLOCKED") ?? false
     }
 }

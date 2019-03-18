@@ -1,0 +1,16 @@
+/* (No Comment) */
+"CFBundleDisplayName" = "Движок AdBlock";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Авторское право © 2018 BetaFish, Inc. Все права защищены.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Заблокируйте навязчивую, раздражающую рекламу, а также забудьте о всплывающих окнах и мошеннических объявлениях. Интернет, приятный глазу.";
+

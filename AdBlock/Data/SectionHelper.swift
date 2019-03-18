@@ -16,21 +16,22 @@
  */
 
 import Foundation
+import SwiftyBeaver
 
 class SectionHelper {
     
     static func defaultSections() -> [Section]? {
-        let mainMenuSourcePath = Bundle.main.path(forResource: "sections", ofType: "plist")
-        let sectionArray = NSArray(contentsOfFile: mainMenuSourcePath!) as? [[String:AnyObject]]
+        guard let mainMenuSourcePath = Bundle.main.path(forResource: "sections", ofType: "plist") else { return nil }
+        guard let sectionArray = NSArray(contentsOfFile: mainMenuSourcePath) as? [[String:AnyObject]] else { return nil }
         var sections: [Section]? = []
-        for section in sectionArray! {
+        for section in sectionArray {
             let header = section["header"] as? String
             var items: [Item]? = []
             if let itemsArray = section["section"] as? [[String: AnyObject]] {
                 // Process and prepare section items
                 for item in itemsArray {
                     let id = item["id"] as? String
-                    let name = item["name"] as? String
+                    let name = item["name"] as? String ?? ""
                     let active = (item["active"] as? Bool ?? true)
                     
                     // Process and prepare filter list
@@ -44,16 +45,33 @@ class SectionHelper {
                             guard status ?? 0 == 1 else {
                                 continue
                             }
+                            
+                            let upgrade = filterListItem["upgrade"] as? Bool ?? false
+                            if upgrade && !UserPref.isUpgradeUnlocked() {
+                                continue
+                            }
+                            
                             let id = filterListItem["id"] as? String
-                            let name = filterListItem["name"] as? String
+                            if id == Constants.CUSTOM_FILTER_LIST_ID || id == Constants.ADVANCE_FILTER_LIST_ID {
+                                continue
+                            }
+                            
+                            let name = filterListItem["name"] as? String ?? ""
                             let active = (filterListItem["active"] as? Bool ?? true)
-                            let desc = filterListItem["desc"] as? String
+                            let desc = filterListItem["desc"] as? String ?? ""
                             let rulesCount = filterListItem["rules_count"] as? Int
-                            filterListItems?.append(Item(id: id, name: NSLocalizedString(name!, comment: ""), active: active, desc: NSLocalizedString(desc!, comment: ""), rulesCount: rulesCount))
+                            filterListItems?.append(Item(id: id, name: NSLocalizedString(name, comment: ""), active: active, desc: NSLocalizedString(desc, comment: ""), rulesCount: rulesCount))
                         }
                     }
-                    
-                    items?.append(Item(id: id, name: NSLocalizedString(name!, comment: ""), active: active, filterListItems: filterListItems))
+
+                    if id == Item.UPGRADE_ITEM_ID && (UserPref.purchasedProductId() != nil) {
+                        items?.append(Item(id: id, name: NSLocalizedString("product.account.title", comment: ""), active: active, filterListItems: filterListItems))
+                    } else {
+                        items?.append(Item(id: id, name: NSLocalizedString(name, comment: ""), active: active, filterListItems: filterListItems))
+                    }
+                    if let image = item["image"] as? String {
+                        items?.last?.image = image
+                    }
                 }
             }
             sections?.append(Section(header: header, items: items))

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF68BC9AD722A4A828C93F1FFA731586"
+               BlueprintIdentifier = "44CE36AA6A155EB00403E7D6B1B5092C"
                BuildableName = "Pods_AdBlock_Safari_Menu.framework"
                BlueprintName = "Pods-AdBlock-Safari-Menu"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF68BC9AD722A4A828C93F1FFA731586"
+            BlueprintIdentifier = "44CE36AA6A155EB00403E7D6B1B5092C"
             BuildableName = "Pods_AdBlock_Safari_Menu.framework"
             BlueprintName = "Pods-AdBlock-Safari-Menu"
             ReferencedContainer = "container:Pods.xcodeproj">

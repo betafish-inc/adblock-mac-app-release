@@ -28,13 +28,12 @@ class Button: NSButton
         {
             let style = NSMutableParagraphStyle()
             style.alignment = .center
-            
             let attributes =
                 [
                     .foregroundColor: textColor,
                     .font: font,
                     .paragraphStyle: style
-                    ] as [NSAttributedStringKey : Any]
+                    ] as [NSAttributedString.Key : Any]
             
             if title.isEmpty {
                 title = " "
@@ -44,9 +43,9 @@ class Button: NSButton
         }
     }
     
-    func getAttributes() -> [NSAttributedStringKey : Any]?
+    func getAttributes() -> [NSAttributedString.Key : Any]?
     {
-        let buttonAttributes: [NSAttributedStringKey : Any]?
+        let buttonAttributes: [NSAttributedString.Key : Any]?
         if self.attributedTitle.string.isEmpty {
             buttonAttributes = nil
         } else {

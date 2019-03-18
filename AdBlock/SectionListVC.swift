@@ -38,7 +38,7 @@ class SectionListVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.wantsLayer = true
-        
+        SwiftyBeaver.debug("[SectionListVC] viewDidLoad")
         shouldSelectWhitelistRef = Constants.shouldSelectWhitelist.didChange.addHandler(target: self, handler: SectionListVC.whitelistMenuClickObserve)
         whitelistManagerStatusObserverRef = WhitelistManager.shared.status.didChange.addHandler(target: self, handler: SectionListVC.whitelistManagerStatusChageObserver)
         
@@ -50,6 +50,9 @@ class SectionListVC: NSViewController {
         } else {
             selectSectionItemById("DEFAULT_FILTERLIST")
         }
+        if #available(OSX 10.14, *) {
+            collectionView.appearance =  NSAppearance(named: .aqua)
+        }
     }
     
     func whitelistMenuClickObserve(data: (Bool, Bool)) {
@@ -57,6 +60,12 @@ class SectionListVC: NSViewController {
             selectSectionItemById(Item.WHITELIST_ITEM_ID)
             Constants.shouldSelectWhitelist.set(newValue: false)
         }
+    }
+
+    func reload() {
+        sections = SectionHelper.defaultSections()
+        selectSectionItemById(Item.UPGRADE_ITEM_ID)
+        self.collectionView.reloadData()
     }
     
     deinit {
@@ -84,7 +93,9 @@ class SectionListVC: NSViewController {
         let item = section?.items?[itemIndex]
         DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
             self.collectionView.selectItems(at: indexPathSet, scrollPosition: .top)
-            self.delegate?.sectionListVC(self, didSelectSectionItem: item!)
+            if let unwrappedItem = item {
+                self.delegate?.sectionListVC(self, didSelectSectionItem: unwrappedItem)
+            }
         })
         
     }
@@ -156,8 +167,9 @@ extension SectionListVC : NSCollectionViewDataSource {
 extension SectionListVC : NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView,
                         didSelectItemsAt indexPaths: Set<IndexPath>) {
-        guard let item = self.sections?[indexPaths.first!.section].items?[indexPaths.first!.item] else { return }
-        self.delegate?.sectionListVC(self, didSelectSectionItem: item)
+        if let indexPathSection = indexPaths.first?.section, let indexPathItem = indexPaths.first?.item, let item = self.sections?[indexPathSection].items?[indexPathItem] {
+            self.delegate?.sectionListVC(self, didSelectSectionItem: item)
+        }
     }
 }
 

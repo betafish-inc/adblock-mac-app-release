@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "AdBlock 소개";
+
+/* About menu item */
+"about.menu" = "소개";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "비침입형 광고 허용";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock이 광고를 차단하기 시작했습니다.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Safari에서 AdBlock 확장 프로그램을 켜시기 바랍니다.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Safari에서 AdBlock 켜기";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock 확장 프로그램";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock 도움말";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock이 광고를 차단하지 않고 있습니다";
+
+/* Alert title */
+"alert.title" = "알림";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "향상된 광고 차단";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "모두 앞으로 가져오기";
+
+/* Custom title */
+"custom.title" = "사용자 지정";
+
+/* Title for debug info window */
+"debug.info.title" = "디버그 정보";
+
+/* Debug info menu item */
+"debug.menu" = "디버그 정보 보기";
+
+/* EasyList title */
+"easylist.title" = "성가신 광고와 팝업 차단하기";
+
+/* Feature under development alert */
+"feature.under.development" = "이 기능은 현재 개발 중입니다.";
+
+/* Filter Lists error */
+"filter.lists.error" = "필터 목록 업데이트에 실패했습니다. 나중에 다시 시도해주세요.";
+
+/* Filter Lists header */
+"filter.lists.header" = "방문하는 웹 사이트에서 AdBlock이 무엇을 보이거나 숨길지 결정합니다.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "마지막 업데이트";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "규칙";
+
+/* Filter Lists success */
+"filter.lists.success" = "필터 목록이 성공적으로 업데이트되었습니다";
+
+/* Filter Lists title */
+"filter.lists.title" = "필터 목록";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "너무 많은 필터가 적용되고 있습니다. Safari는 5만 개의 규칙까지만 적용할 수 있습니다.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "필터 목록 업데이트";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "필터 목록 업데이트 중...";
+
+/* Help menu item */
+"help.menu" = "도움말";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Safari에서 %1$@ 아이콘을 클릭하여 AdBlock을 일시 중지하거나 원하는 사이트에서 광고를 허용하도록 지정할 수 있습니다";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "'이 사이트에서 광고 허용'을 선택하여 AdBlock을 끌 수 있습니다. 광고 수익을 통하여 좋아하는 웹 사이트들을 지원해보세요.";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "도움말 및 의견 링크에서 자주 묻는 질문 및 답변을 확인할 수 있습니다. 직접 %1$@이메일%2$@을 보내주셔도 됩니다.";
+
+/* Info Text button */
+"info.text.button" = "웹 탐색 시작!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "%1$@저희 사이트%2$@에서 자주 묻는 질문 답변을 확인해보거나 의견을 남길 수 있습니다.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock 준비 완료!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock이 켜져 있으며 이제 광고를 차단합니다. 여기 몇 가지 안내 사항이 있습니다.";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Safari에서 AdBlock 설정";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Safari 확장 프로그램 설정에서 <b>AdBlock 엔진</b>과 <b>AdBlock 아이콘</b>을 켜십시오";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "예, AdBlock을 최신 버전으로 유지합니다!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "이 단계 건너뛰기";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "저희는 광고를 더욱 효율적으로 차단하기 위해 목록을 지속해서 업데이트하고 있습니다.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "최대한 많은 광고를 차단할 수 있도록 AdBlock을 최신 버전으로 유지하고 싶으시다면 아래 버튼을 클릭하세요.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(참고: 이 설정을 켠 경우 AdBlock을 끄더라도 백그라운드에서 향상 실행됩니다. Mac 메뉴 바에 있는 AdBlock 메뉴에서 '로그인 후 AdBlock을 자동으로 시작' 항목을 통해 이 설정을 언제든지 켜고 끌 수 있습니다.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "업그레이드 상품을 불러올 수 없었습니다. 나중에 다시 시도해주세요.";
+
+/* Load product failed title */
+"load.product.fail.title" = "업그레이드 불러오기 실패";
+
+/* Minimize menu item */
+"minimize.menu" = "최소화";
+
+/* New Window menu item */
+"new.window.menu" = "새 윈도우";
+
+/* OK button */
+"ok.button" = "확인";
+
+/* Preferences menu item */
+"preferences.menu" = "환경설정...";
+
+/* Upgrade title */
+"product.account.title" = "내 계정";
+
+/* Upgrade title */
+"product.upgrade.title" = "업그레이드";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "구매가 취소되었습니다.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "구매 취소";
+
+/* Date of purchase */
+"purchase.date" = "구매 일자: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "구매 중 오류: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "구매 오류";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "오류로 인해 구매가 취소되었습니다: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "구매 실패";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "유효하지 않은 업그레이드 구매 식별자입니다. 고객지원(https://help.getadblock.com)에 문의하시기 바랍니다.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "유효하지 않은 업그레이드 구매 식별자";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "업그레이드가 복구되었습니다. 감사합니다!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "업그레이드 복원됨";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "업그레이드를 구매해주셔서 감사합니다!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "업그레이드 완료";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "AdBlock 종료";
+
+/* Quit menu item */
+"quit.menu" = "종료";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "구매 영수증을 읽는 중 오류가 발생했습니다. 나중에 다시 시도해주세요.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "구매 영수증 오류";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "업그레이드 복원 중 오류가 발생했습니다. 나중에 다시 시도해주세요.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "업그레이드 복원 실패";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "일치하는 업그레이드 구매 기록을 찾을 수 없습니다.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "업그레이드 오류";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "업그레이드 영수증을 읽는 중 오류가 발생했습니다. 나중에 다시 시도해주세요.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "업그레이드 영수증 오류";
+
+/* Services menu item */
+"services.menu" = "서비스";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "로그인 후 AdBlock을 자동으로 시작";
+
+/* Upgrade already text */
+"upgrade.already" = "이미 업그레이드 하셨나요?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "여기를 클릭하세요";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "AdBlock의 추가 기능을 사용해보세요.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "내가 즐겨찾는 사이트를 개인 허용목록에 추가하여 지원할 수 있습니다";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "내가 가장 좋아하는 사이트의 광고 허용";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "더욱 똑똑하고 강력해진 광고 차단을 경험해보세요";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "향상된 광고 차단";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "궁금증이 있거나 도움이 필요할 경우 당일 내로 답변을 받을 수 있습니다";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "VIP 지원";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "더 많은 기능이 곧 출시 예정입니다!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "지금 업그레이드";
+
+/* Upgrade price prefix */
+"upgrade.only" = "단돈 %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "이 계정은 인 앱 구매를 진행할 수 없습니다.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "업그레이드 사용 불가";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "업그레이드는 Safari 11 또는 그 이후 버전에서 사용 가능합니다. Safari를 업데이트한 후 다시 시도해주세요.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "업그레이드 사용 불가";
+
+/* Whitelist menu item */
+"whitelist.menu" = "허용목록";
+
+/* Whitelisting button */
+"whitelisting.button" = "웹사이트 추가";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "광고를 허용한 웹사이트가 없습니다";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "유효한 URL을 입력하세요.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.example.com/index.html 또는 subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "예: http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "특정한 웹사이트에서 광고 차단을 해제하려면 아래 '허용목록'에 추가하시기 바랍니다.";
+
+/* Whitelisting title */
+"whitelisting.title" = "광고 허용";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "이 URL은 이미 목록에 있습니다.";
+
+/* Window menu item */
+"window.menu" = "윈도우";
+

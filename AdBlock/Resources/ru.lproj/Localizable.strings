@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "Об AdBlock";
+
+/* About menu item */
+"about.menu" = "О продукте";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Разрешить ненавязчивую рекламу";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock снова блокирует рекламу.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Пожалуйста, включите расширение AdBlock в Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Включить AdBlock в Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Расширение AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "Помощь с AdBlock";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock больше не блокирует рекламу";
+
+/* Alert title */
+"alert.title" = "Оповещение";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Продвинутая блокировка рекламы";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Все на передний план";
+
+/* Custom title */
+"custom.title" = "Персонализация";
+
+/* Title for debug info window */
+"debug.info.title" = "Сведения об отладке";
+
+/* Debug info menu item */
+"debug.menu" = "Просмотреть сведения об отладке";
+
+/* EasyList title */
+"easylist.title" = "Блокировать раздражающую рекламу и всплывающие окна";
+
+/* Feature under development alert */
+"feature.under.development" = "Эта функция находится в стадии разработки.";
+
+/* Filter Lists error */
+"filter.lists.error" = "При обновлении списка фильтров произошла ошибка. Пожалуйста, повторите попытку позже.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Вы сами решаете, какую рекламу AdBlock будет скрывать, а какую — показывать.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Последнее обновление";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Исключения";
+
+/* Filter Lists success */
+"filter.lists.success" = "Списки фильтров были успешно обновлены";
+
+/* Filter Lists title */
+"filter.lists.title" = "Списки фильтров";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Активировано слишком много фильтров. В Safari не может использоваться более 50000 исключений.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Обновить списки фильтров";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Обновление списка фильтров...";
+
+/* Help menu item */
+"help.menu" = "Помощь";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Нажмите на ￼%1$@ в Safari, чтобы приостановить работу AdBlock или разрешить показывать рекламу на некоторых сайтах";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Выберите пункт «Разрешить рекламу на этом сайте», чтобы отключить AdBlock на сайтах, владельцев которых вы хотите поддержать";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Откройте ссылку «Помощь и обратная связь», чтобы ознакомиться с часто задаваемыми вопросами или %1$@ отправить нам письмо по электронной почте%2$@";
+
+/* Info Text button */
+"info.text.button" = "В чистый Интернет!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Посетите %1$@наш сайт%2$@, чтобы получить ответы на часто задаваемые вопросы или отправить нам свой отзыв.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock готов к работе!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock запущен и успешно скрывает нежелательные объявления. А вот что можно сделать:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Настроить AdBlock в Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Пожалуйста, активируйте <b>движок AdBlock</b> и <b>значок AdBlock Safari</b> в настройках расширений Safari";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Да, я хочу актуальную версию!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Пропустить шаг";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Мы постоянно обновляем списки, которые мы используем для блокирования рекламы.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "Для того, чтобы скрывать как можно больше рекламы, нажмите на кнопку ниже — так ваша версия AdBlock всегда будет актуальной.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Важно: при выборе этой опции AdBlock продолжит работу даже после выхода из приложения. Вы можете изменить это в любой момент, сняв галочку с варианта \"Запускать AdBlock при входе\" в меню AdBlock, расположенном в строке меню Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "Не удалось загрузить обновления продукта. Пожалуйста, повторите попытку позже.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Обновление не выполнено";
+
+/* Minimize menu item */
+"minimize.menu" = "Свернуть";
+
+/* New Window menu item */
+"new.window.menu" = "Новое окно";
+
+/* OK button */
+"ok.button" = "ОК";
+
+/* Preferences menu item */
+"preferences.menu" = "Предпочтения...";
+
+/* Upgrade title */
+"product.account.title" = "Мой аккаунт";
+
+/* Upgrade title */
+"product.upgrade.title" = "Обновить";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "Покупка была отменена.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Покупка отменена";
+
+/* Date of purchase */
+"purchase.date" = "Дата покупки: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Ошибка покупки: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Ошибка покупки";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Покупка не удалась из-за ошибки: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Покупка не удалась";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "Недопустимый идентификатор покупки обновления. Обратитесь в службу поддержки на https://help.getadblock.com.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Недопустимый идентификатор покупки обновления";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Обновление восстановлено. Спасибо!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Обновление восстановлено";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Благодарим вас за приобретение обновления!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Обновление завершено";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Выход из AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Выход";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Чек не удалось прочитать. Пожалуйста, повторите попытку.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Ошибка чека покупки";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Ошибка восстановления покупки. Пожалуйста, повторите попытку позже.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Обновление не удалось восстановить";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Факт покупки обновления не был установлен.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Ошибка обновления";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Чек не удалось прочитать. Пожалуйста, повторите попытку.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Ошибка чека обновления";
+
+/* Services menu item */
+"services.menu" = "Службы";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Запускать AdBlock при входе в систему";
+
+/* Upgrade already text */
+"upgrade.already" = "Уже обновились?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Щелкните";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "С этими бонусными функциями AdBlock будет работать еще лучше.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Поддержите любимый сайт, добавив его в личный белый список";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Разрешайте рекламу на любимых сайтах";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Получить доступ к еще более умной и мощной блокировке рекламы";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Продвинутая блокировка рекламы";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Мы ответим на ваш вопрос в тот же день, когда он возникнет";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "ВИП-поддержка";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Еще больше новых функций — скоро!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Обновиться сейчас";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Всего %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Внутренние покупки недоступны для этого аккаунта.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Обновление недоступно";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "Обновление доступно только для Safari 11 и более поздних версий. Пожалуйста, обновите Safari и повторите попытку.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Обновление недоступно";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Белый список";
+
+/* Whitelisting button */
+"whitelisting.button" = "Добавить сайт";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Вы пока не добавили ни одного сайта в белый список";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Пожалуйста, введите корректный URL-адрес.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.example.com/index.html ИЛИ subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "например, http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "Здесь вы можете добавить сайты в белый список, чтобы разрешить им показывать вам рекламу:";
+
+/* Whitelisting title */
+"whitelisting.title" = "Белый список";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Этот URL-адрес уже был внесен.";
+
+/* Window menu item */
+"window.menu" = "Окно";
+

@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "關於 AdBlock";
+
+/* About menu item */
+"about.menu" = "關於";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "允許部分非侵入廣告";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock 重新開始阻擋廣告。";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "請在 Safari 中啟用 AdBlock 延伸功能。";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "在 Safari 中啟用 AdBlock";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock 分機";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock 説明";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock 不會再阻擋任何廣告";
+
+/* Alert title */
+"alert.title" = "提醒";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "進階廣告攔截";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "全部提到最上層";
+
+/* Custom title */
+"custom.title" = "自訂";
+
+/* Title for debug info window */
+"debug.info.title" = "偵錯資訊";
+
+/* Debug info menu item */
+"debug.menu" = "查看偵錯資訊";
+
+/* EasyList title */
+"easylist.title" = "阻擋惱人的廣告、彈出視窗";
+
+/* Feature under development alert */
+"feature.under.development" = "此功能正在開發中。";
+
+/* Filter Lists error */
+"filter.lists.error" = "更新過濾名單時出現錯誤。請稍後再試。";
+
+/* Filter Lists header */
+"filter.lists.header" = "決定 AdBlock 在您拜訪的網站上顯示或隱藏哪些內容。";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "上次更新時間";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "規則";
+
+/* Filter Lists success */
+"filter.lists.success" = "您的過濾名單已成功更新";
+
+/* Filter Lists title */
+"filter.lists.title" = "過濾名單";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "啟用了過多的過濾清單，Safari 不支援 50000 條以上的規則。";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "更新過濾名單";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "正在更新過濾名單……";
+
+/* Help menu item */
+"help.menu" = "説明";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "在 Safari 中按下 %1$@ 圖示可暫停 AdBlock 或在您喜歡的網站上顯示廣告。";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "選擇「允許這個網站上的廣告」，可在您想要顯示廣告或支持該網站擁有者的網站上關閉 AdBlock ";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "使用「說明與回饋」連結可以查看常見問題或向我們傳送電子郵件";
+
+/* Info Text button */
+"info.text.button" = "開始瀏覽網路！";
+
+/* Info Text contact text */
+"info.text.contact.text" = "請到%1$@我們的網站%2$@查看常見問題解答，或提供我們回饋意見。";
+
+/* Info Text header */
+"info.text.header" = "AdBlock 準備好了！";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock 正在為您攔截廣告。以下是您可以做的幾件事：";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "在 Safari 中設定 AdBlock";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "請在您的 Safari 延伸功能偏好設定中啟用 <b>AdBlock 引擎</b> 與 <b>AdBlock 圖示</b>";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "是，請維持 AdBlock 在最新狀態！";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "跳過此步驟";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "我們不斷更新用來有效阻擋廣告的清單。";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "為了確保我們盡可能多攔截廣告，請按下方按鈕以將 AdBlock 維持在最新狀態。";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "（注意：如果選擇此選項，即使在退出應用程式後 AdBlock 還是會繼續在背景執行。您可以隨時到 Mac 選單列中的 AdBlock 選單切換「登入時啟動 AdBlock」選項來更改此設定。）";
+
+/* Load product failed message */
+"load.product.fail.message" = "升級產品載入失敗。請稍後再試。";
+
+/* Load product failed title */
+"load.product.fail.title" = "升級載入失敗";
+
+/* Minimize menu item */
+"minimize.menu" = "最小化";
+
+/* New Window menu item */
+"new.window.menu" = "新視窗";
+
+/* OK button */
+"ok.button" = "確定";
+
+/* Preferences menu item */
+"preferences.menu" = "偏好設定……";
+
+/* Upgrade title */
+"product.account.title" = "我的帳戶";
+
+/* Upgrade title */
+"product.upgrade.title" = "升級";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "購買已取消。";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "已取消購買";
+
+/* Date of purchase */
+"purchase.date" = "購買日期： ";
+
+/* Purchase error message text */
+"purchase.error.message" = "購買時出現錯誤： ";
+
+/* Purchase error title text */
+"purchase.error.title" = "購買錯誤";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "由於出現錯誤，購買失敗： ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "購買失敗";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "升級購買識別碼無效。請到 https://help.getadblock.com 聯絡支援團隊尋求協助。";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "升級購買識別碼無效";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "您的升級已復原。謝謝！";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "升級已復原";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "感謝您購買升級！";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "升級完成";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "離開 AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "退出";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "讀取購買收據時出現錯誤。請稍後再試。";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "購買收據錯誤";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "還原升級時出現錯誤。請稍後再試。";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "升級還原失敗";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "找不到符合的升級購買。";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "升級錯誤";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "讀取升級收據時出現錯誤。請稍後再試。";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "升級收據錯誤";
+
+/* Services menu item */
+"services.menu" = "服務";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "在登入時啟動 AdBlock";
+
+/* Upgrade already text */
+"upgrade.already" = "已經升級了？";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "請按此處";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "進一步享受 AdBlock 的額外功能。";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "將您喜愛的網站新增到個人的白名單中，支持這些網站";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "允許在您喜愛的網站上投放廣告";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "使用更有智慧、更強大的廣告攔截";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "進階廣告攔截";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "在您提出問題的當天獲得回覆";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "享受 VIP 支援";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "更多功能即將推出！";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "立即升級";
+
+/* Upgrade price prefix */
+"upgrade.only" = "只要 %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "此帳戶未啟用應用程式內購買。";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "無法使用升級";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "升級僅適用 Safari 11 以上的版本。請更新 Safari，然後再試一次。";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "無法使用升級";
+
+/* Whitelist menu item */
+"whitelist.menu" = "白名單";
+
+/* Whitelisting button */
+"whitelisting.button" = "新增網站";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "白名單中沒有網站";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "請輸入有效的網址。";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.example.com/index.html 或 subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "如：http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "要在特定網站關閉廣告過濾功能，您可以將網站新增到這裡的「白名單」：";
+
+/* Whitelisting title */
+"whitelisting.title" = "白名單";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "此網址已存在。";
+
+/* Window menu item */
+"window.menu" = "視窗";
+

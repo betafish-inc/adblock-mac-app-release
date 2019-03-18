@@ -1,0 +1,8 @@
+*.bak
+*.pem
+/dist/build/
+/tmp/
+xcuserdata/
+AdBlock.xcodeproj/project.xcworkspace/xcuserdata
+Pods/
+.DS_Store

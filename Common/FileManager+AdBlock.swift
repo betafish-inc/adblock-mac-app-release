@@ -22,10 +22,16 @@ import SwiftyBeaver
 extension FileManager {    
     
     func readJsonFile<T>(at fileUrl: URL?) -> T? {
-        guard fileExists(atPath: (fileUrl?.path)!) else { return nil }
+        guard let unwrappedURL = fileUrl else {
+            SwiftyBeaver.error("[ERR_READ_JSON]: url is nil")
+            return nil
+        }
         do {
-            let fileData = try Data(contentsOf: fileUrl!)
-            return try JSONSerialization.jsonObject(with: fileData, options: .allowFragments) as? T
+            if let fileData = contents(atPath: unwrappedURL.path) {
+                return try JSONSerialization.jsonObject(with: fileData, options: .allowFragments) as? T
+            } else {
+                return nil
+            }
         } catch {
             SwiftyBeaver.error("[ERR_READ_JSON]: \(error), Path: \(fileUrl?.path ?? "NULL")")
             return nil
@@ -35,7 +41,7 @@ extension FileManager {
     func writeJsonFile<T>(at fileUrl: URL?, with data: T?) {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: data ?? [], options: JSONSerialization.WritingOptions.prettyPrinted)
-            if FileManager.default.createFile(atPath: (fileUrl?.path)!, contents: jsonData, attributes: nil) {
+            if FileManager.default.createFile(atPath: (fileUrl?.path ?? ""), contents: jsonData, attributes: nil) {
             } else {
                 SwiftyBeaver.error("[ERR_WRITE_JSON_FILE]: Unable to write to file: \(fileUrl?.path ?? "NULL")")
             }
@@ -51,13 +57,19 @@ extension FileManager {
     ///   - url: directory url
     ///   - hasIntermediateDir: true to create intermediate directories, false otherwise
     public func createDirectoryIfNotExists(_ url: URL?, withIntermediateDirectories hasIntermediateDir: Bool) {
-        if !FileManager.default.fileExists(atPath: (url?.path)!) {
+        guard let unwrappedURL = url else {
+            SwiftyBeaver.error("[ERR_CREATE_DIRECTORY] url is nil")
+            return
+        }
+        if !FileManager.default.fileExists(atPath: unwrappedURL.path) {
             do {
-                try FileManager.default.createDirectory(at: url!, withIntermediateDirectories: hasIntermediateDir, attributes: nil)
-                SwiftyBeaver.debug("[CREATE_DIRECTORY]: \(url?.path ?? "NULL")")
+                try FileManager.default.createDirectory(at: unwrappedURL, withIntermediateDirectories: hasIntermediateDir, attributes: nil)
+                SwiftyBeaver.debug("[CREATE_DIRECTORY]: \(unwrappedURL.path)")
             } catch {
-                SwiftyBeaver.error("[ERR_CREATE_DIRECTORY]: \(error), Path:\(url?.path ?? "NULL")")
+                SwiftyBeaver.error("[ERR_CREATE_DIRECTORY]: \(error), Path:\(unwrappedURL.path)")
             }
         }
     }
 }
+
+

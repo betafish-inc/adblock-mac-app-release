@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "提醒";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "允許此網站上的廣告";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "允許這個頁面上的廣告";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "阻擋此網站上的廣告";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "阻擋這個頁面上的廣告";
+
+/* Error title */
+"error.title" = "錯誤";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "AdBlock 擴充功能已禁用";
+
+/* Feature under development alert */
+"feature.under.development" = "此功能正在開發中。";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "説明與回饋";
+
+/* Invalid url alert */
+"invalid.url.alert" = "無效的網址";
+
+/* OK button */
+"ok.button" = "確定";
+
+/* Pause menu item */
+"pause.menu" = "暫停";
+
+/* Resume menu item */
+"resume.menu" = "恢復";
+
+/* Settings menu item */
+"settings.menu" = "設定";
+
+/* Upgrade button */
+"upgrade.button" = "升級";
+

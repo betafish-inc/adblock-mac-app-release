@@ -61,33 +61,41 @@ class WhitelistTableCellView: NSTableCellView {
     }
     
     func showProgress(_ show: Bool) {
-        checkbox.isHidden = show
-        progressView.isHidden = !show
-        if show {
-            progressView.startAnimation(nil)
-        } else {
-            progressView.stopAnimation(nil)
+        DispatchQueue.main.async {
+            self.checkbox.isHidden = show
+            self.progressView.isHidden = !show
+            if show {
+                self.progressView.startAnimation(nil)
+            } else {
+                self.progressView.stopAnimation(nil)
+            }
         }
     }
     
     func showDeleteProgress(_ show: Bool) {
-        deleteProgressView.isHidden = !show
-        btnDelete.isHidden = show
-        if show {
-            deleteProgressView.startAnimation(nil)
-        } else {
-            deleteProgressView.stopAnimation(nil)
+        DispatchQueue.main.async {
+            self.deleteProgressView.isHidden = !show
+            self.btnDelete.isHidden = show
+            if show {
+                self.deleteProgressView.startAnimation(nil)
+            } else {
+                self.deleteProgressView.stopAnimation(nil)
+            }
         }
     }
     
     private func assetsManagerStatusChageObserver(data: (AssetsManagerStatus, AssetsManagerStatus)) {
         switch data.1 {
         case .mergeRulesStarted:
-            checkbox.isEnabled = false
-            btnDelete.isEnabled = false
+            DispatchQueue.main.async {
+                self.checkbox.isEnabled = false
+                self.btnDelete.isEnabled = false
+            }
         case .mergeRulesCompleted, .mergeRulesError:
-            checkbox.isEnabled = true
-            btnDelete.isEnabled = true
+            DispatchQueue.main.async {
+                self.checkbox.isEnabled = true
+                self.btnDelete.isEnabled = true
+            }
         default:
             SwiftyBeaver.debug("idle")
         }

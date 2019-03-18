@@ -1,0 +1,19 @@
+/* (No Comment) */
+"CFBundleDisplayName" = "AdBlock-ikon";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Upphovsrätt © 2018 BetaFish, Inc. Alla rättigheter förbehållna.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Denna ikon låter dig kontrollera AdBlock-appen från Safari, inklusive förmågan att pausa och tillåta annonser på sidor som du gillar.";
+
+/* (No Comment) */
+"Toolbar Button Label for Identifier: AdBlockSafariIcon" = "AdBlock-ikon";
+

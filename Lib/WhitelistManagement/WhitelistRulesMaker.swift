@@ -17,6 +17,8 @@
 
 import Cocoa
 import Punycode_Cocoa
+import SafariServices
+import SwiftyBeaver
 
 class WhitelistRulesMaker: NSObject {
     
@@ -24,7 +26,16 @@ class WhitelistRulesMaker: NSObject {
     private override init() {}
     
     func makeRule(for url: String) -> [String: Any] {
-        let trigger = prepareTriggerV2(url)
+        var trigger: [String: Any]
+        if (SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
+            if (url.hasPrefix("https://") || url.hasPrefix("http://")) {
+                trigger = prepareTriggerV2(url)
+            } else {
+              trigger = prepareDomainOnlyTriggerV2(url)
+            }
+        } else {
+            trigger = prepareTriggerV1(url)
+        }
         let action = prepareAction(url)
         let rule = ["trigger": trigger, "action": action]
         return rule
@@ -59,7 +70,17 @@ class WhitelistRulesMaker: NSObject {
         return trigger
     }
     
+    private func prepareDomainOnlyTriggerV2(_ url: String) -> [String: Any] {
+        let trigger: [String: Any] = ["url-filter": ".*", "if-top-url": ["^https?://(?:[^/?#]*?\(url))"]]
+        return trigger
+    }
+
     private func prepareTriggerV2(_ url: String) -> [String: Any] {
+        let trigger: [String: Any] = ["url-filter": ".*", "if-top-url": ["^\(url)"]]
+        return trigger
+    }
+
+    private func prepareTriggerV1(_ url: String) -> [String: Any] {
         let trigger: [String: Any] = ["url-filter": ".*", "if-domain": ["*\(url)"]]
         return trigger
     }

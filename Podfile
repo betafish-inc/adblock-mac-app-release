@@ -11,6 +11,9 @@ target 'AdBlock' do
     pod 'Alamofire', '~> 4.7'
     pod 'SwiftyBeaver'
     pod 'Punycode-Cocoa'
+    pod 'SwiftyStoreKit', '~> 0.13.0'
+    pod 'GRKOpenSSLFramework'
+    pod 'SwiftSoup'
 end
 
 target 'AdBlock-Extension' do
@@ -20,6 +23,7 @@ target 'AdBlock-Extension' do
     pod 'Alamofire', '~> 4.7'
     pod 'SwiftyBeaver'
     pod 'Punycode-Cocoa'
+    pod 'SwiftSoup'
 end
 
 target 'AdBlock-Safari-Menu' do
@@ -29,4 +33,31 @@ target 'AdBlock-Safari-Menu' do
     pod 'Alamofire', '~> 4.7'
     pod 'SwiftyBeaver'
     pod 'Punycode-Cocoa'
+    pod 'SwiftyStoreKit', '~> 0.13.0'
+    pod 'SwiftSoup'
+end
+
+target 'AdBlock-Tests' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+
+    pod 'Alamofire', '~> 4.7'
+    pod 'SwiftyBeaver'
+    pod 'Punycode-Cocoa'
+    pod 'SwiftSoup'
+end
+
+target 'LauncherApp' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+
+    pod 'SwiftyBeaver'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
+        end
+    end
 end

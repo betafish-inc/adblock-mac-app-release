@@ -36,6 +36,7 @@ class IntroVC: NSViewController {
     
     @IBOutlet weak var introTwoTextFieldOne: NSTextField!
     @IBOutlet weak var introTwoTextFieldTwo: NSTextField!
+    @IBOutlet weak var introTwoTextFieldThree: NSTextField!
     @IBOutlet weak var introTwoButton: Button!
     @IBOutlet weak var introTwoSkip: NSButton!
     
@@ -46,10 +47,15 @@ class IntroVC: NSViewController {
     var delegate: IntroVCDelegate? = nil
 
     var skipLaunchAppOnUserLoginStep: Bool = false
+
+    /// True if the application is in dark mode, and false otherwise
+    var inDarkMode: Bool {
+        let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+        return mode == "Dark"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SwiftyBeaver.debug("viewDidiLoad")
         checkExtensionIsEnabled()
         
         introOneTextField.isEditable = false
@@ -58,6 +64,7 @@ class IntroVC: NSViewController {
         
         introTwoTextFieldOne.stringValue = NSLocalizedString("intro.screen.2.text.1", comment: "")
         introTwoTextFieldTwo.stringValue = NSLocalizedString("intro.screen.2.text.2", comment: "")
+        introTwoTextFieldThree.stringValue = NSLocalizedString("intro.screen.2.text.3", comment: "")
         introTwoButton.attributedTitle = NSAttributedString(string: NSLocalizedString("intro.screen.2.button", comment: ""), attributes: introTwoButton.getAttributes())
         introTwoSkip.title = NSLocalizedString("intro.screen.2.skip", comment: "")
         
@@ -65,6 +72,19 @@ class IntroVC: NSViewController {
         buildIntroInfoPage()
         infoHeaderTextField.stringValue = NSLocalizedString("info.text.header", comment: "")
         infoTextButton.attributedTitle = NSAttributedString(string: NSLocalizedString("info.text.button", comment: ""), attributes: infoTextButton.getAttributes())
+
+        if #available(OSX 10.14, *) {
+            introOneTextField.appearance =  NSAppearance(named: .aqua)
+            introOneButton.appearance = NSAppearance(named: .aqua)
+            introTwoTextFieldOne.appearance = NSAppearance(named: .aqua)
+            introTwoTextFieldTwo.appearance = NSAppearance(named: .aqua)
+            introTwoTextFieldThree.appearance = NSAppearance(named: .aqua)
+            introTwoButton.appearance =  NSAppearance(named: .aqua)
+            introTwoSkip.appearance =  NSAppearance(named: .aqua)
+            infoHeaderTextField.appearance = NSAppearance(named: .aqua)
+            infoTextView.appearance = NSAppearance(named: .aqua)
+            infoTextButton.appearance = NSAppearance(named: .aqua)
+        }
     }
     
     private func buildIntroInfoPage() {
@@ -85,7 +105,7 @@ class IntroVC: NSViewController {
         
         let logoUrl = Bundle.main.url(forResource: "AdBlockIcon3", withExtension: "png")
         let logoString = logoUrl?.absoluteString
-        let logoHTML = "<img src='" + logoString! + "'>"
+        let logoHTML = "<img src='" + (logoString ?? "") + "'>"
         let bulletOne = bulletSymbol.convertHTML(size: 24)
         bulletOne.append(String(format: NSLocalizedString("info.text.bullet.1", comment: ""), logoHTML).convertHTML(size: 14))
         bulletOne.addAttributes([.paragraphStyle: ourParagraphStyle], range: NSMakeRange(0, bulletOne.length))
@@ -110,7 +130,6 @@ class IntroVC: NSViewController {
     }
     
     private func checkExtensionIsEnabled() {
-        SwiftyBeaver.debug("checkextensionenabled self.skipLaunchAppOnUserLoginStep: \(self.skipLaunchAppOnUserLoginStep)")
         var safariContentBlockerEnabled = false
         var safariMenuEnabled = false
         let group = DispatchGroup()
@@ -171,7 +190,6 @@ class IntroVC: NSViewController {
             
             if !UserPref.isLaunchAppOnUserLogin() && !self.skipLaunchAppOnUserLoginStep {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    SwiftyBeaver.debug("check extension is enabled or not....")
                     self.checkExtensionIsEnabled()
                 })
             }
@@ -187,7 +205,6 @@ class IntroVC: NSViewController {
     }*/
     
     @IBAction func launchClick(_ sender: NSButton) {
-        SwiftyBeaver.debug("launchClick")
         SFSafariApplication.showPreferencesForExtension(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXTENSION_IDENTIFIER, completionHandler: { (error) in
             if let error = error {
                 SwiftyBeaver.error("safari extension preference error: \(error.localizedDescription)")
@@ -198,8 +215,7 @@ class IntroVC: NSViewController {
     }
     
     @IBAction func startAppOnLoginClicked(_ sender: NSButton) {
-        LogServerManager.shared.recordMessageWithUserID(msg: "startAppOnLoginClicked")
-        SwiftyBeaver.debug("start app on login click")
+        LogServerManager.shared.recordMessageWithUserID(msg: "start_app_on_login_clicked")
         let launcherAppId = "com.betafish.adblock-mac.LauncherApp"
         if !SMLoginItemSetEnabled(launcherAppId as CFString, sender.state == .on ? true : false) {
             SwiftyBeaver.error("Error in setting launcher app")
@@ -213,14 +229,12 @@ class IntroVC: NSViewController {
         /*if !UserPref.isDonationPageShown() {
             self.openDonationPageInSafari()
         }*/
-        SwiftyBeaver.debug("start surfing")
         self.delegate?.startApp()
         NSWorkspace.shared.launchApplication("Safari")
     }
 
     @IBAction func skipThisStepClicked(_ sender: NSButton) {
-        LogServerManager.shared.recordMessageWithUserID(msg: "skipThisStepClicked")
-        SwiftyBeaver.debug("skipThisStepClicked")
+        LogServerManager.shared.recordMessageWithUserID(msg: "skip_this_step_clicked")
         self.skipLaunchAppOnUserLoginStep = true
          UserPref.setLaunchAppOnUserLogin(false)
     }

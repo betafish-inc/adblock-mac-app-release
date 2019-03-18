@@ -19,7 +19,7 @@
 import Foundation
 
 public struct Constants {
-    
+
     static let DEBUG_LOG_ENABLED = false
 
     /// Group Identifier
@@ -36,6 +36,11 @@ public struct Constants {
     static let FILTER_LISTS_UPDATE_SCHEDULE_INTERVAL_IN_SECONDS = 60 * 60 * 24 * 4 // 4 DAYS
     static let ALLOW_ADS_FILTER_LIST_ID = "easylist_exceptionrules_content_blocker"
     static let ADS_FILTER_LIST_ID = "easylist_content_blocker"
+    static let ANTI_CIRCUMVENTION_LIST_ID = "anti_circumvention"
+    static let CUSTOM_FILTER_LIST_ID = "custom"
+    static let ADVANCE_FILTER_LIST_ID = "advance_filters"
+    
+    static let ANTICIRCUMVENTION_NOT_FIRST_RUN = "anti_circumvention_not_first_run"
     
     static let BUNDLED_FILTER_LISTS_UPDATE_DATE: Date = {
        var components = Calendar.current.dateComponents([], from: Date())
@@ -47,6 +52,7 @@ public struct Constants {
         components.setValue(00, for: .second)
         return Calendar.current.date(from: components)!
     }()
+    static let DATE_STRING_A_WHILE_AGO = "Sat, 1 Jan 2000 12:00:00 GMT"
     
     struct AssetsUrls {
         private init() {}
@@ -54,6 +60,8 @@ public struct Constants {
         static let assetsFolder: URL? = AssetsUrls.groupStorageFolder?.appendingPathComponent("Assets")
         static let thirdPartyFolder: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("ThirdParty")
         static let contentBlockerFolder: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("ContentBlocker")
+        static let logFolder: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("Log")
+        static let logFileURL: URL? = AssetsUrls.logFolder?.appendingPathComponent("log_file.txt")
         
         static let assetsChecksumUrl: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("assets_checksum.json")
         static let mergedRulesUrl: URL? = AssetsUrls.contentBlockerFolder?.appendingPathComponent("merged_rules.json")
@@ -62,6 +70,8 @@ public struct Constants {
         static let whitelistUrl: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("whitelist.json")
         
         static let userPreferenceUrl: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("user_preference.json")
+        
+        static let filterListTextUrl: URL? = AssetsUrls.assetsFolder?.appendingPathComponent("filter_lists_text.txt")
     }
     
     /// Observable flag to select whitelist in section when user click on `whitelist` from app menu bar
@@ -74,4 +84,15 @@ public struct Constants {
     public enum AdBlockError: Error {
         case invalidApiUrl
     }
+
+    public struct Api {
+        static let validateReceipt = "/validate-receipt"
+    }
+
+    // In-app purchase product ids
+    public enum Donate: String {
+        case onetimePurchaseAt499 = "com.betafish.adblock.mac.adblock.gold"
+    }
+
+
 }

@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "AdBlockについて";
+
+/* About menu item */
+"about.menu" = "概要";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "一部の非侵入型広告を許可する";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlockが再び広告をブロックしています。";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "SafariのAdBlock拡張機能を有効にして下さい。";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Safariの AdBlock を有効にします。";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock拡張機能";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlockヘルプ";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlockは広告をブロックしていません";
+
+/* Alert title */
+"alert.title" = "警告";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "高度な広告ブロック";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "すべて手前に表示する";
+
+/* Custom title */
+"custom.title" = "カスタム";
+
+/* Title for debug info window */
+"debug.info.title" = "デバッグ情報";
+
+/* Debug info menu item */
+"debug.menu" = "デバッグ情報を見る";
+
+/* EasyList title */
+"easylist.title" = "迷惑な広告、ポップアップをブロックします。";
+
+/* Feature under development alert */
+"feature.under.development" = "この機能は開発中です。";
+
+/* Filter Lists error */
+"filter.lists.error" = "フィルタリストの更新エラーです。後でもう一度お試し下さい。";
+
+/* Filter Lists header */
+"filter.lists.header" = "アクセスしたWebサイトでAdBlockが表示/非表示するものを設定しましょう。";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "最終更新日";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "ルール";
+
+/* Filter Lists success */
+"filter.lists.success" = "フィルタリストが無事に更新されました";
+
+/* Filter Lists title */
+"filter.lists.title" = "フィルタリスト";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "有効なフィルタが多すぎます。Safariで使用できるルールは50.000個までです。";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "フィルタリストを更新";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "フィルタリストを更新しています...";
+
+/* Help menu item */
+"help.menu" = "ヘルプ";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "AdBlockを一時停止またはお気に入りのサイトの広告を許可するには、Safariの%1$@アイコンをクリックします";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "広告を表示したいサイトや管理人のサポートを受けたい場合、「このサイトの広告を許可する」を選択してAdBlockをオフにして下さい。";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "「ヘルプとフィードバック」のリンクからよくある質問を確認したり、弊社へ%1$@お問い合わせ%2$@頂けます";
+
+/* Info Text button */
+"info.text.button" = "ウェブサーフィンを始めましょう!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "よくある質問への回答を得るかフィードバックを送って頂くには、%1$@弊社のサイト%2$@にアクセスしてください。";
+
+/* Info Text header */
+"info.text.header" = "AdBlockの準備が完了しました!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlockが有効です。広告をあなたに代わってブロックします。機能は以下の通りです:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "SafariでAdBlockを設定します";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Safariの拡張機能設定から<b>AdBlock Engine</b>と<b>AdBlock Icon</b>を有効にして下さい。";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "AdBlockを最新の状態に保つ！";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "この手順をスキップ";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "効果的に広告をブロックするためリストを頻繁に更新します。";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "できるだけ多くの広告をブロックするには、下記をクリックしてAdBlockを最新の状態にしてください。";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "（注意: このオプションを選択すると、AdBlockはアプリ終了後もバックグラウンドで動作し続けます。この設定はいつでも、Macメニューバー上のAdBlockメニューで「ログイン時にAdBlockを起動する」を切り替えることで変更できます。）";
+
+/* Load product failed message */
+"load.product.fail.message" = "アップグレード製品の読み込みに失敗しました。時間をおいてから再度お試しください。";
+
+/* Load product failed title */
+"load.product.fail.title" = "アップグレードのロードに失敗しました";
+
+/* Minimize menu item */
+"minimize.menu" = "縮小";
+
+/* New Window menu item */
+"new.window.menu" = "新しいウィンドウ";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "設定...";
+
+/* Upgrade title */
+"product.account.title" = "マイアカウント";
+
+/* Upgrade title */
+"product.upgrade.title" = "アップグレード";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "購入処理がキャンセルされました。";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "購入のキャンセル";
+
+/* Date of purchase */
+"purchase.date" = "購入日: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "購入中のエラー: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "購入エラー";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "エラーが発生したため購入処理が完了しませんでした: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "購入を完了できませんでした";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "アップグレード購入識別データが無効です。https://help.getadblock.comに移動しサポートまでお問い合わせ下さい。";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "アップグレード購入識別データが無効です。";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "アップグレードが復元されました。 ありがとうございます！";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "アップグレードの復元";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "アップグレードをご購入いただきありがとうございます！";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "アップグレードが完了しました";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "AdBlockを終了する";
+
+/* Quit menu item */
+"quit.menu" = "終了";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "領収書の読み取り中にエラーが発生しました。時間をおいてから再度お試しください。";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "領収書のエラー";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "アップグレードの復元中にエラーが発生しました。時間をおいてから再度お試しください。";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "アップグレード復元に失敗しました";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "一致するアップグレードの購入が見つかりませんでした。";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "アップグレードエラー";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "アップグレードの領収書の読み込みに失敗しました。時間をおいてから再度お試し下さい。";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "アップグレード領収書エラー";
+
+/* Services menu item */
+"services.menu" = "サービス";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "ログイン時にAdBlockを起動する";
+
+/* Upgrade already text */
+"upgrade.already" = "既にアップグレードしましたか？";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "こちらをクリック";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "これらのボーナス機能を使ってAdBlockをさらに活用しましょう。";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "個人ホワイトリストに追加することで、お気に入りのウェブサイトを支援できます。";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "お気に入りのページの広告を許可";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "よりスマートで強力な広告ブロックを手に入れよう";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "高度な広告ブロック";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "質問や問題が生じた際、同日にお問い合わせへの回答が得れます";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "VIPサポートを楽しもう";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "さらなる機能も導入予定！";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "今すぐアップグレード";
+
+/* Upgrade price prefix */
+"upgrade.only" = "%1$@のみ";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "このアカウントではアプリ内購入が有効になっていません。";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "アップグレードが利用できません";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "アップグレードはSafari 11以降でのみ利用可能です。Safariを更新してから再度お試し下さい。";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "アップグレードが利用できません";
+
+/* Whitelist menu item */
+"whitelist.menu" = "ホワイトリスト";
+
+/* Whitelisting button */
+"whitelisting.button" = "Webサイトを追加";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "ホワイトリストに登録されたサイトはありません";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "正しいURLを入力してください。";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.example.com/index.html または subdomain.example.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "例: http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "特定のサイトでの広告のブロックを無効にしたい場合、ホワイトリストに追加してください:";
+
+/* Whitelisting title */
+"whitelisting.title" = "ホワイトリスト";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "このURLは既に存在します。";
+
+/* Window menu item */
+"window.menu" = "ウィンドウ";
+

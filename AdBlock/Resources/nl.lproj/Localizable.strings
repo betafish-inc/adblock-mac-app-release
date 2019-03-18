@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "Info over AdBlock";
+
+/* About menu item */
+"about.menu" = "Info";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Bepaalde niet-opdringerige advertenties toestaan";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock blokkeert opnieuw advertenties.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Schakel de AdBlock-extensies in Safari in.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "AdBlock inschakelen in Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "AdBlock-extensie";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "AdBlock Help";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock blokkeert geen advertenties meer";
+
+/* Alert title */
+"alert.title" = "Alarm";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Geavanceerde advertentieblokkering";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Alles naar voren";
+
+/* Custom title */
+"custom.title" = "Aangepast";
+
+/* Title for debug info window */
+"debug.info.title" = "Debuginfo";
+
+/* Debug info menu item */
+"debug.menu" = "Debuginfo weergeven";
+
+/* EasyList title */
+"easylist.title" = "Irritante advertenties en pop-ups blokkeren";
+
+/* Feature under development alert */
+"feature.under.development" = "Deze functie is nog in ontwikkeling.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Fout bij het bijwerken van de filterlijsten. Probeer het later opnieuw.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Bepaal wat AdBlock moet weergeven of verbergen op de websites die je bezoekt.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Laats bijgewerkt";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Regels";
+
+/* Filter Lists success */
+"filter.lists.success" = "Je filterlijsten zijn bijgewerkt";
+
+/* Filter Lists title */
+"filter.lists.title" = "Filterlijsten";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Teveel filters ingeschakeld: Safari kan niet meer dan 50.000 regels gebruiken.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Filterlijsten bijwerken";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "De filterlijsten bijwerken...";
+
+/* Help menu item */
+"help.menu" = "Help";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Klik op het symbooltje ￼%1$@ in Safari om AdBlock te blokkeren of om advertenties toe te staan op sites die je leuk vindt";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Selecteer 'Advertenties toestaan op deze site' om AdBlock uit te schakelen op sites waarop je advertenties wel wilt weergeven of waarvan je de eigenaar wilt steunen";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Gebruik de Help en feedback-link om veelgestelde vragen te bekijken of om ons %1$@een e-mail te sturen%2$@";
+
+/* Info Text button */
+"info.text.button" = "Ga surfen op internet!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Bezoek %1$@onze site%2$@ voor antwoorden op veelgestelde vragen of om ons feedback te sturen.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock is klaar voor de start!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock staat aan en blokkeert advertenties voor je. Hier zijn een paar dingen die je kunt doen:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "AdBlock instellen in Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Activeer de <b>AdBlock-engine</b> en het <b>symbooltje voor AdBlock</b> via de voorkeuren voor Safari-extensies";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Ja, houd AdBlock up-to-date!";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Deze stap overslaan";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "We werken de lijsten die we gebruiken om advertenties effectief te blokkeren doorlopend bij.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "Om ervoor te zorgen dat we zo veel mogelijk advertenties blokkeren, klik je hieronder om AdBlock up-to-date te houden.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Opmerking: als je deze optie selecteert, blijft AdBlock op de achtergrond draaien, ook nadat je de app hebt afgesloten. Je kunt deze instelling op elk gewenst moment wijzigen door de optie 'AdBlock opstarten bij aanmelden' aan of uit te zetten in het AdBlock-menu in de menubalk van de Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "Upgrade kon niet worden geladen. Probeer het later nog eens.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Upgrade laden mislukt";
+
+/* Minimize menu item */
+"minimize.menu" = "Minimaliseren";
+
+/* New Window menu item */
+"new.window.menu" = "Nieuw venster";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "Voorkeuren...";
+
+/* Upgrade title */
+"product.account.title" = "Mijn account";
+
+/* Upgrade title */
+"product.upgrade.title" = "Upgrade";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "De aankoop is geannuleerd.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Aankoop geannuleerd";
+
+/* Date of purchase */
+"purchase.date" = "Aankoopdatum: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Fout bij aankoop: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Aankoopfout";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Aankoop mislukt vanwege fout: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Aankoop mislukt";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "De identificatie van de upgrade-aankoop is ongeldig. Neem contact op met support op https://help.getadblock.com voor hulp.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Identificatie upgrade-aankoop ongeldig";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Je upgrade is hersteld. Bedankt!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Upgrade hersteld";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Bedankt voor je aankoop van de upgrade!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Upgrade voltooid";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "AdBlock afsluiten";
+
+/* Quit menu item */
+"quit.menu" = "Afsluiten";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Fout bij lezen ontvangst aankoop. Probeer het later opnieuw.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Fout met ontvangst aankoop";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Fout bij herstellen upgrade. Probeer het later opnieuw.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Herstellen upgrade mislukt";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Geen overeenkomende upgrade-aankoop gevonden.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Upgradefout";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Fout bij lezen ontvangst upgrade. Probeer het later opnieuw.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Fout bij ontvangst upgrade";
+
+/* Services menu item */
+"services.menu" = "Services";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "AdBlock opstarten bij aanmelden";
+
+/* Upgrade already text */
+"upgrade.already" = "Al geüpgraded?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Klik hier";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Haal meer uit AdBlock met deze bonusfuncties.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Ondersteun je favoriete websites door ze toe te voegen aan je persoonlijke whitelist";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Sta advertenties toe op sites die je leuk vindt";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Je krijgt toegang tot nog slimmere en krachtigere opties om advertenties te blokkeren";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Geavanceerde advertentieblokkering";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Je krijgt nog dezelfde dag antwoord als je een vraag stelt of een kwestie aankaart";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Geniet van VIP-ondersteuning";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Binnenkort meer functies!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Upgrade nu";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Slechts %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "In-app aankopen zijn niet ingeschakeld op deze account.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Upgrade niet beschikbaar";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "De upgrade is alleen beschikbaar voor Safari 11 en later. Update Safari en probeer het opnieuw.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Upgrade niet beschikbaar";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Whitelist";
+
+/* Whitelisting button */
+"whitelisting.button" = "Website toevoegen";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Er zijn geen gewhiteliste sites";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Voer een geldige url in.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.voorbeeld.com/index.html OF subdomein.voorbeeld.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "bijv. http://www.voorbeeld.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "Om het blokkeren van advertenties op bepaalde sites uit te schakelen, kun je ze hier toevoegen aan je 'whitelist':";
+
+/* Whitelisting title */
+"whitelisting.title" = "Whitelisting";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Deze url bestaat al.";
+
+/* Window menu item */
+"window.menu" = "Venster";
+

@@ -17,6 +17,7 @@
 
 import Cocoa
 import SwiftyBeaver
+import SafariServices
 
 enum AssetMergerStatus {
     case idle
@@ -74,6 +75,7 @@ class AssetMerger: NSObject {
         }
         
         let mergedFilterListGroup = DispatchGroup()
+        let mergeLock = NSLock()
         var mergedFilterLists: [[String: Any]]? = []
         
         for (key, _) in checksums {
@@ -81,16 +83,23 @@ class AssetMerger: NSObject {
                 if key == Constants.ADS_FILTER_LIST_ID && FilterListManager.shared.isEnabled(filterListId: Constants.ALLOW_ADS_FILTER_LIST_ID) {
                     continue
                 }
+                if key == Constants.CUSTOM_FILTER_LIST_ID || key == Constants.ANTI_CIRCUMVENTION_LIST_ID || key == Constants.ADVANCE_FILTER_LIST_ID {
+                    continue
+                }
                 
                 mergedFilterListGroup.enter()
                 DispatchQueue.global(qos: .background).async(group: mergedFilterListGroup) {
-                    let filterListUrl = Constants.AssetsUrls.thirdPartyFolder?.appendingPathComponent("\(key).json")
+                    var updatedKey = key
+                    if (SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
+                        updatedKey = key + "_v2";
+                    }
+                    let filterListUrl = Constants.AssetsUrls.thirdPartyFolder?.appendingPathComponent("\(updatedKey).json")
                     
                     // Copy bundled version of third party assets, if not found in group
-                    if !FileManager.default.fileExists(atPath: (filterListUrl?.path)!) {
-                        if let bundledFilterListPath = Bundle.main.path(forResource: key, ofType: "json", inDirectory: "Assets/ThirdParty") {
+                    if let filterListPath = filterListUrl?.path, !FileManager.default.fileExists(atPath: filterListPath) {
+                        if let bundledFilterListPath = Bundle.main.path(forResource: updatedKey, ofType: "json", inDirectory: "Assets/ThirdParty") {
                             do {
-                                try FileManager.default.copyItem(atPath: bundledFilterListPath, toPath: (filterListUrl?.path)!)
+                                try FileManager.default.copyItem(atPath: bundledFilterListPath, toPath: filterListPath)
                             } catch {
                                 SwiftyBeaver.error("error: \(error)")
                             }
@@ -98,8 +107,10 @@ class AssetMerger: NSObject {
                     }
                     
                     let filterList: [[String: Any]]? = FileManager.default.readJsonFile(at: filterListUrl)
+                    mergeLock.lock()
                     mergedFilterLists = (mergedFilterLists ?? []) + (filterList ?? [])
-                    SwiftyBeaver.debug("[ASSET_MERGER]: Merged \(key), Rules: \(filterList?.count ?? 0), Total Rules: \(mergedFilterLists?.count ?? 0)")
+                    mergeLock.unlock()
+                    SwiftyBeaver.debug("[ASSET_MERGER]: Merged \(updatedKey), Rules: \(filterList?.count ?? 0), Total Rules: \(mergedFilterLists?.count ?? 0)")
                     mergedFilterListGroup.leave()
                 }
             }
@@ -120,7 +131,7 @@ class AssetMerger: NSObject {
             
             do {
                 let mergedRulesData = try JSONSerialization.data(withJSONObject: mergedFilterLists ?? [], options: JSONSerialization.WritingOptions.prettyPrinted)
-                if FileManager.default.createFile(atPath: (mergedRulesUrl?.path)!, contents: mergedRulesData, attributes: nil) {
+                if let mergedRulesPath = mergedRulesUrl?.path, FileManager.default.createFile(atPath: mergedRulesPath, contents: mergedRulesData, attributes: nil) {
                     SwiftyBeaver.debug("[UPDATE_MERGED_RULES]: Successful")
                 } else {
                     SwiftyBeaver.error("[ERR_UPDATE_MERGED_RULES]: Unable to write merged rules to file")

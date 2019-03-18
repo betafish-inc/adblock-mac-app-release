@@ -1,0 +1,300 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "À propos d'AdBlock";
+
+/* About menu item */
+"about.menu" = "À propos";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Autoriser les publicités discrètes";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock bloque de nouveau les publicités.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Veuillez activer les extensions AdBlock dans Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Activer AdBlock dans Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Extension AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "Aide AdBlock";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock ne bloque plus aucune publicité";
+
+/* Alert title */
+"alert.title" = "Alerte";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Blocage avancé";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Tout placer devant";
+
+/* Custom title */
+"custom.title" = "Personnalisé";
+
+/* Title for debug info window */
+"debug.info.title" = "Infos de débogage";
+
+/* Debug info menu item */
+"debug.menu" = "Afficher les infos de débogage";
+
+/* EasyList title */
+"easylist.title" = "Bloquer les publicités gênantes et pop-ups";
+
+/* Feature under development alert */
+"feature.under.development" = "Cette fonctionnalité est en cours de développement.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Erreur de mise à jour des listes de filtres. Veuillez réessayer ultérieurement.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Paramétrez ce qu'affiche ou cache AdBlock sur les sites web que vous visitez.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Dernière mise à jour";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Règles";
+
+/* Filter Lists success */
+"filter.lists.success" = "Vos listes de filtres ont été mises à jour avec succès";
+
+/* Filter Lists title */
+"filter.lists.title" = "Listes de filtres";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Trop de filtres activés : Safari ne peut pas appliquer plus de 50 000 règles.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Mettre à jour les listes de filtres";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Mise à jour des listes de filtres...";
+
+/* Help menu item */
+"help.menu" = "Aide";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Cliquer sur l'icône ￼%1$@ dans Safari pour mettre en pause AdBlock ou autoriser les publicités sur vos sites préférés";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Choisir \"Autoriser les publicités sur ce site\" pour désactiver AdBlock sur les sites où les publicités ne vous gênent pas ou si vous voulez soutenir le propriétaire du site web";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Utiliser le bouton Aide et remarques pour afficher les questions fréquentes ou %1$@nous envoyer un e-mail%2$@";
+
+/* Info Text button */
+"info.text.button" = "Commencez à surfer sur le web !";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Merci de visiter %1$@notre site%2$@ pour trouver des réponses aux questions fréquentes ou nous envoyer vos remarques.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock est prêt !";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock est activé et bloque des publicités pour vous. Vous pouvez, entre autres :";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Installer AdBlock dans Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Veuillez activer le <b>Moteur AdBlock</b> et l'<b>Icône AdBlock</b> dans vos préférences d'extensions Safari";
+
+/* Intro Screen 2 button */
+"intro.screen.2.button" = "Oui, je veux maintenir AdBlock à jour !";
+
+/* Intro Screen 2 skip */
+"intro.screen.2.skip" = "Passer cette étape";
+
+/* Intro Screen 2 text 1 */
+"intro.screen.2.text.1" = "Nous mettons constamment à jour les listes grâce auxquelles nous bloquons efficacement les publicités.";
+
+/* Intro Screen 2 text 2 */
+"intro.screen.2.text.2" = "Assurez le blocage d'un maximum de publicités en cliquant sur le bouton ci-dessous et gardez AdBlock à jour.";
+
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Remarque : En sélectionnant cette option, AdBlock continuera à fonctionner en arrière-plan, même après avoir quitté l’application. Vous pouvez modifier ce paramètre à tout moment en activant/désactivant l’option « Lancer AdBlock au démarrage » dans le menu d’AdBlock situé dans la barre des menus Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "Échec du chargement de la mise à niveau. Veuillez réessayer ultérieurement.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Échec du chargement de la mise à niveau";
+
+/* Minimize menu item */
+"minimize.menu" = "Réduire";
+
+/* New Window menu item */
+"new.window.menu" = "Nouvelle fenêtre";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "Préférences...";
+
+/* Upgrade title */
+"product.account.title" = "Mon compte";
+
+/* Upgrade title */
+"product.upgrade.title" = "Mise à niveau";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "L’achat a été annulé.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Achat annulé";
+
+/* Date of purchase */
+"purchase.date" = "Date d’achat : ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Erreur lors de l'achat : ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Erreur achat";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Échec de l'achat suite à une erreur : ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Échec de l'achat";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "L'identifiant d'achat de la mise à niveau n'est pas valide. Veuillez contacter l'assistance sur https://help.getadblock.com pour obtenir de l'aide.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Identifiant d'achat de mise à niveau non valide";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Votre mise à niveau a été restauré. Merci !";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Mise à niveau restaurée";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Merci d’avoir acheté la mise à niveau !";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Mise à niveau terminée";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Quitter AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Quitter";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Erreur de lecture de la preuve d'achat. Veuillez réessayer ultérieurement.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Erreur preuve d'achat";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Erreur de restauration de la mise à niveau. Veuillez réessayer ultérieurement.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Échec de restauration de la mise à niveau";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Aucun achat de mise à niveau correspondant n'a été trouvé.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Erreur de mise à niveau";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Erreur de lecture du reçu de mise à niveau. Veuillez réessayer ultérieurement.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Erreur reçu de mise à niveau";
+
+/* Services menu item */
+"services.menu" = "Services";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Lancer AdBlock au démarrage";
+
+/* Upgrade already text */
+"upgrade.already" = "Déjà mis à niveau ?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Cliquez ici";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Tirez le meilleur parti d'AdBlock avec ces fonctionnalités supplémentaires.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Soutenez vos sites web préférés en les ajoutant à votre liste blanche personnelle";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Autorisez les pubs sur vos sites favoris";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Accédez à un bloqueur de publicités encore plus intelligent et puissant";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Blocage avancé";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Obtenez une réponse à votre question ou problème dans la journée";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Profitez d'une assistance VIP";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Plus de fonctionnalités à venir !";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Mettre à niveau maintenant";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Seulement %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Les achats intégrés ne sont pas activés sur ce compte.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Mise à niveau indisponible";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "La mise à niveau n’est disponible qu'à partir de Safari 11 ou plus. Veuillez mettre à jour Safari et réessayer.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Mise à niveau indisponible";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Liste blanche";
+
+/* Whitelisting button */
+"whitelisting.button" = "Ajouter un site web";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Vous n’avez aucun site sur liste blanche";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Veuillez entrer une URL valide.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.exemple.com/index.html OU sousdomaine.exemple.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "par exemple : http://www.exemple.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "Pour désactiver le blocage de publicités sur certains sites, vous pouvez les ajouter à votre \"liste blanche\" :";
+
+/* Whitelisting title */
+"whitelisting.title" = "Mise sur liste blanche";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Cette URL existe déjà.";
+
+/* Window menu item */
+"window.menu" = "Fenêtre";
+

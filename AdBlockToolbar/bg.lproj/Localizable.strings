@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "Известие";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "Позволи реклами в сайта";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "Позволи реклами в страницата";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "Блокирай реклами в сайта";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "Блокирай реклами в страницата";
+
+/* Error title */
+"error.title" = "Грешка";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "Разширението AdBlock е забранено.";
+
+/* Feature under development alert */
+"feature.under.development" = "Възможността e в разработка.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Помощ и отзив";
+
+/* Invalid url alert */
+"invalid.url.alert" = "Недействителен адрес";
+
+/* OK button */
+"ok.button" = "ДА";
+
+/* Pause menu item */
+"pause.menu" = "Задръж";
+
+/* Resume menu item */
+"resume.menu" = "Поднови";
+
+/* Settings menu item */
+"settings.menu" = "Настройки";
+
+/* Upgrade button */
+"upgrade.button" = "ОБНОВИ";
+

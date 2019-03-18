@@ -20,13 +20,13 @@ import Cocoa
 
 extension NSStoryboard {
     
-    private class func mainStoryboard() -> NSStoryboard { return NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: Bundle.main) }
+    private class func mainStoryboard() -> NSStoryboard { return NSStoryboard(name: "Main", bundle: Bundle.main) }
     
     class func mainVC() -> MainVC {
-        return self.mainStoryboard().instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "MainVC")) as! MainVC
+        return self.mainStoryboard().instantiateController(withIdentifier: "MainVC") as! MainVC
     }
     
     class func introVC() -> IntroVC {
-        return self.mainStoryboard().instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "IntroVC")) as! IntroVC
+        return self.mainStoryboard().instantiateController(withIdentifier: "IntroVC") as! IntroVC
     }
 }

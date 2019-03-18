@@ -28,6 +28,21 @@
 /* Alert title */
 "alert.title" = "Alerta";
 
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Bloqueig avançat d'anuncis";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Portar-ho tot a primer pla";
+
+/* Custom title */
+"custom.title" = "Personalitzat";
+
+/* Title for debug info window */
+"debug.info.title" = "Informació de depuració";
+
+/* Debug info menu item */
+"debug.menu" = "Mostra la informació de depuració";
+
 /* EasyList title */
 "easylist.title" = "Bloqueja anuncis molestos, finestres emergents";
 
@@ -89,7 +104,7 @@
 "intro.screen.1.button" = "Configureu l'AdBlock al Safari";
 
 /* Intro Screen 1 text */
-"intro.screen.1.text" = "Activeu l'<b>AdBlock</b> i la icona d'<b>AdBlock Safari</b> a les preferències d'extensió del Safari";
+"intro.screen.1.text" = "Activeu <b>el motor d'AdBlock </b> i <b>la icona d'AdBlock</b> a les preferències d'extensions de Safari";
 
 /* Intro Screen 2 button */
 "intro.screen.2.button" = "Sí, si us plau, continueu amb l'AdBlock actualitzat!";
@@ -103,11 +118,71 @@
 /* Intro Screen 2 text 2 */
 "intro.screen.2.text.2" = "Per assegurar-nos que estem bloquejant tants anuncis com sigui possible, feu clic a sota per mantenir actualitzat l'AdBlock.";
 
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Nota: si seleccioneu aquesta opció, l'AdBlock continuarà executant-se en segon pla fins i tot després de sortir de l'aplicació. Podeu canviar aquesta configuració en qualsevol moment en alternar l'opció «Obre l'AdBlock en iniciar sessió» al menú AdBlock situat a la barra de menú del Mac.)";
+
+/* Load product failed message */
+"load.product.fail.message" = "No s'ha pogut carregar el producte d'actualització. Proveu-ho més tard.";
+
+/* Load product failed title */
+"load.product.fail.title" = "S'ha produït un error en carregar l'actualització";
+
+/* Minimize menu item */
+"minimize.menu" = "Minimitzar";
+
+/* New Window menu item */
+"new.window.menu" = "Nova finestra";
+
 /* OK button */
 "ok.button" = "D'acord";
 
 /* Preferences menu item */
 "preferences.menu" = "Preferències...";
+
+/* Upgrade title */
+"product.account.title" = "El meu compte";
+
+/* Upgrade title */
+"product.upgrade.title" = "Actualitza";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "S'ha cancel·lat la compra.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Compra cancel·lada";
+
+/* Date of purchase */
+"purchase.date" = "Data de la compra: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Error en la compra: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Error de compra";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "La compra ha fallat a causa d'un error: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "La compra ha fallat";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "L'identificador de compra de l'actualització no és vàlid. Contacteu amb el suport a https://help.getadblock.com per obtenir ajuda.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "L'identificador de compra de l'actualització no és vàlid";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "S'ha restaurat la vostra actualització. Gràcies!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Actualització restaurada";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Gràcies per comprar l'actualització!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Actualització completada";
 
 /* Quit AdBlock menu item */
 "quit.adblock.menu" = "Surt de l'AdBlock";
@@ -115,11 +190,83 @@
 /* Quit menu item */
 "quit.menu" = "Surt";
 
+/* Receipt fail message text */
+"receipt.fail.message" = "Error en llegir el rebut de compra. Proveu-ho més tard.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Error en el rebut de compra";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "S'ha produït un error en restaurar l'actualització. Proveu-ho més tard.";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "No s'ha pogut restaurar l'actualització";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "No s'ha trobat cap compra d'actualització coincident.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Error d'actualització";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "S'ha produït un error en llegir el rebut de l'actualització. Proveu-ho més tard.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "S'ha produït un error en rebre l'actualització";
+
 /* Services menu item */
 "services.menu" = "Serveis";
 
 /* Start AdBlock at login menu item */
 "start.at.login" = "Inicia l'AdBlock a l'inici de sessió";
+
+/* Upgrade already text */
+"upgrade.already" = "Ja heu actualitzat?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Feu clic aquí";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Obtingueu més d'AdBlock amb aquestes característiques addicionals.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Ajudeu als vostres llocs web preferits afegint-los a la llista blanca personal";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Permeteu els anuncis als llocs que us agraden";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Obtingueu accés a un bloqueig d'anuncis encara més intel·ligent i poderós";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Bloqueig avançat d'anuncis";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Obtingueu una resposta el mateix dia que tingueu una pregunta o problema";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Gaudiu de suport VIP";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "¡Més característiques ben aviat!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Actualitza ara";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Només %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Les compres en l'aplicació no estan activades en aquest compte.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Actualització disponible";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "L'actualització només està disponible a Safari 11 i posterior. Actualitzeu Safari i torneu-ho a provar.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Actualització disponible";
 
 /* Whitelist menu item */
 "whitelist.menu" = "Llista blanca";
@@ -134,10 +281,10 @@
 "whitelisting.enter.valid.url" = "Escriu una URL vàlida.";
 
 /* Whitelisting example explanation */
-"whitelisting.example.explanation" = "example.com O subdomain.example.com";
+"whitelisting.example.explanation" = "http://www.example.com/index.html O subdomain.example.com";
 
 /* Whitelisting example text */
-"whitelisting.example.text" = "p. ex. www.example.com";
+"whitelisting.example.text" = "p. ex. http://www.example.com/";
 
 /* Whitelisting header */
 "whitelisting.header" = "Per desactivar el bloqueig d'anuncis en llocs específics, podeu afegir-los a la vostra «llista blanca» aquí:";
@@ -147,4 +294,7 @@
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Aquesta URL ja existeix.";
+
+/* Window menu item */
+"window.menu" = "Finestra";
 

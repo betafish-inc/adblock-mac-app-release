@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A0DD74AF83B5EB4A072DB37A4AA6106"
+               BlueprintIdentifier = "40E86B0E056BDB0DF99BE8B42D43AF70"
                BuildableName = "Punycode_Cocoa.framework"
                BlueprintName = "Punycode-Cocoa-macOS10.12"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A0DD74AF83B5EB4A072DB37A4AA6106"
+            BlueprintIdentifier = "40E86B0E056BDB0DF99BE8B42D43AF70"
             BuildableName = "Punycode_Cocoa.framework"
             BlueprintName = "Punycode-Cocoa-macOS10.12"
             ReferencedContainer = "container:Pods.xcodeproj">

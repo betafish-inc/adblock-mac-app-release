@@ -29,12 +29,13 @@ class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
         
         var items: [NSExtensionItem] = []
         
-        let attachment = NSItemProvider(contentsOf: rulesUrl)!
-        let item = NSExtensionItem()
-        item.attachments = [attachment]
-        items.append(item)
-        
-        context.completeRequest(returningItems: items, completionHandler: nil)
+        if let attachment = NSItemProvider(contentsOf: rulesUrl) {
+            let item = NSExtensionItem()
+            item.attachments = [attachment]
+            items.append(item)
+            
+            context.completeRequest(returningItems: items, completionHandler: nil)
+        }
     }
     
 }

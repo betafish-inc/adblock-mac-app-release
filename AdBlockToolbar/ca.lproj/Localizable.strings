@@ -1,11 +1,17 @@
 /* Alert title */
 "alert.title" = "Alerta";
 
-/* Allow ads menu item */
-"allow.ads.site.menu" = "Permet anuncis en aquest lloc";
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "Permet anuncis en aquest lloc";
 
-/* Block ads menu item */
-"block.ads.site.menu" = "Bloqueja anuncis en aquest lloc";
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "Permet anuncis en aquesta pàgina";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "Bloqueja anuncis en aquest lloc";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "Bloqueja anuncis en aquesta pàgina";
 
 /* Error title */
 "error.title" = "Error";
@@ -33,4 +39,7 @@
 
 /* Settings menu item */
 "settings.menu" = "Configuració";
+
+/* Upgrade button */
+"upgrade.button" = "ACTUALITZA";
 

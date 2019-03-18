@@ -1,12 +1,16 @@
-/* Bundle display name */
-"CFBundleDisplayName" = "AdBlock";
+/* (No Comment) */
+"CFBundleDisplayName" = "Motor AdBlock";
 
 /* Bundle name */
 "CFBundleName" = "AdBlock";
 
-/* Copyright (human-readable) */
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
 "NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Todos los derechos reservados.";
 
 /* (No Comment) */
-"NSHumanReadableDescription" = "Bloquear ventanas emergentes y anuncios molestos, entrometidos y maliciosos. Disfrutar de navegar por la red de nuevo.";
+"NSHumanReadableDescription" = "Bloquea anuncios y elementos emergentes molestos, invasivos y maliciosos. Vuelve a disfrutar navegando por la web.";
 

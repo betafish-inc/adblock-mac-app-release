@@ -28,6 +28,9 @@
 /* Alert title */
 "alert.title" = "Upozornění";
 
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Přenést vše do popředí";
+
 /* EasyList title */
 "easylist.title" = "Blokovat obtěžující reklamy, vyskakovací okna";
 
@@ -103,6 +106,12 @@
 /* Intro Screen 2 text 2 */
 "intro.screen.2.text.2" = "Abychom se ujistili, že blokujeme co největší počet reklam, klikněte prosím níže k udržování aktuálnosti AdBlocku.";
 
+/* Minimize menu item */
+"minimize.menu" = "Minimalizovat";
+
+/* New Window menu item */
+"new.window.menu" = "Nové okno";
+
 /* OK button */
 "ok.button" = "OK";
 
@@ -134,10 +143,10 @@
 "whitelisting.enter.valid.url" = "Zadejte prosím platnou adresu URL.";
 
 /* Whitelisting example explanation */
-"whitelisting.example.explanation" = "example.com NEBO subdomain.example.com";
+"whitelisting.example.explanation" = "http://www.example.com/index.html NEBO subdoména.example.com";
 
 /* Whitelisting example text */
-"whitelisting.example.text" = "např. www.example.com";
+"whitelisting.example.text" = "např. http://www.example.com/";
 
 /* Whitelisting header */
 "whitelisting.header" = "Chcete-li vypnout blokování reklam na konkrétních webových stránkách, můžete je přidat na 'bílou listinu' zde:";
@@ -148,3 +157,84 @@
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Tato adresa URL již existuje.";
 
+/* Window menu item */
+"window.menu" = "Okno";
+
+/* Title for debug info window */
+"debug.info.title" = "Debug Info";
+/* Debug info menu item */
+"debug.menu" = "View Debug Info";
+/* Upgrade title */
+"product.upgrade.title" = "Upgrade";
+/* Upgrade title */
+"product.account.title" = "My Account";
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Allow ads on sites you love";
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Support your favorite websites by adding them to your personal whitelist";
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Enjoy VIP support";
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Get an answer the same day when you have a question or issue";
+/* Upgrade line three text */
+"upgrade.get.more" = "Get more out of AdBlock with these bonus features.";
+/* Upgrade price prefix */
+"upgrade.only" = "Only";
+/* Upgrade line three description text */
+"upgrade.more.soon" = "More features coming soon!";
+/* Upgrade Now button text */
+"upgrade.now.button" = "Upgrade Now";
+/* Upgrade already text */
+"upgrade.already" = "Already upgraded?";
+/* Upgrade restore click here */
+"upgrade.click.here" = "Click here";
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Upgrade complete";
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Thank you for purchasing the upgrade!";
+/* Upgrade restore title text */
+"purchase.restore.title" = "Upgrade restored";
+/* Upgrade restore message text */
+"purchase.restore.message" = "Your upgrade has been restored. Thank you!";
+/* Receipt fail title text */
+"receipt.fail.title" = "Purchase Receipt Error";
+/* Receipt fail message text */
+"receipt.fail.message" = "Error reading purchase receipt. Please try again later.";
+/* Purchase error title text */
+"purchase.error.title" = "Purchase Error";
+/* Purchase error message text */
+"purchase.error.message" = "Error in purchase: ";
+/* Purchase failed title text */
+"purchase.fail.title" = "Purchase Failed";
+/* Purchase failed message text */
+"purchase.fail.message" = "Purchase failed due to error: ";
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Purchase Canceled";
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "The purchase was cancelled.";
+/* Date of purchase */
+"purchase.date" = "Purchase date: ";
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Upgrade Restore Failed";
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Error restoring update. Please try again later.";
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Upgrade Receipt Error";
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Error reading upgrade receipt. Please try again later.";
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Upgrade Error";
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "No matching upgrade purchase was found.";
+/* Load product failed title */
+"load.product.fail.title" = "Upgrade Load Failed";
+/* Load product failed message */
+"load.product.fail.title" = "Upgrade product failed to load. Please try again later.";
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Upgrade Unavailable";
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "The upgrade is only available on Safari 11 and later. Please update Safari and try again.";
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Upgrade Unavailable";
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "In-App Purchases are not enabled on this account.";

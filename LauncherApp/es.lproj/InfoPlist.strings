@@ -1,6 +1,10 @@
 /* Bundle name */
 "CFBundleName" = "AdBlock";
 
-/* Copyright (human-readable) */
-"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish LLC. Todos los derechos reservados.";
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Todos los derechos reservados.";
 

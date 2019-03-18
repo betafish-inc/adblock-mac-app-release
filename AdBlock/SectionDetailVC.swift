@@ -35,10 +35,12 @@ class SectionDetailVC: NSViewController {
     fileprivate var deletingWhitelistItem: Bool = false
     
     private var isWhitelist: Bool = false
+    private var isUpgrade: Bool = false
     
     private var adsEnabled: Bool?
     
     private let whitelistNotificationName = Notification.Name(rawValue: "\(Constants.SAFARI_MENU_EXTENSION_IDENTIFIER).whitelist")
+    private let mergeNotificationName = Notification.Name(rawValue: "\(Constants.SAFARI_MENU_EXTENSION_IDENTIFIER).merge")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,9 @@ class SectionDetailVC: NSViewController {
                                                             selector: #selector(self.updateWhitelist),
                                                             name: whitelistNotificationName,
                                                             object: Constants.SAFARI_MENU_EXTENSION_IDENTIFIER)
+        if #available(OSX 10.14, *) {
+            tableView.appearance =  NSAppearance(named: .aqua)
+        }
     }
     
     @objc private func updateWhitelist() {
@@ -55,18 +60,28 @@ class SectionDetailVC: NSViewController {
         let whitelists = WhitelistManager.shared.getAllItems()
         self.items?.removeAll()
         self.items = (self.items ?? []) + (whitelists ?? [])
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func updateItems(_ items: [Item]?, title: String, itemId: String) {
+        SwiftyBeaver.debug("[updateItems] itemId: \(itemId) ")
         self.items = items
         
         switch itemId {
         case Item.WHITELIST_ITEM_ID:
             isWhitelist = true
+            isUpgrade = false
+        case Item.UPGRADE_ITEM_ID:
+            isWhitelist = false
+            isUpgrade = true
         default:
             isWhitelist = false
+            isUpgrade = false
         }
+
+        SwiftyBeaver.debug("[updateItems] isWhitelist: \(isWhitelist)  isUpgrade: \(isUpgrade)")
         
         tableView.reloadData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: showOrHideFilterListWarning)
@@ -88,7 +103,7 @@ class SectionDetailVC: NSViewController {
     }
     
     private func findFilterListCellById(_ filterListId: String?) -> FilterListTableCellView? {
-        if isWhitelist { return nil }
+        if isWhitelist || isUpgrade { return nil }
         
         guard let cellIndex = self.items?.index(where: { (item) -> Bool in
             return item.id == filterListId
@@ -99,7 +114,7 @@ class SectionDetailVC: NSViewController {
     }
     
     private func findWhitelistCellByUrl(_ whitelistUrl: String?) -> WhitelistTableCellView? {
-        if !isWhitelist { return nil }
+        if !isWhitelist || isUpgrade { return nil }
         
         guard let cellIndex = self.items?.index(where: { (item) -> Bool in
             return item.id == whitelistUrl
@@ -113,11 +128,13 @@ class SectionDetailVC: NSViewController {
         switch data.1 {
         case .mergeRulesStarted:
             if isWhitelist {
-                let whitelistCell = findWhitelistCellByUrl(currentProcessingItemId)
-                if deletingWhitelistItem {
-                    whitelistCell?.showDeleteProgress(true)
-                } else {
-                    whitelistCell?.showProgress(true)
+                DispatchQueue.main.async {
+                    let whitelistCell = self.findWhitelistCellByUrl(self.currentProcessingItemId)
+                    if self.deletingWhitelistItem {
+                        whitelistCell?.showDeleteProgress(true)
+                    } else {
+                        whitelistCell?.showProgress(true)
+                    }
                 }
             } else {
                 if AppMenuBar.lastFilterListMenuOperation > 0 {
@@ -125,31 +142,39 @@ class SectionDetailVC: NSViewController {
                         currentProcessingItemId = Constants.ADS_FILTER_LIST_ID
                     } else if AppMenuBar.lastFilterListMenuOperation == AppMenuBar.ALLOW_ADS_CLICKED {
                         currentProcessingItemId = Constants.ALLOW_ADS_FILTER_LIST_ID
+                    } else if AppMenuBar.lastFilterListMenuOperation == AppMenuBar.ANTI_CIRCUMVENTION_CLICKED {
+                        currentProcessingItemId = Constants.ANTI_CIRCUMVENTION_LIST_ID
                     }
                 }
-                let filterListCell = findFilterListCellById(currentProcessingItemId)
-                filterListCell?.showProgress(true)
+                DispatchQueue.main.async {
+                    let filterListCell = self.findFilterListCellById(self.currentProcessingItemId)
+                    filterListCell?.showProgress(true)
+                }
             }
         case .mergeRulesCompleted, .mergeRulesError:
             if isWhitelist {
-                let whitelistCell = findWhitelistCellByUrl(currentProcessingItemId)
-                if deletingWhitelistItem {
-                    whitelistCell?.showDeleteProgress(false)
-                } else {
-                    whitelistCell?.showProgress(false)
+                DispatchQueue.main.async {
+                    let whitelistCell = self.findWhitelistCellByUrl(self.currentProcessingItemId)
+                    if self.deletingWhitelistItem {
+                        whitelistCell?.showDeleteProgress(false)
+                    } else {
+                        whitelistCell?.showProgress(false)
+                    }
+                    self.currentProcessingItemId = nil
+                    self.deletingWhitelistItem = false
                 }
-                currentProcessingItemId = nil
-                deletingWhitelistItem = false
                 updateWhitelist()
             } else {
-                let filterListCell = findFilterListCellById(currentProcessingItemId)
-                filterListCell?.showProgress(false)
-                currentProcessingItemId = nil
-                AppMenuBar.lastFilterListMenuOperation = 0
-                tableView.reloadData()
+                DispatchQueue.main.async {
+                    let filterListCell = self.findFilterListCellById(self.currentProcessingItemId)
+                    filterListCell?.showProgress(false)
+                    self.currentProcessingItemId = nil
+                    AppMenuBar.lastFilterListMenuOperation = 0
+                    self.tableView.reloadData()
+                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: showOrHideFilterListWarning)
             }
-            
+            DistributedNotificationCenter.default().post(name: mergeNotificationName, object: nil)
         default:
             SwiftyBeaver.debug("idle")
         }
@@ -162,7 +187,7 @@ class SectionDetailVC: NSViewController {
     }
     
     fileprivate func showOrHideFilterListWarning() {
-        if isWhitelist { return }
+        if isWhitelist || isUpgrade { return }
         
         guard var _ = self.items?.index(where: { (item) -> Bool in
             return item.active == true && item.id ?? "" != Item.ALL_FILTER_LIST_INACTIVE_ITEM_ID
@@ -210,10 +235,11 @@ extension SectionDetailVC : NSTableViewDataSource, NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
+
         let itemData = items?[row]
-        
         if isWhitelist {
             if itemData?.id ?? "" == Item.EMPTY_WHITELIST_ITEM_ID {
+
                 let emptyWhitelistItemView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "EmptyWhitelistTableCellView"), owner: self)
                 guard let emptyWhitelistCollectionViewItem = emptyWhitelistItemView as? EmptyWhitelistTableCellView else { return emptyWhitelistItemView }
                 emptyWhitelistCollectionViewItem.updateText()
@@ -232,7 +258,7 @@ extension SectionDetailVC : NSTableViewDataSource, NSTableViewDelegate {
                 }
                 return whitelistCollectionViewItem
             }
-        } else {
+        } else if (!isWhitelist && !isUpgrade) {
             if itemData?.id ?? "" == Item.ALL_FILTER_LIST_INACTIVE_ITEM_ID {
                 let inactiveFilterListItemView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "InactiveFilterListTableCellView"), owner: self)
                 guard let inactiveFilterListTableViewItem = inactiveFilterListItemView as? InactiveFilterListTableCellView else { return inactiveFilterListItemView }
@@ -257,6 +283,8 @@ extension SectionDetailVC : NSTableViewDataSource, NSTableViewDelegate {
                 
                 return filterListTableViewItem
             }
+        } else {
+            return nil
         }
     }
     

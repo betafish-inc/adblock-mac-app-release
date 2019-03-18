@@ -5,7 +5,7 @@
   Created by Rachel Weissman-Hohler on 7/3/18.
   Copyright © 2018 BetaFish. All rights reserved.
 */
-NSHumanReadableCopyright = "Copyright © 2018 BetaFish LLC. All rights reserved.";
+NSHumanReadableCopyright = "Copyright © 2018 BetaFish, Inc. All rights reserved.";
 NSHumanReadableDescription = "This icon allows you to control the AdBlock app from within Safari, including the ability to pause and allow ads on sites you like.";
-CFBundleDisplayName = "AdBlock Safari Icon";
-NSExtension.SFSafariToolbarItem.Label = "AdBlock Safari Icon";
+CFBundleDisplayName = "AdBlock Icon";
+"Toolbar Button Label for Identifier: AdBlockSafariIcon" = "AdBlock Icon";

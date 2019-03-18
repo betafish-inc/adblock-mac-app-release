@@ -6,13 +6,15 @@
   Copyright © 2018 BetaFish. All rights reserved.
 */
 /* Intro Screen 1 text */
-"intro.screen.1.text" = "Please activate <b>AdBlock</b> and the <b>AdBlock Safari icon</b> in your Safari extension preferences";
+"intro.screen.1.text" = "Please activate <b>AdBlock Engine</b> and <b>AdBlock Icon</b> in your Safari extension preferences";
 /* Intro Screen 1 button */
 "intro.screen.1.button" = "Set up AdBlock in Safari";
 /* Intro Screen 2 text 1 */
 "intro.screen.2.text.1" = "We are constantly updating the lists we use to block ads effectively.";
 /* Intro Screen 2 text 2 */
 "intro.screen.2.text.2" = "To ensure we are blocking as many ads as possible, please click below to keep AdBlock current.";
+/* Intro Screen 2 text 3 */
+"intro.screen.2.text.3" = "(Note: If you select this option, AdBlock will continue to run in the background even after you quit the app. You can change this setting at any time by toggling the 'Start AdBlock at Login' option in the AdBlock menu located in the Mac menu bar.)";
 /* Intro Screen 2 button */
 "intro.screen.2.button" = "Yes, please keep AdBlock up to date!";
 /* Intro Screen 2 skip */
@@ -49,6 +51,10 @@
 "easylist.title" = "Block annoying ads, pop-ups";
 /* Acceptable Ads title */
 "acceptable.ads.title" = "Allow some non-intrusive ads";
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Advanced ad blocking";
+/* Custom title */
+"custom.title" = "Custom";
 /* Filter Lists Rules count label */
 "filter.lists.rules" = "Rules";
 /* Filter Lists too many rules alert */
@@ -70,9 +76,9 @@
 /* Whitelisting header */
 "whitelisting.header" = "To turn off ad blocking on specific sites, you can add them to your 'whitelist' here:";
 /* Whitelisting example text */
-"whitelisting.example.text" = "eg. www.example.com";
+"whitelisting.example.text" = "eg. http://www.example.com/";
 /* Whitelisting example explanation */
-"whitelisting.example.explanation" = "example.com OR subdomain.example.com";
+"whitelisting.example.explanation" = "http://www.example.com/index.html OR subdomain.example.com";
 /* Whitelisting button */
 "whitelisting.button" = "Add Website";
 /* Whitelisting empty text */
@@ -81,6 +87,88 @@
 "whitelisting.enter.valid.url" = "Please enter a valid url.";
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "This url already exists.";
+/* Upgrade title */
+"product.upgrade.title" = "Upgrade";
+/* Upgrade title */
+"product.account.title" = "My Account";
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Advanced ad blocking";
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Get access to even smarter and more powerful ad blocking";
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Allow ads on sites you love";
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Support your favorite websites by adding them to your personal whitelist";
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Enjoy VIP support";
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Get an answer the same day when you have a question or issue";
+/* Upgrade line three text */
+"upgrade.get.more" = "Get more out of AdBlock with these bonus features.";
+/* Upgrade price prefix */
+"upgrade.only" = "Only %1$@";
+/* Upgrade line three description text */
+"upgrade.more.soon" = "More features coming soon!";
+/* Upgrade Now button text */
+"upgrade.now.button" = "Upgrade Now";
+/* Upgrade already text */
+"upgrade.already" = "Already upgraded?";
+/* Upgrade restore click here */
+"upgrade.click.here" = "Click here";
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Upgrade complete";
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Thank you for purchasing the upgrade!";
+/* Upgrade restore title text */
+"purchase.restore.title" = "Upgrade restored";
+/* Upgrade restore message text */
+"purchase.restore.message" = "Your upgrade has been restored. Thank you!";
+/* Receipt fail title text */
+"receipt.fail.title" = "Purchase Receipt Error";
+/* Receipt fail message text */
+"receipt.fail.message" = "Error reading purchase receipt. Please try again later.";
+/* Purchase error title text */
+"purchase.error.title" = "Purchase Error";
+/* Purchase error message text */
+"purchase.error.message" = "Error in purchase: ";
+/* Purchase failed title text */
+"purchase.fail.title" = "Purchase Failed";
+/* Purchase failed message text */
+"purchase.fail.message" = "Purchase failed due to error: ";
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Purchase Canceled";
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "The purchase was canceled.";
+/* Date of purchase */
+"purchase.date" = "Purchase date: ";
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Upgrade Restore Failed";
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Error restoring upgrade. Please try again later.";
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Upgrade Receipt Error";
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Error reading upgrade receipt. Please try again later.";
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Upgrade Error";
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "No matching upgrade purchase was found.";
+/* Load product failed title */
+"load.product.fail.title" = "Upgrade Load Failed";
+/* Load product failed message */
+"load.product.fail.message" = "Upgrade product failed to load. Please try again later.";
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Upgrade Purchase Identifier Invalid";
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "The upgrade purchase identifier is invalid. Please contact support at https://help.getadblock.com for assistance.";
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Upgrade Unavailable";
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "The upgrade is only available on Safari 11 and later. Please update Safari and try again.";
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Upgrade Unavailable";
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "In-App Purchases are not enabled on this account.";
 /* Start AdBlock at login menu item */
 "start.at.login" = "Start AdBlock at Login";
 /* Whitelist menu item */
@@ -101,9 +189,21 @@
 "services.menu" = "Services";
 /* Help menu item */
 "help.menu" = "Help";
+/* Window menu item */
+"window.menu" = "Window";
+/* Minimize menu item */
+"minimize.menu" = "Minimize";
+/* New Window menu item */
+"new.window.menu" = "New Window";
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Bring All to Front";
 /* Alert title */
 "alert.title" = "Alert";
 /* Feature under development alert */
 "feature.under.development" = "This feature is under development.";
 /* OK button */
 "ok.button" = "OK";
+/* Title for debug info window */
+"debug.info.title" = "Debug Info";
+/* Debug info menu item */
+"debug.menu" = "View Debug Info";

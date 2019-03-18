@@ -1,12 +1,16 @@
-/* Bundle display name */
-"CFBundleDisplayName" = "AdBlock";
+/* (No Comment) */
+"CFBundleDisplayName" = "AdBlock 引擎";
 
 /* Bundle name */
 "CFBundleName" = "AdBlock";
 
-/* Copyright (human-readable) */
-"NSHumanReadableCopyright" = "版权所有© 2018 BetaFish有限公司。保留所有权利。";
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. 保留所有权利。";
 
 /* (No Comment) */
-"NSHumanReadableDescription" = "屏蔽烦人的、侵入性的、恶意的广告和弹出窗口。使网上冲浪再次成为享受。";
+"NSHumanReadableDescription" = "阻止恼人的、侵入式的、恶意的广告以及弹窗。享受网上冲浪的快乐。";
 

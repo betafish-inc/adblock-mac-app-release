@@ -7,12 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297831E0488C981E9D68D75F /* Pods_LauncherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0385E7A8451909174566976D /* Pods_LauncherApp.framework */; };
 		3703CBE120D9801100FCEAF0 /* AdBlockIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3703CBE020D9801100FCEAF0 /* AdBlockIcon.pdf */; };
+		3705E418211A3653000F7C08 /* FileManager+AdBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A67852092FA4F00BD464F /* FileManager+AdBlock.swift */; };
 		3707751120E171E300CCD620 /* Pods_AdBlock_Safari_Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D9F255A79038F94E7D5C36 /* Pods_AdBlock_Safari_Menu.framework */; };
+		37091F42217FCFF100302A87 /* LogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EE7F20F530C700FF5633 /* LogServerManager.swift */; };
+		37091F43217FCFF100302A87 /* LogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EE7F20F530C700FF5633 /* LogServerManager.swift */; };
+		37091F44217FD0A700302A87 /* PingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8B23820BD25B5000C64D1 /* PingDataManager.swift */; };
+		3719D8382149C40200EEB92E /* pkcs7_union_accessors.c in Sources */ = {isa = PBXBuildFile; fileRef = 3719D8372149C40200EEB92E /* pkcs7_union_accessors.c */; };
 		372D7D0E20D94766009B4DA5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372D7D0D20D94766009B4DA5 /* Image.xcassets */; };
+		373A34B22114B24600CB26BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278F434208A013500573C9B /* Constants.swift */; };
+		373A34B32114B2F400CB26BB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3165520919FD900202151 /* Event.swift */; };
+		373A34B42114B2F700CB26BB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3165620919FDA00202151 /* Observable.swift */; };
 		375A5E3D20D03D4B00A8A572 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375A5E3C20D03D4B00A8A572 /* IntroVC.swift */; };
+		375ADF7F2111080F00F0D238 /* jquery in Resources */ = {isa = PBXBuildFile; fileRef = 375ADF7E2111080E00F0D238 /* jquery */; };
+		375ADF822111087E00F0D238 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 375ADF802111087E00F0D238 /* script.js */; };
+		375ADF832111087E00F0D238 /* whitelist_ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 375ADF812111087E00F0D238 /* whitelist_ui.js */; };
+		375ADF852111127100F0D238 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 375ADF842111127100F0D238 /* _locales */; };
 		3787EE8020F530C700FF5633 /* LogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EE7F20F530C700FF5633 /* LogServerManager.swift */; };
+		379A7A78212C6645001129FC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A7A77212C6645001129FC /* IAPManager.swift */; };
+		37AB11C921012681008DAA64 /* AdBlock_Whitellist_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB11C821012681008DAA64 /* AdBlock_Whitellist_Tests.swift */; };
+		37AB11D021012707008DAA64 /* WhitelistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217A8D620A2CC5B00DF0CF1 /* WhitelistManager.swift */; };
+		37AB11D121012A42008DAA64 /* WhitelistRulesMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217A8DB20A2F6DD00DF0CF1 /* WhitelistRulesMaker.swift */; };
+		37AB11D221012A6B008DAA64 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B7108B208E03E600E3752C /* Item.swift */; };
+		37AB11D321012A7E008DAA64 /* AssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E207F54F209747D1008DC607 /* AssetsManager.swift */; };
+		37AB11D421012A81008DAA64 /* AssetDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F249D2092E6F6006B4EDE /* AssetDownloader.swift */; };
+		37AB11D521012A84008DAA64 /* AssetMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E207F54D209729B9008DC607 /* AssetMerger.swift */; };
+		37AB11D621012A88008DAA64 /* LogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EE7F20F530C700FF5633 /* LogServerManager.swift */; };
+		37AB11D721012A8C008DAA64 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3165620919FDA00202151 /* Observable.swift */; };
+		37AB11D821012A8F008DAA64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3165520919FD900202151 /* Event.swift */; };
+		37AB11D921012A94008DAA64 /* FilterListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588FA320A01B3D009ADDAA /* FilterListManager.swift */; };
+		37AB11DA21012A98008DAA64 /* PauseResumeBlockinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2359FAE20A465870055C403 /* PauseResumeBlockinManager.swift */; };
+		37AB11DB21012A9D008DAA64 /* PingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8B23820BD25B5000C64D1 /* PingDataManager.swift */; };
+		37AB11DC21012AA3008DAA64 /* String+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D69EC82099775B0012B58F /* String+Shortcuts.swift */; };
+		37AB11DD21012AA7008DAA64 /* NSControl+AdBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244F7AD2098B06C00B37D53 /* NSControl+AdBlock.swift */; };
+		37AB11DE21012B22008DAA64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278F434208A013500573C9B /* Constants.swift */; };
+		37AB11DF21012B28008DAA64 /* FileManager+AdBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A67852092FA4F00BD464F /* FileManager+AdBlock.swift */; };
+		37AB11E021012B2B008DAA64 /* UserPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = E229BA9220A58F5A00F35740 /* UserPref.swift */; };
 		37B33A2920F3E79C00921596 /* PingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8B23820BD25B5000C64D1 /* PingDataManager.swift */; };
+		37CA121E2149C64000330D10 /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 37CA121D2149C63F00330D10 /* AppleIncRootCertificate.cer */; };
+		37F2CBBF2149CAB4001F4397 /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2CBBE2149CAB4001F4397 /* ReceiptValidator.swift */; };
 		5167F6E8C9E69C88C7E747ED /* Pods_AdBlock_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A4AA2A6AE574059D091D0F /* Pods_AdBlock_Extension.framework */; };
 		599CD0E020EAD0DB0005A60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599CD0DF20EAD0DB0005A60A /* Main.storyboard */; };
 		599CD0E220EAD11C0005A60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599CD0E120EAD11B0005A60A /* Main.storyboard */; };
@@ -27,6 +61,43 @@
 		59EF602620E6B2AA00A822B1 /* AdBlockIcon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 59EF602520E6B2AA00A822B1 /* AdBlockIcon3.png */; };
 		59EF602820EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF602720EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift */; };
 		59EF602A20EAB64300A822B1 /* InactiveFilterListTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF602920EAB64300A822B1 /* InactiveFilterListTableCellView.swift */; };
+		6E1D7B585AD96B5872403F05 /* Pods_AdBlock_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905319B063FFACE43DAF7D99 /* Pods_AdBlock_Tests.framework */; };
+		71039DAD21ADFA210083C6D7 /* NSControl+AdBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039DAC21ADFA210083C6D7 /* NSControl+AdBlock.swift */; };
+		710E482421FA55E600967319 /* FilterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E482321FA55E600967319 /* FilterSet.swift */; };
+		710E482521FA55E600967319 /* FilterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E482321FA55E600967319 /* FilterSet.swift */; };
+		710E482621FA55E600967319 /* FilterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E482321FA55E600967319 /* FilterSet.swift */; };
+		710E482721FA55E600967319 /* FilterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E482321FA55E600967319 /* FilterSet.swift */; };
+		715C3AD42113881000F9A587 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 715C3AD22113881000F9A587 /* InfoPlist.strings */; };
+		718AD5A6219B905D00ED1859 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71627FDE219B8BA9003F6551 /* ToolbarButton.swift */; };
+		7196765D21FFB869000DCBC1 /* SnippetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196765C21FFB869000DCBC1 /* SnippetsHelper.swift */; };
+		7196765F21FFEC15000DCBC1 /* snippets.js in Resources */ = {isa = PBXBuildFile; fileRef = 7196765E21FFEC15000DCBC1 /* snippets.js */; };
+		7196766121FFF6C2000DCBC1 /* elemHideEmulation.js in Resources */ = {isa = PBXBuildFile; fileRef = 7196766021FFF6C2000DCBC1 /* elemHideEmulation.js */; };
+		7196766322013498000DCBC1 /* FilterListsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196766222013498000DCBC1 /* FilterListsText.swift */; };
+		7196766422013498000DCBC1 /* FilterListsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196766222013498000DCBC1 /* FilterListsText.swift */; };
+		7196766522013498000DCBC1 /* FilterListsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196766222013498000DCBC1 /* FilterListsText.swift */; };
+		7196766622013498000DCBC1 /* FilterListsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196766222013498000DCBC1 /* FilterListsText.swift */; };
+		71CD352821823034001FCE8F /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD352721823034001FCE8F /* DebugVC.swift */; };
+		71CD352A2182576D001FCE8F /* DebugWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD35292182576D001FCE8F /* DebugWindowController.swift */; };
+		71FE40FE21E56EB600F2DC87 /* FilterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40F821E56EB500F2DC87 /* FilterTypes.swift */; };
+		71FE40FF21E56EB600F2DC87 /* FilterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40F821E56EB500F2DC87 /* FilterTypes.swift */; };
+		71FE410021E56EB600F2DC87 /* FilterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40F821E56EB500F2DC87 /* FilterTypes.swift */; };
+		71FE410121E56EB600F2DC87 /* FilterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40F821E56EB500F2DC87 /* FilterTypes.swift */; };
+		71FE410621E56EB600F2DC87 /* DomainSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FA21E56EB600F2DC87 /* DomainSet.swift */; };
+		71FE410721E56EB600F2DC87 /* DomainSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FA21E56EB600F2DC87 /* DomainSet.swift */; };
+		71FE410821E56EB600F2DC87 /* DomainSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FA21E56EB600F2DC87 /* DomainSet.swift */; };
+		71FE410921E56EB600F2DC87 /* DomainSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FA21E56EB600F2DC87 /* DomainSet.swift */; };
+		71FE410A21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */; };
+		71FE410C21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */; };
+		71FE410D21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */; };
+		71FE411221E56EB600F2DC87 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FD21E56EB600F2DC87 /* FilterOption.swift */; };
+		71FE411321E56EB600F2DC87 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FD21E56EB600F2DC87 /* FilterOption.swift */; };
+		71FE411421E56EB600F2DC87 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FD21E56EB600F2DC87 /* FilterOption.swift */; };
+		71FE411521E56EB600F2DC87 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FD21E56EB600F2DC87 /* FilterOption.swift */; };
+		71FE411721E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */; };
+		71FE411821E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */; };
+		71FE411921E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */; };
+		71FE411A21E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */; };
+		71FE411B21E57DCE00F2DC87 /* FilterNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */; };
 		8B5420D67EC72A483E837D37 /* Pods_AdBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EEAD48C6B9D5AB845AF3A3 /* Pods_AdBlock.framework */; };
 		E207F550209747D1008DC607 /* AssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E207F54F209747D1008DC607 /* AssetsManager.swift */; };
 		E207F55120975759008DC607 /* AssetDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F249D2092E6F6006B4EDE /* AssetDownloader.swift */; };
@@ -112,6 +183,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		37AB11CB21012681008DAA64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E278F3FE2089D93A00573C9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E278F4052089D93A00573C9B;
+			remoteInfo = AdBlock;
+		};
 		E2D4331D20907DD40073624C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E278F3FE2089D93A00573C9B /* Project object */;
@@ -154,14 +232,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0385E7A8451909174566976D /* Pods_LauncherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LauncherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC896482A1610C2476567C /* Pods-AdBlock-Safari-Menu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Safari-Menu.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Safari-Menu/Pods-AdBlock-Safari-Menu.release.xcconfig"; sourceTree = "<group>"; };
 		0F4E4CDA3311D2E3AD20DF1B /* Pods-AdBlock-Mac-Safari-Menu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Mac-Safari-Menu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Mac-Safari-Menu/Pods-AdBlock-Mac-Safari-Menu.debug.xcconfig"; sourceTree = "<group>"; };
 		248CE0D26EE177F8360E18FC /* Pods-AdBlock-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Mac/Pods-AdBlock-Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		29558AEBFF5E5BD1CFD53716 /* Pods-AdBlock-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Mac/Pods-AdBlock-Mac.release.xcconfig"; sourceTree = "<group>"; };
 		3703CBE020D9801100FCEAF0 /* AdBlockIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AdBlockIcon.pdf; sourceTree = "<group>"; };
+		3719D8332149C15900EEB92E /* AdBlock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdBlock-Bridging-Header.h"; sourceTree = "<group>"; };
+		3719D8362149C3C500EEB92E /* pkcs7_union_accessors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs7_union_accessors.h; sourceTree = "<group>"; };
+		3719D8372149C40200EEB92E /* pkcs7_union_accessors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pkcs7_union_accessors.c; sourceTree = "<group>"; };
 		372D7D0D20D94766009B4DA5 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		375A5E3C20D03D4B00A8A572 /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		375ADF7E2111080E00F0D238 /* jquery */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jquery; sourceTree = "<group>"; };
+		375ADF802111087E00F0D238 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		375ADF812111087E00F0D238 /* whitelist_ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = whitelist_ui.js; sourceTree = "<group>"; };
+		375ADF842111127100F0D238 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		3787EE7F20F530C700FF5633 /* LogServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogServerManager.swift; sourceTree = "<group>"; };
+		379A7A77212C6645001129FC /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		37AB11C621012681008DAA64 /* AdBlock-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AdBlock-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AB11C821012681008DAA64 /* AdBlock_Whitellist_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlock_Whitellist_Tests.swift; sourceTree = "<group>"; };
+		37AB11CA21012681008DAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CA121D2149C63F00330D10 /* AppleIncRootCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleIncRootCertificate.cer; sourceTree = "<group>"; };
+		37F2CBBE2149CAB4001F4397 /* ReceiptValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptValidator.swift; sourceTree = "<group>"; };
 		399EFEF224E0B1C088B2730B /* Pods-AdBlock-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Extension/Pods-AdBlock-Extension.release.xcconfig"; sourceTree = "<group>"; };
 		39EEAD48C6B9D5AB845AF3A3 /* Pods_AdBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D23F4E0FB36263FA613141E /* Pods-AdBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock/Pods-AdBlock.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,12 +272,6 @@
 		5948600F20F04B0400765931 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5948601020F04B0400765931 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5948601120F04B6100765931 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		5998A2A920F59504005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5998A2AA20F59504005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5998A2AB20F59504005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5998A2AC20F59504005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5998A2AD20F59504005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5998A2AE20F59520005025F9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		599CD0DF20EAD0DB0005A60A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		599CD0E120EAD11B0005A60A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		599CD0E620EAE7A40005A60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -208,8 +294,106 @@
 		59EF602520E6B2AA00A822B1 /* AdBlockIcon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdBlockIcon3.png; sourceTree = "<group>"; };
 		59EF602720EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyWhitelistTableCellView.swift; sourceTree = "<group>"; };
 		59EF602920EAB64300A822B1 /* InactiveFilterListTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactiveFilterListTableCellView.swift; sourceTree = "<group>"; };
+		71039DAC21ADFA210083C6D7 /* NSControl+AdBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSControl+AdBlock.swift"; sourceTree = "<group>"; };
+		710E482321FA55E600967319 /* FilterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSet.swift; sourceTree = "<group>"; };
+		71177A8821E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71177A8921E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71177A8A21E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71177A8B21E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71177A8C21E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71177A8D21E9222B004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71177A8E21E92270004E0A15 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		715C3AD32113881000F9A587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		715C3AD5211393CC00F9A587 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		715C3AD62113940700F9A587 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		715C3AD82113941B00F9A587 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71627FDE219B8BA9003F6551 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
+		71636C932127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C952127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C962127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C972127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C982127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C992127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636C9A2127AEED00833D49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636C9B2127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C9C2127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C9D2127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C9E2127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636C9F2127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA02127B0D300833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CA12127B0EA00833D49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CA22127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA32127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA42127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA52127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA62127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CA72127B1B600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CA82127B1C600833D49 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CA92127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CAA2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CAB2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CAC2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CAD2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CAE2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CAF2127B27700833D49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CB02127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CB12127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CB22127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CB32127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CB42127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CB52127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CB62127B39300833D49 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CB72127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CB82127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CB92127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CBA2127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CBB2127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CBC2127B44000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		71636CBD2127B45000833D49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		71636CBE2127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CBF2127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC02127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC12127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC22127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC32127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CC42127BB9F00833D49 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CC72127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC82127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CC92127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CCA2127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CCB2127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71636CCC2127C49900833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CCD2127C4ED00833D49 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71636CCE2127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CCF2127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CD02127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CD12127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CD22127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		71636CD32127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		71636CD42127C5F100833D49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		719420DD210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		719420DE210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		719420DF210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		719420E0210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		719420E1210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		719420E2210FBCB3007F84E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7196765C21FFB869000DCBC1 /* SnippetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetsHelper.swift; sourceTree = "<group>"; };
+		7196765E21FFEC15000DCBC1 /* snippets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = snippets.js; sourceTree = "<group>"; };
+		7196766021FFF6C2000DCBC1 /* elemHideEmulation.js */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.javascript; path = elemHideEmulation.js; sourceTree = "<group>"; tabWidth = 2; };
+		7196766222013498000DCBC1 /* FilterListsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListsText.swift; sourceTree = "<group>"; };
+		71CD352721823034001FCE8F /* DebugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
+		71CD35292182576D001FCE8F /* DebugWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWindowController.swift; sourceTree = "<group>"; };
+		71FE40F821E56EB500F2DC87 /* FilterTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTypes.swift; sourceTree = "<group>"; };
+		71FE40FA21E56EB600F2DC87 /* DomainSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainSet.swift; sourceTree = "<group>"; };
+		71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterNormalizer.swift; sourceTree = "<group>"; };
+		71FE40FD21E56EB600F2DC87 /* FilterOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
+		71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionHelper.swift; sourceTree = "<group>"; };
+		72CAF6B92A567797CF6F2088 /* Pods-LauncherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LauncherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LauncherApp/Pods-LauncherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7697EDEBD512B5CCFA7810AC /* Pods-AdBlock-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Tests/Pods-AdBlock-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AEEAB69470CF4D78726E661 /* Pods-AdBlock-Safari-Menu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Safari-Menu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Safari-Menu/Pods-AdBlock-Safari-Menu.debug.xcconfig"; sourceTree = "<group>"; };
+		905319B063FFACE43DAF7D99 /* Pods_AdBlock_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdBlock_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A4AA2A6AE574059D091D0F /* Pods_AdBlock_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdBlock_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE17FF6EBC3E9894004C6C2 /* Pods-LauncherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LauncherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LauncherApp/Pods-LauncherApp.release.xcconfig"; sourceTree = "<group>"; };
 		E06BE0C5D39A0BA68EBC96FA /* Pods-AdBlock-Mac-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Mac-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Mac-Extension/Pods-AdBlock-Mac-Extension.release.xcconfig"; sourceTree = "<group>"; };
 		E207F54D209729B9008DC607 /* AssetMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMerger.swift; sourceTree = "<group>"; };
 		E207F54F209747D1008DC607 /* AssetsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsManager.swift; sourceTree = "<group>"; };
@@ -266,18 +450,28 @@
 		E2D43341209093FF0073624C /* AppMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuBar.swift; sourceTree = "<group>"; };
 		E2D433452090C1930073624C /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		E2D69EC82099775B0012B58F /* String+Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Shortcuts.swift"; sourceTree = "<group>"; };
-		E2D69ECA2099CA1C0012B58F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E2D69ECA2099CA1C0012B58F /* Button.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E2E8B23820BD25B5000C64D1 /* PingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingDataManager.swift; sourceTree = "<group>"; };
 		E2FD39BA20A40BD200D4D534 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E9D57999E4913F3FD2488E96 /* Pods-AdBlock-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Extension/Pods-AdBlock-Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		EB6A8CF91E0F53027D351C5E /* Pods-AdBlock-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdBlock-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdBlock-Tests/Pods-AdBlock-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D9F255A79038F94E7D5C36 /* Pods_AdBlock_Safari_Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdBlock_Safari_Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37AB11C321012681008DAA64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1D7B585AD96B5872403F05 /* Pods_AdBlock_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2201A8920AD8E2D00F7CFB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297831E0488C981E9D68D75F /* Pods_LauncherApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +513,24 @@
 			path = LogServerManagement;
 			sourceTree = "<group>";
 		};
+		379A7A76212C65FF001129FC /* InAppPurchaseManagement */ = {
+			isa = PBXGroup;
+			children = (
+				379A7A77212C6645001129FC /* IAPManager.swift */,
+			);
+			path = InAppPurchaseManagement;
+			sourceTree = "<group>";
+		};
+		37AB11C721012681008DAA64 /* AdBlock-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				37AB11C821012681008DAA64 /* AdBlock_Whitellist_Tests.swift */,
+				37AB11CA21012681008DAA64 /* Info.plist */,
+				715C3AD22113881000F9A587 /* InfoPlist.strings */,
+			);
+			path = "AdBlock-Tests";
+			sourceTree = "<group>";
+		};
 		5D8AC3369989B05B0C955716 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +539,8 @@
 				39EEAD48C6B9D5AB845AF3A3 /* Pods_AdBlock.framework */,
 				C5A4AA2A6AE574059D091D0F /* Pods_AdBlock_Extension.framework */,
 				F6D9F255A79038F94E7D5C36 /* Pods_AdBlock_Safari_Menu.framework */,
+				905319B063FFACE43DAF7D99 /* Pods_AdBlock_Tests.framework */,
+				0385E7A8451909174566976D /* Pods_LauncherApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -346,6 +560,10 @@
 				399EFEF224E0B1C088B2730B /* Pods-AdBlock-Extension.release.xcconfig */,
 				7AEEAB69470CF4D78726E661 /* Pods-AdBlock-Safari-Menu.debug.xcconfig */,
 				08EC896482A1610C2476567C /* Pods-AdBlock-Safari-Menu.release.xcconfig */,
+				EB6A8CF91E0F53027D351C5E /* Pods-AdBlock-Tests.debug.xcconfig */,
+				7697EDEBD512B5CCFA7810AC /* Pods-AdBlock-Tests.release.xcconfig */,
+				72CAF6B92A567797CF6F2088 /* Pods-LauncherApp.debug.xcconfig */,
+				DAE17FF6EBC3E9894004C6C2 /* Pods-LauncherApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -374,6 +592,7 @@
 				E2D4331620907DD30073624C /* AdBlockExtension */,
 				E2D4332920907E8C0073624C /* AdBlockToolbar */,
 				E2201A8D20AD8E2D00F7CFB5 /* LauncherApp */,
+				37AB11C721012681008DAA64 /* AdBlock-Tests */,
 				E278F4072089D93A00573C9B /* Products */,
 				DF1F2BFF8935F2FF2AB91FBA /* Pods */,
 				5D8AC3369989B05B0C955716 /* Frameworks */,
@@ -387,6 +606,7 @@
 				E2D4331420907DD30073624C /* AdBlock-Extension.appex */,
 				E2D4332720907E8C0073624C /* AdBlock-Safari-Menu.appex */,
 				E2201A8C20AD8E2D00F7CFB5 /* LauncherApp.app */,
+				37AB11C621012681008DAA64 /* AdBlock-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,7 +617,9 @@
 				E278F4092089D93A00573C9B /* AppDelegate.swift */,
 				E2D43341209093FF0073624C /* AppMenuBar.swift */,
 				E2D433452090C1930073624C /* MainWindowController.swift */,
+				71CD35292182576D001FCE8F /* DebugWindowController.swift */,
 				375A5E3C20D03D4B00A8A572 /* IntroVC.swift */,
+				71CD352721823034001FCE8F /* DebugVC.swift */,
 				E278F40B2089D93A00573C9B /* MainVC.swift */,
 				E2B7106D208DB16700E3752C /* SectionListVC.swift */,
 				E26E2292209AC870004AC4C2 /* SectionDetailVC.swift */,
@@ -415,6 +637,7 @@
 		E278F41A2089EDC100573C9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37CA121D2149C63F00330D10 /* AppleIncRootCertificate.cer */,
 				59EF602520E6B2AA00A822B1 /* AdBlockIcon3.png */,
 				599CD12220EC548F0005A60A /* Info.plist */,
 				599CD0FD20EB19300005A60A /* sections.plist */,
@@ -431,9 +654,10 @@
 			children = (
 				E2C3165520919FD900202151 /* Event.swift */,
 				E2C3165620919FDA00202151 /* Observable.swift */,
-				3787EE7E20F5302900FF5633 /* LogServerManagement */,
-				E278F437208A01E700573C9B /* AssetsManagement */,
+				379A7A76212C65FF001129FC /* InAppPurchaseManagement */,
 				E278F439208A020500573C9B /* FilterlistManagement */,
+				E278F437208A01E700573C9B /* AssetsManagement */,
+				3787EE7E20F5302900FF5633 /* LogServerManagement */,
 				E278F438208A01F500573C9B /* WhitelistManagement */,
 				E278F43A208A0D0800573C9B /* PauseResumeBlockingManagement */,
 				E2E8B23720BD2592000C64D1 /* PingDataManagement */,
@@ -459,6 +683,7 @@
 				E207F54F209747D1008DC607 /* AssetsManager.swift */,
 				E27F249D2092E6F6006B4EDE /* AssetDownloader.swift */,
 				E207F54D209729B9008DC607 /* AssetMerger.swift */,
+				7196766222013498000DCBC1 /* FilterListsText.swift */,
 			);
 			path = AssetsManagement;
 			sourceTree = "<group>";
@@ -475,7 +700,13 @@
 		E278F439208A020500573C9B /* FilterlistManagement */ = {
 			isa = PBXGroup;
 			children = (
+				71FE411621E56F7100F2DC87 /* RegularExpressionHelper.swift */,
 				E2588FA320A01B3D009ADDAA /* FilterListManager.swift */,
+				71FE40FA21E56EB600F2DC87 /* DomainSet.swift */,
+				71FE40FB21E56EB600F2DC87 /* FilterNormalizer.swift */,
+				71FE40FD21E56EB600F2DC87 /* FilterOption.swift */,
+				71FE40F821E56EB500F2DC87 /* FilterTypes.swift */,
+				710E482321FA55E600967319 /* FilterSet.swift */,
 			);
 			path = FilterlistManagement;
 			sourceTree = "<group>";
@@ -539,6 +770,10 @@
 		E2D4332920907E8C0073624C /* AdBlockToolbar */ = {
 			isa = PBXGroup;
 			children = (
+				7196766021FFF6C2000DCBC1 /* elemHideEmulation.js */,
+				7196765E21FFEC15000DCBC1 /* snippets.js */,
+				375ADF842111127100F0D238 /* _locales */,
+				375ADF7E2111080E00F0D238 /* jquery */,
 				E2D4332A20907E8C0073624C /* SafariExtensionHandler.swift */,
 				E2D4332C20907E8C0073624C /* SafariExtensionViewController.swift */,
 				599CD0ED20EAEB490005A60A /* SafariExtensionViewController.xib */,
@@ -547,8 +782,13 @@
 				E2D4333120907E8C0073624C /* Info.plist */,
 				E2D4333620907E8C0073624C /* AdBlockToolbar.entitlements */,
 				372D7D0D20D94766009B4DA5 /* Image.xcassets */,
+				375ADF802111087E00F0D238 /* script.js */,
+				375ADF812111087E00F0D238 /* whitelist_ui.js */,
 				599CD0E720EAE7A40005A60A /* Localizable.strings */,
 				599CD11020EC1BC70005A60A /* InfoPlist.strings */,
+				71627FDE219B8BA9003F6551 /* ToolbarButton.swift */,
+				71039DAC21ADFA210083C6D7 /* NSControl+AdBlock.swift */,
+				7196765C21FFB869000DCBC1 /* SnippetsHelper.swift */,
 			);
 			path = AdBlockToolbar;
 			sourceTree = "<group>";
@@ -558,6 +798,10 @@
 			children = (
 				E2D69EC82099775B0012B58F /* String+Shortcuts.swift */,
 				E244F7AD2098B06C00B37D53 /* NSControl+AdBlock.swift */,
+				3719D8332149C15900EEB92E /* AdBlock-Bridging-Header.h */,
+				3719D8362149C3C500EEB92E /* pkcs7_union_accessors.h */,
+				3719D8372149C40200EEB92E /* pkcs7_union_accessors.c */,
+				37F2CBBE2149CAB4001F4397 /* ReceiptValidator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -573,13 +817,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37AB11C521012681008DAA64 /* AdBlock-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AB11CF21012681008DAA64 /* Build configuration list for PBXNativeTarget "AdBlock-Tests" */;
+			buildPhases = (
+				262D0C935202760B10C83F87 /* [CP] Check Pods Manifest.lock */,
+				37AB11C221012681008DAA64 /* Sources */,
+				37AB11C321012681008DAA64 /* Frameworks */,
+				37AB11C421012681008DAA64 /* Resources */,
+				D0937C71DA09F939D22D8B23 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37AB11CC21012681008DAA64 /* PBXTargetDependency */,
+			);
+			name = "AdBlock-Tests";
+			productName = "AdBlock-Tests";
+			productReference = 37AB11C621012681008DAA64 /* AdBlock-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E2201A8B20AD8E2D00F7CFB5 /* LauncherApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2201A9B20AD8E2D00F7CFB5 /* Build configuration list for PBXNativeTarget "LauncherApp" */;
 			buildPhases = (
+				638896F2A3AF0811FD9FFBDA /* [CP] Check Pods Manifest.lock */,
 				E2201A8820AD8E2D00F7CFB5 /* Sources */,
 				E2201A8920AD8E2D00F7CFB5 /* Frameworks */,
 				E2201A8A20AD8E2D00F7CFB5 /* Resources */,
+				2B202725D44D743D2EFDFE25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -655,16 +921,32 @@
 		E278F3FE2089D93A00573C9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = BetaFish;
 				TargetAttributes = {
+					37AB11C521012681008DAA64 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E278F4052089D93A00573C9B;
+					};
 					E2201A8B20AD8E2D00F7CFB5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					E278F4052089D93A00573C9B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -677,6 +959,7 @@
 					};
 					E2D4331320907DD30073624C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -689,6 +972,7 @@
 					};
 					E2D4332620907E8C0073624C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -708,6 +992,8 @@
 				"zh-Hans",
 				ca,
 				ar,
+				de,
+				bg,
 			);
 			mainGroup = E278F3FD2089D93A00573C9B;
 			productRefGroup = E278F4072089D93A00573C9B /* Products */;
@@ -718,11 +1004,20 @@
 				E2D4331320907DD30073624C /* AdBlock-Extension */,
 				E2D4332620907E8C0073624C /* AdBlock-Safari-Menu */,
 				E2201A8B20AD8E2D00F7CFB5 /* LauncherApp */,
+				37AB11C521012681008DAA64 /* AdBlock-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		37AB11C421012681008DAA64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715C3AD42113881000F9A587 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2201A8A20AD8E2D00F7CFB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -741,6 +1036,7 @@
 				599CD0E020EAD0DB0005A60A /* Main.storyboard in Resources */,
 				599CD0FE20EB19310005A60A /* sections.plist in Resources */,
 				E283EDA920A171C8008B471B /* Assets in Resources */,
+				37CA121E2149C64000330D10 /* AppleIncRootCertificate.cer in Resources */,
 				E2B7107C208DBE2800E3752C /* SectionHeaderView.xib in Resources */,
 				59AD37BB20EAC81700F738D8 /* Localizable.strings in Resources */,
 				E2B7106C208DA1FA00E3752C /* Assets.xcassets in Resources */,
@@ -764,10 +1060,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				599CD0F120EAEC220005A60A /* Localizable.strings in Resources */,
+				375ADF822111087E00F0D238 /* script.js in Resources */,
+				7196766121FFF6C2000DCBC1 /* elemHideEmulation.js in Resources */,
+				375ADF7F2111080F00F0D238 /* jquery in Resources */,
 				599CD10E20EC1BC70005A60A /* InfoPlist.strings in Resources */,
 				599CD0EE20EAEB490005A60A /* SafariExtensionViewController.xib in Resources */,
 				372D7D0E20D94766009B4DA5 /* Image.xcassets in Resources */,
+				7196765F21FFEC15000DCBC1 /* snippets.js in Resources */,
+				375ADF832111087E00F0D238 /* whitelist_ui.js in Resources */,
 				3703CBE120D9801100FCEAF0 /* AdBlockIcon.pdf in Resources */,
+				375ADF852111127100F0D238 /* _locales in Resources */,
 				E2C31661209210FE00202151 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +1095,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		262D0C935202760B10C83F87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdBlock-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B202725D44D743D2EFDFE25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LauncherApp/Pods-LauncherApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver-macOS10.13/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LauncherApp/Pods-LauncherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		638896F2A3AF0811FD9FFBDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LauncherApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BE46BC5BC81844CC654963DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -811,6 +1167,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D0937C71DA09F939D22D8B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AdBlock-Tests/Pods-AdBlock-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS10.13/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Punycode-Cocoa-macOS10.13/Punycode_Cocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup-macOS10.13/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver-macOS10.13/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Punycode_Cocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdBlock-Tests/Pods-AdBlock-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D1890C0979EF53AB52AA4F5C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -818,15 +1198,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AdBlock/Pods-AdBlock-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Punycode-Cocoa/Punycode_Cocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS10.12/Alamofire.framework",
+				"${PODS_ROOT}/GRKOpenSSLFramework/OpenSSL-macOS/bin/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Punycode-Cocoa-macOS10.12/Punycode_Cocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup-macOS10.12/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver-macOS10.12/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Punycode_Cocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -854,11 +1240,47 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37AB11C221012681008DAA64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71FE410D21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */,
+				37AB11D221012A6B008DAA64 /* Item.swift in Sources */,
+				37AB11D421012A81008DAA64 /* AssetDownloader.swift in Sources */,
+				37AB11DC21012AA3008DAA64 /* String+Shortcuts.swift in Sources */,
+				37AB11C921012681008DAA64 /* AdBlock_Whitellist_Tests.swift in Sources */,
+				37AB11DF21012B28008DAA64 /* FileManager+AdBlock.swift in Sources */,
+				71FE411A21E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */,
+				37AB11D021012707008DAA64 /* WhitelistManager.swift in Sources */,
+				37AB11D921012A94008DAA64 /* FilterListManager.swift in Sources */,
+				71FE410921E56EB600F2DC87 /* DomainSet.swift in Sources */,
+				71FE410121E56EB600F2DC87 /* FilterTypes.swift in Sources */,
+				37AB11DD21012AA7008DAA64 /* NSControl+AdBlock.swift in Sources */,
+				71FE411521E56EB600F2DC87 /* FilterOption.swift in Sources */,
+				37AB11DE21012B22008DAA64 /* Constants.swift in Sources */,
+				37AB11D821012A8F008DAA64 /* Event.swift in Sources */,
+				37AB11D721012A8C008DAA64 /* Observable.swift in Sources */,
+				37AB11DB21012A9D008DAA64 /* PingDataManager.swift in Sources */,
+				37AB11D321012A7E008DAA64 /* AssetsManager.swift in Sources */,
+				37AB11D621012A88008DAA64 /* LogServerManager.swift in Sources */,
+				37AB11D121012A42008DAA64 /* WhitelistRulesMaker.swift in Sources */,
+				37AB11E021012B2B008DAA64 /* UserPref.swift in Sources */,
+				710E482721FA55E600967319 /* FilterSet.swift in Sources */,
+				7196766622013498000DCBC1 /* FilterListsText.swift in Sources */,
+				37AB11DA21012A98008DAA64 /* PauseResumeBlockinManager.swift in Sources */,
+				37AB11D521012A84008DAA64 /* AssetMerger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2201A8820AD8E2D00F7CFB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373A34B42114B2F700CB26BB /* Observable.swift in Sources */,
 				E2201A8F20AD8E2D00F7CFB5 /* AppDelegate.swift in Sources */,
+				373A34B32114B2F400CB26BB /* Event.swift in Sources */,
+				373A34B22114B24600CB26BB /* Constants.swift in Sources */,
+				3705E418211A3653000F7C08 /* FileManager+AdBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,10 +1289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E244F7AE2098B06C00B37D53 /* NSControl+AdBlock.swift in Sources */,
+				71CD352A2182576D001FCE8F /* DebugWindowController.swift in Sources */,
 				59EF602820EAB4C500A822B1 /* EmptyWhitelistTableCellView.swift in Sources */,
 				E2D4330F209060E00073624C /* AlertUtil.swift in Sources */,
 				E2D69EC92099775B0012B58F /* String+Shortcuts.swift in Sources */,
 				E2B7108C208E03E600E3752C /* Item.swift in Sources */,
+				71FE411721E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */,
 				E2B71089208E03A500E3752C /* Section.swift in Sources */,
 				375A5E3D20D03D4B00A8A572 /* IntroVC.swift in Sources */,
 				E2588FA420A01B3D009ADDAA /* FilterListManager.swift in Sources */,
@@ -879,26 +1303,36 @@
 				E2E8B23920BD25B5000C64D1 /* PingDataManager.swift in Sources */,
 				E278F40C2089D93A00573C9B /* MainVC.swift in Sources */,
 				E2C3165720919FDA00202151 /* Event.swift in Sources */,
+				71FE410621E56EB600F2DC87 /* DomainSet.swift in Sources */,
 				E2C3165C2091CF4700202151 /* Storyboard+AdBlock.swift in Sources */,
 				3787EE8020F530C700FF5633 /* LogServerManager.swift in Sources */,
 				E2B71079208DBE2000E3752C /* SectionHeaderView.swift in Sources */,
 				E278F40A2089D93A00573C9B /* AppDelegate.swift in Sources */,
 				E2D433462090C1930073624C /* MainWindowController.swift in Sources */,
+				71CD352821823034001FCE8F /* DebugVC.swift in Sources */,
 				E2B7106E208DB16700E3752C /* SectionListVC.swift in Sources */,
+				37F2CBBF2149CAB4001F4397 /* ReceiptValidator.swift in Sources */,
 				E207F55120975759008DC607 /* AssetDownloader.swift in Sources */,
 				E2B7108F208E048600E3752C /* SectionHelper.swift in Sources */,
 				59EF602A20EAB64300A822B1 /* InactiveFilterListTableCellView.swift in Sources */,
 				E2B71080208DC86200E3752C /* NSColor+AdBlock.swift in Sources */,
+				7196766322013498000DCBC1 /* FilterListsText.swift in Sources */,
 				E2B71070208DB1C900E3752C /* SectionItemCollectionViewItem.swift in Sources */,
 				E2D43342209093FF0073624C /* AppMenuBar.swift in Sources */,
 				E207F550209747D1008DC607 /* AssetsManager.swift in Sources */,
 				E26E2299209AD549004AC4C2 /* FilterListTableCellView.swift in Sources */,
 				E2359FAF20A465870055C403 /* PauseResumeBlockinManager.swift in Sources */,
+				71FE40FE21E56EB600F2DC87 /* FilterTypes.swift in Sources */,
 				E26E2295209ACA0A004AC4C2 /* WhitelistTableCellView.swift in Sources */,
 				E2C3165820919FDA00202151 /* Observable.swift in Sources */,
+				710E482421FA55E600967319 /* FilterSet.swift in Sources */,
+				3719D8382149C40200EEB92E /* pkcs7_union_accessors.c in Sources */,
 				E23A67862092FA4F00BD464F /* FileManager+AdBlock.swift in Sources */,
 				E207F5522097575B008DC607 /* AssetMerger.swift in Sources */,
 				E2D69ECB2099CA1C0012B58F /* Button.swift in Sources */,
+				379A7A78212C6645001129FC /* IAPManager.swift in Sources */,
+				71FE410A21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */,
+				71FE411221E56EB600F2DC87 /* FilterOption.swift in Sources */,
 				E2CB9B79208F61EF004A5DFE /* PlaceholderTextView.swift in Sources */,
 				E217A8DC20A2F6DD00DF0CF1 /* WhitelistRulesMaker.swift in Sources */,
 				E27BB6FE20AC68A100544CD0 /* Util.swift in Sources */,
@@ -911,16 +1345,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71FE411B21E57DCE00F2DC87 /* FilterNormalizer.swift in Sources */,
 				E244F79320983ADF00B37D53 /* FileManager+AdBlock.swift in Sources */,
 				E2D4331A20907DD40073624C /* ContentBlockerRequestHandler.swift in Sources */,
+				710E482521FA55E600967319 /* FilterSet.swift in Sources */,
+				71FE410721E56EB600F2DC87 /* DomainSet.swift in Sources */,
+				71FE40FF21E56EB600F2DC87 /* FilterTypes.swift in Sources */,
 				E2588FA920A02A80009ADDAA /* Item.swift in Sources */,
+				37091F44217FD0A700302A87 /* PingDataManager.swift in Sources */,
 				E2588FAF20A05954009ADDAA /* Constants.swift in Sources */,
 				E244F79620983C9F00B37D53 /* Observable.swift in Sources */,
 				E2359FB120A467BE0055C403 /* PauseResumeBlockinManager.swift in Sources */,
+				71FE411821E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */,
 				E244F79520983C9D00B37D53 /* Event.swift in Sources */,
+				7196766422013498000DCBC1 /* FilterListsText.swift in Sources */,
+				37091F43217FCFF100302A87 /* LogServerManager.swift in Sources */,
 				E229BA9020A58E4B00F35740 /* AssetDownloader.swift in Sources */,
 				E229BA8B20A58DDF00F35740 /* WhitelistManager.swift in Sources */,
 				E229BA9420A58F5A00F35740 /* UserPref.swift in Sources */,
+				71FE411321E56EB600F2DC87 /* FilterOption.swift in Sources */,
 				E229BA9120A58E4E00F35740 /* AssetMerger.swift in Sources */,
 				E229BA8F20A58E4900F35740 /* AssetsManager.swift in Sources */,
 				E229BA8C20A58DE100F35740 /* WhitelistRulesMaker.swift in Sources */,
@@ -933,22 +1376,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				E229BA9520A58F5A00F35740 /* UserPref.swift in Sources */,
+				71FE411921E56F7100F2DC87 /* RegularExpressionHelper.swift in Sources */,
 				E269283520BE6FC000421BF3 /* Util.swift in Sources */,
 				E2D4332D20907E8C0073624C /* SafariExtensionViewController.swift in Sources */,
 				E217A8DF20A2FFE800DF0CF1 /* Event.swift in Sources */,
+				71FE410021E56EB600F2DC87 /* FilterTypes.swift in Sources */,
 				E270FEC420B2A3E80053EDD6 /* String+Shortcuts.swift in Sources */,
+				71039DAD21ADFA210083C6D7 /* NSControl+AdBlock.swift in Sources */,
+				7196766522013498000DCBC1 /* FilterListsText.swift in Sources */,
+				718AD5A6219B905D00ED1859 /* ToolbarButton.swift in Sources */,
 				E217A8D820A2CC5B00DF0CF1 /* WhitelistManager.swift in Sources */,
 				E217A8D920A2EE9700DF0CF1 /* FileManager+AdBlock.swift in Sources */,
 				37B33A2920F3E79C00921596 /* PingDataManager.swift in Sources */,
 				E217A8E320A3214D00DF0CF1 /* FilterListManager.swift in Sources */,
 				E2C3165E20920CE000202151 /* AlertUtil.swift in Sources */,
 				E2359FB020A465870055C403 /* PauseResumeBlockinManager.swift in Sources */,
+				710E482621FA55E600967319 /* FilterSet.swift in Sources */,
 				E217A8E220A31F4C00DF0CF1 /* AssetMerger.swift in Sources */,
 				E2D4332B20907E8C0073624C /* SafariExtensionHandler.swift in Sources */,
 				E217A8DE20A2FFE600DF0CF1 /* Observable.swift in Sources */,
+				7196765D21FFB869000DCBC1 /* SnippetsHelper.swift in Sources */,
 				E217A8E020A31F4500DF0CF1 /* AssetsManager.swift in Sources */,
+				71FE410821E56EB600F2DC87 /* DomainSet.swift in Sources */,
+				71FE411421E56EB600F2DC87 /* FilterOption.swift in Sources */,
 				E217A8DD20A2F6DD00DF0CF1 /* WhitelistRulesMaker.swift in Sources */,
 				E2588FAA20A02A80009ADDAA /* Item.swift in Sources */,
+				37091F42217FCFF100302A87 /* LogServerManager.swift in Sources */,
+				71FE410C21E56EB600F2DC87 /* FilterNormalizer.swift in Sources */,
 				E217A8E120A31F4A00DF0CF1 /* AssetDownloader.swift in Sources */,
 				E217A8DA20A2EF1800DF0CF1 /* Constants.swift in Sources */,
 			);
@@ -957,6 +1411,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		37AB11CC21012681008DAA64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E278F4052089D93A00573C9B /* AdBlock */;
+			targetProxy = 37AB11CB21012681008DAA64 /* PBXContainerItemProxy */;
+		};
 		E2D4331E20907DD40073624C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E2D4331320907DD30073624C /* AdBlock-Extension */;
@@ -977,7 +1436,17 @@
 				599CD11820EC45D70005A60A /* es */,
 				5948600A20F04AF000765931 /* zh-Hans */,
 				5948600F20F04B0400765931 /* ca */,
-				5998A2AD20F59504005025F9 /* cs */,
+				719420E1210FBCB3007F84E4 /* ko */,
+				71636C992127AEED00833D49 /* de */,
+				71636CA02127B0D300833D49 /* fr */,
+				71636CA72127B1B600833D49 /* it */,
+				71636CAE2127B27700833D49 /* ja */,
+				71636CB52127B39300833D49 /* nl */,
+				71636CBC2127B44000833D49 /* pt-BR */,
+				71636CC32127BB9F00833D49 /* ru */,
+				71636CCC2127C49900833D49 /* sv */,
+				71636CD32127C5F100833D49 /* zh-Hant */,
+				71177A8C21E9222B004E0A15 /* bg */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -989,7 +1458,17 @@
 				599CD12420EC54B90005A60A /* en */,
 				5948600620F04AF000765931 /* zh-Hans */,
 				5948600B20F04B0400765931 /* ca */,
-				5998A2A920F59504005025F9 /* cs */,
+				719420DE210FBCB3007F84E4 /* ko */,
+				71636C952127AEED00833D49 /* de */,
+				71636C9C2127B0D300833D49 /* fr */,
+				71636CA32127B1B600833D49 /* it */,
+				71636CAA2127B27700833D49 /* ja */,
+				71636CB12127B39300833D49 /* nl */,
+				71636CB82127B44000833D49 /* pt-BR */,
+				71636CC12127BB9F00833D49 /* ru */,
+				71636CC82127C49900833D49 /* sv */,
+				71636CD02127C5F100833D49 /* zh-Hant */,
+				71177A8821E9222B004E0A15 /* bg */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1001,7 +1480,17 @@
 				599CD11620EC45D70005A60A /* es */,
 				5948600720F04AF000765931 /* zh-Hans */,
 				5948600E20F04B0400765931 /* ca */,
-				5998A2AC20F59504005025F9 /* cs */,
+				719420DF210FBCB3007F84E4 /* ko */,
+				71636C982127AEED00833D49 /* de */,
+				71636C9F2127B0D300833D49 /* fr */,
+				71636CA52127B1B600833D49 /* it */,
+				71636CAB2127B27700833D49 /* ja */,
+				71636CB32127B39300833D49 /* nl */,
+				71636CBB2127B44000833D49 /* pt-BR */,
+				71636CC22127BB9F00833D49 /* ru */,
+				71636CCA2127C49900833D49 /* sv */,
+				71636CD12127C5F100833D49 /* zh-Hant */,
+				71177A8A21E9222B004E0A15 /* bg */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1013,7 +1502,17 @@
 				599CD11720EC45D70005A60A /* es */,
 				5948600820F04AF000765931 /* zh-Hans */,
 				5948600D20F04B0400765931 /* ca */,
-				5998A2AB20F59504005025F9 /* cs */,
+				719420E0210FBCB3007F84E4 /* ko */,
+				71636C972127AEED00833D49 /* de */,
+				71636C9E2127B0D300833D49 /* fr */,
+				71636CA62127B1B600833D49 /* it */,
+				71636CAD2127B27700833D49 /* ja */,
+				71636CB42127B39300833D49 /* nl */,
+				71636CBA2127B44000833D49 /* pt-BR */,
+				71636CC02127BB9F00833D49 /* ru */,
+				71636CCB2127C49900833D49 /* sv */,
+				71636CD22127C5F100833D49 /* zh-Hant */,
+				71177A8B21E9222B004E0A15 /* bg */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1025,7 +1524,17 @@
 				599CD11420EC45D70005A60A /* es */,
 				5948600920F04AF000765931 /* zh-Hans */,
 				5948600C20F04B0400765931 /* ca */,
-				5998A2AA20F59504005025F9 /* cs */,
+				719420DD210FBCB3007F84E4 /* ko */,
+				71636C962127AEED00833D49 /* de */,
+				71636C9D2127B0D300833D49 /* fr */,
+				71636CA42127B1B600833D49 /* it */,
+				71636CAC2127B27700833D49 /* ja */,
+				71636CB22127B39300833D49 /* nl */,
+				71636CB92127B44000833D49 /* pt-BR */,
+				71636CBF2127BB9F00833D49 /* ru */,
+				71636CC92127C49900833D49 /* sv */,
+				71636CCF2127C5F100833D49 /* zh-Hant */,
+				71177A8921E9222B004E0A15 /* bg */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1037,49 +1546,129 @@
 				599CD11920EC460E0005A60A /* es */,
 				5948601020F04B0400765931 /* ca */,
 				5948601120F04B6100765931 /* zh-Hans */,
-				5998A2AE20F59520005025F9 /* cs */,
+				719420E2210FBCB3007F84E4 /* ko */,
+				71636C9A2127AEED00833D49 /* de */,
+				71636CA12127B0EA00833D49 /* fr */,
+				71636CA82127B1C600833D49 /* it */,
+				71636CAF2127B27700833D49 /* ja */,
+				71636CB62127B39300833D49 /* nl */,
+				71636CBD2127B45000833D49 /* pt-BR */,
+				71636CC42127BB9F00833D49 /* ru */,
+				71636CCD2127C4ED00833D49 /* sv */,
+				71636CD42127C5F100833D49 /* zh-Hant */,
+				71177A8D21E9222B004E0A15 /* bg */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		715C3AD22113881000F9A587 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				715C3AD32113881000F9A587 /* es */,
+				715C3AD5211393CC00F9A587 /* ca */,
+				715C3AD62113940700F9A587 /* zh-Hans */,
+				715C3AD82113941B00F9A587 /* ko */,
+				71636C932127AEED00833D49 /* de */,
+				71636C9B2127B0D300833D49 /* fr */,
+				71636CA22127B1B600833D49 /* it */,
+				71636CA92127B27700833D49 /* ja */,
+				71636CB02127B39300833D49 /* nl */,
+				71636CB72127B44000833D49 /* pt-BR */,
+				71636CBE2127BB9F00833D49 /* ru */,
+				71636CC72127C49900833D49 /* sv */,
+				71636CCE2127C5F100833D49 /* zh-Hant */,
+				71177A8E21E92270004E0A15 /* bg */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		37AB11CD21012681008DAA64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6A8CF91E0F53027D351C5E /* Pods-AdBlock-Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3KKZV48AQD;
+				INFOPLIST_FILE = "AdBlock-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac.AdBlock-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdBlock.app/Contents/MacOS/AdBlock";
+			};
+			name = Debug;
+		};
+		37AB11CE21012681008DAA64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7697EDEBD512B5CCFA7810AC /* Pods-AdBlock-Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3KKZV48AQD;
+				INFOPLIST_FILE = "AdBlock-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac.AdBlock-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdBlock.app/Contents/MacOS/AdBlock";
+			};
+			name = Release;
+		};
 		E2201A9920AD8E2D00F7CFB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CAF6B92A567797CF6F2088 /* Pods-LauncherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LauncherApp/LauncherApp.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 3KKZV48AQD;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = LauncherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac.LauncherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = all;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		E2201A9A20AD8E2D00F7CFB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE17FF6EBC3E9894004C6C2 /* Pods-LauncherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LauncherApp/LauncherApp.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 3KKZV48AQD;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = LauncherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac.LauncherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = all;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1201,6 +1790,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdBlock/Resources/AdBlock.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1213,7 +1803,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "AdBlock/Extensions/AdBlock-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1223,6 +1815,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdBlock/Resources/AdBlock.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1234,7 +1827,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.betafish.adblock-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "AdBlock/Extensions/AdBlock-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1253,7 +1847,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1264,6 +1858,7 @@
 				CODE_SIGN_ENTITLEMENTS = AdBlockExtension/AdBlockExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 3KKZV48AQD;
 				INFOPLIST_FILE = "$(SRCROOT)/AdBlockExtension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -1272,7 +1867,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1291,7 +1886,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1302,6 +1897,7 @@
 				CODE_SIGN_ENTITLEMENTS = AdBlockToolbar/AdBlockToolbar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 3KKZV48AQD;
 				INFOPLIST_FILE = "$(SRCROOT)/AdBlockToolbar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -1310,13 +1906,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37AB11CF21012681008DAA64 /* Build configuration list for PBXNativeTarget "AdBlock-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB11CD21012681008DAA64 /* Debug */,
+				37AB11CE21012681008DAA64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2201A9B20AD8E2D00F7CFB5 /* Build configuration list for PBXNativeTarget "LauncherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

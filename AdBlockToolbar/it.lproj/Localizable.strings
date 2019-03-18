@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "Avviso";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "Mostra la pubblicità su questo sito";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "Mostra la pubblicità su questa pagina";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "Blocca la pubblicità su questo sito";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "Blocca la pubblicità su questa pagina";
+
+/* Error title */
+"error.title" = "Errore";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "L'estensione AdBlock è disattivata";
+
+/* Feature under development alert */
+"feature.under.development" = "Questa funzione è in fase di sviluppo.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Aiuto e consigli";
+
+/* Invalid url alert */
+"invalid.url.alert" = "URL non valido";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Pause menu item */
+"pause.menu" = "Pausa";
+
+/* Resume menu item */
+"resume.menu" = "Riprendi";
+
+/* Settings menu item */
+"settings.menu" = "Impostazioni";
+
+/* Upgrade button */
+"upgrade.button" = "AGGIORNA";
+

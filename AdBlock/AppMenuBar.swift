@@ -24,6 +24,7 @@ class AppMenuBar: NSObject {
     
     static let ADS_CLICKED = 1
     static let ALLOW_ADS_CLICKED = 2
+    static let ANTI_CIRCUMVENTION_CLICKED = 3
     static var lastFilterListMenuOperation: Int = 0
     
     var statusItem: NSStatusItem?
@@ -31,12 +32,15 @@ class AppMenuBar: NSObject {
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var adsMenuItem: NSMenuItem!
     @IBOutlet weak var allowAdsMenuItem: NSMenuItem!
+    @IBOutlet weak var antiCircumventionMenuItem: NSMenuItem!
     @IBOutlet weak var startAppAtLoginMenuItem: NSMenuItem!
     @IBOutlet weak var filterListsMenuItem: NSMenuItem!
     @IBOutlet weak var quitMenuItem: NSMenuItem!
     @IBOutlet weak var updateMenuItem: NSMenuItem!
     @IBOutlet weak var whitelistMenuItem: NSMenuItem!
     @IBOutlet weak var aboutMenuItem: NSMenuItem!
+    @IBOutlet weak var aboutAdBlockMenuItem: NSMenuItem!
+    @IBOutlet weak var debugMenuItem: NSMenuItem!
     
     override init() {
         super.init()        
@@ -45,18 +49,27 @@ class AppMenuBar: NSObject {
     func initializeAppMenuBar() {
         statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
         if let button = statusItem?.button {
-            button.image = NSImage(named:NSImage.Name("MenuBarAppIcon"))
+            button.image = NSImage(named:"MenuBarAppIcon")
         }
         statusItem?.menu = menu
         
+        if UserPref.isUpgradeUnlocked() {
+            antiCircumventionMenuItem.isHidden = false
+        } else {
+            antiCircumventionMenuItem.isHidden = true
+        }
+        
         adsMenuItem.title = NSLocalizedString("easylist.title", comment: "")
         allowAdsMenuItem.title = NSLocalizedString("acceptable.ads.title", comment: "")
+        antiCircumventionMenuItem.title = NSLocalizedString("anti.circumvention.title", comment: "")
         startAppAtLoginMenuItem.title = NSLocalizedString("start.at.login", comment: "")
         filterListsMenuItem.title = NSLocalizedString("filter.lists.title", comment: "")
         quitMenuItem.title = NSLocalizedString("quit.menu", comment: "")
         updateMenuItem.title = NSLocalizedString("filter.lists.update.button", comment: "")
         whitelistMenuItem.title = NSLocalizedString("whitelist.menu", comment: "")
         aboutMenuItem.title = NSLocalizedString("about.menu", comment: "")
+        aboutAdBlockMenuItem.title = NSLocalizedString("about.adblock.menu", comment: "")
+        debugMenuItem.title = NSLocalizedString("debug.menu", comment: "")
     }
     
     fileprivate func updateFilterListsItemsState() {
@@ -72,6 +85,18 @@ class AppMenuBar: NSObject {
             allowAdsMenuItem.state = .on
         } else {
             allowAdsMenuItem.state = .off
+        }
+        
+        if FilterListManager.shared.isEnabled(filterListId: Constants.ANTI_CIRCUMVENTION_LIST_ID) {
+            antiCircumventionMenuItem.state = .on
+        } else {
+            antiCircumventionMenuItem.state = .off
+        }
+        
+        if UserPref.isUpgradeUnlocked() {
+            antiCircumventionMenuItem.isHidden = false
+        } else {
+            antiCircumventionMenuItem.isHidden = true
         }
     }
     
@@ -102,6 +127,17 @@ class AppMenuBar: NSObject {
         FilterListManager.shared.callAssetMerge()
     }
     
+    @IBAction func antiCircumventionMenuItemClick(_ sender: NSMenuItem) {
+        AppMenuBar.lastFilterListMenuOperation = AppMenuBar.ANTI_CIRCUMVENTION_CLICKED
+        if sender.state == .on {
+            FilterListManager.shared.disable(filterListId: Constants.ANTI_CIRCUMVENTION_LIST_ID)
+        } else {
+            FilterListManager.shared.enable(filterListId: Constants.ANTI_CIRCUMVENTION_LIST_ID)
+        }
+        updateFilterListsItemsState()
+        FilterListManager.shared.callAssetMerge()
+    }
+    
     @IBAction func whitelistMenuItemClick(_ sender: NSMenuItem) {
         activateApp()
         DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
@@ -117,7 +153,6 @@ class AppMenuBar: NSObject {
     }
     
     @IBAction func startAppOnLoginClick(_ sender: NSMenuItem) {
-        // TODO
         let launcherAppId = "com.betafish.adblock-mac.LauncherApp"
         let launchApp = sender.state == .on ? false : true
         if !SMLoginItemSetEnabled(launcherAppId as CFString, launchApp) {

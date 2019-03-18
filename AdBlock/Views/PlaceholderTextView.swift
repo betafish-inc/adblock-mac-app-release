@@ -20,7 +20,7 @@ import Cocoa
 class PlaceholderTextView: NSTextView {
     private var placeholderAttributeString: NSAttributedString?
     private let placeholderDrawingPoint = NSPoint(x: 6, y: 0)
-    private let placeholderAttributes: [NSAttributedStringKey: Any]? = [NSAttributedStringKey.foregroundColor: NSColor.gray]
+    private let placeholderAttributes: [NSAttributedString.Key: Any]? = [NSAttributedString.Key.foregroundColor: NSColor.gray]
     
     func setPlaceholderText(_ text: String) {
         placeholderAttributeString = NSAttributedString(string: text, attributes: placeholderAttributes)

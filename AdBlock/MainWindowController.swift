@@ -24,9 +24,7 @@ class MainWindowController: NSWindowController {
         super.windowDidLoad()
         let appDelegate = NSApplication.shared.delegate as? AppDelegate
         appDelegate?.mainWindow = self.window
-        // TODO - remove
-        // UserPref.setIntroScreenShown(false)
-        UserPref.setLaunchAppOnUserLogin(false)
+
         if UserPref.isIntroScreenShown() {
             self.contentViewController = NSStoryboard.mainVC()
             self.window?.titleVisibility = .visible
@@ -37,11 +35,26 @@ class MainWindowController: NSWindowController {
             self.window?.titleVisibility = .hidden
         }
     }
+
+    override func windowWillLoad() {
+        super.windowWillLoad()
+        if (Constants.DEBUG_LOG_ENABLED && SwiftyBeaver.countDestinations() == 0) {
+            let console = ConsoleDestination()
+            console.minLevel = .verbose
+            SwiftyBeaver.addDestination(console)
+            if let assetsPath = Constants.AssetsUrls.assetsFolder?.path, FileManager.default.fileExists(atPath: assetsPath) {
+                FileManager.default.createDirectoryIfNotExists(Constants.AssetsUrls.logFolder, withIntermediateDirectories: true)
+                let file = FileDestination()
+                file.logFileURL = Constants.AssetsUrls.logFileURL
+                SwiftyBeaver.addDestination(file)
+            }
+        }
+    }
+
 }
 
 extension MainWindowController: IntroVCDelegate {
     func startApp() {
-        SwiftyBeaver.debug("startApp")
         UserPref.setIntroScreenShown(true)
         self.contentViewController = nil
         self.contentViewController = NSStoryboard.mainVC()

@@ -1,0 +1,16 @@
+/* (No Comment) */
+"CFBundleDisplayName" = "AdBlock-Engine";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Alle Rechte vorbehalten.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "Blockieren Sie lästige, aufdringliche und bösartige Werbung und Pop-ups. Genießen Sie das Surfen im Netz wieder.";
+

@@ -21,6 +21,7 @@ class Item : NSObject {
     static let EMPTY_WHITELIST_ITEM_ID = "EMPTY_WHITELIST"
     static let WHITELIST_ITEM_ID = "WHITELIST"
     static let ALL_FILTER_LIST_INACTIVE_ITEM_ID = "INACTIVE_FILTER_LIST"
+    static let UPGRADE_ITEM_ID = "UPGRADE"
     
     var id: String? = nil
     var name: String? = nil
@@ -28,6 +29,7 @@ class Item : NSObject {
     var desc: String? = nil
     var url: String? = nil
     var rulesCount: Int? = nil
+    var image: String? = nil
     
     var filterListItems: [Item]? = nil
     

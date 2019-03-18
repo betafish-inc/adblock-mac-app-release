@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "警告";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "このサイトの広告を許可する";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "このサイトの広告を許可する";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "このサイトの広告をブロックする";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "このサイトの広告をブロックする";
+
+/* Error title */
+"error.title" = "エラー";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "AdBlock拡張機能は無効になっています";
+
+/* Feature under development alert */
+"feature.under.development" = "この機能は開発中です。";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "ヘルプとフィードバック";
+
+/* Invalid url alert */
+"invalid.url.alert" = "無効なURL";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Pause menu item */
+"pause.menu" = "一時停止";
+
+/* Resume menu item */
+"resume.menu" = "再開";
+
+/* Settings menu item */
+"settings.menu" = "設定";
+
+/* Upgrade button */
+"upgrade.button" = "アップグレード";
+

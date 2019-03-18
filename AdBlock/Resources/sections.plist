@@ -17,6 +17,54 @@
 				<key>filterlist</key>
 				<array>
 					<dict>
+						<key>status</key>
+						<integer>1</integer>
+						<key>rules_count</key>
+						<integer>0</integer>
+						<key>active</key>
+						<false/>
+						<key>name</key>
+						<string></string>
+						<key>id</key>
+						<string>advance_filters</string>
+						<key>url</key>
+						<string>https://cdn.adblockcdn.com/filters/advance_hiding.txt</string>
+						<key>upgrade</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>status</key>
+						<integer>1</integer>
+						<key>rules_count</key>
+						<integer>0</integer>
+						<key>active</key>
+						<false/>
+						<key>name</key>
+						<string>custom.title</string>
+						<key>id</key>
+						<string>custom</string>
+						<key>url</key>
+						<string></string>
+						<key>upgrade</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>status</key>
+						<integer>1</integer>
+						<key>rules_count</key>
+						<integer>0</integer>
+						<key>active</key>
+						<true/>
+						<key>name</key>
+						<string>anti.circumvention.title</string>
+						<key>id</key>
+						<string>anti_circumvention</string>
+						<key>url</key>
+						<string>https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt</string>
+						<key>upgrade</key>
+						<true/>
+					</dict>
+					<dict>
 						<key>url</key>
 						<string>https://cdn.adblockcdn.com/filters/easylist_content_blocker.json</string>
 						<key>id</key>
@@ -99,6 +147,16 @@
 				<string>whitelisting.title</string>
 				<key>active</key>
 				<false/>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>UPGRADE</string>
+				<key>name</key>
+				<string>product.upgrade.title</string>
+				<key>active</key>
+				<true/>
+				<key>image</key>
+				<string>heart</string>
 			</dict>
 		</array>
 	</dict>

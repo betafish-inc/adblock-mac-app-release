@@ -1,0 +1,19 @@
+/* (No Comment) */
+"CFBundleDisplayName" = "AdBlock Icon";
+
+/* Bundle name */
+"CFBundleName" = "AdBlock";
+
+/* InfoPlist.strings
+  AdBlock
+
+  Created by Rachel Weissman-Hohler on 7/3/18.
+  Copyright © 2018 BetaFish. All rights reserved. */
+"NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. All rights reserved.";
+
+/* (No Comment) */
+"NSHumanReadableDescription" = "アイコンで、Safari上のAdBlockアプリを管理できます。一時停止やお気に入りのサイトでの広告の表示の許可などが行なえます。";
+
+/* (No Comment) */
+"Toolbar Button Label for Identifier: AdBlockSafariIcon" = "AdBlock Icon";
+
