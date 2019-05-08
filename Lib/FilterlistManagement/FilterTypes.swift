@@ -36,7 +36,7 @@ class Filter: NSObject, PrettyPrint {
             if (Filter.isSelectorFilter(text: text)) {
                 Filter.cache[text] = SelectorFilter(text: text)
             } else if (Filter.isAdvancedSelectorFilter(text: text)) {
-                Filter.cache[text] = ElemHideEmulationFilter(text: text);
+                Filter.cache[text] = ElemHideEmulationFilter(text: text)
             } else if (Filter.isContentFilter(text: text)) {
                 Filter.cache[text] = try? ContentFilter.from(text: text, domains: nil, type: nil, body: nil)
             } else {

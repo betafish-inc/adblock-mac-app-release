@@ -24,12 +24,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func beginRequest(with context: NSExtensionContext) {
         if !SafariExtensionHandler.initialized {
+            SafariExtensionHandler.initialized = true
             FilterListsText.shared.processTextFromFile()
             DistributedNotificationCenter.default().addObserver(self,
                                                                 selector: #selector(self.processFilterListsText),
                                                                 name: mergeNotificationName,
                                                                 object: nil)
-            SafariExtensionHandler.initialized = true
         }
         super .beginRequest(with: context)
     }
@@ -165,7 +165,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
  
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-        PingDataManager.shared.pingDataIfNecessary()
+        
+        // Commenting out this call to send ping data from the icon
+        // The app itself will still ping when it's running
+        // PingDataManager.shared.pingDataIfNecessary()
         validationHandler(true, "")
     }
     
