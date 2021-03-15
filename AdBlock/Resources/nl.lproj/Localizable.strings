@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Activeer de <b>AdBlock-engine</b> en het <b>symbooltje voor AdBlock</b> via de voorkeuren voor Safari-extensies";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Ja, houd AdBlock up-to-date!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Deze stap overslaan";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "We werken de lijsten die we gebruiken om advertenties effectief te blokkeren doorlopend bij.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Om ervoor te zorgen dat we zo veel mogelijk advertenties blokkeren, klik je hieronder om AdBlock up-to-date te houden.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Opmerking: als je deze optie selecteert, blijft AdBlock op de achtergrond draaien, ook nadat je de app hebt afgesloten. Je kunt deze instelling op elk gewenst moment wijzigen door de optie 'AdBlock opstarten bij aanmelden' aan of uit te zetten in het AdBlock-menu in de menubalk van de Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "Upgrade kon niet worden geladen. Probeer het later nog eens.";
 
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Fout bij herstellen upgrade. Probeer het later opnieuw.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Fout bij het herstellen van de upgrade: ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "Herstellen upgrade mislukt";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "Haal meer uit AdBlock met deze bonusfuncties.";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Ondersteun je favoriete websites door ze toe te voegen aan je persoonlijke whitelist";
+"upgrade.line.one.description" = "Ondersteun je favoriete websites door ze toe te voegen aan je persoonlijke acceptatielijst";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "Sta advertenties toe op sites die je leuk vindt";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Upgrade niet beschikbaar";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Whitelist";
+"whitelist.menu" = "Toegestane advertenties beheren";
 
 /* Whitelisting button */
 "whitelisting.button" = "Website toevoegen";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "Er zijn geen gewhiteliste sites";
+"whitelisting.empty.text" = "Je hebt geen toegestane advertenties op sites";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Voer een geldige url in.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "bijv. http://www.voorbeeld.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "Om het blokkeren van advertenties op bepaalde sites uit te schakelen, kun je ze hier toevoegen aan je 'whitelist':";
-
-/* Whitelisting title */
-"whitelisting.title" = "Whitelisting";
+"whitelisting.header" = "Om advertenties op bepaalde sites toe te staan, kun je ze hier toevoegen aan je 'acceptatielijst':";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Deze url bestaat al.";

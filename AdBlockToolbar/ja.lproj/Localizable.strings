@@ -5,7 +5,7 @@
 "allow.ads.site.menu.safari.10" = "このサイトの広告を許可する";
 
 /* Allow ads menu item for Safari 11+ users */
-"allow.ads.site.menu.safari.11" = "このサイトの広告を許可する";
+"allow.ads.site.menu.safari.11" = "このページの広告を許可する";
 
 /* Block ads menu item Safari 10 users */
 "block.ads.site.menu.safari.10" = "このサイトの広告をブロックする";

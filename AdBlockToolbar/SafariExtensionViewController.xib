@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="AdBlock_Safari_Menu" customModuleProvider="target">
             <connections>
                 <outlet property="allowAdsImage" destination="QuJ-Bw-YHp" id="rIR-HF-Iuh"/>
-                <outlet property="allowAdsLine" destination="LlA-rK-ad2" id="ss0-14-VD5"/>
                 <outlet property="allowAdsProgressView" destination="MUi-rD-1k9" id="cVh-97-oH4"/>
-                <outlet property="allowAdsStackView" destination="2ce-Lg-63u" id="iM1-OH-dG1"/>
                 <outlet property="btnAllowAds" destination="uUn-5R-TpW" id="bnR-Rn-U2t"/>
-                <outlet property="btnHelpAndFeedback" destination="VDL-2W-2VD" id="r6y-SN-1av"/>
                 <outlet property="btnPause" destination="6l0-QH-t7y" id="e4s-Ko-7yr"/>
-                <outlet property="btnSettings" destination="6nV-fz-nvQ" id="zos-g8-HBR"/>
                 <outlet property="btnWhitelistDomain" destination="bj0-YX-kRU" id="tfT-GY-80c"/>
-                <outlet property="disabledTextField" destination="SpZ-Ft-dCO" id="NVU-98-k58"/>
-                <outlet property="menuBox" destination="ovq-Ua-vzQ" id="czH-jS-kuy"/>
                 <outlet property="pauseImage" destination="DhR-xb-MSY" id="SiQ-fj-5Kr"/>
                 <outlet property="pauseProgressView" destination="WWu-fp-Sp4" id="JbV-qw-a3u"/>
                 <outlet property="upgradeButton" destination="TSY-kH-y0O" id="5Wb-MB-lMa"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
-                <outlet property="warningBox" destination="O93-bJ-NI9" id="Xfl-jC-eI9"/>
                 <outlet property="whitelistDomainImage" destination="Myk-hq-YP7" id="4AX-c5-ejw"/>
                 <outlet property="whitelistDomainLine" destination="VIG-zU-RJe" id="1Xo-PE-mPE"/>
                 <outlet property="whitelistDomainStackView" destination="25w-ix-VKr" id="MBB-hl-fbp"/>
@@ -31,18 +24,18 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="378" height="205"/>
+        <customView appearanceType="aqua" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="486" height="205"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <box boxType="custom" borderWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="d0F-U2-jJV">
-                    <rect key="frame" x="0.0" y="159" width="378" height="46"/>
+                    <rect key="frame" x="0.0" y="159" width="486" height="46"/>
                     <view key="contentView" id="2yg-Sd-EuS">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="46"/>
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="46"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scK-Fb-FXn">
-                                <rect key="frame" x="60" y="12" width="258" height="23"/>
+                                <rect key="frame" x="60" y="12" width="366" height="23"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AdBlockLogo" id="EIY-UA-4uu"/>
                             </imageView>
@@ -55,16 +48,16 @@
                     <color key="fillColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                 </box>
                 <box horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" boxType="custom" borderWidth="0.0" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ovq-Ua-vzQ">
-                    <rect key="frame" x="0.0" y="0.0" width="378" height="159"/>
+                    <rect key="frame" x="0.0" y="0.0" width="486" height="159"/>
                     <view key="contentView" id="IJn-bd-fg6">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="159"/>
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="159"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmO-ox-Zc6">
-                                <rect key="frame" x="14" y="0.0" width="350" height="159"/>
+                                <rect key="frame" x="14" y="0.0" width="458" height="159"/>
                                 <subviews>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWX-ju-0H2" userLabel="Pause - Stack View">
-                                        <rect key="frame" x="0.0" y="128" width="350" height="31"/>
+                                        <rect key="frame" x="0.0" y="128" width="458" height="31"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-xb-MSY">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="31"/>
@@ -81,32 +74,32 @@
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PauseIcon" id="Pzx-A8-uZM"/>
                                             </imageView>
                                             <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-QH-t7y" customClass="Button" customModule="AdBlock">
-                                                <rect key="frame" x="20" y="0.0" width="309" height="31"/>
+                                                <rect key="frame" x="20" y="0.0" width="417" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="T6c-Ri-kaE"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="KMP-7Z-7LK">
+                                                <buttonCell key="cell" type="inline" title="Pause" bezelStyle="inline" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="KMP-7Z-7LK">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <font key="font" metaFont="menu" size="14"/>
                                                 </buttonCell>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                         <color key="value" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="pause.menu"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="pauseBlockingClick:" target="-2" id="TTo-i9-Nyk"/>
                                                 </connections>
                                             </button>
                                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="WWu-fp-Sp4">
-                                                <rect key="frame" x="334" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="442" y="8" width="16" height="16"/>
                                             </progressIndicator>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="WWu-fp-Sp4" firstAttribute="centerY" secondItem="oWX-ju-0H2" secondAttribute="centerY" id="A0X-VE-qE2"/>
                                             <constraint firstItem="DhR-xb-MSY" firstAttribute="leading" secondItem="oWX-ju-0H2" secondAttribute="leading" id="Cdt-Sl-czI"/>
                                             <constraint firstItem="WWu-fp-Sp4" firstAttribute="leading" secondItem="6l0-QH-t7y" secondAttribute="trailing" constant="5" id="Ir2-y4-xYC"/>
-                                            <constraint firstAttribute="trailing" secondItem="WWu-fp-Sp4" secondAttribute="trailing" id="aGb-mw-qfk"/>
                                             <constraint firstItem="6l0-QH-t7y" firstAttribute="leading" secondItem="DhR-xb-MSY" secondAttribute="trailing" constant="5" id="dhl-dY-Mx8"/>
                                             <constraint firstItem="DhR-xb-MSY" firstAttribute="centerY" secondItem="oWX-ju-0H2" secondAttribute="centerY" id="hPt-bV-Kea"/>
                                             <constraint firstAttribute="height" constant="31" id="rjn-IF-GRM"/>
@@ -124,13 +117,13 @@
                                         </customSpacing>
                                     </stackView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="lT9-DN-qpI">
-                                        <rect key="frame" x="0.0" y="125" width="350" height="5"/>
+                                        <rect key="frame" x="0.0" y="125" width="458" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="1q3-Mu-BkM"/>
                                         </constraints>
                                     </box>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ce-Lg-63u" userLabel="Allow Ads - Stack View">
-                                        <rect key="frame" x="0.0" y="96" width="350" height="31"/>
+                                        <rect key="frame" x="0.0" y="96" width="458" height="31"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QuJ-Bw-YHp">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="31"/>
@@ -146,14 +139,14 @@
                                                 </gestureRecognizers>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AllowAdsOnPageIcon" id="GSY-My-zbz"/>
                                             </imageView>
-                                            <button focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-5R-TpW" userLabel="Allow ads" customClass="Button" customModule="AdBlock">
-                                                <rect key="frame" x="325" y="0.0" width="4" height="31"/>
+                                            <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-5R-TpW" userLabel="Allow ads" customClass="Button" customModule="AdBlock">
+                                                <rect key="frame" x="362" y="0.0" width="75" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="GM4-mC-eq6"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ynJ-bs-scG">
+                                                <buttonCell key="cell" type="inline" title="Allow Ads" bezelStyle="inline" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ynJ-bs-scG">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <font key="font" metaFont="menu" size="14"/>
                                                 </buttonCell>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -165,7 +158,7 @@
                                                 </connections>
                                             </button>
                                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="MUi-rD-1k9">
-                                                <rect key="frame" x="334" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="442" y="8" width="16" height="16"/>
                                             </progressIndicator>
                                         </subviews>
                                         <constraints>
@@ -175,7 +168,7 @@
                                             <constraint firstAttribute="trailing" secondItem="MUi-rD-1k9" secondAttribute="trailing" id="TiX-u9-4Fw"/>
                                             <constraint firstItem="MUi-rD-1k9" firstAttribute="centerY" secondItem="2ce-Lg-63u" secondAttribute="centerY" id="a96-gT-okf"/>
                                             <constraint firstAttribute="height" constant="31" id="hKT-km-Hym"/>
-                                            <constraint firstItem="MUi-rD-1k9" firstAttribute="leading" secondItem="uUn-5R-TpW" secondAttribute="trailing" constant="5" id="hSN-Gp-Jjc"/>
+                                            <constraint firstItem="MUi-rD-1k9" firstAttribute="leading" secondItem="uUn-5R-TpW" secondAttribute="trailing" priority="750" constant="5" id="hSN-Gp-Jjc"/>
                                         </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
@@ -189,13 +182,13 @@
                                         </customSpacing>
                                     </stackView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="LlA-rK-ad2">
-                                        <rect key="frame" x="0.0" y="93" width="350" height="5"/>
+                                        <rect key="frame" x="0.0" y="93" width="458" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="BXT-LS-blI"/>
                                         </constraints>
                                     </box>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" verticalClippingResistancePriority="250" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25w-ix-VKr">
-                                        <rect key="frame" x="0.0" y="64" width="350" height="31"/>
+                                        <rect key="frame" x="0.0" y="64" width="458" height="31"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Myk-hq-YP7">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="31"/>
@@ -212,10 +205,9 @@
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AllowAdsOnSiteIcon" id="2Dl-92-YwM"/>
                                             </imageView>
                                             <button focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="bj0-YX-kRU" userLabel="whitelist-wizard" customClass="Button" customModule="AdBlock">
-                                                <rect key="frame" x="20" y="0.0" width="10" height="31"/>
+                                                <rect key="frame" x="20" y="0.0" width="118" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="4VS-wI-F1N"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="xYd-zx-f4G"/>
                                                 </constraints>
                                                 <gestureRecognizers>
                                                     <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="w47-TI-UtT">
@@ -224,21 +216,22 @@
                                                         </connections>
                                                     </clickGestureRecognizer>
                                                 </gestureRecognizers>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="tqv-d5-EtK">
+                                                <buttonCell key="cell" type="inline" title="Whitelist Wizard" bezelStyle="inline" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="tqv-d5-EtK">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <font key="font" metaFont="menu" size="14"/>
                                                 </buttonCell>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                         <color key="value" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="allow.ads.site.menu.safari.10"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="whitelistDomainClick:" target="-2" id="kxe-Az-4fi"/>
                                                 </connections>
                                             </button>
-                                            <button focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="TSY-kH-y0O" userLabel="upgrade" customClass="ToolbarButton" customModule="AdBlock_Safari_Menu" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="8" width="300" height="15"/>
+                                            <button focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="TSY-kH-y0O" userLabel="upgrade" customClass="Button" customModule="AdBlock_Safari_Menu" customModuleProvider="target">
+                                                <rect key="frame" x="158" y="8" width="300" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="OAV-H5-pKA"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="10" id="XMP-Oj-EPW"/>
@@ -261,8 +254,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useLucidaGrandeRegularFont" value="NO"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useLucidaGrandeBoldFont" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="upgrade.button"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="whitelistDomainClick:" target="-2" id="xD2-Sa-X9b"/>
@@ -274,6 +266,7 @@
                                             <constraint firstItem="Myk-hq-YP7" firstAttribute="leading" secondItem="25w-ix-VKr" secondAttribute="leading" id="88G-5a-uU3"/>
                                             <constraint firstItem="Myk-hq-YP7" firstAttribute="centerY" secondItem="25w-ix-VKr" secondAttribute="centerY" id="Bg1-mv-OuY"/>
                                             <constraint firstAttribute="height" priority="750" constant="31" id="FFh-Yl-XSo"/>
+                                            <constraint firstAttribute="trailing" secondItem="TSY-kH-y0O" secondAttribute="trailing" id="Sqe-eu-dwE"/>
                                             <constraint firstItem="bj0-YX-kRU" firstAttribute="leading" secondItem="Myk-hq-YP7" secondAttribute="trailing" constant="5" id="b65-xl-HJX"/>
                                             <constraint firstItem="TSY-kH-y0O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bj0-YX-kRU" secondAttribute="trailing" constant="20" id="jUI-T4-95s"/>
                                         </constraints>
@@ -289,13 +282,13 @@
                                         </customSpacing>
                                     </stackView>
                                     <box verticalHuggingPriority="750" verticalCompressionResistancePriority="250" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="VIG-zU-RJe">
-                                        <rect key="frame" x="0.0" y="61" width="350" height="5"/>
+                                        <rect key="frame" x="0.0" y="61" width="458" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="2nx-Jb-pvA"/>
                                         </constraints>
                                     </box>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-ae-oy5" userLabel="Setting Stack View">
-                                        <rect key="frame" x="0.0" y="32" width="350" height="31"/>
+                                        <rect key="frame" x="0.0" y="32" width="458" height="31"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-Ql-PWv" userLabel="Setting Image">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="31"/>
@@ -312,18 +305,19 @@
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SettingsIcon" id="E4j-oZ-8N8"/>
                                             </imageView>
                                             <button focusRingType="none" horizontalHuggingPriority="249" verticalHuggingPriority="749" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-fz-nvQ" userLabel="Setting" customClass="Button" customModule="AdBlock">
-                                                <rect key="frame" x="20" y="0.0" width="330" height="31"/>
+                                                <rect key="frame" x="20" y="0.0" width="438" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="LuT-ev-fXA"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="MwP-wH-BBL">
+                                                <buttonCell key="cell" type="inline" title="Setting" bezelStyle="inline" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="MwP-wH-BBL">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <font key="font" metaFont="menu" size="14"/>
                                                 </buttonCell>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                         <color key="value" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="settings.menu"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="settingsClick:" target="-2" id="TeW-8G-Wtz"/>
@@ -347,13 +341,13 @@
                                         </customSpacing>
                                     </stackView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="36B-8u-hWG">
-                                        <rect key="frame" x="0.0" y="29" width="350" height="5"/>
+                                        <rect key="frame" x="0.0" y="29" width="458" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="ejK-J1-7Ku"/>
                                         </constraints>
                                     </box>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-hL-X6W" userLabel="Help Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="458" height="31"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-NR-fXd" userLabel="Help Image">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="31"/>
@@ -370,18 +364,20 @@
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HelpIcon" id="PR6-WI-1ZK"/>
                                             </imageView>
                                             <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-2W-2VD" customClass="Button" customModule="AdBlock">
-                                                <rect key="frame" x="20" y="0.0" width="330" height="31"/>
+                                                <rect key="frame" x="20" y="0.0" width="438" height="31"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="aFm-xb-0fP"/>
                                                     <constraint firstAttribute="height" constant="31" id="mGt-aW-MH7"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="uEo-9m-w17">
+                                                <buttonCell key="cell" type="inline" title="Help" bezelStyle="inline" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="uEo-9m-w17">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <font key="font" metaFont="menu" size="14"/>
                                                 </buttonCell>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                        <color key="value" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="help.feedback.menu"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="helpAndFeedbackClick:" target="-2" id="SR2-m4-MIk"/>
@@ -458,46 +454,15 @@
                     </view>
                     <color key="fillColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                 </box>
-                <box hidden="YES" boxType="custom" borderWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="O93-bJ-NI9">
-                    <rect key="frame" x="0.0" y="0.0" width="378" height="159"/>
-                    <view key="contentView" id="aXJ-2L-sIS">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="159"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SpZ-Ft-dCO">
-                                <rect key="frame" x="6" y="55" width="187" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="tc2-qY-6My">
-                                    <font key="font" size="16" name="LucidaGrande"/>
-                                    <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useLucidaGrandeBoldFont" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT9-lO-dJj">
-                                <rect key="frame" x="81" y="101" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="warning_icon_red" id="tON-Hq-9xQ"/>
-                            </imageView>
-                        </subviews>
-                    </view>
-                </box>
             </subviews>
             <constraints>
                 <constraint firstItem="ovq-Ua-vzQ" firstAttribute="top" secondItem="d0F-U2-jJV" secondAttribute="bottom" id="1Su-re-wJd"/>
                 <constraint firstItem="d0F-U2-jJV" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="9jZ-3C-ZmC"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O93-bJ-NI9" secondAttribute="trailing" id="GlT-lR-08x"/>
                 <constraint firstItem="d0F-U2-jJV" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Kf2-fX-L12"/>
                 <constraint firstAttribute="bottom" secondItem="ovq-Ua-vzQ" secondAttribute="bottom" id="OVr-Cb-qGQ"/>
-                <constraint firstItem="O93-bJ-NI9" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="OVw-ZQ-3v1"/>
-                <constraint firstAttribute="bottom" secondItem="O93-bJ-NI9" secondAttribute="bottom" id="Zh5-vX-sWR"/>
                 <constraint firstItem="ovq-Ua-vzQ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="hnb-1Y-Y76"/>
                 <constraint firstItem="d0F-U2-jJV" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="nvR-VC-G5v"/>
-                <constraint firstItem="O93-bJ-NI9" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="ppg-eP-Rnc"/>
                 <constraint firstAttribute="trailing" secondItem="ovq-Ua-vzQ" secondAttribute="trailing" id="qfG-6J-zix"/>
-                <constraint firstItem="O93-bJ-NI9" firstAttribute="top" secondItem="d0F-U2-jJV" secondAttribute="bottom" id="taf-g8-mK4"/>
                 <constraint firstItem="ovq-Ua-vzQ" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="v1z-Dy-vTp"/>
                 <constraint firstAttribute="trailing" secondItem="d0F-U2-jJV" secondAttribute="trailing" id="w9P-gH-TzW"/>
             </constraints>
@@ -511,6 +476,5 @@
         <image name="HelpIcon" width="20" height="20"/>
         <image name="PauseIcon" width="20" height="20"/>
         <image name="SettingsIcon" width="20" height="20"/>
-        <image name="warning_icon_red" width="128" height="128"/>
     </resources>
 </document>

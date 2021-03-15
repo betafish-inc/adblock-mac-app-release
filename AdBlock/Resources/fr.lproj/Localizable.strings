@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Veuillez activer le <b>Moteur AdBlock</b> et l'<b>Icône AdBlock</b> dans vos préférences d'extensions Safari";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Oui, je veux maintenir AdBlock à jour !";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Passer cette étape";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Nous mettons constamment à jour les listes grâce auxquelles nous bloquons efficacement les publicités.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Assurez le blocage d'un maximum de publicités en cliquant sur le bouton ci-dessous et gardez AdBlock à jour.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Remarque : En sélectionnant cette option, AdBlock continuera à fonctionner en arrière-plan, même après avoir quitté l’application. Vous pouvez modifier ce paramètre à tout moment en activant/désactivant l’option « Lancer AdBlock au démarrage » dans le menu d’AdBlock situé dans la barre des menus Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "Échec du chargement de la mise à niveau. Veuillez réessayer ultérieurement.";
 
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Erreur de restauration de la mise à niveau. Veuillez réessayer ultérieurement.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Erreur de restauration de mise à niveau : ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "Échec de restauration de la mise à niveau";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "Tirez le meilleur parti d'AdBlock avec ces fonctionnalités supplémentaires.";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Soutenez vos sites web préférés en les ajoutant à votre liste blanche personnelle";
+"upgrade.line.one.description" = "Soutenez vos sites web préférés en les ajoutant à votre liste d'autorisation personnelle";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "Autorisez les pubs sur vos sites favoris";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Mise à niveau indisponible";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Liste blanche";
+"whitelist.menu" = "Gérer les publicités autorisées";
 
 /* Whitelisting button */
 "whitelisting.button" = "Ajouter un site web";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "Vous n’avez aucun site sur liste blanche";
+"whitelisting.empty.text" = "Vous n'avez autorisé de publicité sur aucun site";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Veuillez entrer une URL valide.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "par exemple : http://www.exemple.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "Pour désactiver le blocage de publicités sur certains sites, vous pouvez les ajouter à votre \"liste blanche\" :";
-
-/* Whitelisting title */
-"whitelisting.title" = "Mise sur liste blanche";
+"whitelisting.header" = "Pour autoriser les publicités sur certains sites, ajoutez-les à votre 'liste d'autorisation' :";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Cette URL existe déjà.";

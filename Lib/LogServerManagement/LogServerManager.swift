@@ -20,21 +20,26 @@ import SwiftyBeaver
 import Alamofire
 import SafariServices
 
-class LogServerManager: NSObject {
-    static let shared: LogServerManager = LogServerManager()
-
-    private override init() {}
+struct LogServerManager {
+    static private var payload: [String: Any] {
+        let locale = NSLocale.autoupdatingCurrent
+        
+        return [
+            "t": "",
+            "u": PingDataManager.shared.generateOrGetUserId(),
+            "ov": ProcessInfo().operatingSystemVersionString,
+            "f": "MA",
+            "l": locale.languageCode ?? locale.identifier
+        ] as [String: Any]
+    }
     
-    func recordMessageWithUserID(msg: String) {
+    static func recordMessageWithUserID(msg: String) {
         guard let url = URL(string: "\(Constants.LOG_SERVER_URL)" ) else {
             return
         }
-        let userInfoPayload = preparePayload()
-        var payload: [String: Any] = [:]
-        payload["event"] =  msg
-        payload["payload"] = userInfoPayload
-        SwiftyBeaver.debug("[LOG_REQUEST]: \(url.absoluteString) => Para: \(payload)")
-        Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncoding.default)
+        let requestPayload = ["event": msg, "payload": payload] as [String: Any]
+        SwiftyBeaver.debug("[LOG_REQUEST]: \(url.absoluteString) => Para: \(requestPayload)")
+        Alamofire.request(url, method: .post, parameters: requestPayload, encoding: JSONEncoding.default)
             .validate()
             .response { (response) in
                 guard let data = response.data else {
@@ -42,19 +47,6 @@ class LogServerManager: NSObject {
                     return
                 }
                 SwiftyBeaver.debug("[log server response]: \(String(data: data, encoding: .utf8) ?? "")")
-        }
+            }
     }
-    
-    private func preparePayload() -> [String: Any] {
-        var payload: [String: Any] = [:]
-        payload["t"] = ""
-        let locale = NSLocale.autoupdatingCurrent
-        payload["u"] = PingDataManager.shared.generateOrGetUserId()
-        payload["ov"] = ProcessInfo().operatingSystemVersionString // operating system version
-        payload["f"] = "MA" // flavor
-        payload["l"] = locale.languageCode ?? locale.identifier   // user language
-        
-        return payload
-    }
-
 }

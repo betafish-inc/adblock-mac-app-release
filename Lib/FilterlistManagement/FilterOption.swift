@@ -17,48 +17,49 @@
 
 /* This file was taken from AdBlock's iOS app, and then modified to use
  Swift 4 and MacOS APIs */
+// swiftlint:disable identifier_name
 
 import Foundation
 
-enum FilterOptions : UInt8 {
+enum FilterOptions: UInt8 {
     case NONE = 0
     case THIRDPARTY = 1
     case MATCHCASE = 2
     case FIRSTPARTY = 4
 }
 
-var ElementTypes : [String:Int] = [
-    "NONE" : 0,
-    "script" : 1,
-    "image" : 2,
-    "background" : 4,
-    "stylesheet" : 8,
-    "object" : 16,
-    "subdocument" : 32,
-    "object_subrequest" : 64,
-    "media" : 128,
-    "other" : 256,
-    "xmlhttprequest" : 512,
-    "DEFAULTTYPES" : 1023,
-    "document" : 1024,
-    "elemhide" : 2048,
-    "popup" : 4096,
-    "generichide" : 8192,
-    "genericblock" : 16384,
-    "websocket" : 32768,
-    "ping" : 65536,
-    "font" : 131072,
-    "webrtc" : 262144,
-    "csp" : 524288,
+var ElementTypes: [String: Int] = [
+    "NONE": 0,
+    "script": 1,
+    "image": 2,
+    "background": 4,
+    "stylesheet": 8,
+    "object": 16,
+    "subdocument": 32,
+    "object_subrequest": 64,
+    "media": 128,
+    "other": 256,
+    "xmlhttprequest": 512,
+    "DEFAULTTYPES": 1023,
+    "document": 1024,
+    "elemhide": 2048,
+    "popup": 4096,
+    "generichide": 8192,
+    "genericblock": 16384,
+    "websocket": 32768,
+    "ping": 65536,
+    "font": 131072,
+    "webrtc": 262144,
+    "csp": 524288
 ]
 
 var ChromeOnlyElementTypes = ElementTypes["NONE"]! | ElementTypes["other"]! | ElementTypes["xmlhttprequest"]!
 
-enum FilterRuleError : Error {
-    case invalidOption(sourceRule:String, unknownOption: String)
-    case invalidSelector(sourceRule:String)
-    case invalidDomain(domain:String)
-    case invalidRegex(sourceRule:String)
-    case snippetsNotAllowed(sourceRule:String)
-    case invalidContentFilterText(sourceRule:String)
+enum FilterRuleError: Error {
+    case invalidOption(sourceRule: String, unknownOption: String)
+    case invalidSelector(sourceRule: String)
+    case invalidDomain(domain: String)
+    case invalidRegex(sourceRule: String)
+    case snippetsNotAllowed(sourceRule: String)
+    case invalidContentFilterText(sourceRule: String)
 }

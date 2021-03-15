@@ -50,7 +50,7 @@
 "feature.under.development" = "此功能正在開發中。";
 
 /* Filter Lists error */
-"filter.lists.error" = "更新過濾名單時出現錯誤。請稍後再試。";
+"filter.lists.error" = "更新過濾清單時出現錯誤。請稍後再試。";
 
 /* Filter Lists header */
 "filter.lists.header" = "決定 AdBlock 在您拜訪的網站上顯示或隱藏哪些內容。";
@@ -62,19 +62,19 @@
 "filter.lists.rules" = "規則";
 
 /* Filter Lists success */
-"filter.lists.success" = "您的過濾名單已成功更新";
+"filter.lists.success" = "您的過濾清單已成功更新";
 
 /* Filter Lists title */
-"filter.lists.title" = "過濾名單";
+"filter.lists.title" = "過濾清單";
 
 /* Filter Lists too many rules alert */
 "filter.lists.too.many.rules" = "啟用了過多的過濾清單，Safari 不支援 50000 條以上的規則。";
 
 /* Filter Lists update button */
-"filter.lists.update.button" = "更新過濾名單";
+"filter.lists.update.button" = "更新過濾清單";
 
 /* Filter Lists updates in progress alert */
-"filter.lists.updating" = "正在更新過濾名單……";
+"filter.lists.updating" = "正在更新過濾清單……";
 
 /* Help menu item */
 "help.menu" = "説明";
@@ -105,21 +105,6 @@
 
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "請在您的 Safari 延伸功能偏好設定中啟用 <b>AdBlock 引擎</b> 與 <b>AdBlock 圖示</b>";
-
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "是，請維持 AdBlock 在最新狀態！";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "跳過此步驟";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "我們不斷更新用來有效阻擋廣告的清單。";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "為了確保我們盡可能多攔截廣告，請按下方按鈕以將 AdBlock 維持在最新狀態。";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "（注意：如果選擇此選項，即使在退出應用程式後 AdBlock 還是會繼續在背景執行。您可以隨時到 Mac 選單列中的 AdBlock 選單切換「登入時啟動 AdBlock」選項來更改此設定。）";
 
 /* Load product failed message */
 "load.product.fail.message" = "升級產品載入失敗。請稍後再試。";
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "還原升級時出現錯誤。請稍後再試。";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "恢復升級時發生錯誤： ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "升級還原失敗";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "進一步享受 AdBlock 的額外功能。";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "將您喜愛的網站新增到個人的白名單中，支持這些網站";
+"upgrade.line.one.description" = "將您喜愛的網站新增到個人的允許名單中，支持這些網站";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "允許在您喜愛的網站上投放廣告";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "無法使用升級";
 
 /* Whitelist menu item */
-"whitelist.menu" = "白名單";
+"whitelist.menu" = "管理允許的廣告";
 
 /* Whitelisting button */
 "whitelisting.button" = "新增網站";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "白名單中沒有網站";
+"whitelisting.empty.text" = "您沒有在任何網站上允許廣告";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "請輸入有效的網址。";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "如：http://www.example.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "要在特定網站關閉廣告過濾功能，您可以將網站新增到這裡的「白名單」：";
-
-/* Whitelisting title */
-"whitelisting.title" = "白名單";
+"whitelisting.header" = "要允許在特定網站上的廣告，請由此處加到「允許名單」中：";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "此網址已存在。";

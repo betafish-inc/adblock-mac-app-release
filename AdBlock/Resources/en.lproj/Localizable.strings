@@ -9,16 +9,6 @@
 "intro.screen.1.text" = "Please activate <b>AdBlock Engine</b> and <b>AdBlock Icon</b> in your Safari extension preferences";
 /* Intro Screen 1 button */
 "intro.screen.1.button" = "Set up AdBlock in Safari";
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "We are constantly updating the lists we use to block ads effectively.";
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "To ensure we are blocking as many ads as possible, please click below to keep AdBlock current.";
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Note: If you select this option, AdBlock will continue to run in the background even after you quit the app. You can change this setting at any time by toggling the 'Start AdBlock at Login' option in the AdBlock menu located in the Mac menu bar.)";
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Yes, please keep AdBlock up to date!";
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Skip this step";
 /* Info Text header */
 "info.text.header" = "AdBlock is ready to go!";
 /* Info Text intro text */
@@ -71,10 +61,8 @@
 "adblock.not.blocking.alert" = "AdBlock is no longer blocking any ads";
 /* AdBlock blocking again */
 "adblock.blocking.again" = "AdBlock is blocking ads again.";
-/* Whitelisting title */
-"whitelisting.title" = "Whitelisting";
 /* Whitelisting header */
-"whitelisting.header" = "To turn off ad blocking on specific sites, you can add them to your 'whitelist' here:";
+"whitelisting.header" = "To allow ads on specific sites, add them to your 'allowlist' here:";
 /* Whitelisting example text */
 "whitelisting.example.text" = "eg. http://www.example.com/";
 /* Whitelisting example explanation */
@@ -82,7 +70,7 @@
 /* Whitelisting button */
 "whitelisting.button" = "Add Website";
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "You have no whitelisted sites";
+"whitelisting.empty.text" = "You have not allowed ads on any sites";
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Please enter a valid url.";
 /* Whitelisting duplicate url message */
@@ -98,7 +86,7 @@
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "Allow ads on sites you love";
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Support your favorite websites by adding them to your personal whitelist";
+"upgrade.line.one.description" = "Support your favorite websites by adding them to your personal allowlist";
 /* Upgrade line two title text */
 "upgrade.line.two.text" = "Enjoy VIP support";
 /* Upgrade line two description text */
@@ -145,6 +133,8 @@
 "restore.failed.title" = "Upgrade Restore Failed";
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Error restoring upgrade. Please try again later.";
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Error restoring upgrade: ";
 /* Upgrade restore receipt error title */
 "restore.receipt.error.title" = "Upgrade Receipt Error";
 /* Upgrade restore receipt error message */
@@ -172,7 +162,7 @@
 /* Start AdBlock at login menu item */
 "start.at.login" = "Start AdBlock at Login";
 /* Whitelist menu item */
-"whitelist.menu" = "Whitelist";
+"whitelist.menu" = "Manage Allowed Ads";
 /* Quit menu item */
 "quit.menu" = "Quit";
 /* About menu item */

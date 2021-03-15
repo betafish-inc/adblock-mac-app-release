@@ -53,7 +53,7 @@
 "filter.lists.error" = "Fehler bei der Aktualisierung der Filterlisten. Bitte versuchen Sie es später noch einmal.";
 
 /* Filter Lists header */
-"filter.lists.header" = "Entscheiden Sie, was AdBlock auf den von Ihnen besuchten Websites anzeigt oder ausblendet.";
+"filter.lists.header" = "Entscheiden Sie, was AdBlock auf den Websites anzeigt oder ausblendet, die Sie besuchen.";
 
 /* Filter Lists last updated */
 "filter.lists.last.updated" = "Zuletzt aktualisiert";
@@ -98,34 +98,19 @@
 "info.text.header" = "AdBlock ist einsatzbereit!";
 
 /* Info Text intro text */
-"info.text.intro" = "AdBlock ist aktiviert und blockiert Werbung für Sie. Hier sind einige Sachen, die Sie tun können:";
+"info.text.intro" = "AdBlock ist aktiviert und blockiert Werbung für Sie. Sie können beispielsweise Folgendes machen:";
 
 /* Intro Screen 1 button */
 "intro.screen.1.button" = "AdBlock in Safari einrichten";
 
 /* Intro Screen 1 text */
-"intro.screen.1.text" = "Bitte aktivieren Sie <b>AdBlock-Engine</b> und <b>AdBlock-Symbol</b> in Ihren Safari-Erweiterungspräferenzen";
-
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Ja, bitte halten Sie AdBlock aktuell!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Diesen Schritt überspringen";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Wir aktualisieren die von uns genutzten Listen ständig, um Werbung effektiv zu blockieren.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Um das Blockieren von möglichst viel Werbung zu garantieren, klicken Sie bitte unten, um AdBlock aktuell zu halten.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Hinweis: Wenn Sie diese Option auswählen, wird AdBlock weiterhin im Hintergrund ausgeführt, auch nachdem Sie die App beendet haben. Sie können diese Einstellung jederzeit ändern, indem Sie mithilfe der Funktion „AdBlock bei der Anmeldung starten“ im AdBlock-Menü in der Mac-Menüleiste umschalten.)";
+"intro.screen.1.text" = "Bitte aktivieren Sie <b>AdBlock-Engine</b> und das <b>AdBlock-Symbol</b> in Ihren Safari-Erweiterungspräferenzen";
 
 /* Load product failed message */
-"load.product.fail.message" = "Upgegradetes Produkt konnte nicht geladen werden. Bitte versuchen Sie es erneut.";
+"load.product.fail.message" = "Aktualisiertes Produkt konnte nicht geladen werden. Bitte versuchen Sie es erneut.";
 
 /* Load product failed title */
-"load.product.fail.title" = "Laden des Upgrades fehlgeschlagen";
+"load.product.fail.title" = "Laden der Aktualisierung fehlgeschlagen";
 
 /* Minimize menu item */
 "minimize.menu" = "Minimieren";
@@ -167,10 +152,10 @@
 "purchase.fail.title" = "Kauf fehlgeschlagen";
 
 /* Invalid purchase idetifier message */
-"purchase.id.invalid.message" = "Unzulässige Kennung für den Kauf des Upgrades. Bitte kontaktieren Sie via https://help.getadblock.com den Support.";
+"purchase.id.invalid.message" = "Unzulässige Upgrade-Kaufkennung. Bitte kontaktieren Sie den Support unter https://help.getadblock.com.";
 
 /* Invalid purchase idetifier title */
-"purchase.id.invalid.title" = "Unzulässige Kennung für den Kauf des Upgrades";
+"purchase.id.invalid.title" = "Unzulässige Upgrade-Kaufkennung";
 
 /* Upgrade restore message text */
 "purchase.restore.message" = "Ihr Upgrade wurde wiederhergestellt. Vielen Dank!";
@@ -199,20 +184,23 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Fehler beim Wiederherstellen des Upgrades. BItten versuchen Sie es später erneut.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Fehler bei Upgrade-Wiederherstellung: ";
+
 /* Upgrade restore failed title text */
-"restore.failed.title" = "Upgradewiederherstellungsfehler";
+"restore.failed.title" = "Upgrade-Wiederherstellungsfehler";
 
 /* Upgrade no matching purchase message */
-"restore.no.match.message" = "Es wurde kein übereinstimmender Upgradekauf gefunden.";
+"restore.no.match.message" = "Es wurde kein übereinstimmender Upgrade-Kauf gefunden.";
 
 /* Upgrade no matching purchase title */
-"restore.no.match.title" = "Upgradefehler";
+"restore.no.match.title" = "Upgrade-Fehler";
 
 /* Upgrade restore receipt error message */
-"restore.receipt.error.message" = "Fehler beim Lesen des Upgradebelegs. Bitte versuchen Sie es später erneut.";
+"restore.receipt.error.message" = "Fehler beim Lesen des Upgrade-Belegs. Bitte versuchen Sie es später erneut.";
 
 /* Upgrade restore receipt error title */
-"restore.receipt.error.title" = "Upgradebelegfehler";
+"restore.receipt.error.title" = "Upgrade-Belegfehler";
 
 /* Services menu item */
 "services.menu" = "Services";
@@ -221,37 +209,37 @@
 "start.at.login" = "AdBlock bei der Anmeldung starten";
 
 /* Upgrade already text */
-"upgrade.already" = "Bereits upgegradet?";
+"upgrade.already" = "Bereits aktualisiert?";
 
 /* Upgrade restore click here */
 "upgrade.click.here" = "Klicken Sie hier";
 
 /* Upgrade line three text */
-"upgrade.get.more" = "Holen Sie mit diesen Bonusfeatures noch mehr aus AdBlock heraus.";
+"upgrade.get.more" = "Mit diesen Bonusfeatures wird AdBlock noch leistungsfähiger.";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Unterstützen Sie Ihre favorisierten Webseiten, indem Sie sie zu Ihrer perönlichen Whitelist hinzufügen";
+"upgrade.line.one.description" = "Unterstützen Sie Ihre Lieblings-Websites und fügen Sie sie zu Ihrer persönlichen Positivliste hinzu";
 
 /* Upgrade line one title text */
-"upgrade.line.one.text" = "Ads von Ihren Lieblingsseiten zulassen";
+"upgrade.line.one.text" = "Werbung von Ihren Lieblings-Websites zulassen";
 
 /* Upgrade line 1A description text */
-"upgrade.line.point.five.description" = "Erhalten Sie Zugriff auf noch ausgeklügeltere und noch mächtigere Werbeblockertechnologien";
+"upgrade.line.point.five.description" = "Erhalten Sie Zugriff auf noch ausgeklügeltere und mächtigere Ad-Blocker-Technologien";
 
 /* Upgrade line 1A title text */
 "upgrade.line.point.five.text" = "Erweitertes Blocken von Werbung";
 
 /* Upgrade line two description text */
-"upgrade.line.two.description" = "Erhalten Sie noch am selben Tag Ihrer Frage oder Ihres Anliegens eine Antwort";
+"upgrade.line.two.description" = "Erhalten Sie am Tag Ihrer Frage oder Ihres Anliegens eine Antwort";
 
 /* Upgrade line two title text */
-"upgrade.line.two.text" = "Vom VIP-Kundensupport profitieren";
+"upgrade.line.two.text" = "Genießen Sie den VIP-Support";
 
 /* Upgrade line three description text */
 "upgrade.more.soon" = "Bald mit noch mehr Features!";
 
 /* Upgrade Now button text */
-"upgrade.now.button" = "Jetzt upgraden";
+"upgrade.now.button" = "Jetzt aktualisieren";
 
 /* Upgrade price prefix */
 "upgrade.only" = "Nur %1$@";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Upgrade verfügbar";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Whitelist";
+"whitelist.menu" = "Erlaubte Werbung verwalten";
 
 /* Whitelisting button */
 "whitelisting.button" = "Website hinzufügen";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "Sie haben keine Websites in Ihrer Whitelist";
+"whitelisting.empty.text" = "Sie haben auf keiner Website Werbung zugelassen";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Bitte eine gültige URL eingeben.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "z. B. http://www.example.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "Um das Blockieren von Anzeigen auf bestimmten Websites zu deaktivieren, können Sie diese Ihrer „Whitelist” hinzufügen:";
-
-/* Whitelisting title */
-"whitelisting.title" = "Whitelist";
+"whitelisting.header" = "Um Werbung auf bestimmten Websites zuzulassen, fügen Sie sie hier zu Ihrer Positivliste hinzu:";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Diese URL ist bereits vorhanden.";

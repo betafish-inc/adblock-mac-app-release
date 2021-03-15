@@ -52,6 +52,7 @@ class AlertUtil {
     }
     
     private static let toastFont = NSFont(name: "LucidaGrande", size: 14.0)
+    
     public enum ToastType {
         case info
         case error
@@ -59,23 +60,23 @@ class AlertUtil {
     public static func toast(in view: NSView, message: String, toastType: ToastType? = .info) {
         let viewFrame = view.frame
         let width: CGFloat = 300
-        let heightPadding: CGFloat = 10.0
-        let height = message.height(withConstrainedWidth: width, font: AlertUtil.toastFont!) + heightPadding
+        let padding: CGFloat = 10.0
+        let height = message.height(withConstrainedWidth: width - padding, font: AlertUtil.toastFont!) + padding
         
-        let textParagraph:NSMutableParagraphStyle = NSMutableParagraphStyle()
+        let textParagraph: NSMutableParagraphStyle = NSMutableParagraphStyle()
         textParagraph.alignment = .center
         let attributedString = NSAttributedString(string: message,
-                                                  attributes: [.paragraphStyle : textParagraph, .font: toastFont!])
+                                                  attributes: [.paragraphStyle: textParagraph, .font: toastFont!])
         let messageLabel = NSTextField(labelWithAttributedString: attributedString)
         messageLabel.textColor = .white
         messageLabel.wantsLayer = true
-        messageLabel.frame = CGRect(x: 0, y: 0, width: width, height: height - heightPadding)
+        messageLabel.frame = CGRect(x: 0, y: 0, width: width, height: height - padding)
         
         let bgColor: NSColor = {
             if toastType == .info {
-                return NSColor(deviceRed: 76/255.0, green: 175/255.0, blue: 80/255.0, alpha: 1)
+                return NSColor(deviceRed: 76 / 255.0, green: 175 / 255.0, blue: 80 / 255.0, alpha: 1)
             } else {
-                return NSColor(deviceRed: 244/255.0, green: 67/255.0, blue: 54/255.0, alpha: 1)
+                return NSColor(deviceRed: 244 / 255.0, green: 67 / 255.0, blue: 54 / 255.0, alpha: 1)
             }
         }()
         let container = NSBox(frame: CGRect(x: (viewFrame.size.width - width) / 2, y: viewFrame.size.height - height - 20, width: width, height: height))

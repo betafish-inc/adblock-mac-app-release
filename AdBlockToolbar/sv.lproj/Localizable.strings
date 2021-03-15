@@ -2,10 +2,10 @@
 "alert.title" = "Varning";
 
 /* Allow ads menu item for Safari 10 users */
-"allow.ads.site.menu.safari.10" = "Tillåt annonser på den här webbplatsen";
+"allow.ads.site.menu.safari.10" = "Tillåt annonser på den här hemsidan";
 
 /* Allow ads menu item for Safari 11+ users */
-"allow.ads.site.menu.safari.11" = "Tillåt annonser på den här webbplatsen";
+"allow.ads.site.menu.safari.11" = "Tillåt annonser på den här hemsidan";
 
 /* Block ads menu item Safari 10 users */
 "block.ads.site.menu.safari.10" = "Blockera annonser på den här webbplatsen";

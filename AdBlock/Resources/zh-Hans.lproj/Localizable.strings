@@ -53,7 +53,7 @@
 "filter.lists.error" = "更新拦截规则列表时出错。请稍后再试。";
 
 /* Filter Lists header */
-"filter.lists.header" = "决定 AdBlock 在您访问的网站上显示或隐藏哪些内容。";
+"filter.lists.header" = "决定 AdBlock 在你访问的网站上显示或隐藏哪些内容。";
 
 /* Filter Lists last updated */
 "filter.lists.last.updated" = "上次更新时间";
@@ -62,7 +62,7 @@
 "filter.lists.rules" = "规则";
 
 /* Filter Lists success */
-"filter.lists.success" = "您的过滤名单已成功更新";
+"filter.lists.success" = "你的过滤名单已成功更新";
 
 /* Filter Lists title */
 "filter.lists.title" = "拦截规则列表";
@@ -80,10 +80,10 @@
 "help.menu" = "帮助";
 
 /* Info Text bullet 1 text */
-"info.text.bullet.1" = "在 Safari 中点击 %1$@ 可暂停 uBlock 或在您喜欢的网站上显示广告。";
+"info.text.bullet.1" = "在 Safari 中点击 %1$@ 可暂停 uBlock 或在你喜欢的网站上显示广告。";
 
 /* Info Text bullet 2 text */
-"info.text.bullet.2" = "选择“允许此网站上的广告”可在您想要显示广告或支持网站主的网站上关闭 AdBlock";
+"info.text.bullet.2" = "选择“允许此网站上的广告”可在你想要显示广告或支持网站主的网站上关闭 AdBlock";
 
 /* Info Text bullet 3 text */
 "info.text.bullet.3" = "使用“帮助和反馈”链接可以查看常见问题或%1$@向我们发送电子邮件%2$@";
@@ -98,28 +98,13 @@
 "info.text.header" = "AdBlock 准备就绪！";
 
 /* Info Text intro text */
-"info.text.intro" = "AdBlock 正在为您拦截广告。以下是您可以执行的操作：";
+"info.text.intro" = "AdBlock 正在为你拦截广告。以下是你可以执行的操作：";
 
 /* Intro Screen 1 button */
 "intro.screen.1.button" = "在 Safari 中设置 AdBlock";
 
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "请在 Safari 扩展首选项中激活 <b>AdBlock 引擎</b> 和 <b>AdBlock 图标</b>";
-
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "是的，请保持 AdBlock 为最新版本！";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "跳过此步骤";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "我们通过持续更新规则列表来保证对广告的有效拦截。";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "为了确保我们尽可能多地拦截广告，请点击下方按钮保证 AdBlock 及时更新。";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "（注意：如果选择此选项，即使您退出应用后，AdBlock 仍将继续在后台运行。您可以随时在 Mac 菜单栏上的 AdBlock 菜单中通过“在登录时启动 AdBlock”来更改此设置。）";
 
 /* Load product failed message */
 "load.product.fail.message" = "升级产品加载失败。请稍后再试。";
@@ -173,13 +158,13 @@
 "purchase.id.invalid.title" = "升级购买标识符无效";
 
 /* Upgrade restore message text */
-"purchase.restore.message" = "您的升级已恢复。谢谢！";
+"purchase.restore.message" = "你的升级已恢复。谢谢！";
 
 /* Upgrade restore title text */
 "purchase.restore.title" = "升级已恢复";
 
 /* Upgrade Thank You message text */
-"purchase.thankyou.message" = "感谢您购买升级！";
+"purchase.thankyou.message" = "感谢你购买升级！";
 
 /* Upgrade Thank You title text */
 "purchase.thankyou.title" = "升级完成";
@@ -198,6 +183,9 @@
 
 /* Upgrade restore failed title message */
 "restore.failed.message" = "恢复升级时出错。请稍后再试。";
+
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "恢复升级时出错： ";
 
 /* Upgrade restore failed title text */
 "restore.failed.title" = "恢复升级失败";
@@ -230,10 +218,10 @@
 "upgrade.get.more" = "获得 AdBlock 的更多额外功能。";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "将您喜爱的网站加入白名单以支持网站";
+"upgrade.line.one.description" = "将你喜爱的网站加入允许列表以支持网站";
 
 /* Upgrade line one title text */
-"upgrade.line.one.text" = "在您喜爱的网站上允许展示广告";
+"upgrade.line.one.text" = "在你喜爱的网站上允许展示广告";
 
 /* Upgrade line 1A description text */
 "upgrade.line.point.five.description" = "获得更智能、更强大的广告拦截服务";
@@ -242,7 +230,7 @@
 "upgrade.line.point.five.text" = "高级广告拦截";
 
 /* Upgrade line two description text */
-"upgrade.line.two.description" = "在您遇到问题时获得当天回复";
+"upgrade.line.two.description" = "在你遇到问题时获得当天回复";
 
 /* Upgrade line two title text */
 "upgrade.line.two.text" = "享受 VIP 支持服务";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "升级不可用";
 
 /* Whitelist menu item */
-"whitelist.menu" = "白名单";
+"whitelist.menu" = "管理允许的广告";
 
 /* Whitelisting button */
 "whitelisting.button" = "添加网站";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "白名单中没有网站";
+"whitelisting.empty.text" = "你尚未在任何网站上允许广告";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "请输入有效的 URL。";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "如：http://www.example.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "要在特定网站上关闭广告拦截功能，您可以将网站添加到这里的“白名单”中：";
-
-/* Whitelisting title */
-"whitelisting.title" = "白名单";
+"whitelisting.header" = "要在特定网站上允许广告，请在这里将它们添加到您的“允许列表”：";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "此 URL 已存在。";

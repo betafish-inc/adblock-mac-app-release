@@ -21,20 +21,16 @@ import SafariServices
 import SwiftyBeaver
 
 class WhitelistRulesMaker: NSObject {
-    
     static let shared: WhitelistRulesMaker = WhitelistRulesMaker()
+    
     private override init() {}
     
     func makeRule(for url: String) -> [String: Any] {
         var trigger: [String: Any]
-        if (SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            if (url.hasPrefix("https://") || url.hasPrefix("http://")) {
-                trigger = prepareTriggerV2(url)
-            } else {
-              trigger = prepareDomainOnlyTriggerV2(url)
-            }
+        if url.hasPrefix("https://") || url.hasPrefix("http://") {
+            trigger = prepareTriggerV2(url)
         } else {
-            trigger = prepareTriggerV1(url)
+            trigger = prepareDomainOnlyTriggerV2(url)
         }
         let action = prepareAction(url)
         let rule = ["trigger": trigger, "action": action]
@@ -64,9 +60,9 @@ class WhitelistRulesMaker: NSObject {
     private func prepareTrigger(_ url: String) -> [String: Any] {
         let urlFilter = prepareUrlFilter(url)
         let trigger: [String: Any] = ["url-filter": urlFilter,
-                                      "resource-type" : [
-                                        "image", "style-sheet", "script", "svg-document", "media",
-                                        "font", "media", "raw", "document", "popup"]]
+                                      "resource-type": ["image", "style-sheet", "script", "svg-document",
+                                                        "media", "font", "media", "raw", "document",
+                                                        "popup"]]
         return trigger
     }
     
@@ -77,11 +73,6 @@ class WhitelistRulesMaker: NSObject {
 
     private func prepareTriggerV2(_ url: String) -> [String: Any] {
         let trigger: [String: Any] = ["url-filter": ".*", "if-top-url": ["^\(url)"]]
-        return trigger
-    }
-
-    private func prepareTriggerV1(_ url: String) -> [String: Any] {
-        let trigger: [String: Any] = ["url-filter": ".*", "if-domain": ["*\(url)"]]
         return trigger
     }
     

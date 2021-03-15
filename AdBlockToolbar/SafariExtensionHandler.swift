@@ -27,9 +27,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             SafariExtensionHandler.initialized = true
             FilterListsText.shared.processTextFromFile()
             DistributedNotificationCenter.default().addObserver(self,
-                                                                selector: #selector(self.processFilterListsText),
+                                                                selector: #selector(processFilterListsText),
                                                                 name: mergeNotificationName,
                                                                 object: nil)
+            scheduleDownloadActivity()
         }
         super .beginRequest(with: context)
     }
@@ -38,137 +39,43 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         FilterListsText.shared.processTextFromFile()
     }
     
-    override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]!) {
-        if (messageName == "add_custom_filter") {
-            guard case let url as String = userInfo["url"] else {
-                return
-            }
-            if WhitelistManager.shared.exists(url) {
-                if WhitelistManager.shared.isEnabled(url) {
-                    WhitelistManager.shared.remove(url)
-                } else {
-                    WhitelistManager.shared.enable(url)
-                }
-            } else if (WhitelistManager.shared.isValid(url: url)) {
-                WhitelistManager.shared.add(url)
-            } else {
-                return
-            }
+    private func scheduleDownloadActivity() {
+        let activity = NSBackgroundActivityScheduler(identifier: "com.betafish.adblock-mac.updateHandler")
+        activity.repeats = true
+        activity.interval = 60 * 60 * 24 // One day
+        activity.tolerance = 60 * 60 // One hour
+        activity.schedule { (completion: NSBackgroundActivityScheduler.CompletionHandler) in
+            AssetsManager.shared.downloadDataIfNecessary()
+            completion(NSBackgroundActivityScheduler.Result.finished)
+        }
+    }
+
+    override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String: Any]?) {
+        guard let info = userInfo else { return }
+        if messageName == "add_custom_filter" {
+            guard case let url as String = info["url"] else { return }
+            
+            _ = WhitelistManager.shared.updateCustomFilter(url)
             
             DistributedNotificationCenter.default().post(name: whitelistNotificationName,
                                                          object: Constants.SAFARI_MENU_EXTENSION_IDENTIFIER)
             page.dispatchMessageToScript(withName: "add_custom_filter_response", userInfo: nil)
-        } else if (messageName == "get_advance_selectors_data") {
-            guard case let url as String = userInfo["url"] else {
+        } else if messageName == "get_advance_selectors_data" {
+            guard case let url as String = info["url"],
+                case let parentUrl as String = info["parentUrl"],
+                case let domain as String = info["domain"] else {
                 return
             }
             
-            guard case let parentUrl as String = userInfo["parentUrl"] else {
-                return
-            }
+            let advancedSelectorsData = AdvancedHiding.getDataForPage(url: url, parentUrl: parentUrl, domain: domain, page: page)
             
-            guard case let domain as String = userInfo["domain"] else {
-                return
-            }
-            
-            let runnable = !PauseResumeBlockinManager.shared.isBlockingPaused() && !pageIsUnblockable(url: url)
-            var running = runnable && !(WhitelistManager.shared.exists(url) && WhitelistManager.shared.isEnabled(url)) && !pageIsWhitelisted(url: url, type: nil, frameDomain: nil)
-            let runningTop = runnable && !(WhitelistManager.shared.exists(parentUrl) && WhitelistManager.shared.isEnabled(parentUrl)) && !pageIsWhitelisted(url: parentUrl, type: nil, frameDomain: nil)
-            var hiding = running && !pageIsWhitelisted(url: url, type: ElementTypes["elemhide"], frameDomain: nil)
-            
-            if !runningTop && running {
-                running = false;
-                hiding = false
-            }
-            
-            var inline = true
-            var advanceSelectors: [SelectorFilter]?
-            var snippets: [SnippetFilter]?
-            
-            if hiding {
-                let filterListsTextData = FilterListsText.shared.getFiltersTextData()
-                
-                // If |matchGeneric| is , don't test request against hiding generic rules
-                let matchGeneric = filterListsTextData["whitelist"]??.matches(url: parentUrl, elementType: ElementTypes["generichide"]!, frameDomain: parentUrl, isThirdParty: false, matchGeneric: false) != nil
-                inline = true
-                
-                advanceSelectors = filterListsTextData["advancedHiding"]??.advanceFiltersFor(domain: domain, matchGeneric: matchGeneric) as? [SelectorFilter]
-                snippets = filterListsTextData["snippets"]??.advanceFiltersFor(domain: domain, matchGeneric: matchGeneric) as? [SnippetFilter]
-                
-                if let snippetArray = snippets {
-                    for filter in snippetArray {
-                        if let script = filter.body {
-                            let executableScript = SnippetsHelper.shared.getExecutableCode(script: script)
-                            page.dispatchMessageToScript(withName: "injectScript", userInfo: ["evalScript": executableScript, "topOnly": true ])
-                        }
-                    }
-                }
-            }
-            
-            // Convert from Filter objects to JavaScript compatible data type (for sending to the content script)
-            var filtersResult: [[String: String]] = []
-            if let selectors = advanceSelectors {
-                var filterSub: [String: String] = [:]
-                for filter in selectors {
-                    filterSub["selector"] = filter.selector ?? ""
-                    filterSub["text"] = filter.text ?? ""
-                    filtersResult.append(filterSub)
-                }
-            }
-            
-            var result: [String: Any] = [:]
-            result["runnable"] = runnable
-            result["running"] = running
-            result["runningTop"] = runningTop
-            result["hiding"] = hiding
-            result["inline"] = inline
-            result["advanceSelectors"] = filtersResult
-            
-            page.dispatchMessageToScript(withName: "advance_selectors_data_response", userInfo: result)
+            page.dispatchMessageToScript(withName: "advance_selectors_data_response", userInfo: advancedSelectorsData)
         }
-    }
-    
-    private func pageIsUnblockable(url: String) -> Bool {
-        if let urlObj = URL(string: url) {
-            let components = URLComponents(url: urlObj, resolvingAgainstBaseURL: false)
-            if let scheme = components?.scheme {
-                return (scheme != "http" && scheme != "https" && scheme != "feed")
-            }
-        }
-        return true
-    }
-    
-    // Returns true if anything in whitelist matches the_domain.
-    //   url: the url of the page
-    //   type: one out of ElementTypes, default ElementTypes.document,
-    //         to check what the page is whitelisted for: hiding rules or everything
-    private func pageIsWhitelisted(url: String, type: Int?, frameDomain: String?) -> Bool {
-        if url == "" {
-            return true
-        }
-        
-        var cleanedUrl: String
-        do {
-            cleanedUrl = try replaceMatches(pattern: "#.*$", inString: url, replacementString: "") ?? url
-        } catch {
-            cleanedUrl = url
-        }
-        
-        if FilterListsText.shared.getWhitelist() == nil {
-            return false
-        }
-        
-        let components = URLComponents(string: cleanedUrl)
-        
-        return FilterListsText.shared.getWhitelist()?.matches(url: cleanedUrl, elementType: type ?? ElementTypes["document"]!, frameDomain: frameDomain ?? components?.host ?? "", isThirdParty: false, matchGeneric: false) != nil
     }
  
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-        
-        // Commenting out this call to send ping data from the icon
-        // The app itself will still ping when it's running
-        // PingDataManager.shared.pingDataIfNecessary()
+        PingDataManager.shared.pingDataIfNecessary()
         validationHandler(true, "")
     }
     
@@ -178,11 +85,11 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func popoverWillShow(in window: SFSafariWindow) {
         window.getActiveTab { (activeTab) in
-            activeTab?.getActivePage(completionHandler: { (activePage) in
-                activePage?.getPropertiesWithCompletionHandler( { (properties) in
+            activeTab?.getActivePage { (activePage) in
+                activePage?.getPropertiesWithCompletionHandler { (properties) in
                     SafariExtensionViewController.shared.onPopoverVisible(with: properties?.url?.absoluteString)
-                })
-            })
+                }
+            }
         }
     }
 }

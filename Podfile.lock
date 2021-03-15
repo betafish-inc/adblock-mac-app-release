@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.8.1)
-  - GRKOpenSSLFramework (1.0.2.16)
+  - Alamofire (4.9.1)
+  - GRKOpenSSLFramework (1.0.2.20.2)
   - Punycode-Cocoa (1.3.1)
-  - SwiftSoup (1.7.4)
-  - SwiftyBeaver (1.6.2)
+  - SwiftSoup (2.3.2)
+  - SwiftyBeaver (1.9.2)
   - SwiftyStoreKit (0.13.3)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SwiftyStoreKit (~> 0.13.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - GRKOpenSSLFramework
     - Punycode-Cocoa
@@ -24,13 +24,13 @@ SPEC REPOS:
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  GRKOpenSSLFramework: 35944e317e6336b2944ad70b059d84db6b2d8532
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  GRKOpenSSLFramework: 01e3dd58a1d865111ac9439841119ff91a26e1f2
   Punycode-Cocoa: d9a974cc7384bd6d31b8d9df867a9b7b213d8880
-  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
-  SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
+  SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
+  SwiftyBeaver: b8239f6bfe9e1ea3303e6139abc8c24228081d84
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
 
-PODFILE CHECKSUM: 4589cab22c6717f99133f003653a5601d24480a8
+PODFILE CHECKSUM: 43cb9771d76bf0d4af6ab5d0db425cf26ae1c30d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

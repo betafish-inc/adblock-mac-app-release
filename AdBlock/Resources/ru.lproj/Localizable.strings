@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Пожалуйста, активируйте <b>движок AdBlock</b> и <b>значок AdBlock Safari</b> в настройках расширений Safari";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Да, я хочу актуальную версию!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Пропустить шаг";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Мы постоянно обновляем списки, которые мы используем для блокирования рекламы.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Для того, чтобы скрывать как можно больше рекламы, нажмите на кнопку ниже — так ваша версия AdBlock всегда будет актуальной.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Важно: при выборе этой опции AdBlock продолжит работу даже после выхода из приложения. Вы можете изменить это в любой момент, сняв галочку с варианта \"Запускать AdBlock при входе\" в меню AdBlock, расположенном в строке меню Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "Не удалось загрузить обновления продукта. Пожалуйста, повторите попытку позже.";
 
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Ошибка восстановления покупки. Пожалуйста, повторите попытку позже.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Не удалось восстановить обновление: ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "Обновление не удалось восстановить";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "С этими бонусными функциями AdBlock будет работать еще лучше.";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Поддержите любимый сайт, добавив его в личный белый список";
+"upgrade.line.one.description" = "Поддержите свои любимые сайты, добавив их в персональный разрешенный список";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "Разрешайте рекламу на любимых сайтах";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Обновление недоступно";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Белый список";
+"whitelist.menu" = "Управление допустимой рекламой";
 
 /* Whitelisting button */
 "whitelisting.button" = "Добавить сайт";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "Вы пока не добавили ни одного сайта в белый список";
+"whitelisting.empty.text" = "Вы не разрешили показывать рекламу ни на каких сайтах";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Пожалуйста, введите корректный URL-адрес.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "например, http://www.example.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "Здесь вы можете добавить сайты в белый список, чтобы разрешить им показывать вам рекламу:";
-
-/* Whitelisting title */
-"whitelisting.title" = "Белый список";
+"whitelisting.header" = "Если вы готовы видеть рекламу на конкретных сайтах, добавьте их в этот список:";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Этот URL-адрес уже был внесен.";

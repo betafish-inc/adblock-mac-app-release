@@ -1,0 +1,58 @@
+disabled_rules:
+- trailing_whitespace
+opt_in_rules:
+- empty_count
+- empty_string
+- closure_end_indentation
+- closure_spacing
+- collection_alignment
+#- force_unwrapping
+- implicitly_unwrapped_optional
+- let_var_whitespace
+- literal_expression_end_indentation
+- operator_usage_whitespace
+- trailing_closure
+- unowned_variable_capture
+- unused_declaration
+- unused_import
+- vertical_whitespace_closing_braces
+- vertical_whitespace_opening_braces
+- yoda_condition
+excluded:
+- Pods
+- AdBlock/Extensions
+- AdBlock-Tests
+- Common/Storyboard+AdBlock.swift
+- Lib/Event.swift
+- Playground.playground
+line_length:
+    warning: 175
+    error: 200
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+function_body_length:
+    warning: 300
+    error: 500
+function_parameter_count:
+    warning: 6
+    error: 8
+type_body_length:
+    warning: 300
+    error: 500
+file_length:
+    warning: 1000
+    error: 1500
+    ignore_comment_only_lines: true
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+identifier_name:
+    allowed_symbols: "_"
+    excluded:
+        - id
+        - vc
+        - os
+shorthand_operator:
+    severity: warning
+reporter: "xcode"

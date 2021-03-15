@@ -31,11 +31,11 @@ class PauseResumeBlockinManager: NSObject {
     }
     
     func isBlockingPaused() -> Bool {
-        return UserPref.isBlockingPaused()
+        return UserPref.isBlockingPaused
     }
     
     func callReloadContentBlocker(_ completion: @escaping () -> Void) {
-        SFContentBlockerManager.reloadContentBlocker(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXTENSION_IDENTIFIER, completionHandler: { (error) in
+        SFContentBlockerManager.reloadContentBlocker(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXT_IDENTIFIER) { (error) in
             if let error = error {
                 SwiftyBeaver.error("[ASSETS_MANAGER]: Error in reloading content blocker \(error)")
             } else {
@@ -44,7 +44,6 @@ class PauseResumeBlockinManager: NSObject {
             DispatchQueue.main.async {
                 completion()
             }
-            
-        })
+        }
     }
 }

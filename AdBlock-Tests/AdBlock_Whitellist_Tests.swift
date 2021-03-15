@@ -92,40 +92,40 @@ class AdBlock_Tests: XCTestCase {
     func testURLValidation() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://code.example.com/test/test1.html") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://example.com/test/") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://google.com") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://mail.google.com/one/two.html") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "http://code.example.com/test/test1.html") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "http://example.com/test/") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "http://google.com") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "http://mail.google.com/one/two.html") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "http://mail.google.com/one/two.html#first") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://example.com/test//installed/?u=z7v5ftfk59075024") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://example.com/test//installed?u") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://google") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "www.google.com") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "google.com") == true)
-        XCTAssert(WhitelistManager.shared.isValid(url: "e.com") == true)
+        XCTAssert("https://code.example.com/test/test1.html".isValidUrl() == true)
+        XCTAssert("https://example.com/test/".isValidUrl() == true)
+        XCTAssert("https://google.com".isValidUrl() == true)
+        XCTAssert("https://mail.google.com/one/two.html".isValidUrl() == true)
+        XCTAssert("http://code.example.com/test/test1.html".isValidUrl() == true)
+        XCTAssert("http://example.com/test/".isValidUrl() == true)
+        XCTAssert("http://google.com".isValidUrl() == true)
+        XCTAssert("http://mail.google.com/one/two.html".isValidUrl() == true)
+        XCTAssert("http://mail.google.com/one/two.html#first".isValidUrl() == true)
+        XCTAssert("https://example.com/test//installed/?u=z7v5ftfk59075024".isValidUrl() == true)
+        XCTAssert("https://example.com/test//installed?u".isValidUrl() == true)
+        XCTAssert("https://google".isValidUrl() == true)
+        XCTAssert("www.google.com".isValidUrl() == true)
+        XCTAssert("google.com".isValidUrl() == true)
+        XCTAssert("e.com".isValidUrl() == true)
 
-        XCTAssert(WhitelistManager.shared.isValid(url: "e") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https//code.example.com/test/test1.html") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https:/example.com/test/") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https://") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "https:") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "://") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: ":") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "") == false)
-        XCTAssert(WhitelistManager.shared.isValid(url: "😕") == false)
+        XCTAssert("e".isValidUrl() == false)
+        XCTAssert("https//code.example.com/test/test1.html".isValidUrl() == false)
+        XCTAssert("https:/example.com/test/".isValidUrl() == false)
+        XCTAssert("https://".isValidUrl() == false)
+        XCTAssert("https:".isValidUrl() == false)
+        XCTAssert("://".isValidUrl() == false)
+        XCTAssert(":".isValidUrl() == false)
+        XCTAssert("".isValidUrl() == false)
+        XCTAssert("😕".isValidUrl() == false)
     }
 
     func testSubDomainParsing() {
-        XCTAssert(WhitelistManager.shared.domainAndParents("http://www.google.com/this/ine.html")?.count == 3)
-        XCTAssert(WhitelistManager.shared.domainAndParents("https://www.google.com/this/ine.html")?.count == 3)
-        XCTAssert(WhitelistManager.shared.domainAndParents("https://google.com")?.count == 2)
-        XCTAssert(WhitelistManager.shared.domainAndParents("http://google.com")?.count == 2)
-        XCTAssert(WhitelistManager.shared.domainAndParents("google.com")?.count == 2)
-        XCTAssert(WhitelistManager.shared.domainAndParents("mail.google.com")?.count == 3)
+        XCTAssert(WhitelistManager.shared.domainAndParents("http://www.google.com/this/ine.html").count == 3)
+        XCTAssert(WhitelistManager.shared.domainAndParents("https://www.google.com/this/ine.html").count == 3)
+        XCTAssert(WhitelistManager.shared.domainAndParents("https://google.com").count == 2)
+        XCTAssert(WhitelistManager.shared.domainAndParents("http://google.com").count == 2)
+        XCTAssert(WhitelistManager.shared.domainAndParents("google.com").count == 2)
+        XCTAssert(WhitelistManager.shared.domainAndParents("mail.google.com").count == 3)
     }
 
     func testRemoveDomainWithURL() {
@@ -592,10 +592,10 @@ class AdBlock_Tests: XCTestCase {
         let text = "safariadblock.com##div"
         let f = Filter.fromText(text: text)
         XCTAssert(f === Filter.fromText(text: text))
-        let fCopy = f?.toString()
+        let fCopy = f?.stringValue
         let f2 = SelectorFilter.merge(filter: f as! SelectorFilter, excludeFiltersIn: [Filter.fromText(text: "safariadblock.com#@#div") as! SelectorFilter])
         XCTAssert(f?.domains != f2.domains)
-        let fSecondCopy = f?.toString()
+        let fSecondCopy = f?.stringValue
         XCTAssert(fCopy == fSecondCopy)
         XCTAssert(f === Filter.fromText(text: text))
     }
@@ -604,7 +604,7 @@ class AdBlock_Tests: XCTestCase {
         let d = DomainSet(data: ["": true, "a.com": false,  "b.a.com": true])
         let d2 = d.clone()
         XCTAssert(d !== d2)
-        XCTAssert(d.toString() == d2.toString())
+        XCTAssert(d.stringValue == d2.stringValue)
     }
     
     func testDomainSetSubtract() {
@@ -701,7 +701,7 @@ class AdBlock_Tests: XCTestCase {
             }
             let first = SelectorFilter.merge(filter: Filter.fromText(text: a) as! SelectorFilter, excludeFiltersIn: c as? [SelectorFilter])
             let result = DomainSet(data: ["": false])
-            XCTAssert(first.domains?.toString() == result.toString())
+            XCTAssert(first.domains?.stringValue == result.stringValue)
         }
         
         func localTest(a: String, b: [String], c: String) {
@@ -715,7 +715,7 @@ class AdBlock_Tests: XCTestCase {
             let second = Filter.fromText(text: c)
             XCTAssert(first.id != second?.id)
             first.id = second?.id ?? -1
-            XCTAssert(first.toString() == second?.toString())
+            XCTAssert(first.stringValue == second?.stringValue)
         }
         
         let f = [

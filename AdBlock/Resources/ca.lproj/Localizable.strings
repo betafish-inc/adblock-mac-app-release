@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Activeu <b>el motor d'AdBlock </b> i <b>la icona d'AdBlock</b> a les preferències d'extensions de Safari";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Sí, si us plau, continueu amb l'AdBlock actualitzat!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Omet aquest pas";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Actualitzem contínuament les llistes que utilitzem per bloquejar els anuncis amb eficàcia.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Per assegurar-nos que estem bloquejant tants anuncis com sigui possible, feu clic a sota per mantenir actualitzat l'AdBlock.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Nota: si seleccioneu aquesta opció, l'AdBlock continuarà executant-se en segon pla fins i tot després de sortir de l'aplicació. Podeu canviar aquesta configuració en qualsevol moment en alternar l'opció «Obre l'AdBlock en iniciar sessió» al menú AdBlock situat a la barra de menú del Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "No s'ha pogut carregar el producte d'actualització. Proveu-ho més tard.";
 
@@ -298,3 +283,5 @@
 /* Window menu item */
 "window.menu" = "Finestra";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Error restoring upgrade: ";

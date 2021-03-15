@@ -36,7 +36,7 @@ class FilterSet: NSObject {
     var exclude: [String: [Int: Bool]] = [:]
     
     override init() {
-        self.items = ["global" : []]
+        self.items = ["global": []]
     }
     
     // Return a new FilterSet containing the subset of this FilterSet's entries
@@ -44,17 +44,17 @@ class FilterSet: NSObject {
     // sub.foo.com will get items['global', 'foo.com', 'sub.foo.com'] and
     // exclude['foo.com', 'sub.foo.com'].
     func viewFor(domain: String, matchGeneric: Bool) -> FilterSet {
-        let result = FilterSet();
+        let result = FilterSet()
         if !matchGeneric {
-            result.items["global"] = self.items["global"]
+            result.items["global"] = items["global"]
         }
         
         for (nextDomain, _) in DomainSet.domainAndParents(domain: domain) {
-            if (self.items[nextDomain] != nil) {
-                result.items[nextDomain] = self.items[nextDomain]
+            if items[nextDomain] != nil {
+                result.items[nextDomain] = items[nextDomain]
             }
-            if (self.exclude[nextDomain] != nil) {
-                result.exclude[nextDomain] = self.exclude[nextDomain]
+            if exclude[nextDomain] != nil {
+                result.exclude[nextDomain] = exclude[nextDomain]
             }
         }
         return result
@@ -66,7 +66,7 @@ class FilterSet: NSObject {
     func filtersFor(domain: String, matchGeneric: Bool) -> [String] {
         var result: [String] = []
         let unicodeDomain = domain.punycodeDecoded ?? domain
-        let limited = self.viewFor(domain: unicodeDomain, matchGeneric: matchGeneric)
+        let limited = viewFor(domain: unicodeDomain, matchGeneric: matchGeneric)
         var data: [Int: SelectorFilter] = [:]
         
         // data = set(limited.items)
@@ -102,7 +102,7 @@ class FilterSet: NSObject {
     func advanceFiltersFor(domain: String, matchGeneric: Bool) -> [Filter] {
         var result: [Filter] = []
         let unicodeDomain = domain.punycodeDecoded ?? domain
-        let limited = self.viewFor(domain: unicodeDomain, matchGeneric: matchGeneric)
+        let limited = viewFor(domain: unicodeDomain, matchGeneric: matchGeneric)
         var data: [Int: Filter] = [:]
         
         // data = set(limited.items)
@@ -133,21 +133,19 @@ class FilterSet: NSObject {
     // relevant entry in this.exclude.
     // isThirdParty: true if url and frameDomain have different origins.
     func matches(url: String, elementType: Int, frameDomain: String, isThirdParty: Bool, matchGeneric: Bool) -> Filter? {
-        let limited = self.viewFor(domain: frameDomain, matchGeneric: matchGeneric)
+        let limited = viewFor(domain: frameDomain, matchGeneric: matchGeneric)
         for (_, entry) in limited.items {
             for filter in entry {
                 if let patternFilter = filter as? PatternFilter {
-                    if (patternFilter.matches(url: url, elementType: elementType, isThirdParty: isThirdParty)) {
+                    if patternFilter.matches(url: url, elementType: elementType, isThirdParty: isThirdParty) {
                         // Maybe filter shouldn't match because it is excluded on our domain?
                         var excluded = false
-                        for (_, value) in limited.exclude {
-                            if (value[patternFilter.id] ?? false) {
-                                excluded = true
-                                break
-                            }
+                        for (_, value) in limited.exclude where value[patternFilter.id] == true {
+                            excluded = true
+                            break
                         }
                         
-                        if (!excluded) {
+                        if !excluded {
                             return patternFilter
                         }
                     }
@@ -171,7 +169,7 @@ class FilterSet: NSObject {
                     if domain == DomainSet.ALL {
                         domainKey = "global"
                     }
-                    if (result.items[domainKey] == nil) {
+                    if result.items[domainKey] == nil {
                         result.items[domainKey] = []
                     }
                     result.items[domainKey]?.append(filter)

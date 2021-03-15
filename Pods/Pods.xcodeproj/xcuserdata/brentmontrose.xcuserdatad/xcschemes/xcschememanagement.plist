@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire-macOS10.12.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Alamofire-macOS10.13.xcscheme</key>
+		<key>GRKOpenSSLFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,37 +34,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-LauncherApp.xcscheme</key>
+		<key>Punycode-Cocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Punycode-Cocoa-macOS10.12.xcscheme</key>
+		<key>SwiftSoup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Punycode-Cocoa-macOS10.13.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftSoup-macOS10.12.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftSoup-macOS10.13.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyBeaver-macOS10.12.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyBeaver-macOS10.13.xcscheme</key>
+		<key>SwiftyBeaver.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

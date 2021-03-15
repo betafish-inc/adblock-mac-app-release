@@ -18,7 +18,6 @@
 import Foundation
 
 class Observable<T> {
-    
     let didChange = Event<(T, T)>()
     private var value: T
     

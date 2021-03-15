@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Aktivera <b>AdBlock-motor</b> och <b>AdBlock-ikon</b> i dina tilläggsinställningar för Safari";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Ja, håll AdBlock uppdaterat!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Hoppa över det här steget";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Vi uppdaterar konstant listorna som vi använder för att blockera annonser effektivt.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "För att se till att vi blockerar så många annonser som möjligt, klicka nedan för att hålla AdBlock aktuellt.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Obs: Om du väljer det här alternativet, kommer AdBlock att fortsätta köras i bakgrunden även när du har avslutat appen. Du kan när som helst ändra denna inställning via alternativet \"Starta AdBlock vid inloggning\" i AdBlock-menyn som du hittar i menyfältet på din Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "Uppgraderingen kunde inte laddas. Försök igen senare.";
 
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Det gick inte att återställa uppgraderingen. Försök igen senare.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Fel vid återställning av uppgradering: ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "Återställning av uppgradering misslyckades";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "Få ut mer av AdBlock med dessa extrafunktioner.";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "Stöd dina favoritwebbplatser genom att lägga till dem till din personliga vitlista";
+"upgrade.line.one.description" = "Stöd dina favoritwebbplatser genom att lägga till dem till din personliga tillåt-lista";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "Tillåt annonser på webbplatser du gillar";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Uppgradering inte tillgänglig";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Vitlista";
+"whitelist.menu" = "Hantera tillåtna annonser";
 
 /* Whitelisting button */
 "whitelisting.button" = "Lägg till webbplats";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "Du har inga vitlistade webbplatser";
+"whitelisting.empty.text" = "Du har inte tillåtit annonser på några webbplatser";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Ange en giltig URL.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "t.ex. http://www.exampel.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "För att stänga av annonsblockering på specifika webbplatser så kan du lägga till dem på din \"vitlista\" här:";
-
-/* Whitelisting title */
-"whitelisting.title" = "Vitlistning";
+"whitelisting.header" = "För att tillåta annonser på specifika webbplatser, lägg till dem på din \"tillåt-lista\" här:";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Denna URL finns redan.";

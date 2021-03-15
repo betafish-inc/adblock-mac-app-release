@@ -37,7 +37,7 @@ public class Event<T> {
     
     /// Raises the event, invoking all handlers
     public func raise(data: T) {
-        for handler in self.eventHandlers {
+        for handler in eventHandlers {
             handler.invoke(data: data)
         }
     }

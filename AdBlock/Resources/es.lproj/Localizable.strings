@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Activa el <b>Motor AdBlock</b> y el <b>Icono AdBlock</b> en las preferencias de extensiones de Safari";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "¡Sí, quiero mantener AdBlock al día!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Omitir este paso";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Actualizamos constantemente las listas que usamos para bloquear anuncios de manera eficaz.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "Para asegurar que estamos bloqueando todos los anuncios posibles, haz clic abajo para mantener AdBlock al día.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Nota: si seleccionas esta opción, AdBlock seguirá ejecutándose en segundo plano aunque salgas de la aplicación. Puedes modificar estos ajustes en cualquier momento cambiando la opción \"Iniciar AdBlock al iniciar sesión\" en el menú de AdBlock ubicado en la barra del menú de Mac).";
-
 /* Load product failed message */
 "load.product.fail.message" = "Error al cargar la actualización del producto, inténtalo de nuevo más tarde.";
 
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "Error al restaurar la actualización, vuelve a intentarlo más tarde.";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Error al restaurar mejora: ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "Restauración de la actualización fallida";
 
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "Actualización no disponible";
 
 /* Whitelist menu item */
-"whitelist.menu" = "Lista blanca";
+"whitelist.menu" = "Gestionar anuncios permitidos";
 
 /* Whitelisting button */
 "whitelisting.button" = "Añadir sitio web";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "No tienes ningún sitio web en la lista blanca";
+"whitelisting.empty.text" = "No has permitido anuncios en ninguna página";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "Introduce una URL válida.";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "Por ejemplo: http://www.ejemplo.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "Para inhabilitar el bloqueo de anuncios en sitios web concretos, puedes añadirlos a tu lista blanca aquí:";
-
-/* Whitelisting title */
-"whitelisting.title" = "Lista blanca";
+"whitelisting.header" = "Para permitir anuncios en páginas específicas, añádelas a tu lista de permitidos:";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "Esta URL ya existe.";

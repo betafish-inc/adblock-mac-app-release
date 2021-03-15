@@ -25,15 +25,17 @@ class SnippetsHelper: NSObject {
     static let shared: SnippetsHelper = SnippetsHelper()
     
     private override init() {
-        let snippetsURL = Bundle.main.url(forResource:"snippets", withExtension: "js")
-        self.snippetsLibrarySource = (try? String(contentsOf: snippetsURL!)) ?? ""
+        if let snippetsURL = Bundle.main.url(forResource: "snippets", withExtension: "js"),
+            let source = try? String(contentsOf: snippetsURL) {
+            self.snippetsLibrarySource = source
+        }
         
         super.init()
     }
     
     var executableCode: [String: String] = [:]
     
-    var snippetsLibrarySource: String
+    var snippetsLibrarySource = ""
     
     let singleCharacterEscapes: [String: String] = [
         "n": "\n",
@@ -52,14 +54,14 @@ class SnippetsHelper: NSObject {
         var escape = false
         var withinQuotes = false
     
-        var unicodeEscape: String? = nil
+        var unicodeEscape: String?
     
         var call: [String] = []
         var argument: String = ""
     
-        let trimmedScript = script.trimmingCharacters(in: .whitespacesAndNewlines) + ";"
+        let trimmedScript = "\(script.trimmingCharacters(in: .whitespacesAndNewlines));"
         for character in trimmedScript {
-            let whitespaceMatch = try? containsMatch(pattern: "\\s", inString: String(character))
+            let whitespaceMatch = String(character).containsMatch(pattern: "\\s") ?? false
             if let unicodeString = unicodeEscape {
                 unicodeEscape = unicodeString + String(character)
                 
@@ -85,15 +87,15 @@ class SnippetsHelper: NSObject {
                 escape = true
             } else if character == "'" {
                 withinQuotes = !withinQuotes
-            } else if (withinQuotes || (character != ";" && !(whitespaceMatch ?? false))) {
+            } else if withinQuotes || (character != ";" && !whitespaceMatch) {
                 argument.append(character)
             } else {
-                if argument != "" {
+                if !argument.isEmpty {
                     call.append(argument)
                     argument = ""
                 }
                 
-                if (character == ";" && call.count > 0) {
+                if character == ";" && !call.isEmpty {
                     tree.append(call)
                     call = []
                 }
@@ -113,23 +115,25 @@ class SnippetsHelper: NSObject {
         return """
             "use strict";
             {
-                const libraries = \(libraries);
-        
-                const script = \(parseScript(script: script));
-        
-                let imports = Object.create(null);
-                for (let library of libraries)
-                    new Function("exports", library)(imports);
-        
-                for (let [name, ...args] of script)
+              const libraries = \(libraries);
+              const environment = JSON.stringify({});
+              const script = \(parseScript(script: script));
+
+              let imports = Object.create(null);
+              for (let library of libraries)
+              {
+                let loadLibrary = new Function("exports", "environment", library);
+                loadLibrary(imports, JSON.parse(environment));
+              }
+              for (let [name, ...args] of script)
+              {
+                if (Object.prototype.hasOwnProperty.call(imports, name))
                 {
-                    if (Object.prototype.hasOwnProperty.call(imports, name))
-                    {
-                        let value = imports[name];
-                        if (typeof value === "function")
-                            value(...args);
-                    }
+                  let value = imports[name];
+                  if (typeof value == "function")
+                    value(...args);
                 }
+              }
             }
         """
     }
@@ -140,9 +144,7 @@ class SnippetsHelper: NSObject {
         }
         
         let code = compileScript(script: script, libraries: [snippetsLibrarySource])
-        
         executableCode[script] = code
         return code
     }
-    
 }

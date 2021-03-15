@@ -24,19 +24,31 @@ enum FilterListTextStatus {
     case completed
 }
 
+extension UserPref {
+    // Returns true only if the list is enabled
+    // AND
+    // the list is the custom, anti-circumvention, or advanced lists (txt lists)
+    static func shouldMergeTxtList(_ identifier: String) -> Bool {
+        return UserPref.isFilterListEnabled(identifier: identifier) &&
+            (identifier == Constants.CUSTOM_FILTER_LIST_ID ||
+                identifier == Constants.ANTI_CIRCUMVENTION_LIST_ID ||
+                identifier == Constants.ADVANCE_FILTER_LIST_ID)
+    }
+}
+
 class FilterListsText: NSObject {
     static let shared: FilterListsText = FilterListsText()
     
     private override init() {
         super.init()
-        rebuild(completion: {})
+        rebuild {}
     }
     
     var status: FilterListTextStatus = .idle
     
-    private var advancedHiding: FilterSet? = nil
-    private var snippets: FilterSet? = nil
-    private var whitelist: FilterSet? = nil
+    private var advancedHiding: FilterSet?
+    private var snippets: FilterSet?
+    private var whitelist: FilterSet?
     
     private var filterListsTextQueue = DispatchQueue(label: "filterListsTextQueue")
     
@@ -49,8 +61,8 @@ class FilterListsText: NSObject {
     func getWhitelist() -> FilterSet? {
         var localWhitelist: FilterSet?
         
-        self.filterListsTextQueue.sync {
-            localWhitelist = self.whitelist
+        filterListsTextQueue.sync {[weak self] in
+            localWhitelist = self?.whitelist
         }
         
         return localWhitelist
@@ -62,10 +74,10 @@ class FilterListsText: NSObject {
         var localAdvancedHiding: FilterSet?
         var returnData: [String: FilterSet?] = [:]
         
-        self.filterListsTextQueue.sync {
-            localWhitelist = self.whitelist
-            localSnippets = self.snippets
-            localAdvancedHiding = self.advancedHiding
+        filterListsTextQueue.sync {[weak self] in
+            localWhitelist = self?.whitelist
+            localSnippets = self?.snippets
+            localAdvancedHiding = self?.advancedHiding
         }
         
         returnData["whitelist"] = localWhitelist
@@ -76,45 +88,48 @@ class FilterListsText: NSObject {
     }
     
     private func setFiltersTextData(newAdvancedHiding: FilterSet?, newSnippets: FilterSet?, newWhitelist: FilterSet?) {
-        self.filterListsTextQueue.sync {
-            self.advancedHiding = newAdvancedHiding
-            self.snippets = newSnippets
-            self.whitelist = newWhitelist
+        filterListsTextQueue.sync {[weak self] in
+            self?.advancedHiding = newAdvancedHiding
+            self?.snippets = newSnippets
+            self?.whitelist = newWhitelist
         }
     }
     
     // Rebuild filters based on the current settings and subscriptions.
-    func rebuild(completion: @escaping ()->Void) {
-        if self.status != .idle {
+    func rebuild(completion: @escaping () -> Void) {
+        if status != .idle {
             completion()
             return
         }
         
-        self.status = .merging
-        self.mergeTextFilterListsInBackground() { (mergedFilterText) in
-            if let fileUrl = Constants.AssetsUrls.filterListTextUrl {
-                if (try? mergedFilterText?.write(to: fileUrl, atomically: true, encoding: .utf8)) != nil {
+        status = .merging
+        mergeTextFilterListsInBackground {[weak self] (mergedFilterText) in
+            guard let strongSelf = self else { return }
+            if let fileUrl = URL.filterListTextFile,
+                (try? mergedFilterText?.write(to: fileUrl, atomically: true, encoding: .utf8)) != nil {
                     SwiftyBeaver.debug("[FILTER_LISTS_TEXT]: Merged text written to file")
-                }
             }
+            
             if let texts: [String] = mergedFilterText?.split(separator: "\n").map({ (part) -> String in return String(part) }) {
-                let filters = self.splitByType(texts: texts)
-                self.setFiltersTextData(newAdvancedHiding: FilterSet.fromFilters(data: filters.advanceHiding), newSnippets: FilterSet.fromFilters(data: filters.snippets), newWhitelist: FilterSet.fromFilters(data: filters.whitelist))
+                let filters = strongSelf.splitByType(texts: texts)
+                strongSelf.setFiltersTextData(newAdvancedHiding: FilterSet.fromFilters(data: filters.advanceHiding),
+                                              newSnippets: FilterSet.fromFilters(data: filters.snippets),
+                                              newWhitelist: FilterSet.fromFilters(data: filters.whitelist))
             }
-            self.status = .completed
-            self.status = .idle
+            strongSelf.status = .completed
+            strongSelf.status = .idle
             completion()
         }
     }
     
     func processTextFromFile() {
-        if let fileUrl = Constants.AssetsUrls.filterListTextUrl {
-            let text = try? String(contentsOf: fileUrl, encoding: .utf8)
-            if let texts: [String] = text?.split(separator: "\n").map({ (part) -> String in return String(part) }) {
-                let filters = self.splitByType(texts: texts)
-                self.setFiltersTextData(newAdvancedHiding: FilterSet.fromFilters(data: filters.advanceHiding), newSnippets: FilterSet.fromFilters(data: filters.snippets), newWhitelist: FilterSet.fromFilters(data: filters.whitelist))
-                SwiftyBeaver.debug("[FILTER_LISTS_TEXT]: Merged text processed from file")
-            }
+        if let fileUrl = URL.filterListTextFile,
+            let text = try? String(contentsOf: fileUrl, encoding: .utf8) {
+            let texts: [String] = text.split(separator: "\n").map { (part) -> String in return String(part) }
+            let filters = splitByType(texts: texts)
+            setFiltersTextData(newAdvancedHiding: FilterSet.fromFilters(data: filters.advanceHiding),
+                               newSnippets: FilterSet.fromFilters(data: filters.snippets),
+                               newWhitelist: FilterSet.fromFilters(data: filters.whitelist))
         }
     }
     
@@ -122,7 +137,7 @@ class FilterListsText: NSObject {
         // Remove duplicates and empties.
         var unique = Array(Set(texts))
         
-        if let index = unique.index(of: "") {
+        if let index = unique.firstIndex(of: "") {
             unique.remove(at: index)
         }
         var advanceHidingUnmerged: [SelectorFilter] = []
@@ -131,24 +146,23 @@ class FilterListsText: NSObject {
         var data = FiltersData()
         
         for text in unique {
-            if (Filter.isSelectorExcludeFilter(text: text)) {
-                if let selectorExcludeFilter = Filter.fromText(text: text) as? SelectorFilter {
-                    if let selector = selectorExcludeFilter.selector {
+            if Filter.isSelectorExcludeFilter(text: text) {
+                if let selectorExcludeFilter = Filter.fromText(text: text) as? SelectorFilter,
+                    let selector = selectorExcludeFilter.selector {
                         if exclude[selector] == nil {
                             exclude[selector] = []
                         }
                         exclude[selector]?.append(selectorExcludeFilter)
-                    }
                 }
-            } else if (Filter.isAdvancedSelectorFilter(text: text)) {
+            } else if Filter.isAdvancedSelectorFilter(text: text) {
                 if let advancedSelectorFilter = Filter.fromText(text: text) as? SelectorFilter {
                     advanceHidingUnmerged.append(advancedSelectorFilter)
                 }
-            } else if (Filter.isSnippetFilter(text: text)) {
+            } else if Filter.isSnippetFilter(text: text) {
                 if let snippetFilter = Filter.fromText(text: text) as? SnippetFilter {
                     data.snippets[snippetFilter.id] = snippetFilter
                 }
-            } else if (Filter.isWhitelistFilter(text: text)) {
+            } else if Filter.isWhitelistFilter(text: text) {
                 if let filter = Filter.fromText(text: text) {
                     data.whitelist[filter.id] = filter
                 }
@@ -165,9 +179,8 @@ class FilterListsText: NSObject {
     }
     
     private func mergeTextFilterListsInBackground(completion: @escaping (String?) -> Void) {
-        SwiftyBeaver.debug("[MY_FILTERS]: Reading checksums...")
-        guard let checksums: [String: String] = FileManager.default.readJsonFile(at: Constants.AssetsUrls.assetsChecksumUrl) else {
-            SwiftyBeaver.debug("[MY_FILTERS]: Checksums not found, nothing to merge...")
+        let localChecksums = (FileManager.default.readJsonFile(at: .assetsChecksumFile) as [String: String]?)?.filter { UserPref.shouldMergeTxtList($0.key) }
+        if localChecksums?.isEmpty ?? true {
             completion("")
             return
         }
@@ -176,38 +189,31 @@ class FilterListsText: NSObject {
         let filterLock = NSLock()
         var filterText: String = ""
         
-        for (key, _) in checksums {
-            if FilterListManager.shared.isEnabled(filterListId: key) {
-                if key == Constants.ADS_FILTER_LIST_ID && FilterListManager.shared.isEnabled(filterListId: Constants.ALLOW_ADS_FILTER_LIST_ID) {
-                    continue
+        localChecksums?.forEach {
+            mergedTextFilterListGroup.enter()
+            let identifier = $0.key
+            DispatchQueue.global(qos: .background).async(group: mergedTextFilterListGroup) {[weak self] in
+                guard let strongSelf = self else { return }
+                
+                if let listUrl = URL.assetURL(asset: identifier, type: "txt"),
+                    FileManager.default.fileExists(atPath: listUrl.path),
+                    let filterListText = try? String(contentsOf: listUrl, encoding: .utf8) {
+                        filterLock.lock()
+                        filterText = "\(filterText)\n\(FilterNormalizer.normalizeList(text: filterListText, allowSnippets: strongSelf.snippetsAllowed(forListId: identifier)))"
+                        filterLock.unlock()
                 }
                 
-                mergedTextFilterListGroup.enter()
-                DispatchQueue.global(qos: .background).async(group: mergedTextFilterListGroup) {
-                    let filterListUrl = Constants.AssetsUrls.thirdPartyFolder?.appendingPathComponent("\(key).txt")
-                    
-                    if let filterListPath = filterListUrl?.path, FileManager.default.fileExists(atPath: filterListPath) {
-                        if let filterListText = try? String(contentsOf: filterListUrl!, encoding: .utf8) {
-                            filterLock.lock()
-                            filterText = filterText + "\n" + FilterNormalizer.normalizeList(text: filterListText, allowSnippets: self.snippetsAllowed(forListId: key))
-                            filterLock.unlock()
-                        }
-                    }
-                    
-                    mergedTextFilterListGroup.leave()
-                }
+                mergedTextFilterListGroup.leave()
             }
         }
         
         mergedTextFilterListGroup.notify(queue: .main) {
-            SwiftyBeaver.debug("[MY_FILTERS]: text files merged")
-            
             completion(filterText)
         }
     }
     
     private func snippetsAllowed(forListId: String) -> Bool {
-        if (forListId == Constants.ANTI_CIRCUMVENTION_LIST_ID) || (forListId == Constants.CUSTOM_FILTER_LIST_ID) {
+        if forListId == Constants.ANTI_CIRCUMVENTION_LIST_ID || forListId == Constants.CUSTOM_FILTER_LIST_ID {
             return true
         } else {
             return false

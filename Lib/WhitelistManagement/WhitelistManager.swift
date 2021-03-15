@@ -22,24 +22,22 @@ import SwiftyBeaver
 
 enum WhitelistManagerStatus {
     case idle
-    
     case whitelistUpdateStarted
     case whitelistUpdateCompleted
     case whitelistUpdateError    
 }
 
-class WhitelistManager: NSObject {
-    static let shared: WhitelistManager = WhitelistManager()
+extension String {
+    func trimAndLower() -> String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
     
-    var status: Observable<WhitelistManagerStatus> = Observable(.idle)
-    var whitelistQueue = DispatchQueue(label: "whitelistQueue")
-    
-    func isValid(url: String) -> Bool {
+    func isValidUrl() -> Bool {
         do {
             let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-            if let match = detector.firstMatch(in: url, options: [], range: NSRange(location: 0, length: url.endIndex.encodedOffset)) {
+            if let match = detector.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.endIndex.utf16Offset(in: self))) {
                 // it is a URL, if the match covers the whole string
-                return match.range.length == url.endIndex.encodedOffset
+                return match.range.length == self.endIndex.utf16Offset(in: self)
             } else {
                 return false
             }
@@ -48,326 +46,286 @@ class WhitelistManager: NSObject {
         }
     }
     
-    func removeUrlComponentsAfterHost(url: String) -> String {
-        var host = ""
-        var firstSlashRange: Range<String.Index>?
-        if let protocolRange = url.range(of: "://") {
-            let searchRange = Range<String.Index>(uncheckedBounds: (lower: protocolRange.upperBound, upper: url.endIndex))
-            firstSlashRange = url.range(of: "/", options: .literal, range: searchRange, locale: Locale.current)
-        } else {
-            firstSlashRange = url.range(of: "/", options: .literal, range: nil, locale: Locale.current)
-        }
-        host = String(url[..<(firstSlashRange?.lowerBound ?? url.endIndex)])
-        return host
+    func getHostname() -> String {
+        return URL(string: self)?.host ?? ""
     }
+}
 
+struct Whitelist {
+    var id: String
+    var name: String
+    var active: Bool
+}
+
+class WhitelistManager: NSObject {
+    static let shared: WhitelistManager = WhitelistManager()
+    
+    var status: Observable<WhitelistManagerStatus> = Observable(.idle)
+    var whitelistQueue = DispatchQueue(label: "whitelistQueue")
+    
     // add 
     func add(_ url: String) {
-        self.whitelistQueue.async {
-            self.status.set(newValue: .whitelistUpdateStarted)
-            let normalizedUrl = self.normalizeUrl(url)
-            let rule = self.prepareRule(normalizedUrl)
-            let whitelist: [String : Any] = ["originalEntry": normalizedUrl, "active": self.canEnable(), "rule": rule]
+        whitelistQueue.async {[weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.status.set(newValue: .whitelistUpdateStarted)
+            let normalizedUrl = strongSelf.normalizeUrl(url)
+            let rule = strongSelf.prepareRule(normalizedUrl)
+            let whitelist: [String: Any] = ["originalEntry": normalizedUrl, "active": strongSelf.canEnable(), "rule": rule]
             
-            var whitelists: [[String:Any]]? = self.getAll() ?? []
+            var whitelists: [[String: Any]]? = strongSelf.getAll() ?? []
             whitelists?.append(whitelist)
-            self.save(whitelists)
-            self.status.set(newValue: .whitelistUpdateCompleted)
-            self.status.set(newValue: .idle)
-            self.callAssetMerge()
+            strongSelf.saveAndMerge(whitelists)
         }
     }
     
     func remove(_ url: String) {
-        self.whitelistQueue.async {
-            self.status.set(newValue: .whitelistUpdateStarted)
-            let normalizedUrl = self.normalizeUrl(url)
-            let domainAndParent = self.domainAndParents(normalizedUrl)
-            let whitelists: [[String:Any]]? = self.getAll() ?? []
-            let newWhitelists = whitelists?.filter({ (whitelist) -> Bool in
-                guard let domain = whitelist["originalEntry"] as? String else { return false }
-                var exactMatch = domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() != normalizedUrl.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-                // if this function is invoded from the Safari toolbar icon,
+        whitelistQueue.async {[weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.status.set(newValue: .whitelistUpdateStarted)
+            let normalizedUrl = strongSelf.normalizeUrl(url)
+            let domainAndParent = strongSelf.domainAndParents(normalizedUrl)
+            let whitelists: [[String: Any]]? = strongSelf.getAll() ?? []
+            // filter out any matching rules
+            let newWhitelists = whitelists?.filter { (whitelist) -> Bool in
+                guard let domain = (whitelist["originalEntry"] as? String)?.trimAndLower() else { return false }
+                var exactMatch = domain != normalizedUrl
+                // if this function is invoked from the Safari toolbar icon,
                 // then a full URL, including the http/https protocol should be included,
                 // but the text in the whitelist rules may not include the protocol, so test for it
-                if (exactMatch && !domain.hasPrefix("http") && normalizedUrl.hasPrefix("http")) {
+                if exactMatch && !domain.hasPrefix("http") && normalizedUrl.hasPrefix("http") {
                     var protocolPrefix = "http://"
                     if normalizedUrl.hasPrefix("https") {
                         protocolPrefix = "https://"
                     }
-                    exactMatch = protocolPrefix + domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() != normalizedUrl.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+                    exactMatch = protocolPrefix + domain != normalizedUrl
                 }
                 // if the normalized URL doesn't match the domain, then check if there's parent / sub-domain match
                 // the return from 'first' will be nil if there isn't a match found
-                let domainAndParentMatch = ((domainAndParent?.first(where: {
-                    $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
-                )) == nil)
+                let domainAndParentMatch = ((domainAndParent.first { $0.trimAndLower() == domain }) == nil)
 
                 // both values must be true to keep the element.
                 return exactMatch && domainAndParentMatch
-            })
-            self.save(newWhitelists)
-            self.status.set(newValue: .whitelistUpdateCompleted)
-            self.status.set(newValue: .idle)
-            self.callAssetMerge()
+            }
+            strongSelf.saveAndMerge(newWhitelists)
         }
     }
     
     func enable(_ url: String) {
-        self.whitelistQueue.async {
-            self.status.set(newValue: .whitelistUpdateStarted)
-            guard var whitelists = self.getAll() else {
-                self.status.set(newValue: .idle)
-                return
-            }
-            
-            guard let (whitelist, index) = self.findEntryAndIndex(of: url, in: whitelists) else {
-                self.status.set(newValue: .idle)
-                return
-            }
-            var currentWhitelist = whitelist
-            currentWhitelist["active"] = true
-            whitelists[index] = currentWhitelist
-            
-            self.save(whitelists)
-            self.status.set(newValue: .whitelistUpdateCompleted)
-            self.status.set(newValue: .idle)
-            self.callAssetMerge()
-        }
+        updateRule(url, updatedStatus: true)
     }
     
     func disable(_ url: String) {
-        self.whitelistQueue.async {
-            self.status.set(newValue: .whitelistUpdateStarted)
-            guard var whitelists = self.getAll() else {
-                self.status.set(newValue: .idle)
+        updateRule(url, updatedStatus: false)
+    }
+    
+    private func updateRule(_ url: String, updatedStatus: Bool) {
+        whitelistQueue.async {[weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.status.set(newValue: .whitelistUpdateStarted)
+            guard var whitelists = strongSelf.getAll() else {
+                strongSelf.status.set(newValue: .idle)
                 return
             }
             
-            guard let (whitelist, index) = self.findEntryAndIndex(of: url, in: whitelists) else {
-                self.status.set(newValue: .idle)
+            guard let (whitelist, index) = strongSelf.findEntryAndIndex(of: url, in: whitelists) else {
+                strongSelf.status.set(newValue: .idle)
                 return
             }
             var currentWhitelist = whitelist
-            currentWhitelist["active"] = false
+            currentWhitelist["active"] = updatedStatus
             whitelists[index] = currentWhitelist
             
-            self.save(whitelists)
-            self.status.set(newValue: .whitelistUpdateCompleted)
-            self.status.set(newValue: .idle)
-            self.callAssetMerge()
+            strongSelf.saveAndMerge(whitelists)
         }
     }
     
-    func isEnabled(_ url: String) -> Bool {
-        guard let whitelists = getAll() else { return false }
-        guard let (whitelist, _) = findEntryAndIndex(of: url, in: whitelists) else {
-            // since isEnabled is only called from the Safari toolbar icon
-            // the URL parameter should always include a protocol, but
-            // the whitelist rules may not include the protocol,
-            // so, see if we get a match without it
-            if (url.hasPrefix("https://")) {
-                let newURL = String(url.dropFirst(8))
-                guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists) else {
-                    return false
-                }
-                return true
-            } else if (url.hasPrefix("http://")) {
-                let newURL = String(url.dropFirst(7))
-                guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists) else {
-                    return false
-                }
-                return true
-            }
-            return false
+    func isEnabled(_ url: String, exactMatch: Bool = false) -> Bool {
+        if let (whitelist, _) = getEntry(url, exactMatch: exactMatch) {
+            return whitelist["active"] as? Bool ?? false
         }
-        return whitelist["active"] as? Bool ?? false == true
+        return false
     }
     
     func exists(_ url: String, exactMatch: Bool = false) -> Bool {
-        guard let whitelists = getAll() else { return false }
-        guard let (_, _) = findEntryAndIndex(of: url, in: whitelists, exactMatch: exactMatch) else {
-            if (exactMatch) {
-                return false
-            }
-            if (url.hasPrefix("https://")) {
-                let newURL = String(url.dropFirst(8))
-                guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch) else {
-                    return false
-                }
-                return true
-            } else if (url.hasPrefix("http://")) {
-                let newURL = String(url.dropFirst(7))
-                guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch) else {
-                    return false
-                }
-                return true
-            } else {
-                var newURL = "http://" + url
-                guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch) else {
-                    newURL = "https://" + url
-                    guard let (_, _) = findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch) else {
-                        return false
-                    }
-                    return true
-                }
-                return true
-            }
+        if getEntry(url, exactMatch: exactMatch) != nil {
+            return true
         }
-        return true
+        return false
     }
     
-    func getAllItems() -> [Item]? {
+    private func getEntry(_ url: String, exactMatch: Bool = false) -> ([String: Any], Int)? {
+        guard let whitelists = getAll() else { return nil }
+        if let match = findEntryAndIndex(of: url, in: whitelists, exactMatch: exactMatch) {
+            return match
+        } else {
+            if exactMatch {
+                return nil
+            }
+            if url.hasPrefix("https://") {
+                let newURL = String(url.dropFirst(8))
+                return findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch)
+            } else if url.hasPrefix("http://") {
+                let newURL = String(url.dropFirst(7))
+                return findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch)
+            } else {
+                var newURL = "http://\(url)"
+                if let match = findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch) {
+                    return match
+                } else {
+                    newURL = "https://\(url)"
+                    return findEntryAndIndex(of: newURL, in: whitelists, exactMatch: exactMatch)
+                }
+            }
+        }
+    }
+    
+    func getAllItems() -> [Whitelist]? {
         guard let whitelists = getAll() else { return [] }
-        var whitelistItems: [Item]? = []
+        var whitelistItems: [Whitelist]? = []
         for whitelist in whitelists {
-            let id = whitelist["originalEntry"] as? String
-            let name = whitelist["originalEntry"] as? String
-            let active = whitelist["active"] as? Bool
-            whitelistItems?.append(Item(id: id, name: name, active: active, desc: ""))
+            let id = whitelist["originalEntry"] as? String ?? ""
+            let name = whitelist["originalEntry"] as? String ?? ""
+            let active = whitelist["active"] as? Bool ?? false
+            whitelistItems?.append(Whitelist(id: id, name: name, active: active))
         }
         if whitelistItems?.isEmpty ?? true {
-            whitelistItems?.append(Item(id: Item.EMPTY_WHITELIST_ITEM_ID, name: "", active: true))
+            whitelistItems?.append(Whitelist(id: Constants.EMPTY_WHITELIST_ITEM_ID, name: "", active: true))
         }
         return whitelistItems?.reversed()
     }
     
-    func getActiveWhitelistRules() -> [[String:Any]]? {
+    func getActiveWhitelistRules() -> [[String: Any]]? {
         guard let whitelists = getAll() else { return [] }
         let activeWhitelists = whitelists.filter { (whitelist) -> Bool in
             return whitelist["active"] as? Bool ?? false
-            }.compactMap { (activeWhitelist) -> [String: Any]? in
-                return activeWhitelist["rule"] as? [String: Any]
+        }.compactMap { (activeWhitelist) -> [String: Any]? in
+            return activeWhitelist["rule"] as? [String: Any]
         }
         return activeWhitelists
     }
     
-    private func callAssetMerge() {
-        AssetsManager.shared.requestMerge()
-    }
-    
     func canEnable() -> Bool {
-        guard let mergedRules: [[String:Any]]? = FileManager.default.readJsonFile(at: Constants.AssetsUrls.mergedRulesUrl) else { return true }
+        guard let mergedRules: [[String: Any]]? = FileManager.default.readJsonFile(at: .mergedRulesFile) else { return true }
         let activeRulesCount = mergedRules?.count ?? 0
         return (activeRulesCount + 1) <= Constants.CONTENT_BLOCKING_RULES_LIMIT
     }
     
-    private func getAll() -> [[String:Any]]? {
-        let whitelists: [[String:Any]]? = FileManager.default.readJsonFile(at: Constants.AssetsUrls.whitelistUrl)
+    private func getAll() -> [[String: Any]]? {
+        let whitelists: [[String: Any]]? = FileManager.default.readJsonFile(at: .whitelistFile)
         return convertRules(whitelists)
     }
     
     private func prepareRule(_ url: String) -> [String: Any] {
-        let rule = WhitelistRulesMaker.shared.makeRule(for: url)
-        return rule
+        return WhitelistRulesMaker.shared.makeRule(for: url)
     }
     
-    private func save(_ rules: [[String:Any]]?) {
-        FileManager.default.writeJsonFile(at: Constants.AssetsUrls.whitelistUrl, with: rules)
+    private func save(_ rules: [[String: Any]]?) {
+        FileManager.default.writeJsonFile(at: .whitelistFile, with: rules)
     }
     
-    private func removeProtocol(from url: String) -> String {
-        let dividerRange = url.range(of: "://")
-        guard let divide = dividerRange?.upperBound else { return url }
-        let path = String(url[divide...])
-        return path
+    private func saveAndMerge(_ rules: [[String: Any]]?) {
+        self.save(rules)
+        self.status.set(newValue: .whitelistUpdateCompleted)
+        self.status.set(newValue: .idle)
+        AssetsManager.shared.requestMerge()
     }
-
+    
     // search for a url
-    private func findEntryAndIndex(of url: String, in whitelists: [[String:Any]], exactMatch: Bool = false) -> ([String:Any], Int)? {
+    private func findEntryAndIndex(of url: String, in whitelists: [[String: Any]], exactMatch: Bool = false) -> ([String: Any], Int)? {
+        if url.isEmpty { return nil }
         let normalizedUrl = normalizeUrl(url)
         SwiftyBeaver.debug("normalizedUrl \(normalizedUrl)")
         let domainAndParent = domainAndParents(normalizedUrl)
-        guard let currentUrlWhitelist = whitelists.filter({ (whitelist) -> Bool in
-            guard let domain = whitelist["originalEntry"] as? String else { return false }
-            var returnValue = domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == normalizedUrl.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-            // if the normalized URL doesn't match the domain, then check if there's parent / sub-domain match
-            if (!exactMatch && !returnValue) {
-                returnValue = ((domainAndParent?.first(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() })) != nil)
-            }
-            return returnValue
-        }).first else {
-            return nil
-        }
-        guard let index = whitelists.index(where: { (whitelist) -> Bool in
-            guard let domain = whitelist["originalEntry"] as? String else { return false }
-            var returnValue = domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == normalizedUrl.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-            // if the normalized URL doesn't match the domain, then check if there's parent / sub-domain match
-            if (!exactMatch && !returnValue) {
-                returnValue = ((domainAndParent?.first(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == domain.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() })) != nil)
+        guard let index = whitelists.firstIndex(where: { (whitelist) -> Bool in
+            guard let domain = (whitelist["originalEntry"] as? String)?.trimAndLower() else { return false }
+            var returnValue = domain == normalizedUrl
+            // if the normalized URL doesn't match the domain, then check if there's a parent / sub-domain match
+            if !exactMatch && !returnValue {
+                returnValue = ((domainAndParent.first(where: { $0.trimAndLower() == domain })) != nil)
             }
             return returnValue
         }) else {
             return nil
         }
-        return (currentUrlWhitelist, index)
+        return (whitelists[index], index)
     }
     
-    func normalizeUrl(_ url: String) -> String {
-        var url = url
-        if url.count == 0 {
-            return url
-        }
-        if (!SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            let host = removeUrlComponentsAfterHost(url: url)
-            var normalizedUrl = removeProtocol(from: host)
+    func normalizeUrl(_ urlString: String) -> String {
+        var url = urlString.trimAndLower()
+        
+        if url.isEmpty { return url }
+        
+        if !SFSafariServicesAvailable(SFSafariServicesVersion.version11_0) {
+            var normalizedUrl = url.getHostname()
             if normalizedUrl.starts(with: "www.") {
                 normalizedUrl = normalizedUrl.replacingOccurrences(of: "www.", with: "")
             }
 
             normalizedUrl = (normalizedUrl as NSString).decodedURL ?? normalizedUrl
-            return normalizedUrl.lowercased()
+            return normalizedUrl
         }
-        if url.last! == "/" {
+        if url.last == "/" {
             url = String(url.dropLast())
         }
-        return url.lowercased()
+        return url
     }
 
-    private func convertRules(_ rules: [[String:Any]]?) -> [[String:Any]]? {
-        if (!SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
+    private func convertRules(_ rules: [[String: Any]]?) -> [[String: Any]]? {
+        if !SFSafariServicesAvailable(SFSafariServicesVersion.version11_0) ||
+            UserPref.isConvertedRulesToIfTop {
             return rules
         }
-        if UserPref.isConvertedRulesToIfTop() {
-            return rules
-        }
-        guard let currentRules = rules else {
-            return rules
-        }
-        var convertedRules: [[String:Any]]? = []
+        
+        guard let currentRules = rules else { return rules }
+        
+        var convertedRules: [[String: Any]]? = []
         for whitelist in currentRules {
-            guard let domain = whitelist["domain"] as? String else {
+            guard let domain = whitelist["domain"] as? String,
+                let active = whitelist["active"] as? Bool else {
                 continue
             }
+            
             let rule = WhitelistRulesMaker.shared.makeRule(for: domain)
-            guard let active = whitelist["active"] as? Bool else {
-                continue
-            }
-            let whitelistEntry: [String : Any] = ["originalEntry": domain, "active": active, "rule": rule]
+            let whitelistEntry: [String: Any] = ["originalEntry": domain, "active": active, "rule": rule]
             convertedRules?.append(whitelistEntry)
         }
-        self.save(convertedRules)
+        save(convertedRules)
         UserPref.setConvertedRulesToIfTop(true)
         return convertedRules
     }
 
-
     // Return an array whose entries are |domain| and all of its parent domains, up
     // to and including the TLD.
-    func domainAndParents(_ url: String) -> [String]? {
+    func domainAndParents(_ url: String) -> [String] {
         var domain = url
-        if (url.hasPrefix("https://") || url.hasPrefix("http://")), let theURL = URL(string: url), let domainHost = theURL.host {
+        if let theURL = URL(string: url), let domainHost = theURL.host {
             domain = domainHost
         }
-        var result: [String]? = []
-        var parts = domain.components(separatedBy: ".")
-        var nextDomain = parts[parts.count - 1]
-        for (index, _) in parts.enumerated().reversed()  {
-            result?.append(nextDomain)
-            if (index > 0) {
-                nextDomain = parts[index - 1] + "." + nextDomain
+        var result: [String] = []
+        _ = domain.split(separator: ".").reversed().reduce("") { (last, part) in
+            var next: String
+            if !last.isEmpty {
+                next = "\(String(part)).\(last)"
+            } else {
+                next = "\(String(part))"
             }
+            result.append(next)
+            return next
         }
+        
         return result
+    }
+    
+    func updateCustomFilter(_ url: String) -> Bool {
+        if isEnabled(url) {
+            remove(url)
+        } else if exists(url) {
+            enable(url)
+        } else if url.isValidUrl() {
+            add(url)
+        } else {
+            return false
+        }
+        return true
     }
 }

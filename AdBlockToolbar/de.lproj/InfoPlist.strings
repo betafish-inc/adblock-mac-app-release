@@ -1,4 +1,4 @@
-/* (No Comment) */
+/* Bundle display name */
 "CFBundleDisplayName" = "AdBlock-Symbol";
 
 /* Bundle name */
@@ -12,7 +12,7 @@
 "NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Alle Rechte vorbehalten.";
 
 /* (No Comment) */
-"NSHumanReadableDescription" = "Mit diesem Symbol können Sie die AdBlock-App in Safari steuern, einschließlich der Möglichkeit, AdBlock auf geliebten Sites zu pausieren und Werbung zu erlauben.";
+"NSHumanReadableDescription" = "Mit diesem Symbol können Sie die AdBlock-App in Safari steuern und AdBlock auf Ihren Lieblings-Sites vorübergehend deaktivieren und Werbung erlauben.";
 
 /* (No Comment) */
 "Toolbar Button Label for Identifier: AdBlockSafariIcon" = "AdBlock-Symbol";

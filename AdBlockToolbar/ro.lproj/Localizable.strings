@@ -1,0 +1,45 @@
+/* Alert title */
+"alert.title" = "Alarmă";
+
+/* Allow ads menu item for Safari 10 users */
+"allow.ads.site.menu.safari.10" = "Permite pub pe site";
+
+/* Allow ads menu item for Safari 11+ users */
+"allow.ads.site.menu.safari.11" = "Permite pub pe pagină";
+
+/* Block ads menu item Safari 10 users */
+"block.ads.site.menu.safari.10" = "Blochează pub pe site";
+
+/* Block ads menu item Safari 11+ users */
+"block.ads.site.menu.safari.11" = "Blochează pub pe pagină";
+
+/* Error title */
+"error.title" = "Eroare";
+
+/* Extension disabled alert */
+"extension.disabled.alert" = "Extensia AdBlock este oprită";
+
+/* Feature under development alert */
+"feature.under.development" = "Caracteristica este în dezvoltare.";
+
+/* Help and Feedback menu item */
+"help.feedback.menu" = "Ajutor & Feedback";
+
+/* Invalid url alert */
+"invalid.url.alert" = "URL invalid";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Pause menu item */
+"pause.menu" = "Pauză";
+
+/* Resume menu item */
+"resume.menu" = "Reluare";
+
+/* Settings menu item */
+"settings.menu" = "Setări";
+
+/* Upgrade button */
+"upgrade.button" = "MODERNIZARE";
+

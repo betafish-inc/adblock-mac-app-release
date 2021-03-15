@@ -20,7 +20,6 @@ import Cocoa
 import SwiftyBeaver
 
 extension FileManager {    
-    
     func readJsonFile<T>(at fileUrl: URL?) -> T? {
         guard let unwrappedURL = fileUrl else {
             SwiftyBeaver.error("[ERR_READ_JSON]: url is nil")
@@ -38,18 +37,20 @@ extension FileManager {
         }
     }
     
-    func writeJsonFile<T>(at fileUrl: URL?, with data: T?) {
+    func writeJsonFile<T>(at fileUrl: URL?, with data: T?) -> Bool {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: data ?? [], options: JSONSerialization.WritingOptions.prettyPrinted)
             if FileManager.default.createFile(atPath: (fileUrl?.path ?? ""), contents: jsonData, attributes: nil) {
             } else {
                 SwiftyBeaver.error("[ERR_WRITE_JSON_FILE]: Unable to write to file: \(fileUrl?.path ?? "NULL")")
+                return false
             }
         } catch {
             SwiftyBeaver.error("[ERR_WRITE_JSON_FILE]: \(error), Path = \(fileUrl?.path ?? "NULL")")
+            return false
         }
+        return true
     }
-    
     
     /// Create directory if not exists
     ///
@@ -71,5 +72,3 @@ extension FileManager {
         }
     }
 }
-
-

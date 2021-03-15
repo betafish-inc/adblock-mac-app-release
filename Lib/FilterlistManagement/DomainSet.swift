@@ -34,78 +34,62 @@
 // all of its subdomains not otherwise mentioned are/are not in the set."
 
 import Foundation
+
 class DomainSet: NSObject {
-
     static let ALL = ""
-    var has:[String:Bool] = [:]
-
-    init(data: [String:Bool]) {
+    var has: [String: Bool] = [:]
+    
+    var stringValue: String {
+        var returnString = "DomainSet:"
+        for (key, value) in has {
+            var domain = key
+            if domain.isEmpty {
+                domain = "All"
+            }
+            returnString += " domain: \(domain) : \(String(value))"
+        }
+        return returnString
+    }
+    
+    init(data: [String: Bool]) {
         if data[DomainSet.ALL] != nil {
             self.has = data
         }
     }
 
-    static func parentDomainOf(domain:String)->String {
-        do {
-            if let updatedText = try replaceMatches(pattern: "^.+?(?:\\.|$)", inString: domain, replacementString: "") {
-                return updatedText
+    static func parentDomainOf(domain: String) -> String {
+        return domain.replaceMatches(pattern: "^.+?(?:\\.|$)", replacementString: "") ?? ""
+    }
+
+    static func domainAndParents(domain: String) -> [String: Bool] {
+        var result: [String: Bool] = [:]
+        
+        _ = domain.split(separator: ".").reversed().reduce("") { (last, part) in
+            var next: String
+            if !last.isEmpty {
+                next = "\(String(part)).\(last)"
             } else {
-                return ""
+                next = "\(String(part))"
             }
-        } catch {
-            return ""
+            result[next] = true
+            return next
         }
-    }
-
-    func toString() -> String {
-        var returnString = "DomainSet:"
-        for (key, value) in self.has {
-            var domain = key
-            if domain == "" {
-                domain = "All"
-            }
-            returnString += " domain: " + domain + " : " + String(value)
-        }
-        return returnString
-    }
-
-    static func domainAndParents(domain:String)->[String:Bool] {
-        var result:[String:Bool] = [:]
-        var parts = domain.split(separator: ".").map{ (part) -> String in
-            return String(part)
-        }
-        var nextDomain = parts[parts.count - 1]
-        var i = parts.count - 1
-        while (i >= 0) {
-            result[nextDomain] = true
-            if (i > 0) {
-                nextDomain = parts[i - 1] + "." + nextDomain
-            }
-            i = i - 1
-        }
+        
         return result
     }
 
-    func clone()->DomainSet {
-        return DomainSet(data: self.has)
-    }
-
-    func full()->Bool {
-        for (_, value) in self.has {
-            if !value  {
-                return false
-            }
-        }
-        return true
+    func clone() -> DomainSet {
+        return DomainSet(data: has)
     }
 
     // Modify |this| by set-subtracting |other|.
     // |this| will contain the subset that was in |this| but not in |other|.
-    func subtract(other:DomainSet) {
-        func subtract_operator(a:Bool, b:Bool)->Bool {
+    // swiftlint:disable identifier_name
+    func subtract(other: DomainSet) {
+        func subtract_operator(a: Bool, b: Bool) -> Bool {
             return a && !b
         }
-        self.apply(funcOperator: subtract_operator, other: other);
+        apply(funcOperator: subtract_operator, other: other)
     }
 
     // NB: If we needed them, intersect and union are just like subtract, but use
@@ -113,8 +97,7 @@ class DomainSet: NSObject {
 
     // Modify |this| to be the result of applying the given set |operator| (a
     // 2-param boolean function) to |this| and |other|. Returns undefined.
-    private func apply(funcOperator:((Bool, Bool) -> Bool), other:DomainSet) {
-
+    private func apply(funcOperator: ((Bool, Bool) -> Bool), other: DomainSet) {
         // Make sure there's an entry in .has for every entry in other.has, so
         // that we examine every pairing in the next for loop.
         for (d, _) in other.has {
@@ -127,10 +110,10 @@ class DomainSet: NSObject {
         }
         // Optimization: get rid of redundant entries that now exist in this.has.
         // E.g. if DomainSet.ALL, a, and sub.a all = true, delete the last 2.
-        var newHas:[String:Bool] = [:]
+        var newHas: [String: Bool] = [:]
         newHas[DomainSet.ALL] = self.has[DomainSet.ALL]
         for (d, value) in self.has {
-            if (value != self.computedHas(domain: DomainSet.parentDomainOf(domain: d))) {
+            if value != self.computedHas(domain: DomainSet.parentDomainOf(domain: d)) {
                 newHas[d] = self.has[d]
             }
         }
@@ -141,12 +124,11 @@ class DomainSet: NSObject {
     //
     // E.g. if |this| DomainSet is the set of all domains other than a, then 'b'
     // will yield true, and both 'a' and 'sub.a' will yield false.
-    func computedHas(domain:String)->Bool {
-        if let tempDomain = self.has[domain] {
+    func computedHas(domain: String) -> Bool {
+        if let tempDomain = has[domain] {
             return tempDomain
         } else {
-            return self.computedHas(domain: DomainSet.parentDomainOf(domain: domain))
+            return computedHas(domain: DomainSet.parentDomainOf(domain: domain))
         }
     }
-
 }

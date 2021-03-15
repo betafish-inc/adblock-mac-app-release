@@ -1,4 +1,4 @@
-/* (No Comment) */
+/* Bundle display name */
 "CFBundleDisplayName" = "AdBlock-Engine";
 
 /* Bundle name */
@@ -12,5 +12,5 @@
 "NSHumanReadableCopyright" = "Copyright © 2018 BetaFish, Inc. Alle Rechte vorbehalten.";
 
 /* (No Comment) */
-"NSHumanReadableDescription" = "Blockieren Sie lästige, aufdringliche und bösartige Werbung und Pop-ups. Genießen Sie das Surfen im Netz wieder.";
+"NSHumanReadableDescription" = "Blockieren Sie lästige, aufdringliche und bösartige Werbung und Pop-ups. Das Surfen im Netz macht endlich wieder Spaß.";
 

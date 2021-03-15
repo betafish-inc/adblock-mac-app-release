@@ -11,51 +11,57 @@ code.getadblock.com#$#abort-on-property-read adsShown
 code.getadblock.com#$#readd div.test-8 div[id='readd']
 code.getadblock.com#$#hide-if-has-and-matches-style span.test-9 div[id].test-9 div[id].test-9 /./ 'background-color: rgb(255, 102, 102);'
 code.getadblock.com#$#abort-on-property-write theAdIsShowing
-[Adblock Plus 2.0]
+
+! /filters/element-hiding-emulation
+testpages.adblockplus.org#?#div:-abp-properties(width: 213px)
+testpages.adblockplus.org#?#div:-abp-has(>div>span.ehe-has)
+testpages.adblockplus.org#?#span:-abp-contains(ehe-contains-target)
+testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
+testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)
+testpages.adblockplus.org#?#div:-abp-properties(cursor:*)
+testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)
+testpages.adblockplus.org#?#div > div:-abp-contains(/ehe-containsregex\d/)
+
 
 ! exceptions/image
-||testpages.adblockplus.org/testcasefiles/imageexception/*
-@@testpages.adblockplus.org/testcasefiles/imageexception/$image
+||testpages.adblockplus.org/testfiles/image_exception/*
+@@testpages.adblockplus.org/testfiles/image_exception/$image
 
 ! exceptions/subdocument
-||testpages.adblockplus.org/testcasefiles/subdocumentexception/*
-@@testpages.adblockplus.org/testcasefiles/subdocumentexception/$subdocument
+||testpages.adblockplus.org/testfiles/subdocument_exception/*
+@@testpages.adblockplus.org/testfiles/subdocument_exception/$subdocument
 
 ! exceptions/elemhide
-testpages.adblockplus.org##.testcase-ex-elemhide
-||testpages.adblockplus.org/testcasefiles/elemhide/image.jpg
-@@testpages.adblockplus.org/en/exceptions/elemhide^$elemhide
+testpages.adblockplus.org##.ex-elemhide
+||testpages.adblockplus.org/testfiles/elemhide/*
+@@testpages.adblockplus.org/en/exceptions/elemhide$elemhide
 
 ! exceptions/xmlhttprequest
-||testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/*
-@@testpages.adblockplus.org/testcasefiles/xmlhttprequestexception/$xmlhttprequest
+||testpages.adblockplus.org/testfiles/xmlhttprequest_exception/*
+@@testpages.adblockplus.org/testfiles/xmlhttprequest_exception/$xmlhttprequest
 
 ! exceptions/element-hiding
 testpages.adblockplus.org##.testcase-ehe
 testpages.adblockplus.org#@#.testcase-ehe
 
-! exceptions/sitekey
-||testpages.adblockplus.org/testcasefiles/sitekey/*
-@@$document,sitekey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANGtTstne7e8MbmDHDiMFkGbcuBgXmiVesGOG3gtYeM1EkrzVhBjGUvKXYE4GLFwqty3v5MuWWbvItUWBTYoVVsCAwEAAQ
-
 ! exceptions/document
-testpages.adblockplus.org##.testcase-ex-document
-||testpages.adblockplus.org/testcasefiles/document/*
-@@testpages.adblockplus.org/en/exceptions/document^$document
+testpages.adblockplus.org##.ex-document
+||testpages.adblockplus.org/testfiles/document/*
+@@testpages.adblockplus.org/en/exceptions/document$document
 
 ! exceptions/script
-||testpages.adblockplus.org/testcasefiles/scriptexception/*
-@@testpages.adblockplus.org/testcasefiles/scriptexception/$script
+||testpages.adblockplus.org/testfiles/script_exception/*
+@@testpages.adblockplus.org/testfiles/script_exception/$script
 
 ! exceptions/popup
-||testpages.adblockplus.org/en/exceptions/popup^$popup
-@@||testpages.adblockplus.org/en/exceptions/popup^$popup
-||testpages.adblockplus.org/en/popuptarget^$popup
-@@||testpages.adblockplus.org/en/filters/popup-exception^$popup
+||testpages.adblockplus.org/testfiles/popup_exception/link.html^$popup
+@@||testpages.adblockplus.org/testfiles/popup_exception/link.html^$popup
+||testpages.adblockplus.org/testfiles/popup_exception/script.html^$popup
+@@||testpages.adblockplus.org/testfiles/popup_exception/script.html^$popup
 
 ! exceptions/stylesheet
-||testpages.adblockplus.org/testcasefiles/stylesheetexception/*
-@@testpages.adblockplus.org/testcasefiles/stylesheetexception/$stylesheet
+||testpages.adblockplus.org/testfiles/stylesheet_exception/*
+@@testpages.adblockplus.org/testfiles/stylesheet_exception/$stylesheet
 
 ! circumvention/inline-style-important
 testpages.adblockplus.org##.testcase-circ-is
@@ -63,54 +69,52 @@ testpages.adblockplus.org##.testcase-circ-is
 ! circumvention/anoniframe-documentwrite
 testpages.adblockplus.org##.testcase-circ-anoniframe-docwrite
 
+! filters/blocking
+||testpages.adblockplus.org/testfiles/blocking/full-path.png
+/testfiles/blocking/partial-path/
+/testfiles/blocking/wildcard/*/wildcard.png
+/testfiles/blocking/dynamic.png
+
 ! filters/image
-testpages.adblockplus.org/testcasefiles/image/$image
+||testpages.adblockplus.org/testfiles/image/static/$image
+||testpages.adblockplus.org/testfiles/image/dynamic/$image
 
 ! filters/subdocument
-testpages.adblockplus.org/testcasefiles/subdocument/$subdocument
+testpages.adblockplus.org/testfiles/subdocument/$subdocument
 
 ! filters/xmlhttprequest
-testpages.adblockplus.org/testcasefiles/xmlhttprequest/$xmlhttprequest
+testpages.adblockplus.org/testfiles/xmlhttprequest/$xmlhttprequest
 
 ! filters/ping
 testpages.adblockplus.org/*^$ping
-testpages.adblockplus.org/*^$ping
 
 ! filters/element-hiding
-testpages.adblockplus.org###testcase-eh-id
-testpages.adblockplus.org##.testcase-eh-class
-testpages.adblockplus.org##.testcase-container > .testcase-eh-descendant
-testpages.adblockplus.org##.testcase-eh-sibling + .testcase-eh-sibling-target
-testpages.adblockplus.org##table[height="100"][width="100"]
-testpages.adblockplus.org##a[href="http://testcase-attribute.com/"]
-testpages.adblockplus.org##div[style="width:199px;height:51px;"]
-testpages.adblockplus.org##a[href^="http://testcase-attributestartswith.com/"]
-testpages.adblockplus.org##div[style^="width:201px;height:51px;"]
-testpages.adblockplus.org##div[style$="width:202px;height:51px;"]
-testpages.adblockplus.org##div[style*="width:203px;height:51px;"]
+testpages.adblockplus.org###eh-id
+testpages.adblockplus.org##.eh-class
+testpages.adblockplus.org##.testcase-area > .eh-descendant
+testpages.adblockplus.org##.testcase-examplecontent + .eh-sibling
+testpages.adblockplus.org##div[height="100"][width="100"]
+testpages.adblockplus.org##div[href="http://testcase-attribute.com/"]
+testpages.adblockplus.org##div[style="width: 200px;"]
+testpages.adblockplus.org##div[href^="http://testcase-startswith.com/"]
+testpages.adblockplus.org##div[style^="width: 201px;"]
+testpages.adblockplus.org##div[style$="width: 202px;"]
+testpages.adblockplus.org##div[style*="width: 203px;"]
 
 ! filters/object
-testpages.adblockplus.org/testcasefiles/object/$object
+||testpages.adblockplus.org/testfiles/object/static/$object
+||testpages.adblockplus.org/testfiles/object/dynamic/$object
 
-! filters/element-hiding-emulation
-testpages.adblockplus.org#?#div:-abp-properties(width: 213px)
-testpages.adblockplus.org#?#div:-abp-has(>div>img.testcase-es-has)
-testpages.adblockplus.org#?#span:-abp-contains(ESContainsTarget)
-testpages.adblockplus.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
-testpages.adblockplus.org#?#div:-abp-properties(WiDtH: 215px)
-testpages.adblockplus.org#?#div:-abp-properties(cursor:*)
-testpages.adblockplus.org#?#div:-abp-properties(/width: 12[1-5]px;/)
-testpages.adblockplus.org#?#div > div:-abp-contains(/ESContainsRegEx\d/)
+! filters/domain
+/testfiles/domain/static/target/*$domain=testpages.adblockplus.org
+/testfiles/domain/dynamic/*$domain=testpages.adblockplus.org
 
 ! filters/script
-testpages.adblockplus.org/testcasefiles/script/$script
-
-! filters/object-subrequest
-testpages.adblockplus.org/testcasefiles/objectsubrequest/$object-subrequest
+testpages.adblockplus.org/testfiles/script/$script
 
 ! filters/popup
-||testpages.adblockplus.org/en/popuptarget^$popup
-||testpages.adblockplus.org/en/popuptarget^$popup
+||testpages.adblockplus.org/testfiles/popup/link.html^$popup
+||testpages.adblockplus.org/testfiles/popup/script.html^$popup
 
 ! filters/blocking
 ||testpages.adblockplus.org/testcasefiles/blocking/addresscomplete/image.jpg
@@ -124,7 +128,80 @@ testpages.adblockplus.org/testcasefiles/stylesheet/$stylesheet
 $webrtc,domain=testpages.adblockplus.org
 
 ! filters/match-case
-/testcasefiles/matchcase/*/abc.jpg$match-case
+/testfiles/match-case/static/*/abc.png$match-case
+/testfiles/match-case/dynamic/*/abc.png$match-case
 
 ! filters/websocket
 $websocket,domain=testpages.adblockplus.org
+
+! snippets
+testpages.adblockplus.org#$#hide-if-contains 'hic-basic-static' p[id]
+
+! https://testpages.adblockplus.org/en/snippets/abort-current-inline-script
+testpages.adblockplus.org#$#abort-current-inline-script console.group
+testpages.adblockplus.org#$#abort-current-inline-script console.info acis-search
+testpages.adblockplus.org#$#abort-current-inline-script console.info search
+testpages.adblockplus.org#$#abort-current-inline-script console.warn '/acis-regex[1-2]/'
+
+! https://testpages.adblockplus.org/en/snippets/abort-on-property-read
+testpages.adblockplus.org#$#abort-on-property-read aoprb
+testpages.adblockplus.org#$#abort-on-property-read aopr.sp
+testpages.adblockplus.org#$#abort-on-property-read aoprf.fp
+
+! https://testpages.adblockplus.org/en/snippets/abort-on-property-write
+testpages.adblockplus.org#$#abort-on-property-write window.aopwb
+testpages.adblockplus.org#$#abort-on-property-write window.aopwsp
+testpages.adblockplus.org#$#abort-on-property-write aopwf.fp
+
+! https://testpages.adblockplus.org/en/snippets/dir-string
+testpages.adblockplus.org#$#dir-string
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-contains
+testpages.adblockplus.org#$#hide-if-contains 'hic-basic-static' p[id]
+testpages.adblockplus.org#$#hide-if-contains 'hic-basic-dynamic' p[id]
+testpages.adblockplus.org#$#hide-if-contains 'hic-search' p[id] .target
+testpages.adblockplus.org#$#hide-if-contains /hic-regex-[2-3]/ p[id]
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-contains-and-matches-style
+testpages.adblockplus.org#$#hide-if-contains-and-matches-style hicamss div[id] span.label /./ 'display: inline;'
+testpages.adblockplus.org#$#hide-if-contains-and-matches-style hicamsd div[id] span.label /./ 'display: inline;'
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-contains-image
+testpages.adblockplus.org#$#hide-if-contains-image /^89504e470d0a1a0a0000000d4948445200000064000000640802/ div[shouldhide] div
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-contains-image-hash
+testpages.adblockplus.org#$#hide-if-contains-image-hash 0000007e7e000000 '#basic-target img'
+testpages.adblockplus.org#$#hide-if-contains-image-hash 0101017f7f0100ff '#search-target > div'
+testpages.adblockplus.org#$#hide-if-contains-image-hash ffffffffffffffff '#search-selection-target > div' 0 8 126x0x44x44
+testpages.adblockplus.org#$#hide-if-contains-image-hash ffffffffffffffff '#search-selection-negative-target > div' 0 8 -44x0x44x44
+testpages.adblockplus.org#$#hide-if-contains-image-hash ffffffffffffffff '#search-selection-maxdistance-target > div' 1 8 126x0x44x44
+testpages.adblockplus.org#$#hide-if-contains-image-hash ffffffffffffffff '#search-selection-maxdistance-target-notblocked > div' 0 8 126x0x44x44
+testpages.adblockplus.org#$#hide-if-contains-image-hash 00000000000016f01ff813d01ff807e007e01ff00ff80ff00f3000000000ffff '#search-selection-maxdistance-blockbits-target > div' 0 16 0x0x159x160
+testpages.adblockplus.org#$#hide-if-contains-image-hash ff00007e7e140000 '* img'
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-contains-visible-text
+testpages.adblockplus.org#$#hide-if-contains-visible-text Sponsored-hicvt-basic '#parent-basic > .article' '#parent-basic > .article .label'
+testpages.adblockplus.org#$#hide-if-contains-visible-text Sponsored-hicvt-content '#parent-content > .article' '#parent-content > .article .label'
+
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-has-and-matches-style
+testpages.adblockplus.org#$#hide-if-has-and-matches-style a[href="#basic-target-ad"] div[id] span.label /./ 'display: inline;'
+testpages.adblockplus.org#$#hide-if-has-and-matches-style a[href="#comments-target-ad"] div[id] span.label ';' /\\bdisplay:\ inline\;/
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-labelled-by
+testpages.adblockplus.org#$#hide-if-labelled-by 'Label' '#hilb-target [aria-labelledby]' '#hilb-target'
+
+! https://testpages.adblockplus.org/en/snippets/hide-if-shadow-contains
+testpages.adblockplus.org#$#hide-if-shadow-contains 'hisc-basic' p
+testpages.adblockplus.org#$#hide-if-shadow-contains '/hisc-regex[1-2]/' div
+
+! https://testpages.adblockplus.org/en/snippets/strip-fetch-query-parameter
+testpages.adblockplus.org#$#strip-fetch-query-parameter basicBlocked testpages.adblockplus.org
+testpages.adblockplus.org#$#strip-fetch-query-parameter otherAllowed2 other-domain
+
+! https://testpages.adblockplus.org/en/circumvention/anoniframe-documentwrite
+testpages.adblockplus.org##.testcase-circ-anoniframe-docwrite
+
+! https://testpages.adblockplus.org/en/circumvention/inline-style-important
+testpages.adblockplus.org##.testcase-circ-is
+

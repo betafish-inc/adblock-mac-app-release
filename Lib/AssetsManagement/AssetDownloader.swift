@@ -18,7 +18,6 @@
 import Cocoa
 import Alamofire
 import SwiftyBeaver
-import SafariServices
 
 enum AssetDownloaderStatus {
     case idle
@@ -26,6 +25,33 @@ enum AssetDownloaderStatus {
     case completed
     case noChange
     case downloadError
+}
+
+extension URL {
+    func write(data: Data) {
+        // Save filterlist data to file
+        SwiftyBeaver.debug("[FILTERLIST_FILE_PATH]: \(path)")
+        if FileManager.default.createFile(atPath: path, contents: data, attributes: nil) {
+            SwiftyBeaver.debug("[SAVE_UPDATE_FILTERLIST]: Successful")
+        } else {
+            SwiftyBeaver.error("[ERR_SAVE_UPDATE_FILTERLIST]: Unable to write filter list to file")
+        }
+    }
+}
+
+extension UserPref {
+    // Returns true only if the list is enabled
+    // AND
+    // the list is either not the ADS list OR AA is not enabled
+    // (since if the ADS list and AA are both enabled, only AA
+    // should be downloaded)
+    // AND
+    // the list isn't the custom list (static list)
+    static func shouldDownloadList(_ identifier: String) -> Bool {
+        return UserPref.isFilterListEnabled(identifier: identifier) &&
+        (identifier != Constants.ADS_FILTER_LIST_ID || !UserPref.isFilterListEnabled(identifier: Constants.ALLOW_ADS_FILTER_LIST_ID)) &&
+        identifier != Constants.CUSTOM_FILTER_LIST_ID
+    }
 }
 
 class AssetDownloader: NSObject {
@@ -37,119 +63,59 @@ class AssetDownloader: NSObject {
 
     /// Initiate the assets downloader
     func start(_ completion: ((AssetDownloaderStatus) -> Void)? = nil) {
-        if self.status != .idle {
+        guard status == .idle else { return }
+
+        status = .downloading
+        let localChecksums = (FileManager.default.readJsonFile(at: .assetsChecksumFile) as [String: String]?)?.filter { UserPref.shouldDownloadList($0.key) }
+        if localChecksums?.isEmpty ?? true {
+            completion?(.noChange)
+            status = .idle
             return
         }
-
-        self.status = .downloading
-        let localChecksums: [String: String]? = FileManager.default.readJsonFile(at: Constants.AssetsUrls.assetsChecksumUrl)
-        self.beginDownloadV2(localChecksums) { (error, changed) in
-            if let _ = error {
-                self.status = .downloadError
-                completion?(.downloadError)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    self.status = .idle
-                })
-                return
-            }
-
-            if changed == true {
-                self.status = .completed
-                completion?(.completed)
-                self.status = .idle
-            } else {
-                self.status = .completed
-                completion?(.noChange)
-                self.status = .idle
-            }
-        }
-    }
-
-    /// Initiate downloading of filter lists and recursively download it
-    ///
-    /// - Parameters:
-    ///   - checksums: updated checksums data
-    ///   - completion: completion handler
-    private func beginDownloadV2(_ checksums: [String: String]?, completion: @escaping (Error?, Bool?)->Void) {
-        guard let checksums = checksums else {
-            SwiftyBeaver.debug("[BEGIN_DOWNLOAD]: Nothing to download...")
-            completion(nil, false)
-            return
-        }
-        let checksumDownloadGroup = DispatchGroup()
-        var idx = 0
-        let total = checksums.count
-        var storedError: Error? = nil
+        
+        var storedError: Error?
         var changed: Bool = false
-        for (key, _) in checksums {
-            let enabled = UserPref.isFilterListEnabled(identifier: key)
-            if (!enabled) {
-                continue
-            }
-            // Don't download the "easylist_content_blocker", if its not necessary
-            // Since the "easylist_exceptionrules_content_blocker" file contains
-            // the same rules (+AA rules) as the "easylist_content_blocker" file
-            // only download the "easylist_exceptionrules_content_blocker", if
-            // user has it enabled.
-            //
-            if (key == Constants.ADS_FILTER_LIST_ID &&
-                UserPref.isFilterListEnabled(identifier: Constants.ALLOW_ADS_FILTER_LIST_ID)) || key == Constants.CUSTOM_FILTER_LIST_ID {
-                continue
-            }
+        let checksumDownloadGroup = DispatchGroup()
+        
+        localChecksums?.forEach {
             checksumDownloadGroup.enter()
-            idx = idx + 1
-            SwiftyBeaver.debug("[BEGIN_DOWNLOAD]: Initiate download... \(key) [\(idx) / \(total)]")
-            self.download(key, completion: { (error, data, type) in
+            let identifier = $0.key
+            download(identifier) { (error, data, type) in
                 if let error = error {
                     storedError = error
-                } else if data != nil {
+                } else if let data = data {
                     changed = true
-
-                    // Save filterlist data to file
-                    let thirdPartyDirUrl = Constants.AssetsUrls.thirdPartyFolder
-                    FileManager.default.createDirectoryIfNotExists(thirdPartyDirUrl, withIntermediateDirectories: true)
-                    var updatedKey = key
-                    if SFSafariServicesAvailable(SFSafariServicesVersion.version11_0) && type == "json" {
-                        updatedKey = key + "_v2";
-                    }
-                    let filterListFileUrl = thirdPartyDirUrl?.appendingPathComponent("\(updatedKey).\(type ?? "txt")")
-                    SwiftyBeaver.debug("[FILTERLIST_FILE_PATH]: \(filterListFileUrl?.path ?? "NULL")")
-                    if let filterListFilePath = filterListFileUrl?.path, FileManager.default.createFile(atPath: filterListFilePath, contents: data, attributes: nil) {
-                        SwiftyBeaver.debug("[SAVE_UPDATE_FILTERLIST]: Successful")
-                    } else {
-                        SwiftyBeaver.error("[ERR_SAVE_UPDATE_FILTERLIST]: Unable to write filter list to file")
-                    }
+                    URL.assetURL(asset: identifier, type: type)?.write(data: data)
                 }
                 checksumDownloadGroup.leave()
-            })
+            }
         }
+        
         checksumDownloadGroup.notify(queue: .main) {
-            SwiftyBeaver.debug("[BEGIN_DOWNLOAD]: Assets downloaded...")
-            completion(storedError, changed)
+            switch (storedError, changed) {
+            case (nil, true):
+                completion?(.completed)
+            case (nil, false):
+                completion?(.noChange)
+            default:
+                completion?(.downloadError)
+            }
+            self.status = .idle
         }
     }
 
     /// Download filter list by id provided in checksums and save it in shared group directory of app
-    ///
-    /// - Parameters:
-    ///   - filterListId: filter list id
-    ///   - completion: completion handler
     private func download(_ filterListId: String, completion: @escaping (Error?, Data?, String?) -> Void) {
-        SwiftyBeaver.debug("[DOWNLOAD]: Downloading... \(filterListId)")
-        let urlString = getURLById(filterListId: filterListId)
-        guard let url = URL(string: urlString ) else {
+        guard let url = URL.filterURL(filter: filterListId) else {
             completion(Constants.AdBlockError.invalidApiUrl, nil, nil)
             return
         }
 
-        var formatter = DateFormatter()
-        formatter.dateFormat = "EEE, d MMM y HH:mm:ss z"
-        formatter.timeZone = TimeZone(abbreviation: "GMT")
+        let formatter = dateFormatter
 
         func test<T>(response: DataResponse<T>) {
             guard response.result.isSuccess else {
                 if response.response?.statusCode == 304 {
-                    SwiftyBeaver.debug("[DOWNLOAD] Filter list not modified... \(filterListId)")
                     completion(nil, nil, nil)
                 } else {
                     SwiftyBeaver.error("Error while downloading filterlist: \(String(describing: response.result.error))")
@@ -162,22 +128,13 @@ class AssetDownloader: NSObject {
             let lastModified = responseHeaders?["Last-Modified"] as? String
             let modifiedDate = formatter.date(from: lastModified ?? Constants.DATE_STRING_A_WHILE_AGO) ?? Date(timeIntervalSince1970: 0)
             UserPref.setFilterListModifiedDate(identifier: filterListId, date: modifiedDate)
-            SwiftyBeaver.debug("[DOWNLOAD]: Last modified... \(filterListId) \(modifiedDate)")
-
-            let bcf = ByteCountFormatter()
-            bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
-            bcf.countStyle = .file
-            let filterDataSize = bcf.string(fromByteCount: Int64(response.data?.count ?? 0))
-            SwiftyBeaver.debug("[DOWNLOAD]: Downloaded... \(filterListId) (\(filterDataSize))")
             completion(nil, response.data, url.pathExtension)
         }
-
-        SwiftyBeaver.debug("[DOWNLOAD_REQUEST]: \(url.absoluteString)")
 
         var req = URLRequest(url: url)
         req.httpMethod = "GET"
         let dateString = formatter.string(from: UserPref.filterListModifiedDate(identifier: filterListId))
-        req.setValue(dateString, forHTTPHeaderField:"If-Modified-Since" )
+        req.setValue(dateString, forHTTPHeaderField: "If-Modified-Since" )
         req.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
 
         if url.pathExtension == "json" {
@@ -190,21 +147,11 @@ class AssetDownloader: NSObject {
                 .responseString(completionHandler: test)
         }
     }
-
-    private func getURLById(filterListId: String) -> String {
-        if (filterListId == Constants.ADS_FILTER_LIST_ID && SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            return "https://cdn.adblockcdn.com/filters/easylist_content_blocker_v2.json"
-        } else if (filterListId == Constants.ALLOW_ADS_FILTER_LIST_ID  && SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            return "https://cdn.adblockcdn.com/filters/easylist+exceptionrules_content_blocker_v2.json"
-        } else if (filterListId == Constants.ADS_FILTER_LIST_ID && !SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            return "https://cdn.adblockcdn.com/filters/easylist_content_blocker.json"
-        } else if (filterListId == Constants.ALLOW_ADS_FILTER_LIST_ID && !SFSafariServicesAvailable(SFSafariServicesVersion.version11_0)) {
-            return "https://cdn.adblockcdn.com/filters/easylist+exceptionrules_content_blocker.json"
-        } else if (filterListId == Constants.ANTI_CIRCUMVENTION_LIST_ID) {
-            return "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt"
-        } else if (filterListId == Constants.ADVANCE_FILTER_LIST_ID) {
-            return "https://cdn.adblockcdn.com/filters/advance_hiding.txt"
-        }
-        return ""
-    }
+    
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE, d MMM y HH:mm:ss z"
+        formatter.timeZone = TimeZone(abbreviation: "GMT")
+        return formatter
+    }()
 }

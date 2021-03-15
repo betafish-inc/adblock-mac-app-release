@@ -1,0 +1,285 @@
+/* About AdBlock menu item */
+"about.adblock.menu" = "Despre AdBlock";
+
+/* About menu item */
+"about.menu" = "Despre";
+
+/* Acceptable Ads title */
+"acceptable.ads.title" = "Permiteți câteva reclame neintruzive";
+
+/* AdBlock blocking again */
+"adblock.blocking.again" = "AdBlock blochează din nou reclame.";
+
+/* AdBlock Disabled alertAdBlock Disabled alert */
+"adblock.disabled.alert" = "Vă rugăm să activați extensiile AdBlock în Safari.";
+
+/* AdBlock Disabled button */
+"adblock.disabled.button" = "Activați AdBlock în Safari";
+
+/* AdBlock extension name */
+"adblock.extension" = "Extensia AdBlock";
+
+/* AdBlock Help menu item */
+"adblock.help.menu" = "Ajutor AdBlock";
+
+/* AdBlock no filters enabled */
+"adblock.not.blocking.alert" = "AdBlock nu mai blochează nicio reclamă";
+
+/* Alert title */
+"alert.title" = "Alarmă";
+
+/* Anti-Circumvention title */
+"anti.circumvention.title" = "Blocare de reclame avansată";
+
+/* Bring All to Front menu item */
+"bring.all.to.front.menu" = "Aduceți Totul în Față";
+
+/* Custom title */
+"custom.title" = "Adaptat";
+
+/* Title for debug info window */
+"debug.info.title" = "Informații Depanare";
+
+/* Debug info menu item */
+"debug.menu" = "Vezi Info Depanare";
+
+/* EasyList title */
+"easylist.title" = "Blocați pub enervant, pop-up-uri";
+
+/* Feature under development alert */
+"feature.under.development" = "Caracteristica este în dezvoltare.";
+
+/* Filter Lists error */
+"filter.lists.error" = "Eroare la actualizarea listei de filtre. Încercați mai târziu.";
+
+/* Filter Lists header */
+"filter.lists.header" = "Decideți ce va afișa sau ascunde AdBlock pe site-urile pe care le vizitați.";
+
+/* Filter Lists last updated */
+"filter.lists.last.updated" = "Ultima actualizare";
+
+/* Filter Lists Rules count label */
+"filter.lists.rules" = "Reguli";
+
+/* Filter Lists success */
+"filter.lists.success" = "Listele dvs. de filtre au fost actualizate cu succes";
+
+/* Filter Lists title */
+"filter.lists.title" = "Liste de Filtre";
+
+/* Filter Lists too many rules alert */
+"filter.lists.too.many.rules" = "Prea multe filtre activate: Safari nu poate folosi mai mult de 50000 reguli.";
+
+/* Filter Lists update button */
+"filter.lists.update.button" = "Actualizați Listele de Filtre";
+
+/* Filter Lists updates in progress alert */
+"filter.lists.updating" = "Se actualizează listele de filtre...";
+
+/* Help menu item */
+"help.menu" = "Ajutor";
+
+/* Info Text bullet 1 text */
+"info.text.bullet.1" = "Clic pe iconul ￼%1$@ în Safari întrerupe AdBlock sau permite pub pe site-urile favorite";
+
+/* Info Text bullet 2 text */
+"info.text.bullet.2" = "Alegând 'Permiteți reclame pe acest site' dezactivați AdBlock pe site-uri cu pub plăcut sau a cărui proprietar îl sprijiniți";
+
+/* Info Text bullet 3 text */
+"info.text.bullet.3" = "Cu linkul Ajutor & Feedback vedeți întrebări puse frecvent sau %1$@ne trimiteți un e-mail%2$@";
+
+/* Info Text button */
+"info.text.button" = "Începeți surfing webul!";
+
+/* Info Text contact text */
+"info.text.contact.text" = "Vizitați-ne vă rog %1$@site-ul%2$@ ca să aflați răspuns la întrebări frecvente sau să ne trimiteți feedback.";
+
+/* Info Text header */
+"info.text.header" = "AdBlock este gata de drum!";
+
+/* Info Text intro text */
+"info.text.intro" = "AdBlock este pornit blocându-vă deja reclamele. Iată câteva instrucțiuni:";
+
+/* Intro Screen 1 button */
+"intro.screen.1.button" = "Setați AdBlock în Safari";
+
+/* Intro Screen 1 text */
+"intro.screen.1.text" = "Vă rugăm să activați <b>Motorul AdBlock</b> și <b>Iconul AdBlock</b> în preferințele extensiei Safari";
+
+/* Load product failed message */
+"load.product.fail.message" = "Actualizarea produsului a eșuat. Încercați vă rog mai târziu.";
+
+/* Load product failed title */
+"load.product.fail.title" = "Modernizarea a Eșuat";
+
+/* Minimize menu item */
+"minimize.menu" = "Minimizați";
+
+/* New Window menu item */
+"new.window.menu" = "Fereastră Nouă";
+
+/* OK button */
+"ok.button" = "OK";
+
+/* Preferences menu item */
+"preferences.menu" = "Preferințe...";
+
+/* Upgrade title */
+"product.account.title" = "Contul Meu";
+
+/* Upgrade title */
+"product.upgrade.title" = "Modernizare";
+
+/* Purchase cancelled message text */
+"purchase.cancelled.message" = "Achiziția a fost anulată.";
+
+/* Purchase cancelled title text */
+"purchase.cancelled.title" = "Achiziție Anulată";
+
+/* Date of purchase */
+"purchase.date" = "Data achiziției: ";
+
+/* Purchase error message text */
+"purchase.error.message" = "Eroare la achiziție: ";
+
+/* Purchase error title text */
+"purchase.error.title" = "Eroare la Achiziționare";
+
+/* Purchase failed message text */
+"purchase.fail.message" = "Achiziție eșuată datorită erorii: ";
+
+/* Purchase failed title text */
+"purchase.fail.title" = "Achiziția a Eșuat";
+
+/* Invalid purchase idetifier message */
+"purchase.id.invalid.message" = "Identificator achiziție actualizare invalid. Vă rugăm să contactați https://help.getadblock.com pentru asistență.";
+
+/* Invalid purchase idetifier title */
+"purchase.id.invalid.title" = "Identificator Achiziție Actualizare Invalid";
+
+/* Upgrade restore message text */
+"purchase.restore.message" = "Modernizarea dvs. a fost restaurată. Vă mulțumim!";
+
+/* Upgrade restore title text */
+"purchase.restore.title" = "Modernizare restaurată";
+
+/* Upgrade Thank You message text */
+"purchase.thankyou.message" = "Vă mulțumim pentru achiziția modernizării!";
+
+/* Upgrade Thank You title text */
+"purchase.thankyou.title" = "Modernizare completă";
+
+/* Quit AdBlock menu item */
+"quit.adblock.menu" = "Părăsiți AdBlock";
+
+/* Quit menu item */
+"quit.menu" = "Ieșire";
+
+/* Receipt fail message text */
+"receipt.fail.message" = "Eroare de citire a bonului achiziției. Încercați vă rog mai târziu.";
+
+/* Receipt fail title text */
+"receipt.fail.title" = "Eroare cu Bonul Achiziției";
+
+/* Upgrade restore failed title message */
+"restore.failed.message" = "Restaurarea modernizării a eșuat. Încercați vă rog mai târziu.";
+
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Eroare la restaurarea actualizării: ";
+
+/* Upgrade restore failed title text */
+"restore.failed.title" = "Restaurarea Modernizării Eșuată";
+
+/* Upgrade no matching purchase message */
+"restore.no.match.message" = "Nu s-au găsit achiziții de modernizare potrivite.";
+
+/* Upgrade no matching purchase title */
+"restore.no.match.title" = "Eroare la Modernizare";
+
+/* Upgrade restore receipt error message */
+"restore.receipt.error.message" = "Eroare la citirea primirii actualizării. Încercați mai târziu.";
+
+/* Upgrade restore receipt error title */
+"restore.receipt.error.title" = "Eroare cu Chitanța Modernizării";
+
+/* Services menu item */
+"services.menu" = "Servicii";
+
+/* Start AdBlock at login menu item */
+"start.at.login" = "Start AdBlock la Logare";
+
+/* Upgrade already text */
+"upgrade.already" = "Ați modernizat deja?";
+
+/* Upgrade restore click here */
+"upgrade.click.here" = "Clicați aici";
+
+/* Upgrade line three text */
+"upgrade.get.more" = "Obțineți mai mult de la AdBlock cu aceste funcții bonus.";
+
+/* Upgrade line one description text */
+"upgrade.line.one.description" = "Sprijiniți site-urile preferate adăugându-le la lista personală de permisiuni";
+
+/* Upgrade line one title text */
+"upgrade.line.one.text" = "Permiteți pub pe site-uri favorite";
+
+/* Upgrade line 1A description text */
+"upgrade.line.point.five.description" = "Accesați blocări publicitare mai inteligente și mai puternice";
+
+/* Upgrade line 1A title text */
+"upgrade.line.point.five.text" = "Blocare de reclame avansată";
+
+/* Upgrade line two description text */
+"upgrade.line.two.description" = "Obțineți răspuns la întrebările/problemele dvs. în aceeași zi";
+
+/* Upgrade line two title text */
+"upgrade.line.two.text" = "Bucurați-vă de suport VIP";
+
+/* Upgrade line three description text */
+"upgrade.more.soon" = "Mai multe opțiuni în curând!";
+
+/* Upgrade Now button text */
+"upgrade.now.button" = "Modernizați Acum";
+
+/* Upgrade price prefix */
+"upgrade.only" = "Numai %1$@";
+
+/* Upgrade unavailable unauthorized message */
+"upgrade.unavailable.unauthorized.desc" = "Achizițiile În-Aplicație nu sunt activate în acest cont.";
+
+/* Upgrade unavailable unauthorized message title */
+"upgrade.unavailable.unauthorized.title" = "Modernizare Indisponibilă";
+
+/* Upgrade unavailable Safari 10- message */
+"upgrade.unavailable.version.desc" = "Modernizare disponibilă numai pe Safari 11 și ulterior. Actualizați-l vă rugăm și încercați din nou.";
+
+/* Upgrade unavailable Safari 10- message title */
+"upgrade.unavailable.version.title" = "Modernizare Indisponibilă";
+
+/* Whitelist menu item */
+"whitelist.menu" = "Gestiune de Reclame Permise";
+
+/* Whitelisting button */
+"whitelisting.button" = "Adăugați Site";
+
+/* Whitelisting empty text */
+"whitelisting.empty.text" = "Nu permiteți reclame nicăieri";
+
+/* Whitelisting invalid url message */
+"whitelisting.enter.valid.url" = "Intrați vă rog un url valid.";
+
+/* Whitelisting example explanation */
+"whitelisting.example.explanation" = "http://www.exemplu.com/index.html SAU subdomeniu.exemplu.com";
+
+/* Whitelisting example text */
+"whitelisting.example.text" = "ex. http://www.example.com/";
+
+/* Whitelisting header */
+"whitelisting.header" = "Pentru a permite reclame pe anumite site-uri, adăugați-le în 'lista de permisiuni' aici:";
+
+/* Whitelisting duplicate url message */
+"whitelisting.url.exists" = "Acest url există deja.";
+
+/* Window menu item */
+"window.menu" = "Fereastră";
+

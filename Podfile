@@ -17,6 +17,7 @@ target 'AdBlock' do
 end
 
 target 'AdBlock-Extension' do
+    platform :osx, '10.12'
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
@@ -27,6 +28,7 @@ target 'AdBlock-Extension' do
 end
 
 target 'AdBlock-Safari-Menu' do
+    platform :osx, '10.12'
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
@@ -38,6 +40,7 @@ target 'AdBlock-Safari-Menu' do
 end
 
 target 'AdBlock-Tests' do
+    platform :osx, '10.12'
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
@@ -45,13 +48,6 @@ target 'AdBlock-Tests' do
     pod 'SwiftyBeaver'
     pod 'Punycode-Cocoa'
     pod 'SwiftSoup'
-end
-
-target 'LauncherApp' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
-
-    pod 'SwiftyBeaver'
 end
 
 post_install do |installer|

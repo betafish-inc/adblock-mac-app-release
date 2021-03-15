@@ -20,14 +20,14 @@ import SafariServices
 class Util {
     private init() {}
     
-    static func openUrlInSafari(_ url: String) {
-        guard let u = URL(string: url) else { return }
-        SFSafariApplication.getActiveWindow(completionHandler: { (window) in
+    static func openUrlInSafari(_ stringUrl: String) {
+        guard let url = URL(string: stringUrl) else { return }
+        SFSafariApplication.getActiveWindow { (window) in
             guard let window = window else {
-                SFSafariApplication.openWindow(with: u, completionHandler: nil)
+                SFSafariApplication.openWindow(with: url, completionHandler: nil)
                 return
             }
-            window.openTab(with: u, makeActiveIfPossible: true, completionHandler: nil)
-        })
+            window.openTab(with: url, makeActiveIfPossible: true, completionHandler: nil)
+        }
     }
 }

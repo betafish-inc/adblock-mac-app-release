@@ -106,21 +106,6 @@
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Моля, включете <b>AdBlock</b> и <b>Икона на AdBlock в Safari</b> от настройките на разширението в Safari.";
 
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "Да, моля, обновявай AdBlock!";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "Пропусни стъпката";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "Непрекъснато обновяваме ползваните списъци за ефективно блокиране на реклами.";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "За да се гарантира, че се блокират колкото е възможно повече реклами, моля, щракнете по-долу за актуализиране на AdBlock.";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "(Забележка: ако я изберете, AdBlock ще продължи да работи фоново дори и да затворите апа. Можете да я промените, когато решите, като изключите „Пускай AdBlock с вписване“ в менюто на AdBlock от лентата с меню на Mac.)";
-
 /* Load product failed message */
 "load.product.fail.message" = "Провалено зареждане на обновяването на продукта. Моля, опитайте по-късно.";
 
@@ -298,3 +283,5 @@
 /* Window menu item */
 "window.menu" = "Прозорец";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "Error restoring upgrade: ";

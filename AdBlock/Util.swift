@@ -29,7 +29,7 @@ class Util {
         var err: Error?
         group.enter()
         DispatchQueue.main.async(group: group) {
-            SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXTENSION_IDENTIFIER) { (state, error) in
+            SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Constants.SAFARI_CONTENT_BLOCKER_EXT_IDENTIFIER) { (state, error) in
                 guard let state = state else {
                     SwiftyBeaver.error(error ?? "")
                     err = error

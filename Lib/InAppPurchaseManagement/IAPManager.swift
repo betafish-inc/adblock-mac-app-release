@@ -18,8 +18,7 @@ enum IAPError: Error {
     case cancelledPurchase // in case of user cancelled the purchase
     case paymentFailed(SKError.Code) // in case of .clientInvalid, .paymentNotAllowed
     case receiptValidationFailed(String)
-
-    case restorePurchaseFailed
+    case restorePurchaseFailed(SKError)
 }
 
 class IAPManager: NSObject {
@@ -42,8 +41,8 @@ class IAPManager: NSObject {
         }
     }
 
-    func fetchProducts(with identifiers:Set<String>, completion: @escaping (_ error: IAPError?, _ products: Set<SKProduct>?)->Void) {
-        if identifiers.count == 0 {
+    func fetchProducts(with identifiers: Set<String>, completion: @escaping (_ error: IAPError?, _ products: Set<SKProduct>?) -> Void) {
+        if identifiers.isEmpty {
             completion(IAPError.emptyProductIds, nil)
             return
         }
@@ -64,26 +63,26 @@ class IAPManager: NSObject {
         }
     }
 
-    func restorePurchases(_ completion: @escaping (_ error: IAPError?, _ restoredPurchases: [Purchase]?)->Void) {
+    func restorePurchases(_ completion: @escaping (_ error: IAPError?, _ restoredPurchases: [Purchase]?) -> Void) {
         SwiftyStoreKit.restorePurchases(atomically: true) { results in
             for purchase in results.restoredPurchases where purchase.needsFinishTransaction {
                 SwiftyStoreKit.finishTransaction(purchase.transaction)
             }
 
-            if results.restoreFailedPurchases.count > 0 {
+            if !results.restoreFailedPurchases.isEmpty {
                 SwiftyBeaver.error("Restore Failed: \(results.restoreFailedPurchases)")
-                DispatchQueue.main.async { completion(IAPError.restorePurchaseFailed, nil) }
-            } else if results.restoredPurchases.count > 0 {
+                completion(IAPError.restorePurchaseFailed(results.restoreFailedPurchases[0].0), nil)
+            } else if !results.restoredPurchases.isEmpty {
                 SwiftyBeaver.debug("Restore Success: \(results.restoredPurchases)")
-                DispatchQueue.main.async { completion(nil, results.restoredPurchases) }
+                completion(nil, results.restoredPurchases)
             } else {
                 SwiftyBeaver.debug("Nothing to Restore")
-                DispatchQueue.main.async { completion(nil, []) }
+                completion(nil, [])
             }
         }
     }
 
-    func purchase(product identifier:String, qty: Int = 1, completion: @escaping (_ error: IAPError?, _ purchase: PurchaseDetails?)->Void) {
+    func purchase(product identifier: String, qty: Int = 1, completion: @escaping (_ error: IAPError?, _ purchase: PurchaseDetails?) -> Void) {
         SwiftyStoreKit.purchaseProduct(identifier, quantity: qty, atomically: true) { result in
             switch result {
             case .success(let purchase):
@@ -91,43 +90,32 @@ class IAPManager: NSObject {
                 completion(nil, purchase)
             case .error(let error):
                 switch error.code {
-                case .unknown:
-                    // Unknown error. Please contact support
-                    DispatchQueue.main.async { completion(.other(error), nil) }
                 case .clientInvalid, .paymentNotAllowed:
                     // Not allowed to make the payment
                     // The device is not allowed to make the payment
-                    DispatchQueue.main.async { completion(.paymentFailed(error.code), nil) }
+                    completion(.paymentFailed(error.code), nil)
                 case .paymentCancelled:
-                    DispatchQueue.main.async { completion(.cancelledPurchase, nil) }
+                    completion(.cancelledPurchase, nil)
                 case .paymentInvalid:
                     // The purchase identifier was invalid
-                    DispatchQueue.main.async { completion(.invalidIdentifiers([identifier]), nil) }
+                    completion(.invalidIdentifiers([identifier]), nil)
+                default:
+                    // Unknown error. Please contact support
+                    completion(.other(error), nil)
                 }
             }
         }
     }
 
-    //func validateReceipt(_ completion: @escaping (_ error: IAPError?, _ receipt: ReceiptInfo?)->Void ) {
-    func validateReceipt(_ completion: @escaping (_ error: IAPError?, _ receipt: ParsedReceipt?)->Void ) {
-        let receiptData = SwiftyStoreKit.localReceiptData
-        let receiptString = receiptData?.base64EncodedString(options: [])
+    func validateReceipt(_ completion: @escaping (_ error: IAPError?, _ receipt: ParsedReceipt?) -> Void ) {
         let receiptValidator = ReceiptValidator()
         let validationResult = receiptValidator.validateReceipt()
         switch validationResult {
         case .success(let parsedReceipt):
             SwiftyBeaver.debug("IAPManager: validateReceipt success")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.appVersion)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.originalAppVersion)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.receiptCreationDate)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.inAppPurchaseReceipts?.count)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.inAppPurchaseReceipts?[0].originalPurchaseDate)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.inAppPurchaseReceipts?[0].productIdentifier)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.inAppPurchaseReceipts?[0].quantity)")
-            SwiftyBeaver.debug("IAPManager: validateReceipt \(parsedReceipt.inAppPurchaseReceipts?[0].quantity)")
             completion(nil, parsedReceipt)
         case .error(let error):
-            SwiftyBeaver.debug("IAPManager: validateReceipt error \(error)")
+            SwiftyBeaver.error("IAPManager: validateReceipt error \(error)")
             completion(.receiptValidationFailed("ReceiptValidator: Receipt validation failed."), nil)
         }
     }

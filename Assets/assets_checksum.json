@@ -1,7 +1,7 @@
 {
-  "easylist_exceptionrules_content_blocker" : "ff2432304cacd5d63db50581d8afeb7a",
-  "easylist_content_blocker" : "e8e629c22e0e8a666bd9a95ea0943826",
-  "anti_circumvention" : "OzLM79z1ATvDWnqau9Dp1g",
+  "easylist_exceptionrules_content_blocker" : "",
+  "easylist_content_blocker" : "",
+  "anti_circumvention" : "",
   "custom" : "",
   "advance_filters" : ""
 }

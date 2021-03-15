@@ -18,13 +18,12 @@
 import Foundation
 
 class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
-
     func beginRequest(with context: NSExtensionContext) {
-        var rulesUrl: URL? = nil
+        var rulesUrl: URL?
         if PauseResumeBlockinManager.shared.isBlockingPaused() {
-            rulesUrl = Constants.AssetsUrls.emptyRulesUrl
+            rulesUrl = .emptyRulesFile
         } else {
-            rulesUrl = Constants.AssetsUrls.mergedRulesUrl
+            rulesUrl = .mergedRulesFile
         }
         
         var items: [NSExtensionItem] = []
@@ -37,5 +36,4 @@ class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
             context.completeRequest(returningItems: items, completionHandler: nil)
         }
     }
-    
 }

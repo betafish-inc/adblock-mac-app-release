@@ -95,7 +95,7 @@
 "info.text.contact.text" = "よくある質問への回答を得るかフィードバックを送って頂くには、%1$@弊社のサイト%2$@にアクセスしてください。";
 
 /* Info Text header */
-"info.text.header" = "AdBlockの準備が完了しました!";
+"info.text.header" = "AdBlockの準備が完了しました！";
 
 /* Info Text intro text */
 "info.text.intro" = "AdBlockが有効です。広告をあなたに代わってブロックします。機能は以下の通りです:";
@@ -105,21 +105,6 @@
 
 /* Intro Screen 1 text */
 "intro.screen.1.text" = "Safariの拡張機能設定から<b>AdBlock Engine</b>と<b>AdBlock Icon</b>を有効にして下さい。";
-
-/* Intro Screen 2 button */
-"intro.screen.2.button" = "AdBlockを最新の状態に保つ！";
-
-/* Intro Screen 2 skip */
-"intro.screen.2.skip" = "この手順をスキップ";
-
-/* Intro Screen 2 text 1 */
-"intro.screen.2.text.1" = "効果的に広告をブロックするためリストを頻繁に更新します。";
-
-/* Intro Screen 2 text 2 */
-"intro.screen.2.text.2" = "できるだけ多くの広告をブロックするには、下記をクリックしてAdBlockを最新の状態にしてください。";
-
-/* Intro Screen 2 text 3 */
-"intro.screen.2.text.3" = "（注意: このオプションを選択すると、AdBlockはアプリ終了後もバックグラウンドで動作し続けます。この設定はいつでも、Macメニューバー上のAdBlockメニューで「ログイン時にAdBlockを起動する」を切り替えることで変更できます。）";
 
 /* Load product failed message */
 "load.product.fail.message" = "アップグレード製品の読み込みに失敗しました。時間をおいてから再度お試しください。";
@@ -199,6 +184,9 @@
 /* Upgrade restore failed title message */
 "restore.failed.message" = "アップグレードの復元中にエラーが発生しました。時間をおいてから再度お試しください。";
 
+/* Upgrade restore failed title message */
+"restore.failed.message.error" = "アップグレードの復元エラー: ";
+
 /* Upgrade restore failed title text */
 "restore.failed.title" = "アップグレード復元に失敗しました";
 
@@ -230,7 +218,7 @@
 "upgrade.get.more" = "これらのボーナス機能を使ってAdBlockをさらに活用しましょう。";
 
 /* Upgrade line one description text */
-"upgrade.line.one.description" = "個人ホワイトリストに追加することで、お気に入りのウェブサイトを支援できます。";
+"upgrade.line.one.description" = "個人許可リストに追加することで、お気に入りのウェブサイトを支援できます。";
 
 /* Upgrade line one title text */
 "upgrade.line.one.text" = "お気に入りのページの広告を許可";
@@ -269,13 +257,13 @@
 "upgrade.unavailable.version.title" = "アップグレードが利用できません";
 
 /* Whitelist menu item */
-"whitelist.menu" = "ホワイトリスト";
+"whitelist.menu" = "許可した広告の管理";
 
 /* Whitelisting button */
 "whitelisting.button" = "Webサイトを追加";
 
 /* Whitelisting empty text */
-"whitelisting.empty.text" = "ホワイトリストに登録されたサイトはありません";
+"whitelisting.empty.text" = "広告の表示を許可しているサイトはありません";
 
 /* Whitelisting invalid url message */
 "whitelisting.enter.valid.url" = "正しいURLを入力してください。";
@@ -287,10 +275,7 @@
 "whitelisting.example.text" = "例: http://www.example.com/";
 
 /* Whitelisting header */
-"whitelisting.header" = "特定のサイトでの広告のブロックを無効にしたい場合、ホワイトリストに追加してください:";
-
-/* Whitelisting title */
-"whitelisting.title" = "ホワイトリスト";
+"whitelisting.header" = "特定のサイトで広告の表示を許可するには、ここから「許可リスト」に追加してください:";
 
 /* Whitelisting duplicate url message */
 "whitelisting.url.exists" = "このURLは既に存在します。";
